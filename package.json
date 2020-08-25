@@ -7,6 +7,9 @@
   "description": "machine-readable, always up-to-date GitHub App permissions",
   "main": "index.js",
   "scripts": {
+    "lint": "prettier --check '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
+    "lint:fix": "prettier --write '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
+    "pretest": "npm run -s lint",
     "test": "node test/smoke-test.js"
   },
   "repository": "https://github.com/octokit/app-permissions",
