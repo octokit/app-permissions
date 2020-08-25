@@ -22,7 +22,7 @@
     "cheerio": "^1.0.0-rc.3",
     "got": "^11.5.2",
     "minimist": "^1.2.5",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.0",
     "semantic-release": "^17.1.1"
   },
   "release": {
