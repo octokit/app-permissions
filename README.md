@@ -9,10 +9,14 @@ This repository is scraping the [Permissions required for GitHub Apps](https://d
 ### Node.js
 
 ```js
-const appPermissions = require('@octokit/app-permissions')
+const appPermissions = require("@octokit/app-permissions");
 
-const createIssuePermissions = appPermissions['api.github.com'].paths['/repos/{owner}/{repo}/issues'].post
-console.log(`Required app permissions to create an issue: %o`, createIssuePermissions)
+const createIssuePermissions =
+  appPermissions["api.github.com"].paths["/repos/{owner}/{repo}/issues"].post;
+console.log(
+  `Required app permissions to create an issue: %o`,
+  createIssuePermissions
+);
 ```
 
 ### Download
