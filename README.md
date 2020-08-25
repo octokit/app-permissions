@@ -6,6 +6,23 @@ This repository is scraping the [Permissions required for GitHub Apps](https://d
 
 ## Usage
 
+The structure of the JSON export looks like this
+
+```
+permissions
+  api.github.com
+    permissions
+      [name of permission]
+        url # documentation URL
+        read # array of routes with read access
+        write # array of routes with write access
+    paths
+      [http path]
+        [http method]
+          permission # name of permission
+          access # "read" or "write"
+```
+
 ### Node.js
 
 ```js
@@ -17,6 +34,10 @@ console.log(
   `Required app permissions to create an issue: %o`,
   createIssuePermissions
 );
+
+const issuesPermission = appPermissions["api.github.com"].permissions.issues;
+console.log(`"issues" read access paths: %o`, issuesPermission.read);
+console.log(`"issues" write access paths: %o`, issuesPermission.write);
 ```
 
 ### Download
