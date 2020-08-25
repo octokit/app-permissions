@@ -1,0 +1,4243 @@
+<h3 id="about-github-app-permissions">
+  <a href="#about-github-app-permissions">About GitHub App permissions</a>
+</h3>
+<p>
+  GitHub Apps are created with a set of permissions. Permissions define what
+  resources the GitHub App can access via the API. For more information, see
+  &quot;<a
+    href="/en/apps/building-github-apps/setting-permissions-for-github-apps"
+    >Setting permissions for GitHub Apps</a
+  >.&quot;
+</p>
+<h3 id="metadata-permissions">
+  <a href="#metadata-permissions">Metadata permissions</a>
+</h3>
+<p>
+  GitHub Apps have the <code>Read-only</code> metadata permission by default.
+  The metadata permission provides access to a collection of read-only endpoints
+  with metadata for various resources. These endpoints do not leak sensitive
+  private repository information.
+</p>
+<p>
+  If you set the metadata permission to <code>No access</code> and select a
+  permission that requires repository access, GitHub will override your
+  selection and set the metadata permission back to <code>Read-only</code>. To
+  set the metadata permission to <code>No access</code>, you must set all
+  permissions that require repository access to <code>No access</code> first.
+</p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/#root-endpoint"><code>GET /</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/codes_of_conduct/#get-all-codes-of-conduct"
+        ><code>GET /codes_of_conduct</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/codes_of_conduct/#get-a-code-of-conduct"
+        ><code>GET /codes_of_conduct/:key</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/emojis/#emojis"><code>GET /emojis</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/feeds/#get-feeds"><code>GET /feeds</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/licenses/#get-all-commonly-used-licenses"
+        ><code>GET /licenses</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/licenses/#get-a-license"
+        ><code>GET /licenses/:key</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/markdown/#render-a-markdown-document"
+        ><code>POST /markdown</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/markdown/#render-a-markdown-document-in-raw-mode"
+        ><code>POST /markdown/raw</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/meta/#meta"><code>GET /meta</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/orgs/#list-organizations"
+        ><code>GET /organizations</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/orgs/#get-an-organization"><code>GET /orgs/:org</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/projects/#list-organization-projects"
+        ><code>GET /orgs/:org/projects</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-organization-repositories"
+        ><code>GET /orgs/:org/repos</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/rate_limit/#get-rate-limit-status-for-the-authenticated-user"
+        ><code>GET /rate_limit</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#get-a-repository"
+        ><code>GET /repos/:owner/:repo</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/community/#get-community-profile-metrics"
+        ><code>GET /repos/:owner/:repo/community/profile</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-repository-contributors"
+        ><code>GET /repos/:owner/:repo/contributors</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/forks/#list-forks"
+        ><code>GET /repos/:owner/:repo/forks</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-repository-languages"
+        ><code>GET /repos/:owner/:repo/languages</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/licenses/#get-the-license-for-a-repository"
+        ><code>GET /repos/:owner/:repo/license</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/starring/#list-stargazers"
+        ><code>GET /repos/:owner/:repo/stargazers</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/statistics/#get-the-weekly-commit-activity"
+        ><code>GET /repos/:owner/:repo/stats/code_frequency</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/statistics/#get-the-last-year-of-commit-activity"
+        ><code>GET /repos/:owner/:repo/stats/commit_activity</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/statistics/#get-all-contributor-commit-activity"
+        ><code>GET /repos/:owner/:repo/stats/contributors</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/statistics/#get-the-weekly-commit-count"
+        ><code>GET /repos/:owner/:repo/stats/participation</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/repos/statistics/#get-the-hourly-commit-count-for-each-day"
+        ><code>GET /repos/:owner/:repo/stats/punch_card</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/watching/#list-watchers"
+        ><code>GET /repos/:owner/:repo/subscribers</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-repository-tags"
+        ><code>GET /repos/:owner/:repo/tags</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos#get-all-repository-topics"
+        ><code>GET /repos/:owner/:repo/topics</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-public-repositories"
+        ><code>GET /repositories</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-repositories-for-the-authenticated-user"
+        ><code>GET /user/repos</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/starring/#list-repositories-starred-by-a-user"
+        ><code>GET /user/starred</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/watching/#list-repositories-watched-by-a-user"
+        ><code>GET /user/subscriptions</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/#list-users"><code>GET /users</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/#get-a-user"><code>GET /users/:username</code></a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/followers/#list-followers-of-a-user"
+        ><code>GET /users/:username/followers</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/followers/#list-the-people-a-user-follows"
+        ><code>GET /users/:username/following</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/followers/#check-if-a-user-follows-another-user"
+        ><code>GET /users/:username/following/:target_user</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/users/gpg_keys/#list-gpg-keys-for-a-user"
+        ><code>GET /users/:username/gpg_keys</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/orgs/#list-organizations-for-a-user"
+        ><code>GET /users/:username/orgs</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/activity/events/#list-events-received-by-the-authenticated-user"
+        ><code>GET /users/:username/received_events</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/events/#list-public-events-received-by-a-user"
+        ><code>GET /users/:username/received_events/public</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#list-repositories-for-a-user"
+        ><code>GET /users/:username/repos</code></a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/activity/watching/#list-repositories-watched-by-a-user"
+        ><code>GET /users/:username/subscriptions</code></a
+      >
+    </p>
+  </li>
+</ul>
+<p><em>Collaborators</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/collaborators/#list-repository-collaborators"
+      ><code>GET /repos/:owner/:repo/collaborators</code></a
+    >
+  </li>
+  <li>
+    <a
+      href="/en/v3/repos/collaborators/#check-if-a-user-is-a-repository-collaborator"
+      ><code>GET /repos/:owner/:repo/collaborators/:username</code></a
+    >
+  </li>
+</ul>
+<p><em>Commit comments</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/comments/#list-commit-comments-for-a-repository"
+      ><code>GET /repos/:owner/:repo/comments</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/repos/comments/#get-a-commit-comment"
+      ><code>GET /repos/:owner/:repo/comments/:comment_id</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#list-reactions-for-a-commit-comment"
+      ><code>GET /repos/:owner/:repo/comments/:comment_id/reactions</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/repos/comments/#list-commit-comments"
+      ><code>GET /repos/:owner/:repo/commits/:sha/comments</code></a
+    >
+  </li>
+</ul>
+<p><em>Events</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/activity/events/#list-public-events"
+      ><code>GET /events</code></a
+    >
+  </li>
+  <li>
+    <a
+      href="/en/v3/activity/events/#list-public-events-for-a-network-of-repositories"
+      ><code>GET /networks/:owner/:repo/events</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/activity/events/#list-public-organization-events"
+      ><code>GET /orgs/:org/events</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/activity/events/#list-repository-events"
+      ><code>GET /repos/:owner/:repo/events</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/activity/events/#list-events-for-the-authenticated-user"
+      ><code>GET /users/:username/events</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/activity/events/#list-public-events-for-a-user"
+      ><code>GET /users/:username/events/public</code></a
+    >
+  </li>
+</ul>
+<p><em>Git</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/gitignore/#get-all-gitignore-templates"
+      ><code>GET /gitignore/templates</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/gitignore/#get-a-gitignore-template"
+      ><code>GET /gitignore/templates/:key</code></a
+    >
+  </li>
+</ul>
+<p><em>Keys</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/users/keys/#list-public-keys-for-a-user"
+      ><code>GET /users/:username/keys</code></a
+    >
+  </li>
+</ul>
+<p><em>Organization members</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/orgs/members/#list-organization-members"
+      ><code>GET /orgs/:org/members</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#check-organization-membership-for-a-user"
+      ><code>GET /orgs/:org/members/:username</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#list-public-organization-members"
+      ><code>GET /orgs/:org/public_members</code></a
+    >
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#check-public-organization-membership-for-a-user"
+      ><code>GET /orgs/:org/public_members/:username</code></a
+    >
+  </li>
+</ul>
+<p><em>Search</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/search/#search-code"><code>GET /search/code</code></a>
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-commits"><code>GET /search/commits</code></a>
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-issues-and-pull-requests"
+      ><code>GET /search/issues</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-labels"><code>GET /search/labels</code></a>
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-repositories"
+      ><code>GET /search/repositories</code></a
+    >
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-topics"><code>GET /search/topics</code></a>
+  </li>
+  <li>
+    <a href="/en/v3/search/#search-users"><code>GET /search/users</code></a>
+  </li>
+</ul>
+<h3 id="permission-on-actions">
+  <a href="#permission-on-actions">Permission on &quot;actions&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/actions/artifacts/#list-artifacts-for-a-repository"
+      ><code>GET /repos/:owner/:repo/actions/artifacts</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/artifacts/#get-an-artifact"
+      ><code>GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/artifacts/#delete-an-artifact"
+      ><code>DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/artifacts/#download-an-artifact"
+      ><code
+        >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-jobs/#get-a-job-for-a-workflow-run"
+      ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-jobs/#download-job-logs-for-a-workflow-run"
+      ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#list-workflow-runs-for-a-repository"
+      ><code>GET /repos/:owner/:repo/actions/runs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#get-a-workflow-run"
+      ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/artifacts/#list-workflow-run-artifacts"
+      ><code>GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#cancel-a-workflow-run"
+      ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-jobs/#list-jobs-for-a-workflow-run"
+      ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#download-workflow-run-logs"
+      ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#delete-workflow-run-logs"
+      ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#re-run-a-workflow"
+      ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflows/#list-repository-workflows"
+      ><code>GET /repos/:owner/:repo/actions/workflows</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflows/#get-a-workflow"
+      ><code>GET /repos/:owner/:repo/actions/workflows/:workflow_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/workflow-runs/#list-workflow-runs"
+      ><code
+        >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
+      ></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-administration">
+  <a href="#permission-on-administration"
+    >Permission on &quot;administration&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#create-an-organization-repository"
+        ><code>POST /orgs/:org/repos</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#update-a-repository"
+        ><code>PATCH /repos/:owner/:repo</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#delete-a-repository"
+        ><code>DELETE /repos/:owner/:repo</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#list-runner-applications-for-a-repository"
+        ><code>Get GET /repos/:owner/:repo/actions/runners/downloads</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#list-self-hosted-runners-for-a-repository"
+        ><code>GET /repos/:owner/:repo/actions/runners</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#get-a-self-hosted-runner-for-a-repository"
+        ><code>GET /repos/:owner/:repo/actions/runners/:runner_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#delete-a-self-hosted-runner-from-a-repository"
+        ><code>DELETE /repos/:owner/:repo/actions/runners/:runner_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#create-a-registration-token-for-a-repository"
+        ><code
+          >POST /repos/:owner/:repo/actions/runners/registration-token</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/self-hosted-runners/#create-a-remove-token-for-a-repository"
+        ><code>POST /repos/:owner/:repo/actions/runners/remove-token</code></a
+      >
+      (:write)git
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#enable-automated-security-fixes"
+        ><code>PUT /repos/:owner/:repo/automated-security-fixes</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#disable-automated-security-fixes"
+        ><code>DELETE /repos/:owner/:repo/automated-security-fixes</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/forks/#create-a-fork"
+        ><code>POST /repos/:owner/:repo/forks</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/repos/#get-interaction-restrictions-for-a-repository"
+        ><code>GET /repos/:owner/:repo/interaction-limits</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/repos/#set-interaction-restrictions-for-a-repository"
+        ><code>PUT /repos/:owner/:repo/interaction-limits</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/repos/#remove-interaction-restrictions-for-a-repository"
+        ><code>DELETE /repos/:owner/:repo/interaction-limits</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#replace-all-repository-topics"
+        ><code>PUT /repos/:owner/:repo/topics</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#transfer-a-repository"
+        ><code>POST /repos/:owner/:repo/transfer</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#enable-vulnerability-alerts"
+        ><code>GET /repos/:owner/:repo/vulnerability-alerts</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#enable-vulnerability-alerts"
+        ><code>PUT /repos/:owner/:repo/vulnerability-alerts</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#disable-vulnerability-alerts"
+        ><code>DELETE /repos/:owner/:repo/vulnerability-alerts</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#create-a-repository-for-the-authenticated-user"
+        ><code>POST /user/repos</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/invitations/#accept-a-repository-invitation"
+        ><code>PATCH /user/repository_invitations/:invitation_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/invitations/#decline-a-repository-invitation"
+        ><code>DELETE /user/repository_invitations/:invitation_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<p><em>Branches</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/branches/#get-branch-protection"
+      ><code>GET /repos/:owner/:repo/branches/:branch/protection</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#update-branch-protection"
+      ><code>PUT /repos/:owner/:repo/branches/:branch/protection</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#delete-branch-protection"
+      ><code>DELETE /repos/:owner/:repo/branches/:branch/protection</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-admin-branch-protection"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#set-admin-branch-protection"
+      ><code
+        >POST
+        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#delete-admin-branch-protection"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-pull-request-review-protection"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#update-pull-request-review-protection"
+      ><code
+        >PATCH
+        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#delete-pull-request-review-protection"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-commit-signature-protection"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#create-commit-signature-protection"
+      ><code
+        >POST
+        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#delete-commit-signature-protection"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-status-checks-protection"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#update-status-check-potection"
+      ><code
+        >PATCH
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#remove-status-check-protection"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-all-status-check-contexts"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#add-status-check-contexts"
+      ><code
+        >POST
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#set-status-check-contexts"
+      ><code
+        >PUT
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#remove-status-check-contexts"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#get-access-restrictions"
+      ><code
+        >GET /repos/:owner/:repo/branches/:branch/protection/restrictions</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#delete-access-restrictions"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/restrictions</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/repos/branches/#list-teams-with-access-to-the-protected-branch"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#add-team-access-restrictions"
+      ><code
+        >POST
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#set-team-access-restrictions"
+      ><code
+        >PUT
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#remove-team-access-restrictions"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/repos/branches/#list-users-with-access-to-the-protected-branch"
+      ><code
+        >GET
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#add-user-access-restrictions"
+      ><code
+        >POST
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#set-user-access-restrictions"
+      ><code
+        >PUT
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/branches/#remove-user-access-restrictions"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Collaborators</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/collaborators/#add-a-repository-collaborator"
+      ><code>PUT /repos/:owner/:repo/collaborators/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/collaborators/#remove-a-repository-collaborator"
+      ><code>DELETE /repos/:owner/:repo/collaborators/:username</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Invitations</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/invitations/#list-repository-invitations"
+      ><code>GET /repos/:owner/:repo/invitations</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/invitations/#update-a-repository-invitation"
+      ><code>PATCH /repos/:owner/:repo/invitations/:invitation_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/invitations/#delete-a-repository-invitation"
+      ><code>DELETE /repos/:owner/:repo/invitations/:invitation_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Keys</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/keys/#list-deploy-keys"
+      ><code>GET /repos/:owner/:repo/keys</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/keys/#create-a-deploy-key"
+      ><code>POST /repos/:owner/:repo/keys</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/keys/#get-a-deploy-key"
+      ><code>GET /repos/:owner/:repo/keys/:key_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/keys/#delete-a-deploy-key"
+      ><code>DELETE /repos/:owner/:repo/keys/:key_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Teams</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/#list-repository-teams"
+      ><code>GET /repos/:owner/:repo/teams</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/#add-or-update-team-repository-permissions"
+      ><code>PUT /teams/:team_id/repos/:owner/:repo</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/#remove-a-repository-from-a-team"
+      ><code>DELETE /teams/:team_id/repos/:owner/:repo</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Traffic</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/traffic/#get-repository-clones"
+      ><code>GET /repos/:owner/:repo/traffic/clones</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/traffic/#get-top-referral-paths"
+      ><code>GET /repos/:owner/:repo/traffic/popular/paths</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/traffic/#get-top-referral-sources"
+      ><code>GET /repos/:owner/:repo/traffic/popular/referrers</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/traffic/#get-page-views"
+      ><code>GET /repos/:owner/:repo/traffic/views</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-blocking">
+  <a href="#permission-on-blocking">Permission on &quot;blocking&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a
+      href="/en/v3/users/blocking/#list-users-blocked-by-the-authenticated-user"
+      ><code>GET /user/blocks</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/users/blocking/#check-if-a-user-is-blocked-by-the-authenticated-user"
+      ><code>GET /user/blocks/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/users/blocking/#block-a-user"
+      ><code>PUT /user/blocks/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/users/blocking/#unblock-a-user"
+      ><code>DELETE /user/blocks/:username</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-checks">
+  <a href="#permission-on-checks">Permission on &quot;checks&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/checks/runs/#create-a-check-run"
+      ><code>POST /repos/:owner/:repo/check-runs</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/checks/runs/#get-a-check-run"
+      ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/checks/runs/#update-a-check-run"
+      ><code>PATCH /repos/:owner/:repo/check-runs/:check_run_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/checks/runs/#list-check-run-annotations"
+      ><code
+        >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/checks/suites/#create-a-check-suite"
+      ><code>POST /repos/:owner/:repo/check-suites</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/checks/suites/#get-a-check-suite"
+      ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/checks/runs/#list-check-runs-in-a-check-suite"
+      ><code
+        >GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/checks/suites/#rerequest-a-check-suite"
+      ><code
+        >POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/checks/suites/#update-repository-preferences-for-check-suites"
+      ><code>PATCH /repos/:owner/:repo/check-suites/preferences</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/checks/runs/#list-check-runs-for-a-git-reference"
+      ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/checks/suites/#list-check-suites-for-a-git-reference"
+      ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-contents">
+  <a href="#permission-on-contents">Permission on &quot;contents&quot;</a>
+</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/repos/contents/#download-a-repository-archive"
+        ><code>GET /repos/:owner/:repo/:archive_format/:ref</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/artifacts/#get-an-artifact"
+        ><code>GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/artifacts/#delete-an-artifact"
+        ><code
+          >DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/artifacts/#download-an-artifact"
+        ><code
+          >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-jobs/#get-a-job-for-a-workflow-run"
+        ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/workflow-jobs/#download-job-logs-for-a-workflow-run"
+        ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/actions/workflow-runs/#list-workflow-runs-for-a-repository"
+        ><code>GET /repos/:owner/:repo/actions/runs</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#get-a-workflow-run"
+        ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/artifacts/#list-workflow-run-artifacts"
+        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#cancel-a-workflow-run"
+        ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-jobs/#list-jobs-for-a-workflow-run"
+        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#download-workflow-run-logs"
+        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#delete-workflow-run-logs"
+        ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#re-run-a-workflow"
+        ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/secrets/#list-repository-secrets"
+        ><code>GET /repos/:owner/:repo/actions/secrets</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/secrets/#get-a-repository-secret"
+        ><code>GET /repos/:owner/:repo/actions/secrets/:name</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/secrets/#create-or-update-a-repository-secret"
+        ><code>PUT /repos/:owner/:repo/actions/secrets/:name</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/secrets/#delete-a-repository-secret"
+        ><code>DELETE /repos/:owner/:repo/actions/secrets/:name</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/secrets/#get-a-repository-public-key"
+        ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflows/#list-repository-workflows"
+        ><code>GET /repos/:owner/:repo/actions/workflows</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflows/#get-a-workflow"
+        ><code>GET /repos/:owner/:repo/actions/workflows/:workflow_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/actions/workflow-runs/#list-workflow-runs"
+        ><code
+          >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/runs/#get-a-check-run"
+        ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/runs/#list-check-run-annotations"
+        ><code
+          >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/suites/#get-a-check-suite"
+        ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/runs/#list-check-runs-in-a-check-suite"
+        ><code
+          >GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/suites/#rerequest-a-check-suite"
+        ><code
+          >POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/commits/#list-commits"
+        ><code>GET /repos/:owner/:repo/commits</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/commits/#get-a-commit"
+        ><code>GET /repos/:owner/:repo/commits/:sha</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/runs/#list-check-runs-for-a-git-reference"
+        ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/checks/suites/#list-check-suites-for-a-git-reference"
+        ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/codes_of_conduct/#get-the-code-of-conduct-for-a-repository"
+        ><code>GET /repos/:owner/:repo/community/code_of_conduct</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/commits/#compare-two-commits"
+        ><code>GET /repos/:owner/:repo/compare/:base...:head</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/contents/#get-repository-content"
+        ><code>GET /repos/:owner/:repo/contents/:path</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/#create-a-repository-dispatch-event"
+        ><code>POST /repos/:owner/:repo/dispatches</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/forks/#create-a-fork"
+        ><code>POST /repos/:owner/:repo/forks</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/merging/#merge-a-branch"
+        ><code>POST /repos/:owner/:repo/merges</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/pulls/#merge-a-pull-request"
+        ><code>PUT /repos/:owner/:repo/pulls/:pull_number/merge</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/contents/#get-a-repository-readme"
+        ><code>GET /repos/:owner/:repo/readme(?:/(.*))?</code></a
+      >
+      (:read)
+    </p>
+  </li>
+</ul>
+<p><em>Branches</em></p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/repos/branches/#list-branches"
+        ><code>GET /repos/:owner/:repo/branches</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/branches/#get-a-branch"
+        ><code>GET /repos/:owner/:repo/branches/:branch</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/repos/branches/#list-apps-with-access-to-the-protected-branch"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/branches/#add-app-access-restrictions"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/branches/#set-app-access-restrictions"
+        ><code
+          >PUT
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/repos/branches/#remove-user-access-restrictions"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<p><em>Commit comments</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/comments/#update-a-commit-comment"
+      ><code>PATCH /repos/:owner/:repo/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/comments/#delete-a-commit-comment"
+      ><code>DELETE /repos/:owner/:repo/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#create-reaction-for-a-commit-comment"
+      ><code>POST /repos/:owner/:repo/comments/:comment_id/reactions</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/comments/#create-a-commit-comment"
+      ><code>POST /repos/:owner/:repo/commits/:sha/comments</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<p><em>Git</em></p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/git/blobs/#create-a-blob"
+        ><code>POST /repos/:owner/:repo/git/blobs</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/blobs/#get-a-blob"
+        ><code>GET /repos/:owner/:repo/git/blobs/:sha</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/commits/#create-a-commit"
+        ><code>POST /repos/:owner/:repo/git/commits</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/commits/#get-a-commit"
+        ><code>GET /repos/:owner/:repo/git/commits/:commit_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/refs/#create-a-reference"
+        ><code>POST /repos/:owner/:repo/git/refs</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/refs/#get-a-reference"
+        ><code>GET /repos/:owner/:repo/git/ref/:ref</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/refs/#list-matching-references"
+        ><code>GET /repos/:owner/:repo/git/matching-refs/:ref</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/refs/#update-a-reference"
+        ><code>PATCH /repos/:owner/:repo/git/refs/:ref</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/refs/#delete-a-reference"
+        ><code>DELETE /repos/:owner/:repo/git/refs/:ref</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/tags/#create-a-tag-object"
+        ><code>POST /repos/:owner/:repo/git/tags</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/tags/#get-a-tag"
+        ><code>GET /repos/:owner/:repo/git/tags/:tag_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/trees/#create-a-tree"
+        ><code>POST /repos/:owner/:repo/git/trees</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/git/trees/#get-a-tree"
+        ><code>GET /repos/:owner/:repo/git/trees/:sha</code></a
+      >
+      (:read)
+    </p>
+  </li>
+</ul>
+<p><em>Import</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#get-an-import-status"
+      ><code>GET /repos/:owner/:repo/import</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#start-an-import"
+      ><code>PUT /repos/:owner/:repo/import</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#update-an-import"
+      ><code>PATCH /repos/:owner/:repo/import</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#cancel-an-import"
+      ><code>DELETE /repos/:owner/:repo/import</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#get-commit-authors"
+      ><code>GET /repos/:owner/:repo/import/authors</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#map-a-commit-author"
+      ><code>PATCH /repos/:owner/:repo/import/authors/:author_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#get-large-files"
+      ><code>GET /repos/:owner/:repo/import/large_files</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/migrations/source_imports/#update-git-lfs-preference"
+      ><code>PATCH /repos/:owner/:repo/import/lfs</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Reactions</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/reactions/#delete-a-reaction-legacy"
+      ><code>DELETE /reactions/:reaction_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-a-commit-comment-reaction"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-an-issue-reaction"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-an-issue-comment-reaction"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-a-pull-request-comment-reaction"
+      ><code
+        >DELETE
+        /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-team-discussion-reaction"
+      ><code
+        >DELETE
+        /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#delete-team-discussion-comment-reaction"
+      ><code
+        >DELETE
+        /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Releases</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/repos/releases/#list-releases"
+      ><code>GET /repos/:owner/:repo/releases</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#create-a-release"
+      ><code>POST /repos/:owner/:repo/releases</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#get-a-release"
+      ><code>GET /repos/:owner/:repo/releases/:release_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#update-a-release"
+      ><code>PATCH /repos/:owner/:repo/releases/:release_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#delete-a-release"
+      ><code>DELETE /repos/:owner/:repo/releases/:release_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#list-release-assets"
+      ><code>GET /repos/:owner/:repo/releases/:release_id/assets</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#get-a-release-asset"
+      ><code>GET /repos/:owner/:repo/releases/assets/:asset_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#update-a-release-asset"
+      ><code>PATCH /repos/:owner/:repo/releases/assets/:asset_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#delete-a-release-asset"
+      ><code>DELETE /repos/:owner/:repo/releases/assets/:asset_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#get-the-latest-release"
+      ><code>GET /repos/:owner/:repo/releases/latest</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/releases/#get-a-release-by-tag-name"
+      ><code>GET /repos/:owner/:repo/releases/tags/:tag</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-deployments">
+  <a href="#permission-on-deployments">Permission on &quot;deployments&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/repos/deployments/#list-deployments"
+      ><code>GET /repos/:owner/:repo/deployments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#create-a-deployment"
+      ><code>POST /repos/:owner/:repo/deployments</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#get-a-deployment"
+      ><code>GET /repos/:owner/:repo/deployments/:deployment_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#delete-a-deployment"
+      ><code>DELETE /repos/:owner/:repo/deployments/:deployment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#list-deployment-statuses"
+      ><code
+        >GET /repos/:owner/:repo/deployments/:deployment_id/statuses</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#create-a-deployment-status"
+      ><code
+        >POST /repos/:owner/:repo/deployments/:deployment_id/statuses</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/deployments/#get-a-deployment-status"
+      ><code
+        >GET
+        /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id</code
+      ></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-emails">
+  <a href="#permission-on-emails">Permission on &quot;emails&quot;</a>
+</h3>
+<ul>
+  <li>
+    <p>
+      <a
+        href="/en/v3/users/emails/#set-primary-email-visibility-for-the-authenticated-user"
+        ><code>PATCH /user/email/visibility</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/users/emails/#list-email-addresses-for-the-authenticated-user"
+        ><code>GET /user/emails</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/users/emails/#add-an-email-address-for-the-authenticated-user"
+        ><code>POST /user/emails</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/users/emails/#delete-an-email-address-for-the-authenticated-user"
+        ><code>DELETE /user/emails</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/users/emails/#list-public-email-addresses-for-the-authenticated-user"
+        ><code>GET /user/public_emails</code></a
+      >
+      (:read)
+    </p>
+  </li>
+</ul>
+<h3 id="permission-on-followers">
+  <a href="#permission-on-followers">Permission on &quot;followers&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/users/followers/#list-followers-of-a-user"
+      ><code>GET /user/followers</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/users/followers/#list-the-people-a-user-follows"
+      ><code>GET /user/following</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/users/followers/#check-if-a-person-is-followed-by-the-authenticated-user"
+      ><code>GET /user/following/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/users/followers/#follow-a-user"
+      ><code>PUT /user/following/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/users/followers/#unfollow-a-user"
+      ><code>DELETE /user/following/:username</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-gpg-keys">
+  <a href="#permission-on-gpg-keys">Permission on &quot;gpg keys&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/users/gpg_keys/#list-gpg-keys-for-the-authenticated-user"
+      ><code>GET /user/gpg_keys</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/users/gpg_keys/#create-a-gpg-key-for-the-authenticated-user"
+      ><code>POST /user/gpg_keys</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/users/gpg_keys/#get-a-gpg-key-for-the-authenticated-user"
+      ><code>GET /user/gpg_keys/:gpg_key_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/users/gpg_keys/#delete-a-gpg-key-for-the-authenticated-user"
+      ><code>DELETE /user/gpg_keys/:gpg_key_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-issues">
+  <a href="#permission-on-issues">Permission on &quot;issues&quot;</a>
+</h3>
+<p>
+  Issues and pull requests are closely related. For more information, see
+  &quot;<a href="/en/v3/issues/#list-issues-assigned-to-the-authenticated-user"
+    >List issues assigned to the authenticated user</a
+  >.&quot; If your GitHub App has permissions on issues but not on pull
+  requests, these endpoints will be limited to issues. Endpoints that return
+  both issues and pull requests will be filtered. Endpoints that allow
+  operations on both issues and pull requests will be restricted to issues.
+</p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/#list-repository-issues"
+      ><code>GET /repos/:owner/:repo/issues</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#create-an-issue"
+      ><code>POST /repos/:owner/:repo/issues</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#get-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#update-an-issue"
+      ><code>PATCH /repos/:owner/:repo/issues/:issue_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#list-issue-comments"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#create-an-issue-comment"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/comments</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#lock-an-issue"
+      ><code>PUT /repos/:owner/:repo/issues/:issue_number/lock</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#unlock-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/lock</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#list-reactions-for-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/reactions</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#create-reaction-for-an-issue"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/timeline/#list-timeline-events-for-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/timeline</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#list-issue-comments-for-a-repository"
+      ><code>GET /repos/:owner/:repo/issues/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#get-an-issue-comment"
+      ><code>GET /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#update-an-issue-comment"
+      ><code>PATCH /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#delete-an-issue-comment"
+      ><code>DELETE /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#list-reactions-for-an-issue-comment"
+      ><code
+        >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#create-reaction-for-an-issue-comment"
+      ><code
+        >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Assignees</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/assignees/#list-assignees"
+      ><code>GET /repos/:owner/:repo/assignees</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#check-if-a-user-can-be-assigned"
+      ><code>GET /repos/:owner/:repo/assignees/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#add-assignees-to-an-issue"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/assignees</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#remove-assignees-from-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/assignees</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Events</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/events/#list-issue-events"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/events</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/events/#get-an-issue-event">Get an issue event</a>
+    (:read)
+  </li>
+</ul>
+<p><em>Labels</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#add-labels-to-an-issue"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#set-labels-for-an-issue"
+      ><code>PUT /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#remove-all-labels-from-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#remove-a-label-from-an-issue"
+      ><code
+        >DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-a-repository"
+      ><code>GET /repos/:owner/:repo/labels</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#create-a-label"
+      ><code>POST /repos/:owner/:repo/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#get-a-label"
+      ><code>GET /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#update-a-label"
+      ><code>PATCH /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#delete-a-label"
+      ><code>DELETE /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Milestones</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/milestones/#list-milestones"
+      ><code>GET /repos/:owner/:repo/milestones</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#create-a-milestone"
+      ><code>POST /repos/:owner/:repo/milestones</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#get-a-milestone"
+      ><code>GET /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#update-a-milestone"
+      ><code>PATCH /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#delete-a-milestone"
+      ><code>DELETE /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-issues-in-a-milestone"
+      ><code
+        >GET /repos/:owner/:repo/milestones/:milestone_number/labels</code
+      ></a
+    >
+    (:read)
+  </li>
+</ul>
+<p><em>Reactions</em></p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#list-reactions-for-an-issue-comment"
+        ><code
+          >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#create-reaction-for-an-issue-comment"
+        ><code
+          >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#list-reactions-for-an-issue"
+        ><code>GET /repos/:owner/:repo/issues/:issue_number/reactions</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#create-reaction-for-an-issue"
+        ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-reaction-legacy"
+        ><code>DELETE /reactions/:reaction_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-commit-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-an-issue-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-an-issue-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-pull-request-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-team-discussion-reaction"
+        ><code
+          >DELETE
+          /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-team-discussion-comment-reaction"
+        ><code
+          >DELETE
+          /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<h3 id="permission-on-keys">
+  <a href="#permission-on-keys">Permission on &quot;keys&quot;</a>
+</h3>
+<p><em>Keys</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/users/keys/#list-public-ssh-keys-for-the-authenticated-user"
+      ><code>GET /user/keys</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/users/keys/#create-a-public-ssh-key-for-the-authenticated-user"
+      ><code>POST /user/keys</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/users/keys/#get-a-public-ssh-key-for-the-authenticated-user"
+      ><code>GET /user/keys/:key_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/users/keys/#delete-a-public-ssh-key-for-the-authenticated-user"
+      ><code>DELETE /user/keys/:key_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-members">
+  <a href="#permission-on-members">Permission on &quot;members&quot;</a>
+</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/teams/team_sync/#list-idp-groups-for-a-team"
+        ><code
+          >GET
+          /organizations/:org_id/team/:team_id/team-sync/group-mappings</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/team_sync/#create-or-update-idp-group-connections"
+        ><code
+          >PATCH
+          /organizations/:org_id/team/:team_id/team-sync/group-mappings</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/orgs/outside_collaborators/#list-outside-collaborators-for-an-organization"
+        ><code>GET /orgs/:org/outside_collaborators</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/orgs/outside_collaborators/#convert-an-organization-member-to-outside-collaborator"
+        ><code>PUT /orgs/:org/outside_collaborators/:username</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/orgs/outside_collaborators/#remove-outside-collaborator-from-an-organization"
+        ><code>DELETE /orgs/:org/outside_collaborators/:username</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/team_sync/#list-idp-groups-for-an-organization"
+        ><code>GET /orgs/:org/team-sync/groups</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#get-a-team-by-name"
+        ><code>GET /orgs/:org/team/:team_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#list-scim-provisioned-identities"
+        ><code>GET /scim/v2/orgs/:org/Users</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#provision-and-invite-a-scim-user"
+        ><code>POST /scim/v2/orgs/:org/Users</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#get-scim-provisioning-information-for-a-user"
+        ><code>GET /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#set-scim-information-for-a-provisioned-user"
+        ><code>PUT /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#update-an-attribute-for-a-scim-user"
+        ><code>PATCH /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/scim/#delete-a-scim-user-from-an-organization"
+        ><code>DELETE /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<p><em>Invitations</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/orgs/members/#list-pending-organization-invitations"
+      ><code>GET /orgs/:org/invitations</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#create-an-organization-invitation"
+      ><code>POST /orgs/:org/invitations</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#list-organization-invitation-teams"
+      ><code>GET /orgs/:org/invitations/:invitation_id/teams</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/members/#list-pending-team-invitations"
+      ><code>GET /teams/:team_id/invitations</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<p><em>Organization members</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/orgs/members/#remove-an-organization-member"
+      ><code>DELETE /orgs/:org/members/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#get-organization-membership-for-a-user"
+      ><code>GET /orgs/:org/memberships/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#set-organization-membership-for-a-user"
+      ><code>PUT /orgs/:org/memberships/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/members/#remove-organization-membership-for-a-user"
+      ><code>DELETE /orgs/:org/memberships/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#set-public-organization-membership-for-the-authenticated-user"
+      ><code>PUT /orgs/:org/public_members/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#remove-public-organization-membership-for-the-authenticated-user"
+      ><code>DELETE /orgs/:org/public_members/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#list-organization-memberships-for-the-authenticated-user"
+      ><code>GET /user/memberships/orgs</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#get-an-organization-membership-for-the-authenticated-user"
+      ><code>GET /user/memberships/orgs/:org</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/members/#update-an-organization-membership-for-the-authenticated-user"
+      ><code>PATCH /user/memberships/orgs/:org</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Team members</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/teams/members/#list-team-members"
+      ><code>GET /teams/:team_id/members</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/members/#get-team-membership-for-a-user"
+      ><code>GET /teams/:team_id/memberships/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/members/#add-or-update-team-membership-for-a-user"
+      ><code>PUT /teams/:team_id/memberships/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/members/#remove-team-membership-for-a-user"
+      ><code>DELETE /teams/:team_id/memberships/:username</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Teams</em></p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#list-teams"><code>GET /orgs/:org/teams</code></a>
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#create-a-team"
+        ><code>POST /orgs/:org/teams</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#get-a-team-by-name"
+        ><code>GET /orgs/:org/teams/:team_slug</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#update-a-team"
+        ><code>PATCH /teams/:team_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#delete-a-team"
+        ><code>DELETE /teams/:team_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#list-team-projects"
+        ><code>GET /teams/:team_id/projects</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#check-team-permissions-for-a-project"
+        ><code>GET /teams/:team_id/projects/:project_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#add-or-update-team-project-permissions"
+        ><code>PUT /teams/:team_id/projects/:project_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#remove-a-project-from-a-team"
+        ><code>DELETE /teams/:team_id/projects/:project_id</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#list-team-repositories"
+        ><code>GET /teams/:team_id/repos</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#check-team-permissions-for-a-repository"
+        ><code>GET /teams/:team_id/repos/:owner/:repo</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#add-or-update-team-repository-permissions"
+        ><code>PUT /teams/:team_id/repos/:owner/:repo</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#remove-a-repository-from-a-team"
+        ><code>DELETE /teams/:team_id/repos/:owner/:repo</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/teams/#list-child-teams"
+        ><code>GET /teams/:team_id/teams</code></a
+      >
+      (:read)
+    </p>
+  </li>
+</ul>
+<h3 id="permission-on-organization-administration">
+  <a href="#permission-on-organization-administration"
+    >Permission on &quot;organization administration&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/orgs/#update-an-organization"
+        ><code>PATCH /orgs/:org</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/orgs/#get-interaction-restrictions-for-an-organization"
+        ><code>GET /orgs/:org/interaction-limits</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/orgs/#set-interaction-restrictions-for-an-organization"
+        ><code>PUT /orgs/:org/interaction-limits</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/interactions/orgs/#remove-interaction-restrictions-for-an-organization"
+        ><code>DELETE /orgs/:org/interaction-limits</code></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<h3 id="permission-on-organization-hooks">
+  <a href="#permission-on-organization-hooks"
+    >Permission on &quot;organization hooks&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/orgs/hooks/#list-organization-webhooks"
+      ><code>GET /orgs/:org/hooks</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/hooks/#create-an-organization-webhook"
+      ><code>POST /orgs/:org/hooks</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/hooks/#get-an-organization-webhook"
+      ><code>GET /orgs/:org/hooks/:hook_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/hooks/#update-an-organization-webhook"
+      ><code>PATCH /orgs/:org/hooks/:hook_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/hooks/#delete-an-organization-webhook"
+      ><code>DELETE /orgs/:org/hooks/:hook_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/hooks/#ping-an-organization-webhook"
+      ><code>POST /orgs/:org/hooks/:hook_id/pings</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Teams</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/teams/#remove-a-project-from-a-team"
+      ><code>DELETE /teams/:team_id/projects/:project_id</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-organization-projects">
+  <a href="#permission-on-organization-projects"
+    >Permission on &quot;organization projects&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/projects/#create-an-organization-project"
+      ><code>POST /orgs/:org/projects</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#get-a-project"
+      ><code>GET /projects/:project_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#update-a-project"
+      ><code>PATCH /projects/:project_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#delete-a-project"
+      ><code>DELETE /projects/:project_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#create-a-project-card"
+      ><code>POST /projects/:project_id/cards</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#list-project-columns"
+      ><code>GET /projects/:project_id/columns</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#create-a-project-column"
+      ><code>POST /projects/:project_id/columns</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#get-a-project-column"
+      ><code>GET /projects/columns/:column_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#update-a-project-column"
+      ><code>PATCH /projects/columns/:column_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#delete-a-project-column"
+      ><code>DELETE /projects/columns/:column_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#list-project-cards"
+      ><code>GET /projects/columns/:column_id/cards</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#create-a-project-card"
+      ><code>POST /projects/columns/:column_id/cards</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#move-a-project-column"
+      ><code>POST /projects/columns/:column_id/moves</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#get-a-project-card"
+      ><code>GET /projects/columns/cards/:card_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#update-a-project-card"
+      ><code>PATCH /projects/columns/cards/:card_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#delete-a-project-card"
+      ><code>DELETE /projects/columns/cards/:card_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#move-a-project-card"
+      ><code>POST /projects/columns/cards/:card_id/moves</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-organization-user-blocking">
+  <a href="#permission-on-organization-user-blocking"
+    >Permission on &quot;organization user blocking&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/orgs/blocking/#list-users-blocked-by-an-organization"
+      ><code>GET /orgs/:org/blocks</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/orgs/blocking/#check-if-a-user-is-blocked-by-an-organization"
+      ><code>GET /orgs/:org/blocks/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/blocking/#block-a-user-from-an-organization"
+      ><code>PUT /orgs/:org/blocks/:username</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/orgs/blocking/#unblock-a-user-from-an-organization"
+      ><code>DELETE /orgs/:org/blocks/:username</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-pages">
+  <a href="#permission-on-pages">Permission on &quot;pages&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/repos/pages/#get-a-github-pages-site"
+      ><code>GET /repos/:owner/:repo/pages</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#create-a-github-pages-site"
+      ><code>POST /repos/:owner/:repo/pages</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#update-information-about-a-github-pages-site"
+      ><code>PUT /repos/:owner/:repo/pages</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#delete-a-github-pages-site"
+      ><code>DELETE /repos/:owner/:repo/pages</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#list-github-pages-builds"
+      ><code>GET /repos/:owner/:repo/pages/builds</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#request-a-github-pages-build"
+      ><code>POST /repos/:owner/:repo/pages/builds</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#get-github-pages-build"
+      ><code>GET /repos/:owner/:repo/pages/builds/:build_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/pages/#get-latest-pages-build"
+      ><code>GET /repos/:owner/:repo/pages/builds/latest</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-pull-requests">
+  <a href="#permission-on-pull-requests"
+    >Permission on &quot;pull requests&quot;</a
+  >
+</h3>
+<p>
+  Pull requests and issues are closely related.. If your GitHub App has
+  permissions on pull requests but not on issues, these endpoints will be
+  limited to pull requests. Endpoints that return both pull requests and issues
+  will be filtered. Endpoints that allow operations on both pull requests and
+  issues will be restricted to pull requests.
+</p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/#update-an-issue"
+      ><code>PATCH /repos/:owner/:repo/issues/:issue_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#list-issue-comments"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#create-an-issue-comment"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/comments</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#lock-an-issue"
+      ><code>PUT /repos/:owner/:repo/issues/:issue_number/lock</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/#unlock-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/lock</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/timeline/#list-timeline-events-for-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/timeline</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#list-issue-comments-for-a-repository"
+      ><code>GET /repos/:owner/:repo/issues/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#get-an-issue-comment"
+      ><code>GET /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#update-an-issue-comment"
+      ><code>PATCH /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/comments/#delete-an-issue-comment"
+      ><code>DELETE /repos/:owner/:repo/issues/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#list-pull-requests"
+      ><code>GET /repos/:owner/:repo/pulls</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#create-a-pull-request"
+      ><code>POST /repos/:owner/:repo/pulls</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#get-a-pull-request"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#update-a-pull-request"
+      ><code>PATCH /repos/:owner/:repo/pulls/:pull_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#list-review-comments-on-a-pull-request"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#create-a-review-comment-for-a-pull-request"
+      ><code>POST /repos/:owner/:repo/pulls/:pull_number/comments</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#list-commits-on-a-pull-request"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number/commits</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#list-pull-requests-files"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number/files</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/#check-if-a-pull-request-has-been-merged"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number/merge</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#list-review-comments-in-a-repository"
+      ><code>GET /repos/:owner/:repo/pulls/comments</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#get-a-review-comment-for-a-pull-request"
+      ><code>GET /repos/:owner/:repo/pulls/comments/:comment_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#update-a-review-comment-for-a-pull-request"
+      ><code>PATCH /repos/:owner/:repo/pulls/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/comments/#delete-a-review-comment-for-a-pull-request"
+      ><code>DELETE /repos/:owner/:repo/pulls/comments/:comment_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Assignees</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/assignees/#list-assignees"
+      ><code>GET /repos/:owner/:repo/assignees</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#check-if-a-user-can-be-assigned"
+      ><code>GET /repos/:owner/:repo/assignees/:username</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#add-assignees-to-an-issue"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/assignees</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/assignees/#remove-assignees-from-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/assignees</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Events</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/events/#list-issue-events"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/events</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/events/#get-an-issue-event"
+      ><code>GET /repos/:owner/:repo/issues/events/:event_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#submit-a-review-for-a-pull-request"
+      ><code
+        >POST
+        /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Labels</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-an-issue"
+      ><code>GET /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#add-labels-to-an-issue"
+      ><code>POST /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#set-labels-for-an-issue"
+      ><code>PUT /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#remove-all-labels-from-an-issue"
+      ><code>DELETE /repos/:owner/:repo/issues/:issue_number/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#remove-a-label-from-an-issue"
+      ><code
+        >DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-a-repository"
+      ><code>GET /repos/:owner/:repo/labels</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#create-a-label"
+      ><code>POST /repos/:owner/:repo/labels</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#get-a-label"
+      ><code>GET /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#update-a-label"
+      ><code>PATCH /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#delete-a-label"
+      ><code>DELETE /repos/:owner/:repo/labels/:name</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Milestones</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/issues/milestones/#list-milestones"
+      ><code>GET /repos/:owner/:repo/milestones</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#create-a-milestone"
+      ><code>POST /repos/:owner/:repo/milestones</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#get-a-milestone"
+      ><code>GET /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#update-a-milestone"
+      ><code>PATCH /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/milestones/#delete-a-milestone"
+      ><code>DELETE /repos/:owner/:repo/milestones/:milestone_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/issues/labels/#list-labels-for-issues-in-a-milestone"
+      ><code
+        >GET /repos/:owner/:repo/milestones/:milestone_number/labels</code
+      ></a
+    >
+    (:read)
+  </li>
+</ul>
+<p><em>Reactions</em></p>
+<ul>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#create-reaction-for-an-issue"
+        ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#list-reactions-for-an-issue-comment"
+        ><code
+          >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#create-reaction-for-an-issue-comment"
+        ><code
+          >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/reactions/#list-reactions-for-a-pull-request-review-comment"
+        ><code
+          >GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/v3/reactions/#create-reaction-for-a-pull-request-review-comment"
+        ><code
+          >POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-reaction-legacy"
+        ><code>DELETE /reactions/:reaction_id</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-commit-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-an-issue-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-an-issue-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-a-pull-request-comment-reaction"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-team-discussion-reaction"
+        ><code
+          >DELETE
+          /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/v3/reactions/#delete-team-discussion-comment-reaction"
+        ><code
+          >DELETE
+          /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+</ul>
+<p><em>Requested reviewers</em></p>
+<ul>
+  <li>
+    <a
+      href="/en/v3/pulls/review_requests/#list-requested-reviewers-for-a-pull-request"
+      ><code
+        >GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/review_requests/#request-reviewers-for-a-pull-request"
+      ><code
+        >POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/pulls/review_requests/#remove-requested-reviewers-from-a-pull-request"
+      ><code
+        >DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Reviews</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/pulls/reviews/#list-reviews-for-a-pull-request"
+      ><code>GET /repos/:owner/:repo/pulls/:pull_number/reviews</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#create-a-review-for-a-pull-request"
+      ><code>POST /repos/:owner/:repo/pulls/:pull_number/reviews</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#get-a-review-for-a-pull-request"
+      ><code
+        >GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#update-a-review-for-a-pull-request"
+      ><code
+        >PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#delete-a-pending-review-for-a-pull-request"
+      ><code
+        >DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#list-comments-for-a-pull-request-review"
+      ><code
+        >GET
+        /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/pulls/reviews/#dismiss-a-review-for-a-pull-request"
+      ><code
+        >PUT
+        /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-repository-hooks">
+  <a href="#permission-on-repository-hooks"
+    >Permission on &quot;repository hooks&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/repos/hooks/#list-repository-webhooks"
+      ><code>GET /repos/:owner/:repo/hooks</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#create-a-repository-webhook"
+      ><code>POST /repos/:owner/:repo/hooks</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#get-a-repository-webhook"
+      ><code>GET /repos/:owner/:repo/hooks/:hook_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#update-a-repository-webhook"
+      ><code>PATCH /repos/:owner/:repo/hooks/:hook_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#delete-a-repository-webhook"
+      ><code>DELETE /repos/:owner/:repo/hooks/:hook_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#ping-a-repository-webhook"
+      ><code>POST /repos/:owner/:repo/hooks/:hook_id/pings</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/hooks/#test-the-push-repository-webhook"
+      ><code>POST /repos/:owner/:repo/hooks/:hook_id/tests</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-repository-projects">
+  <a href="#permission-on-repository-projects"
+    >Permission on &quot;repository projects&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/projects/#get-a-project"
+      ><code>GET /projects/:project_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#update-a-project"
+      ><code>PATCH /projects/:project_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#delete-a-project"
+      ><code>DELETE /projects/:project_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#create-a-project-card"
+      ><code>POST /projects/:project_id/cards</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#list-project-columns"
+      ><code>GET /projects/:project_id/columns</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#create-a-project-column"
+      ><code>POST /projects/:project_id/columns</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#get-a-project-column"
+      ><code>GET /projects/columns/:column_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#update-a-project-column"
+      ><code>PATCH /projects/columns/:column_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#delete-a-project-column"
+      ><code>DELETE /projects/columns/:column_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#list-project-cards"
+      ><code>GET /projects/columns/:column_id/cards</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#create-a-project-card"
+      ><code>POST /projects/columns/:column_id/cards</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/columns/#move-a-project-column"
+      ><code>POST /projects/columns/:column_id/moves</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#get-a-project-card"
+      ><code>GET /projects/columns/cards/:card_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#update-a-project-card"
+      ><code>PATCH /projects/columns/cards/:card_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#delete-a-project-card"
+      ><code>DELETE /projects/columns/cards/:card_id</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/cards/#move-a-project-card"
+      ><code>POST /projects/columns/cards/:card_id/moves</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#list-repository-projects"
+      ><code>GET /repos/:owner/:repo/projects</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/projects/#create-a-repository-project"
+      ><code>POST /repos/:owner/:repo/projects</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<p><em>Teams</em></p>
+<ul>
+  <li>
+    <a href="/en/v3/teams/#remove-a-project-from-a-team"
+      ><code>DELETE /teams/:team_id/projects/:project_id</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-secrets">
+  <a href="#permission-on-secrets">Permission on &quot;secrets&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/actions/secrets/#get-a-repository-public-key"
+      ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#list-repository-secrets"
+      ><code>GET /repos/:owner/:repo/actions/secrets</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#get-a-repository-secret"
+      ><code>GET /repos/:owner/:repo/actions/secrets/:secret_name</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#create-or-update-a-repository-secret"
+      ><code>PUT /repos/:owner/:repo/actions/secrets/:secret_name</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#delete-a-repository-secret"
+      ><code>DELETE /repos/:owner/:repo/actions/secrets/:secret_name</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#get-an-organization-public-key"
+      ><code>GET /orgs/:org/actions/secrets/public-key</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#list-organization-secrets"
+      ><code>GET /orgs/:org/actions/secrets</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#get-an-organization-secret"
+      ><code>GET /orgs/:org/actions/secrets/:secret_name</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#create-or-update-an-organization-secret"
+      ><code>PUT /orgs/:org/actions/secrets/:secret_name</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/secrets/#list-selected-repositories-for-an-organization-secret"
+      ><code>GET /orgs/:org/actions/secrets/:secret_name/repositories</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/secrets/#set-selected-repositories-for-an-organization-secret"
+      ><code>PUT /orgs/:org/actions/secrets/:secret_name/repositories</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/secrets/#add-selected-repository-to-an-organization-secret"
+      ><code
+        >PUT
+        /orgs/:org/actions/secrets/:secret_name/repositories/:repository_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/secrets/#remove-selected-repository-from-an-organization-secret"
+      ><code
+        >DELETE
+        /orgs/:org/actions/secrets/:secret_name/repositories/:repository_id</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/actions/secrets/#delete-an-organization-secret"
+      ><code>DELETE /orgs/:org/actions/secrets/:secret_name</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-security-events">
+  <a href="#permission-on-security-events"
+    >Permission on &quot;security events&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/code-scanning/#list-code-scanning-alerts-for-a-repository"
+      ><code>GET /repos/:owner/:repo/code-scanning/alerts</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/code-scanning/#get-a-code-scanning-alert"
+      ><code>GET /repos/:owner/:repo/code-scanning/alerts/:alert_id</code></a
+    >
+    (:read)
+  </li>
+</ul>
+<h3 id="permission-on-self-hosted-runners">
+  <a href="#permission-on-self-hosted-runners"
+    >Permission on &quot;self-hosted runners&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#list-runner-applications-for-an-organization"
+      ><code>GET /orgs/:org/actions/runners/downloads</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#create-a-registration-token-for-an-organization"
+      ><code>POST /orgs/:org/actions/runners/registration-token</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#list-self-hosted-runners-for-an-organization"
+      ><code>GET /orgs/:org/actions/runners</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#get-a-self-hosted-runner-for-an-organization"
+      ><code>GET /orgs/:org/actions/runners/:runner_id</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#create-a-remove-token-for-an-organization"
+      ><code>POST /orgs/:org/actions/runners/remove-token</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/actions/self-hosted-runners/#delete-a-self-hosted-runner-from-an-organization"
+      ><code>DELETE /orgs/:org/actions/runners/:runner_id</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-single-file">
+  <a href="#permission-on-single-file">Permission on &quot;single file&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/repos/contents/#get-repository-content"
+      ><code>GET /repos/:owner/:repo/contents/:path</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/contents/#create-or-update-file-contents"
+      ><code>PUT /repos/:owner/:repo/contents/:path</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/repos/contents/#delete-a-file"
+      ><code>DELETE /repos/:owner/:repo/contents/:path</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-starring">
+  <a href="#permission-on-starring">Permission on &quot;starring&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a
+      href="/en/v3/activity/starring/#check-if-a-repository-is-starred-by-the-authenticated-user"
+      ><code>GET /user/starred/:owner/:repo</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a
+      href="/en/v3/activity/starring/#star-a-repository-for-the-authenticated-user"
+      ><code>PUT /user/starred/:owner/:repo</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a
+      href="/en/v3/activity/starring/#unstar-a-repository-for-the-authenticated-user"
+      ><code>DELETE /user/starred/:owner/:repo</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-statuses">
+  <a href="#permission-on-statuses">Permission on &quot;statuses&quot;</a>
+</h3>
+<ul>
+  <li>
+    <a
+      href="/en/v3/repos/statuses/#get-the-combined-status-for-a-specific-reference"
+      ><code>GET /repos/:owner/:repo/commits/:ref/status</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/statuses/#list-commit-statuses-for-a-reference"
+      ><code>GET /repos/:owner/:repo/commits/:ref/statuses</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/repos/statuses/#create-a-commit-status"
+      ><code>POST /repos/:owner/:repo/statuses/:sha</code></a
+    >
+    (:write)
+  </li>
+</ul>
+<h3 id="permission-on-team-discussions">
+  <a href="#permission-on-team-discussions"
+    >Permission on &quot;team discussions&quot;</a
+  >
+</h3>
+<ul>
+  <li>
+    <a href="/en/v3/teams/discussions/#list-discussions"
+      ><code>GET /teams/:team_id/discussions</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussions/#create-a-discussion"
+      ><code>POST /teams/:team_id/discussions</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussions/#get-a-discussion"
+      ><code>GET /teams/:team_id/discussions/:discussion_number</code></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussions/#update-a-discussion"
+      ><code>PATCH /teams/:team_id/discussions/:discussion_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussions/#delete-a-discussion"
+      ><code>DELETE /teams/:team_id/discussions/:discussion_number</code></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussion_comments/#list-discussion-comments"
+      ><code
+        >GET /teams/:team_id/discussions/:discussion_number/comments</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussion_comments/#create-a-discussion-comment"
+      ><code
+        >POST /teams/:team_id/discussions/:discussion_number/comments</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussion_comments/#get-a-discussion-comment"
+      ><code
+        >GET
+        /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussion_comments/#update-a-discussion-comment"
+      ><code
+        >PATCH
+        /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/teams/discussion_comments/#delete-a-discussion-comment"
+      ><code
+        >DELETE
+        /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#list-reactions-for-a-team-discussion-comment"
+      ><code
+        >GET
+        /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#create-reaction-for-a-team-discussion-comment"
+      ><code
+        >POST
+        /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions</code
+      ></a
+    >
+    (:write)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#list-reactions-for-a-team-discussion"
+      ><code
+        >GET /teams/:team_id/discussions/:discussion_number/reactions</code
+      ></a
+    >
+    (:read)
+  </li>
+  <li>
+    <a href="/en/v3/reactions/#create-reaction-for-a-team-discussion"
+      ><code
+        >POST /teams/:team_id/discussions/:discussion_number/reactions</code
+      ></a
+    >
+    (:write)
+  </li>
+</ul>

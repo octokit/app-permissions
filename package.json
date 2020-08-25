@@ -1,0 +1,44 @@
+{
+  "name": "@octokit/app-permissions",
+  "version": "0.0.0-development",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "machine-readable, always up-to-date GitHub App permissions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --check '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
+    "lint:fix": "prettier --write '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
+    "pretest": "npm run -s lint",
+    "test": "node test/smoke-test.js"
+  },
+  "repository": "https://github.com/octokit/app-permissions",
+  "keywords": [
+    "github app"
+  ],
+  "author": "Gregor Martynus (https://twitter.com/gr2m)",
+  "license": "MIT",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "got": "^11.5.2",
+    "minimist": "^1.2.5",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": "generated/*.json"
+        }
+      ],
+      "@semantic-release/npm"
+    ]
+  }
+}
