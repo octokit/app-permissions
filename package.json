@@ -7,7 +7,7 @@
   "description": "machine-readable, always up-to-date GitHub App permissions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/smoke-test.js"
   },
   "repository": "https://github.com/octokit/app-permissions",
   "keywords": [
