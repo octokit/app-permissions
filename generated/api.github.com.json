@@ -163,7 +163,6 @@
         "POST /repos/{owner}/{repo}/forks",
         "POST /repos/{owner}/{repo}/keys",
         "POST /repos/{owner}/{repo}/transfer",
-        "POST /user/repos",
         "PUT /repos/{owner}/{repo}/automated-security-fixes",
         "PUT /repos/{owner}/{repo}/branches/{branch}/protection",
         "PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
@@ -800,10 +799,7 @@
       "PUT": { "permission": "administration", "access": "write" }
     },
     "/repositories": { "GET": { "permission": "meta", "access": "read" } },
-    "/user/repos": {
-      "GET": { "permission": "meta", "access": "read" },
-      "POST": { "permission": "administration", "access": "write" }
-    },
+    "/user/repos": { "GET": { "permission": "meta", "access": "read" } },
     "/user/starred": { "GET": { "permission": "meta", "access": "read" } },
     "/user/subscriptions": {
       "GET": { "permission": "meta", "access": "read" }
