@@ -58,7 +58,7 @@
   </li>
   <li>
     <p>
-      <a href="/en/free-pro-team@latest/v3/activity/feeds/#get-feeds"
+      <a href="/en/free-pro-team@latest/rest/reference/activity#get-feeds"
         ><code>GET /feeds</code></a
       >
     </p>
@@ -161,7 +161,7 @@
   </li>
   <li>
     <p>
-      <a href="/en/free-pro-team@latest/v3/repos/forks/#list-forks"
+      <a href="/en/free-pro-team@latest/rest/reference/repos#list-forks"
         ><code>GET /repos/:owner/:repo/forks</code></a
       >
     </p>
@@ -183,7 +183,7 @@
   </li>
   <li>
     <p>
-      <a href="/en/free-pro-team@latest/v3/activity/starring/#list-stargazers"
+      <a href="/en/free-pro-team@latest/rest/reference/activity#list-stargazers"
         ><code>GET /repos/:owner/:repo/stargazers</code></a
       >
     </p>
@@ -230,7 +230,7 @@
   </li>
   <li>
     <p>
-      <a href="/en/free-pro-team@latest/v3/activity/watching/#list-watchers"
+      <a href="/en/free-pro-team@latest/rest/reference/activity#list-watchers"
         ><code>GET /repos/:owner/:repo/subscribers</code></a
       >
     </p>
@@ -267,7 +267,7 @@
   <li>
     <p>
       <a
-        href="/en/free-pro-team@latest/v3/activity/starring/#list-repositories-starred-by-a-user"
+        href="/en/free-pro-team@latest/rest/reference/activity#list-repositories-starred-by-a-user"
         ><code>GET /user/starred</code></a
       >
     </p>
@@ -275,7 +275,7 @@
   <li>
     <p>
       <a
-        href="/en/free-pro-team@latest/v3/activity/watching/#list-repositories-watched-by-a-user"
+        href="/en/free-pro-team@latest/rest/reference/activity#list-repositories-watched-by-a-user"
         ><code>GET /user/subscriptions</code></a
       >
     </p>
@@ -336,7 +336,7 @@
   <li>
     <p>
       <a
-        href="/en/free-pro-team@latest/v3/activity/events/#list-events-received-by-the-authenticated-user"
+        href="/en/free-pro-team@latest/rest/reference/activity#list-events-received-by-the-authenticated-user"
         ><code>GET /users/:username/received_events</code></a
       >
     </p>
@@ -344,7 +344,7 @@
   <li>
     <p>
       <a
-        href="/en/free-pro-team@latest/v3/activity/events/#list-public-events-received-by-a-user"
+        href="/en/free-pro-team@latest/rest/reference/activity#list-public-events-received-by-a-user"
         ><code>GET /users/:username/received_events/public</code></a
       >
     </p>
@@ -359,7 +359,7 @@
   <li>
     <p>
       <a
-        href="/en/free-pro-team@latest/v3/activity/watching/#list-repositories-watched-by-a-user"
+        href="/en/free-pro-team@latest/rest/reference/activity#list-repositories-watched-by-a-user"
         ><code>GET /users/:username/subscriptions</code></a
       >
     </p>
@@ -408,37 +408,38 @@
 <p><em>Events</em></p>
 <ul>
   <li>
-    <a href="/en/free-pro-team@latest/v3/activity/events/#list-public-events"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/activity#list-public-events"
       ><code>GET /events</code></a
     >
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/events/#list-public-events-for-a-network-of-repositories"
+      href="/en/free-pro-team@latest/rest/reference/activity#list-public-events-for-a-network-of-repositories"
       ><code>GET /networks/:owner/:repo/events</code></a
     >
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/events/#list-public-organization-events"
+      href="/en/free-pro-team@latest/rest/reference/activity#list-public-organization-events"
       ><code>GET /orgs/:org/events</code></a
     >
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/events/#list-repository-events"
+      href="/en/free-pro-team@latest/rest/reference/activity#list-repository-events"
       ><code>GET /repos/:owner/:repo/events</code></a
     >
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/events/#list-events-for-the-authenticated-user"
+      href="/en/free-pro-team@latest/rest/reference/activity#list-events-for-the-authenticated-user"
       ><code>GET /users/:username/events</code></a
     >
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/events/#list-public-events-for-a-user"
+      href="/en/free-pro-team@latest/rest/reference/activity#list-public-events-for-a-user"
       ><code>GET /users/:username/events/public</code></a
     >
   </li>
@@ -2023,68 +2024,71 @@
 <p><em>Releases</em></p>
 <ul>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#list-releases"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#list-releases"
       ><code>GET /repos/:owner/:repo/releases</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#create-a-release"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#create-a-release"
       ><code>POST /repos/:owner/:repo/releases</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#get-a-release"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#get-a-release"
       ><code>GET /repos/:owner/:repo/releases/:release_id</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#update-a-release"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#update-a-release"
       ><code>PATCH /repos/:owner/:repo/releases/:release_id</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#delete-a-release"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#delete-a-release"
       ><code>DELETE /repos/:owner/:repo/releases/:release_id</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#list-release-assets"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#list-release-assets"
       ><code>GET /repos/:owner/:repo/releases/:release_id/assets</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#get-a-release-asset"
+    <a href="/en/free-pro-team@latest/rest/reference/repos/#get-a-release-asset"
       ><code>GET /repos/:owner/:repo/releases/assets/:asset_id</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#update-a-release-asset"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos/#update-a-release-asset"
       ><code>PATCH /repos/:owner/:repo/releases/assets/:asset_id</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#delete-a-release-asset"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos/#delete-a-release-asset"
       ><code>DELETE /repos/:owner/:repo/releases/assets/:asset_id</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/releases/#get-the-latest-release"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos/#get-the-latest-release"
       ><code>GET /repos/:owner/:repo/releases/latest</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/releases/#get-a-release-by-tag-name"
+      href="/en/free-pro-team@latest/rest/reference/repos/#get-a-release-by-tag-name"
       ><code>GET /repos/:owner/:repo/releases/tags/:tag</code></a
     >
     (:read)
@@ -2095,32 +2099,32 @@
 </h3>
 <ul>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/deployments/#list-deployments"
+    <a href="/en/free-pro-team@latest/rest/reference/repos#list-deployments"
       ><code>GET /repos/:owner/:repo/deployments</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/deployments/#create-a-deployment"
+    <a href="/en/free-pro-team@latest/rest/reference/repos#create-a-deployment"
       ><code>POST /repos/:owner/:repo/deployments</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/deployments/#get-a-deployment"
+    <a href="/en/free-pro-team@latest/rest/reference/repos#get-a-deployment"
       ><code>GET /repos/:owner/:repo/deployments/:deployment_id</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/deployments/#delete-a-deployment"
+    <a href="/en/free-pro-team@latest/rest/reference/repos#delete-a-deployment"
       ><code>DELETE /repos/:owner/:repo/deployments/:deployment_id</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/deployments/#list-deployment-statuses"
+      href="/en/free-pro-team@latest/rest/reference/repos#list-deployment-statuses"
       ><code
         >GET /repos/:owner/:repo/deployments/:deployment_id/statuses</code
       ></a
@@ -2129,7 +2133,7 @@
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/deployments/#create-a-deployment-status"
+      href="/en/free-pro-team@latest/rest/reference/repos#create-a-deployment-status"
       ><code
         >POST /repos/:owner/:repo/deployments/:deployment_id/statuses</code
       ></a
@@ -2138,7 +2142,7 @@
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/deployments/#get-a-deployment-status"
+      href="/en/free-pro-team@latest/rest/reference/repos#get-a-deployment-status"
       ><code
         >GET
         /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id</code
@@ -3132,42 +3136,43 @@
 </h3>
 <ul>
   <li>
-    <a href="/en/free-pro-team@latest/v3/orgs/hooks/#list-organization-webhooks"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#list-organization-webhooks"
       ><code>GET /orgs/:org/hooks</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/orgs/hooks/#create-an-organization-webhook"
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#create-an-organization-webhook"
       ><code>POST /orgs/:org/hooks</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/orgs/hooks/#get-an-organization-webhook"
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#get-an-organization-webhook"
       ><code>GET /orgs/:org/hooks/:hook_id</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/orgs/hooks/#update-an-organization-webhook"
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#update-an-organization-webhook"
       ><code>PATCH /orgs/:org/hooks/:hook_id</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/orgs/hooks/#delete-an-organization-webhook"
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#delete-an-organization-webhook"
       ><code>DELETE /orgs/:org/hooks/:hook_id</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/orgs/hooks/#ping-an-organization-webhook"
+      href="/en/free-pro-team@latest/rest/reference/orgs#webhooks/#ping-an-organization-webhook"
       ><code>POST /orgs/:org/hooks/:hook_id/pings</code></a
     >
     (:write)
@@ -3336,53 +3341,57 @@
 </h3>
 <ul>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/pages/#get-a-github-pages-site"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos#get-a-github-pages-site"
       ><code>GET /repos/:owner/:repo/pages</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/pages/#create-a-github-pages-site"
+      href="/en/free-pro-team@latest/rest/reference/repos#create-a-github-pages-site"
       ><code>POST /repos/:owner/:repo/pages</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/pages/#update-information-about-a-github-pages-site"
+      href="/en/free-pro-team@latest/rest/reference/repos#update-information-about-a-github-pages-site"
       ><code>PUT /repos/:owner/:repo/pages</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/pages/#delete-a-github-pages-site"
+      href="/en/free-pro-team@latest/rest/reference/repos#delete-a-github-pages-site"
       ><code>DELETE /repos/:owner/:repo/pages</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/pages/#list-github-pages-builds"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos#list-github-pages-builds"
       ><code>GET /repos/:owner/:repo/pages/builds</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/repos/pages/#request-a-github-pages-build"
+      href="/en/free-pro-team@latest/rest/reference/repos#request-a-github-pages-build"
       ><code>POST /repos/:owner/:repo/pages/builds</code></a
     >
     (:write)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/pages/#get-github-pages-build"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos#get-github-pages-build"
       ><code>GET /repos/:owner/:repo/pages/builds/:build_id</code></a
     >
     (:read)
   </li>
   <li>
-    <a href="/en/free-pro-team@latest/v3/repos/pages/#get-latest-pages-build"
+    <a
+      href="/en/free-pro-team@latest/rest/reference/repos#get-latest-pages-build"
       ><code>GET /repos/:owner/:repo/pages/builds/latest</code></a
     >
     (:read)
@@ -4337,21 +4346,21 @@
 <ul>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/starring/#check-if-a-repository-is-starred-by-the-authenticated-user"
+      href="/en/free-pro-team@latest/rest/reference/activity#check-if-a-repository-is-starred-by-the-authenticated-user"
       ><code>GET /user/starred/:owner/:repo</code></a
     >
     (:read)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/starring/#star-a-repository-for-the-authenticated-user"
+      href="/en/free-pro-team@latest/rest/reference/activity#star-a-repository-for-the-authenticated-user"
       ><code>PUT /user/starred/:owner/:repo</code></a
     >
     (:write)
   </li>
   <li>
     <a
-      href="/en/free-pro-team@latest/v3/activity/starring/#unstar-a-repository-for-the-authenticated-user"
+      href="/en/free-pro-team@latest/rest/reference/activity#unstar-a-repository-for-the-authenticated-user"
       ><code>DELETE /user/starred/:owner/:repo</code></a
     >
     (:write)
