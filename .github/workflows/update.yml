@@ -28,6 +28,7 @@ jobs:
           author: "Octokit Bot <octokitbot@martynus.net>"
           path: "cache/"
           commit-message: "build: cache"
+          labels: "maintenance"
       - name: update generated app permissions
         uses: gr2m/create-or-update-pull-request-action@v1.x
         env:
@@ -37,3 +38,4 @@ jobs:
           author: "Octokit Bot <octokitbot@martynus.net>"
           path: "generated/"
           commit-message: "WIP: app permissions update"
+          labels: "maintenance"
