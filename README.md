@@ -44,6 +44,12 @@ console.log(`"issues" write access paths: %o`, issuesPermission.write);
 
 All generated JSON files are uploaded as assets to each [GitHub release](https://github.com/octokit/app-permissions/releases)
 
+## See also
+
+- [octokit/graphql-schema](https://github.com/octokit/graphql-schema) – GitHub’s GraphQL Schema with validation
+- [octokit/openapi](https://github.com/octokit/openapi) – GitHub REST API route specifications
+- [octokit/webhooks](https://github.com/octokit/webhooks) – GitHub Webhooks specifications
+
 ## License
 
 [MIT](LICENSE)
