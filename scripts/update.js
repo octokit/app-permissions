@@ -6,7 +6,7 @@ const minimist = require("minimist");
 const prettier = require("prettier");
 
 const PERMISSIONS_DOCUMENTATION_URL =
-  "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/";
+  "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
 const CACHE_FILE_PATH = "cache/api.github.com.html";
 const GENERATED_JSON_FILE_PATH = "generated/api.github.com.json";
 const DOCUMENTED_BASE_URL = "https://docs.github.com";
