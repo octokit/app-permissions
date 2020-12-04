@@ -652,6 +652,16 @@
         "PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}"
       ]
     },
+    "secret_scanning alerts": {
+      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-secret-scanning-alerts",
+      "read": [
+        "GET /repos/{owner}/{repo}/secret-scanning/alerts",
+        "GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"
+      ],
+      "write": [
+        "PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"
+      ]
+    },
     "security_events": {
       "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
       "read": [
@@ -1652,6 +1662,13 @@
     "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}": {
       "PUT": { "permission": "secrets", "access": "write" },
       "DELETE": { "permission": "secrets", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/secret-scanning/alerts": {
+      "GET": { "permission": "secret_scanning alerts", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}": {
+      "GET": { "permission": "secret_scanning alerts", "access": "read" },
+      "PATCH": { "permission": "secret_scanning alerts", "access": "write" }
     },
     "/repos/{owner}/{repo}/code-scanning/alerts": {
       "GET": { "permission": "security_events", "access": "read" }
