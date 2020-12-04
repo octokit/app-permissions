@@ -154,7 +154,7 @@ function toPermissionName(text) {
 
   const title = text.match(/"([^"]+)"/).pop();
 
-  return title.toLowerCase().replace(/\s+/, "_");
+  return title.toLowerCase().replace(/\W/g, "_");
 }
 
 function toPermissionsObject(paths) {

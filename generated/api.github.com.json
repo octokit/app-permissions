@@ -1,7 +1,7 @@
 {
   "permissions": {
     "meta": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#metadata-permissions",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#metadata-permissions",
       "read": [
         "GET /",
         "GET /codes_of_conduct",
@@ -78,7 +78,7 @@
       "write": []
     },
     "actions": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-actions",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-actions",
       "read": [
         "GET /repos/{owner}/{repo}/actions/artifacts",
         "GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}",
@@ -102,7 +102,7 @@
       ]
     },
     "administration": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-administration",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-administration",
       "read": [
         "GET /repos/{owner}/{repo}/actions/runners",
         "GET /repos/{owner}/{repo}/actions/runners/downloads",
@@ -176,12 +176,12 @@
       ]
     },
     "blocking": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-blocking",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-blocking",
       "read": ["GET /user/blocks", "GET /user/blocks/{username}"],
       "write": ["DELETE /user/blocks/{username}", "PUT /user/blocks/{username}"]
     },
     "checks": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-checks",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-checks",
       "read": [
         "GET /repos/{owner}/{repo}/check-runs/{check_run_id}",
         "GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations",
@@ -199,7 +199,7 @@
       ]
     },
     "contents": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-contents",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-contents",
       "read": [
         "GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}",
         "GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip",
@@ -294,7 +294,7 @@
       ]
     },
     "deployments": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-deployments",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-deployments",
       "read": [
         "GET /repos/{owner}/{repo}/deployments",
         "GET /repos/{owner}/{repo}/deployments/{deployment_id}",
@@ -308,7 +308,7 @@
       ]
     },
     "emails": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-emails",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-emails",
       "read": ["GET /user/emails", "GET /user/public_emails"],
       "write": [
         "DELETE /user/emails",
@@ -317,7 +317,7 @@
       ]
     },
     "followers": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-followers",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-followers",
       "read": [
         "GET /user/followers",
         "GET /user/following",
@@ -329,12 +329,12 @@
       ]
     },
     "gpg_keys": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-gpg-keys",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-gpg-keys",
       "read": ["GET /user/gpg_keys", "GET /user/gpg_keys/{gpg_key_id}"],
       "write": ["DELETE /user/gpg_keys/{gpg_key_id}", "POST /user/gpg_keys"]
     },
     "issues": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-issues",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-issues",
       "read": [
         "GET /repos/{owner}/{repo}/assignees",
         "GET /repos/{owner}/{repo}/assignees/{username}",
@@ -391,12 +391,12 @@
       ]
     },
     "keys": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-keys",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-keys",
       "read": ["GET /user/keys", "GET /user/keys/{key_id}"],
       "write": ["DELETE /user/keys/{key_id}", "POST /user/keys"]
     },
     "members": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-members",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-members",
       "read": [
         "DELETE /teams/{team_id}/projects/{project_id}",
         "GET /orgs/{org}/invitations",
@@ -447,7 +447,7 @@
       ]
     },
     "organization_administration": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-organization-administration",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-administration",
       "read": ["GET /orgs/{org}/interaction-limits"],
       "write": [
         "DELETE /orgs/{org}/interaction-limits",
@@ -456,7 +456,7 @@
       ]
     },
     "organization_hooks": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-organization-hooks",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-hooks",
       "read": [
         "DELETE /teams/{team_id}/projects/{project_id}",
         "GET /orgs/{org}/hooks",
@@ -470,7 +470,7 @@
       ]
     },
     "organization_projects": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-organization-projects",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-projects",
       "read": [
         "GET /projects/columns/cards/{card_id}",
         "GET /projects/columns/{column_id}",
@@ -493,8 +493,8 @@
         "POST /projects/{project_id}/columns"
       ]
     },
-    "organization_user blocking": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-organization-user-blocking",
+    "organization_user_blocking": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-user-blocking",
       "read": ["GET /orgs/{org}/blocks", "GET /orgs/{org}/blocks/{username}"],
       "write": [
         "DELETE /orgs/{org}/blocks/{username}",
@@ -502,7 +502,7 @@
       ]
     },
     "pages": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-pages",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-pages",
       "read": [
         "GET /repos/{owner}/{repo}/pages",
         "GET /repos/{owner}/{repo}/pages/builds",
@@ -517,7 +517,7 @@
       ]
     },
     "pull_requests": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-pull-requests",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-pull-requests",
       "read": [
         "GET /repos/{owner}/{repo}/assignees",
         "GET /repos/{owner}/{repo}/assignees/{username}",
@@ -592,7 +592,7 @@
       ]
     },
     "repository_hooks": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-repository-hooks",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-repository-hooks",
       "read": [
         "GET /repos/{owner}/{repo}/hooks",
         "GET /repos/{owner}/{repo}/hooks/{hook_id}",
@@ -606,7 +606,7 @@
       ]
     },
     "repository_projects": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-repository-projects",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-repository-projects",
       "read": [
         "DELETE /teams/{team_id}/projects/{project_id}",
         "GET /projects/columns/cards/{card_id}",
@@ -632,7 +632,7 @@
       ]
     },
     "secrets": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-secrets",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-secrets",
       "read": [
         "GET /orgs/{org}/actions/secrets",
         "GET /orgs/{org}/actions/secrets/public-key",
@@ -652,8 +652,8 @@
         "PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}"
       ]
     },
-    "secret_scanning alerts": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-secret-scanning-alerts",
+    "secret_scanning_alerts": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-secret-scanning-alerts",
       "read": [
         "GET /repos/{owner}/{repo}/secret-scanning/alerts",
         "GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"
@@ -663,15 +663,15 @@
       ]
     },
     "security_events": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
       "read": [
         "GET /repos/{owner}/{repo}/code-scanning/alerts",
         "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}"
       ],
       "write": []
     },
-    "self-hosted_runners": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-self-hosted-runners",
+    "self_hosted_runners": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-self-hosted-runners",
       "read": [
         "GET /orgs/{org}/actions/runners",
         "GET /orgs/{org}/actions/runners/downloads",
@@ -684,7 +684,7 @@
       ]
     },
     "single_file": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-single-file",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-single-file",
       "read": ["GET /repos/{owner}/{repo}/contents/{path}"],
       "write": [
         "DELETE /repos/{owner}/{repo}/contents/{path}",
@@ -692,7 +692,7 @@
       ]
     },
     "starring": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-starring",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-starring",
       "read": ["GET /user/starred/{owner}/{repo}"],
       "write": [
         "DELETE /user/starred/{owner}/{repo}",
@@ -700,7 +700,7 @@
       ]
     },
     "statuses": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-statuses",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-statuses",
       "read": [
         "GET /repos/{owner}/{repo}/commits/{ref}/status",
         "GET /repos/{owner}/{repo}/commits/{ref}/statuses"
@@ -708,7 +708,7 @@
       "write": ["POST /repos/{owner}/{repo}/statuses/{sha}"]
     },
     "team_discussions": {
-      "url": "https://docs.github.com/en/rest/reference/permissions-required-for-github-apps/#permission-on-team-discussions",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-team-discussions",
       "read": [
         "GET /teams/{team_id}/discussions",
         "GET /teams/{team_id}/discussions/{discussion_number}",
@@ -1541,13 +1541,13 @@
       "POST": { "permission": "repository_projects", "access": "write" }
     },
     "/orgs/{org}/blocks": {
-      "GET": { "permission": "organization_user blocking", "access": "read" }
+      "GET": { "permission": "organization_user_blocking", "access": "read" }
     },
     "/orgs/{org}/blocks/{username}": {
-      "GET": { "permission": "organization_user blocking", "access": "read" },
-      "PUT": { "permission": "organization_user blocking", "access": "write" },
+      "GET": { "permission": "organization_user_blocking", "access": "read" },
+      "PUT": { "permission": "organization_user_blocking", "access": "write" },
       "DELETE": {
-        "permission": "organization_user blocking",
+        "permission": "organization_user_blocking",
         "access": "write"
       }
     },
@@ -1664,11 +1664,11 @@
       "DELETE": { "permission": "secrets", "access": "write" }
     },
     "/repos/{owner}/{repo}/secret-scanning/alerts": {
-      "GET": { "permission": "secret_scanning alerts", "access": "read" }
+      "GET": { "permission": "secret_scanning_alerts", "access": "read" }
     },
     "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}": {
-      "GET": { "permission": "secret_scanning alerts", "access": "read" },
-      "PATCH": { "permission": "secret_scanning alerts", "access": "write" }
+      "GET": { "permission": "secret_scanning_alerts", "access": "read" },
+      "PATCH": { "permission": "secret_scanning_alerts", "access": "write" }
     },
     "/repos/{owner}/{repo}/code-scanning/alerts": {
       "GET": { "permission": "security_events", "access": "read" }
@@ -1677,20 +1677,20 @@
       "GET": { "permission": "security_events", "access": "read" }
     },
     "/orgs/{org}/actions/runners/downloads": {
-      "GET": { "permission": "self-hosted_runners", "access": "read" }
+      "GET": { "permission": "self_hosted_runners", "access": "read" }
     },
     "/orgs/{org}/actions/runners/registration-token": {
-      "POST": { "permission": "self-hosted_runners", "access": "write" }
+      "POST": { "permission": "self_hosted_runners", "access": "write" }
     },
     "/orgs/{org}/actions/runners": {
-      "GET": { "permission": "self-hosted_runners", "access": "read" }
+      "GET": { "permission": "self_hosted_runners", "access": "read" }
     },
     "/orgs/{org}/actions/runners/{runner_id}": {
-      "GET": { "permission": "self-hosted_runners", "access": "read" },
-      "DELETE": { "permission": "self-hosted_runners", "access": "write" }
+      "GET": { "permission": "self_hosted_runners", "access": "read" },
+      "DELETE": { "permission": "self_hosted_runners", "access": "write" }
     },
     "/orgs/{org}/actions/runners/remove-token": {
-      "POST": { "permission": "self-hosted_runners", "access": "write" }
+      "POST": { "permission": "self_hosted_runners", "access": "write" }
     },
     "/user/starred/{owner}/{repo}": {
       "GET": { "permission": "starring", "access": "read" },
