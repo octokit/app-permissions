@@ -124,27 +124,7 @@ function getAccess(text, accessString) {
 }
 
 function normalize(rawText) {
-  let text = rawText.replace(/\s+ /g, " ").trim();
-
-  // workaround bugs in documentation
-  // NOTE: remove once obsolete
-  if (
-    text === "Get GET /repos/:owner/:repo/actions/runners/downloads (:read)"
-  ) {
-    return "GET /repos/:owner/:repo/actions/runners/downloads (:read)";
-  }
-
-  if (
-    text === "POST /repos/:owner/:repo/actions/runners/remove-token (:write)git"
-  ) {
-    return "POST /repos/:owner/:repo/actions/runners/remove-token (:write)";
-  }
-
-  if (text === "Get an issue event (:read)") {
-    return "GET /repos/:owner/:repo/issues/events/:event_id (:read)";
-  }
-
-  return text;
+  return rawText.replace(/\s+ /g, " ").trim();
 }
 
 function toPermissionName(text) {
