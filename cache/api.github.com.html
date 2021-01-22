@@ -802,257 +802,324 @@
 <p><em>Branches</em></p>
 <ul>
   <li>
-    <a href="/en/rest/reference/repos#get-branch-protection"
-      ><code>GET /repos/:owner/:repo/branches/:branch/protection</code></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-branch-protection"
+        ><code>GET /repos/:owner/:repo/branches/:branch/protection</code></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#update-branch-protection"
-      ><code>PUT /repos/:owner/:repo/branches/:branch/protection</code></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#update-branch-protection"
+        ><code>PUT /repos/:owner/:repo/branches/:branch/protection</code></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#delete-branch-protection"
-      ><code>DELETE /repos/:owner/:repo/branches/:branch/protection</code></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#delete-branch-protection"
+        ><code>DELETE /repos/:owner/:repo/branches/:branch/protection</code></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-admin-branch-protection"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-admin-branch-protection"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#set-admin-branch-protection"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#set-admin-branch-protection"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#delete-admin-branch-protection"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#delete-admin-branch-protection"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-pull-request-review-protection"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-pull-request-review-protection"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#update-pull-request-review-protection"
-      ><code
-        >PATCH
-        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#update-pull-request-review-protection"
+        ><code
+          >PATCH
+          /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#delete-pull-request-review-protection"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#delete-pull-request-review-protection"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-commit-signature-protection"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-commit-signature-protection"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#create-commit-signature-protection"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#create-commit-signature-protection"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#delete-commit-signature-protection"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#delete-commit-signature-protection"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-status-checks-protection"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-status-checks-protection"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#update-status-check-protection"
-      ><code
-        >PATCH
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#update-status-check-protection"
+        ><code
+          >PATCH
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#remove-status-check-protection"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#remove-status-check-protection"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-all-status-check-contexts"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-all-status-check-contexts"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#add-status-check-contexts"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#add-status-check-contexts"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#set-status-check-contexts"
-      ><code
-        >PUT
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#set-status-check-contexts"
+        ><code
+          >PUT
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#remove-status-check-contexts"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#remove-status-check-contexts"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-access-restrictions"
-      ><code
-        >GET /repos/:owner/:repo/branches/:branch/protection/restrictions</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-access-restrictions"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/restrictions</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#delete-access-restrictions"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/restrictions</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#delete-access-restrictions"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/restrictions</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a
-      href="/en/rest/reference/repos#list-teams-with-access-to-the-protected-branch"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a
+        href="/en/rest/reference/repos#list-teams-with-access-to-the-protected-branch"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#add-team-access-restrictions"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#add-team-access-restrictions"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#set-team-access-restrictions"
-      ><code
-        >PUT
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#set-team-access-restrictions"
+        ><code
+          >PUT
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#remove-team-access-restrictions"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#remove-team-access-restrictions"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a
-      href="/en/rest/reference/repos#list-users-with-access-to-the-protected-branch"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
-      ></a
-    >
-    (:read)
+    <p>
+      <a
+        href="/en/rest/reference/repos#list-users-with-access-to-the-protected-branch"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#add-user-access-restrictions"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#add-user-access-restrictions"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#set-user-access-restrictions"
-      ><code
-        >PUT
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#set-user-access-restrictions"
+        ><code
+          >PUT
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#remove-user-access-restrictions"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#remove-user-access-restrictions"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/rest/reference/repos#rename-a-branch"
+        ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
+      >
+      (:write)
+    </p>
   </li>
 </ul>
 <p><em>Collaborators</em></p>
@@ -1608,53 +1675,73 @@
 <p><em>Branches</em></p>
 <ul>
   <li>
-    <a href="/en/rest/reference/repos#list-branches"
-      ><code>GET /repos/:owner/:repo/branches</code></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#list-branches"
+        ><code>GET /repos/:owner/:repo/branches</code></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#get-a-branch"
-      ><code>GET /repos/:owner/:repo/branches/:branch</code></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/repos#get-a-branch"
+        ><code>GET /repos/:owner/:repo/branches/:branch</code></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a
-      href="/en/rest/reference/repos#list-apps-with-access-to-the-protected-branch"
-      ><code
-        >GET
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a
+        href="/en/rest/reference/repos#list-apps-with-access-to-the-protected-branch"
+        ><code
+          >GET
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#add-app-access-restrictions"
-      ><code
-        >POST
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#add-app-access-restrictions"
+        ><code
+          >POST
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#set-app-access-restrictions"
-      ><code
-        >PUT
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#set-app-access-restrictions"
+        ><code
+          >PUT
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/repos#remove-user-access-restrictions"
-      ><code
-        >DELETE
-        /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
-      ></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/repos#remove-user-access-restrictions"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/rest/reference/repos#rename-a-branch"
+        ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
+      >
+      (:write)
+    </p>
   </li>
 </ul>
 <p><em>Commit comments</em></p>
