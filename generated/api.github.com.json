@@ -668,9 +668,13 @@
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
       "read": [
         "GET /repos/{owner}/{repo}/code-scanning/alerts",
-        "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}"
+        "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}",
+        "GET /repos/{owner}/{repo}/code-scanning/analyses"
       ],
-      "write": []
+      "write": [
+        "PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}",
+        "POST /repos/{owner}/{repo}/code-scanning/sarifs"
+      ]
     },
     "self_hosted_runners": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-self-hosted-runners",
@@ -1679,7 +1683,14 @@
       "GET": { "permission": "security_events", "access": "read" }
     },
     "/repos/{owner}/{repo}/code-scanning/alerts/{alert_id}": {
+      "GET": { "permission": "security_events", "access": "read" },
+      "PATCH": { "permission": "security_events", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/code-scanning/analyses": {
       "GET": { "permission": "security_events", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/code-scanning/sarifs": {
+      "POST": { "permission": "security_events", "access": "write" }
     },
     "/orgs/{org}/actions/runners/downloads": {
       "GET": { "permission": "self_hosted_runners", "access": "read" }
