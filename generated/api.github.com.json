@@ -668,11 +668,15 @@
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
       "read": [
         "GET /repos/{owner}/{repo}/code-scanning/alerts",
-        "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}",
-        "GET /repos/{owner}/{repo}/code-scanning/analyses"
+        "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}",
+        "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances",
+        "GET /repos/{owner}/{repo}/code-scanning/analyses",
+        "GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}",
+        "GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}"
       ],
       "write": [
-        "PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_id}",
+        "DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}",
+        "PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}",
         "POST /repos/{owner}/{repo}/code-scanning/sarifs"
       ]
     },
@@ -1682,15 +1686,25 @@
     "/repos/{owner}/{repo}/code-scanning/alerts": {
       "GET": { "permission": "security_events", "access": "read" }
     },
-    "/repos/{owner}/{repo}/code-scanning/alerts/{alert_id}": {
+    "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}": {
       "GET": { "permission": "security_events", "access": "read" },
       "PATCH": { "permission": "security_events", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances": {
+      "GET": { "permission": "security_events", "access": "read" }
     },
     "/repos/{owner}/{repo}/code-scanning/analyses": {
       "GET": { "permission": "security_events", "access": "read" }
     },
+    "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}": {
+      "GET": { "permission": "security_events", "access": "read" },
+      "DELETE": { "permission": "security_events", "access": "write" }
+    },
     "/repos/{owner}/{repo}/code-scanning/sarifs": {
       "POST": { "permission": "security_events", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}": {
+      "GET": { "permission": "security_events", "access": "read" }
     },
     "/orgs/{org}/actions/runners/downloads": {
       "GET": { "permission": "self_hosted_runners", "access": "read" }
