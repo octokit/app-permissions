@@ -4103,36 +4103,93 @@
 </h3>
 <ul>
   <li>
-    <a
-      href="/en/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository"
-      ><code>GET /repos/:owner/:repo/code-scanning/alerts</code></a
-    >
-    (:read)
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository"
+        ><code>GET /repos/:owner/:repo/code-scanning/alerts</code></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/code-scanning#get-a-code-scanning-alert"
-      ><code>GET /repos/:owner/:repo/code-scanning/alerts/:alert_id</code></a
-    >
-    (:read)
+    <p>
+      <a href="/en/rest/reference/code-scanning#get-a-code-scanning-alert"
+        ><code
+          >GET /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/code-scanning#update-a-code-scanning-alert"
-      ><code>PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_id</code></a
-    >
-    (:write)
+    <p>
+      <a href="/en/rest/reference/code-scanning#update-a-code-scanning-alert"
+        ><code
+          >PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
+        ></a
+      >
+      (:write)
+    </p>
   </li>
   <li>
-    <a
-      href="/en/rest/reference/code-scanning#list-recent-code-scanning-analyses-for-a-repository"
-      ><code>GET /repos/:owner/:repo/code-scanning/analyses</code></a
-    >
-    (:read)
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert"
+        ><code
+          >GET
+          /repos/:owner/:repo/code-scanning/alerts/:alert_number/instances</code
+        ></a
+      >
+      (:read)
+    </p>
   </li>
   <li>
-    <a href="/en/rest/reference/code-scanning#upload-a-sarif-file"
-      ><code>POST /repos/:owner/:repo/code-scanning/sarifs</code></a
-    >
-    (:write)
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository"
+        ><code>GET /repos/:owner/:repo/code-scanning/analyses</code></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository"
+        ><code
+          >GET /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
+        ></a
+      >
+      (:read)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository"
+        ><code
+          >DELETE /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
+        ></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/en/rest/reference/code-scanning#upload-a-sarif-file"
+        ><code>POST /repos/:owner/:repo/code-scanning/sarifs</code></a
+      >
+      (:write)
+    </p>
+  </li>
+  <li>
+    <p>
+      <a
+        href="/en/rest/reference/code-scanning#get-information-about-a-sarif-upload"
+        ><code>GET /repos/:owner/:repo/code-scanning/sarifs/:sarif_id</code></a
+      >
+      (:read)
+    </p>
   </li>
 </ul>
 <h3 id="permission-on-self-hosted-runners">
