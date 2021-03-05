@@ -12,7 +12,7 @@
     "pretest": "npm run -s lint",
     "test": "node test/smoke-test.js"
   },
-  "repository": "https://github.com/octokit/app-permissions",
+  "repository": "github:octokit/app-permissions",
   "keywords": [
     "github app"
   ],
