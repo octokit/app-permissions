@@ -146,6 +146,7 @@
         "DELETE /repos/{owner}/{repo}/vulnerability-alerts",
         "DELETE /teams/{team_id}/repos/{owner}/{repo}",
         "DELETE /user/repository_invitations/{invitation_id}",
+        "GET /repos/{owner}/{repo}/pages/health",
         "GET /repos/{owner}/{repo}/vulnerability-alerts",
         "PATCH /repos/{owner}/{repo}",
         "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
@@ -513,6 +514,7 @@
       ],
       "write": [
         "DELETE /repos/{owner}/{repo}/pages",
+        "GET /repos/{owner}/{repo}/pages/health",
         "POST /repos/{owner}/{repo}/pages",
         "POST /repos/{owner}/{repo}/pages/builds",
         "PUT /repos/{owner}/{repo}/pages"
@@ -995,6 +997,9 @@
       "GET": { "permission": "administration", "access": "read" },
       "PUT": { "permission": "administration", "access": "write" },
       "DELETE": { "permission": "administration", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/pages/health": {
+      "GET": { "permission": "pages", "access": "write" }
     },
     "/repos/{owner}/{repo}/transfer": {
       "POST": { "permission": "administration", "access": "write" }
