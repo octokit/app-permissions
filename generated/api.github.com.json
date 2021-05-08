@@ -97,6 +97,7 @@
       "write": [
         "DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}",
         "DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs",
+        "POST /repos/{owner}/{repo}/actions/runs/{run_id}/approve",
         "POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel",
         "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
       ]
@@ -595,6 +596,11 @@
         "PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals"
       ]
     },
+    "profile": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-profile",
+      "read": [],
+      "write": ["PATCH /user"]
+    },
     "repository_hooks": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-repository-hooks",
       "read": [
@@ -947,6 +953,9 @@
     },
     "/repos/{owner}/{repo}/actions/runs/{run_id}": {
       "GET": { "permission": "contents", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/actions/runs/{run_id}/approve": {
+      "POST": { "permission": "actions", "access": "write" }
     },
     "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts": {
       "GET": { "permission": "contents", "access": "read" }
@@ -1638,6 +1647,7 @@
     "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals": {
       "PUT": { "permission": "pull_requests", "access": "write" }
     },
+    "/user": { "PATCH": { "permission": "profile", "access": "write" } },
     "/repos/{owner}/{repo}/hooks": {
       "GET": { "permission": "repository_hooks", "access": "read" },
       "POST": { "permission": "repository_hooks", "access": "write" }
