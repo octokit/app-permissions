@@ -35,6 +35,7 @@
         "GET /repos/{owner}/{repo}/community/profile",
         "GET /repos/{owner}/{repo}/contributors",
         "GET /repos/{owner}/{repo}/events",
+        "GET /repos/{owner}/{repo}/events/issues",
         "GET /repos/{owner}/{repo}/forks",
         "GET /repos/{owner}/{repo}/languages",
         "GET /repos/{owner}/{repo}/license",
@@ -336,6 +337,14 @@
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-gpg-keys",
       "read": ["GET /user/gpg_keys", "GET /user/gpg_keys/{gpg_key_id}"],
       "write": ["DELETE /user/gpg_keys/{gpg_key_id}", "POST /user/gpg_keys"]
+    },
+    "interaction_limits": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-interaction-limits",
+      "read": ["GET /user/interaction-limits"],
+      "write": [
+        "DELETE /user/interaction-limits",
+        "PUT /user/interaction-limits"
+      ]
     },
     "issues": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-issues",
@@ -893,6 +902,9 @@
     "/repos/{owner}/{repo}/events": {
       "GET": { "permission": "meta", "access": "read" }
     },
+    "/repos/{owner}/{repo}/events/issues": {
+      "GET": { "permission": "meta", "access": "read" }
+    },
     "/users/{username}/events": {
       "GET": { "permission": "meta", "access": "read" }
     },
@@ -1343,6 +1355,11 @@
     "/user/gpg_keys/{gpg_key_id}": {
       "GET": { "permission": "gpg_keys", "access": "read" },
       "DELETE": { "permission": "gpg_keys", "access": "write" }
+    },
+    "/user/interaction-limits": {
+      "GET": { "permission": "interaction_limits", "access": "read" },
+      "PUT": { "permission": "interaction_limits", "access": "write" },
+      "DELETE": { "permission": "interaction_limits", "access": "write" }
     },
     "/repos/{owner}/{repo}/issues": {
       "GET": { "permission": "issues", "access": "read" },
