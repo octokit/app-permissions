@@ -468,6 +468,11 @@
         "PUT /orgs/{org}/interaction-limits"
       ]
     },
+    "organization_events": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-events",
+      "read": ["GET /users/{username}/events/orgs/{org}"],
+      "write": []
+    },
     "organization_hooks": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-hooks",
       "read": [
@@ -1539,6 +1544,9 @@
         "permission": "organization_administration",
         "access": "write"
       }
+    },
+    "/users/{username}/events/orgs/{org}": {
+      "GET": { "permission": "organization_events", "access": "read" }
     },
     "/orgs/{org}/hooks": {
       "GET": { "permission": "organization_hooks", "access": "read" },
