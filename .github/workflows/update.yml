@@ -14,6 +14,7 @@ jobs:
       - run: npm ci
       - name: update
         run: node scripts/update
+        run: git status
       - name: update cache
         uses: gr2m/create-or-update-pull-request-action@v1.x
         env:
@@ -26,7 +27,7 @@ jobs:
             I can't tell if the changes include fixes, features, breaking changes or just cache updates, you'll have to figure that out on yourself and adapt the commit messages accordingly to trigger the right release, see [our commit message conventions](https://github.com/octokit/openapi/blob/main/CONTRIBUTING.md#merging-the-pull-request--releasing-a-new-version).
           branch: "update"
           author: "Octokit Bot <octokitbot@martynus.net>"
-          path: "cache/"
+          path: "cache"
           commit-message: "build: cache"
           labels: "maintenance"
       - name: update generated app permissions
