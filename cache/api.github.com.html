@@ -658,6 +658,52 @@
     </li>
     <li>
       <a
+        href="/en/rest/reference/actions#list-labels-for-a-self-hosted-runner-for-a-repository"
+        ><code
+          >GET /repos/:owner/:repo/actions/runners/:runner_id/labels</code
+        ></a
+      >
+      (:read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#add-custom-labels-to-a-self-hosted-runner-for-a-repository"
+        ><code
+          >POST /repos/:owner/:repo/actions/runners/:runner_id/labels</code
+        ></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#set-custom-labels-for-a-self-hosted-runner-for-a-repository"
+        ><code
+          >PUT /repos/:owner/:repo/actions/runners/:runner_id/labels</code
+        ></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-all-custom-labels-from-a-self-hosted-runner-for-a-repository"
+        ><code
+          >DELETE /repos/:owner/:repo/actions/runners/:runner_id/labels</code
+        ></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-a-custom-label-from-a-self-hosted-runner-for-a-repository"
+        ><code
+          >DELETE
+          /repos/:owner/:repo/actions/runners/:runner_id/labels/:name</code
+        ></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
         href="/en/rest/reference/actions#create-a-registration-token-for-a-repository"
         ><code
           >POST /repos/:owner/:repo/actions/runners/registration-token</code
@@ -4442,6 +4488,43 @@
       <a
         href="/en/rest/reference/actions#delete-a-self-hosted-runner-from-an-organization"
         ><code>DELETE /orgs/:org/actions/runners/:runner_id</code></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#list-labels-for-a-self-hosted-runner-for-an-organization"
+        ><code>GET /orgs/:org/actions/runners/:runner_id/labels</code></a
+      >
+      (:read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#add-custom-labels-to-a-self-hosted-runner-for-an-organization"
+        ><code>POST /orgs/:org/actions/runners/:runner_id/labels</code></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#set-custom-labels-for-a-self-hosted-runner-for-an-organization"
+        ><code>PUT /orgs/:org/actions/runners/:runner_id/labels</code></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-all-custom-labels-from-a-self-hosted-runner-for-an-organization"
+        ><code>DELETE /orgs/:org/actions/runners/:runner_id/labels</code></a
+      >
+      (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-a-custom-label-from-a-self-hosted-runner-for-an-organization"
+        ><code
+          >DELETE /orgs/:org/actions/runners/:runner_id/labels/:name</code
+        ></a
       >
       (:write)
     </li>
