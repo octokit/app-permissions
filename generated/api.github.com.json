@@ -109,6 +109,7 @@
         "GET /repos/{owner}/{repo}/actions/runners",
         "GET /repos/{owner}/{repo}/actions/runners/downloads",
         "GET /repos/{owner}/{repo}/actions/runners/{runner_id}",
+        "GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
         "GET /repos/{owner}/{repo}/branches/{branch}/protection",
         "GET /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
         "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
@@ -131,6 +132,8 @@
       "write": [
         "DELETE /repos/{owner}/{repo}",
         "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}",
+        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}",
         "DELETE /repos/{owner}/{repo}/automated-security-fixes",
         "DELETE /repos/{owner}/{repo}/branches/{branch}/protection",
         "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
@@ -158,6 +161,7 @@
         "POST /orgs/{org}/repos",
         "POST /repos/{owner}/{repo}/actions/runners/registration-token",
         "POST /repos/{owner}/{repo}/actions/runners/remove-token",
+        "POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
         "POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
         "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
         "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
@@ -167,6 +171,7 @@
         "POST /repos/{owner}/{repo}/forks",
         "POST /repos/{owner}/{repo}/keys",
         "POST /repos/{owner}/{repo}/transfer",
+        "PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
         "PUT /repos/{owner}/{repo}/automated-security-fixes",
         "PUT /repos/{owner}/{repo}/branches/{branch}/protection",
         "PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
@@ -707,12 +712,17 @@
       "read": [
         "GET /orgs/{org}/actions/runners",
         "GET /orgs/{org}/actions/runners/downloads",
-        "GET /orgs/{org}/actions/runners/{runner_id}"
+        "GET /orgs/{org}/actions/runners/{runner_id}",
+        "GET /orgs/{org}/actions/runners/{runner_id}/labels"
       ],
       "write": [
         "DELETE /orgs/{org}/actions/runners/{runner_id}",
+        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels",
+        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}",
         "POST /orgs/{org}/actions/runners/registration-token",
-        "POST /orgs/{org}/actions/runners/remove-token"
+        "POST /orgs/{org}/actions/runners/remove-token",
+        "POST /orgs/{org}/actions/runners/{runner_id}/labels",
+        "PUT /orgs/{org}/actions/runners/{runner_id}/labels"
       ]
     },
     "single_file": {
@@ -1007,6 +1017,15 @@
     },
     "/repos/{owner}/{repo}/actions/runners/{runner_id}": {
       "GET": { "permission": "administration", "access": "read" },
+      "DELETE": { "permission": "administration", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels": {
+      "GET": { "permission": "administration", "access": "read" },
+      "POST": { "permission": "administration", "access": "write" },
+      "PUT": { "permission": "administration", "access": "write" },
+      "DELETE": { "permission": "administration", "access": "write" }
+    },
+    "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}": {
       "DELETE": { "permission": "administration", "access": "write" }
     },
     "/repos/{owner}/{repo}/actions/runners/registration-token": {
@@ -1761,6 +1780,15 @@
     },
     "/orgs/{org}/actions/runners/remove-token": {
       "POST": { "permission": "self_hosted_runners", "access": "write" }
+    },
+    "/orgs/{org}/actions/runners/{runner_id}/labels": {
+      "GET": { "permission": "self_hosted_runners", "access": "read" },
+      "POST": { "permission": "self_hosted_runners", "access": "write" },
+      "PUT": { "permission": "self_hosted_runners", "access": "write" },
+      "DELETE": { "permission": "self_hosted_runners", "access": "write" }
+    },
+    "/orgs/{org}/actions/runners/{runner_id}/labels/{name}": {
+      "DELETE": { "permission": "self_hosted_runners", "access": "write" }
     },
     "/user/starred/{owner}/{repo}": {
       "GET": { "permission": "starring", "access": "read" },
