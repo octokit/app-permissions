@@ -141,7 +141,8 @@
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-community-profile-metrics"
+      <a
+        href="/en/rest/reference/repository-metrics#get-community-profile-metrics"
         ><code>GET /repos/:owner/:repo/community/profile</code></a
       >
     </li>
@@ -171,28 +172,32 @@
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-the-weekly-commit-activity"
+      <a
+        href="/en/rest/reference/repository-metrics#get-the-weekly-commit-activity"
         ><code>GET /repos/:owner/:repo/stats/code_frequency</code></a
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-the-last-year-of-commit-activity"
+      <a
+        href="/en/rest/reference/repository-metrics#get-the-last-year-of-commit-activity"
         ><code>GET /repos/:owner/:repo/stats/commit_activity</code></a
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-all-contributor-commit-activity"
+      <a
+        href="/en/rest/reference/repository-metrics#get-all-contributor-commit-activity"
         ><code>GET /repos/:owner/:repo/stats/contributors</code></a
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-the-weekly-commit-count"
+      <a
+        href="/en/rest/reference/repository-metrics#get-the-weekly-commit-count"
         ><code>GET /repos/:owner/:repo/stats/participation</code></a
       >
     </li>
     <li>
       <a
-        href="/en/rest/reference/repos#get-the-hourly-commit-count-for-each-day"
+        href="/en/rest/reference/repository-metrics#get-the-hourly-commit-count-for-each-day"
         ><code>GET /repos/:owner/:repo/stats/punch_card</code></a
       >
     </li>
@@ -291,13 +296,13 @@
   <p><em>Collaborators</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-repository-collaborators"
+      <a href="/en/rest/reference/collaborators#list-repository-collaborators"
         ><code>GET /repos/:owner/:repo/collaborators</code></a
       >
     </li>
     <li>
       <a
-        href="/en/rest/reference/repos#check-if-a-user-is-a-repository-collaborator"
+        href="/en/rest/reference/collaborators#check-if-a-user-is-a-repository-collaborator"
         ><code>GET /repos/:owner/:repo/collaborators/:username</code></a
       >
     </li>
@@ -305,12 +310,12 @@
   <p><em>Commit comments</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-commit-comments-for-a-repository"
+      <a href="/en/rest/reference/commits#list-commit-comments-for-a-repository"
         ><code>GET /repos/:owner/:repo/comments</code></a
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-commit-comment"
+      <a href="/en/rest/reference/commits#get-a-commit-comment"
         ><code>GET /repos/:owner/:repo/comments/:comment_id</code></a
       >
     </li>
@@ -320,7 +325,7 @@
       >
     </li>
     <li>
-      <a href="/en/rest/reference/repos#list-commit-comments"
+      <a href="/en/rest/reference/commits#list-commit-comments"
         ><code>GET /repos/:owner/:repo/commits/:sha/comments</code></a
       >
     </li>
@@ -758,7 +763,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-dns-health-check-for-github-pages"
+      <a href="/en/rest/reference/pages#get-a-dns-health-check-for-github-pages"
         ><code>GET /repos/:owner/:repo/pages/health</code></a
       >
       (:write)
@@ -794,13 +799,13 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#accept-a-repository-invitation"
+      <a href="/en/rest/reference/collaborators#accept-a-repository-invitation"
         ><code>PATCH /user/repository_invitations/:invitation_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#decline-a-repository-invitation"
+      <a href="/en/rest/reference/collaborators#decline-a-repository-invitation"
         ><code>DELETE /user/repository_invitations/:invitation_id</code></a
       >
       (:write)
@@ -809,25 +814,25 @@
   <p><em>Branches</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#get-branch-protection"
+      <a href="/en/rest/reference/branches#get-branch-protection"
         ><code>GET /repos/:owner/:repo/branches/:branch/protection</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#update-branch-protection"
+      <a href="/en/rest/reference/branches#update-branch-protection"
         ><code>PUT /repos/:owner/:repo/branches/:branch/protection</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-branch-protection"
+      <a href="/en/rest/reference/branches#delete-branch-protection"
         ><code>DELETE /repos/:owner/:repo/branches/:branch/protection</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-admin-branch-protection"
+      <a href="/en/rest/reference/branches#get-admin-branch-protection"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
@@ -836,7 +841,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#set-admin-branch-protection"
+      <a href="/en/rest/reference/branches#set-admin-branch-protection"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
@@ -845,7 +850,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-admin-branch-protection"
+      <a href="/en/rest/reference/branches#delete-admin-branch-protection"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
@@ -854,7 +859,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-pull-request-review-protection"
+      <a href="/en/rest/reference/branches#get-pull-request-review-protection"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
@@ -863,7 +868,8 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#update-pull-request-review-protection"
+      <a
+        href="/en/rest/reference/branches#update-pull-request-review-protection"
         ><code
           >PATCH
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
@@ -872,7 +878,8 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-pull-request-review-protection"
+      <a
+        href="/en/rest/reference/branches#delete-pull-request-review-protection"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
@@ -881,7 +888,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-commit-signature-protection"
+      <a href="/en/rest/reference/branches#get-commit-signature-protection"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
@@ -890,7 +897,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-commit-signature-protection"
+      <a href="/en/rest/reference/branches#create-commit-signature-protection"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
@@ -899,7 +906,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-commit-signature-protection"
+      <a href="/en/rest/reference/branches#delete-commit-signature-protection"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
@@ -908,7 +915,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-status-checks-protection"
+      <a href="/en/rest/reference/branches#get-status-checks-protection"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
@@ -917,7 +924,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#update-status-check-protection"
+      <a href="/en/rest/reference/branches#update-status-check-protection"
         ><code
           >PATCH
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
@@ -926,7 +933,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-status-check-protection"
+      <a href="/en/rest/reference/branches#remove-status-check-protection"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
@@ -935,7 +942,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-all-status-check-contexts"
+      <a href="/en/rest/reference/branches#get-all-status-check-contexts"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
@@ -944,7 +951,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#add-status-check-contexts"
+      <a href="/en/rest/reference/branches#add-status-check-contexts"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
@@ -953,7 +960,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#set-status-check-contexts"
+      <a href="/en/rest/reference/branches#set-status-check-contexts"
         ><code
           >PUT
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
@@ -962,7 +969,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-status-check-contexts"
+      <a href="/en/rest/reference/branches#remove-status-check-contexts"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
@@ -971,7 +978,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-access-restrictions"
+      <a href="/en/rest/reference/branches#get-access-restrictions"
         ><code
           >GET
           /repos/:owner/:repo/branches/:branch/protection/restrictions</code
@@ -980,7 +987,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-access-restrictions"
+      <a href="/en/rest/reference/branches#delete-access-restrictions"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/restrictions</code
@@ -999,7 +1006,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#add-team-access-restrictions"
+      <a href="/en/rest/reference/branches#add-team-access-restrictions"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
@@ -1008,7 +1015,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#set-team-access-restrictions"
+      <a href="/en/rest/reference/branches#set-team-access-restrictions"
         ><code
           >PUT
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
@@ -1017,7 +1024,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-team-access-restrictions"
+      <a href="/en/rest/reference/branches#remove-team-access-restrictions"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
@@ -1036,7 +1043,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#add-user-access-restrictions"
+      <a href="/en/rest/reference/branches#add-user-access-restrictions"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
@@ -1045,7 +1052,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#set-user-access-restrictions"
+      <a href="/en/rest/reference/branches#set-user-access-restrictions"
         ><code
           >PUT
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
@@ -1054,7 +1061,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-user-access-restrictions"
+      <a href="/en/rest/reference/branches#remove-user-access-restrictions"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
@@ -1063,7 +1070,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#rename-a-branch"
+      <a href="/en/rest/reference/branches#rename-a-branch"
         ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
       >
       (:write)
@@ -1072,13 +1079,14 @@
   <p><em>Collaborators</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#add-a-repository-collaborator"
+      <a href="/en/rest/reference/collaborators#add-a-repository-collaborator"
         ><code>PUT /repos/:owner/:repo/collaborators/:username</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-a-repository-collaborator"
+      <a
+        href="/en/rest/reference/collaborators#remove-a-repository-collaborator"
         ><code>DELETE /repos/:owner/:repo/collaborators/:username</code></a
       >
       (:write)
@@ -1087,19 +1095,19 @@
   <p><em>Invitations</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-repository-invitations"
+      <a href="/en/rest/reference/collaborators#list-repository-invitations"
         ><code>GET /repos/:owner/:repo/invitations</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#update-a-repository-invitation"
+      <a href="/en/rest/reference/collaborators#update-a-repository-invitation"
         ><code>PATCH /repos/:owner/:repo/invitations/:invitation_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-repository-invitation"
+      <a href="/en/rest/reference/collaborators#delete-a-repository-invitation"
         ><code>DELETE /repos/:owner/:repo/invitations/:invitation_id</code></a
       >
       (:write)
@@ -1108,25 +1116,25 @@
   <p><em>Keys</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-deploy-keys"
+      <a href="/en/rest/reference/deployments#list-deploy-keys"
         ><code>GET /repos/:owner/:repo/keys</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-deploy-key"
+      <a href="/en/rest/reference/deployments#create-a-deploy-key"
         ><code>POST /repos/:owner/:repo/keys</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-deploy-key"
+      <a href="/en/rest/reference/deployments#get-a-deploy-key"
         ><code>GET /repos/:owner/:repo/keys/:key_id</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-deploy-key"
+      <a href="/en/rest/reference/deployments#delete-a-deploy-key"
         ><code>DELETE /repos/:owner/:repo/keys/:key_id</code></a
       >
       (:write)
@@ -1157,25 +1165,25 @@
   <p><em>Traffic</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#get-repository-clones"
+      <a href="/en/rest/reference/repository-metrics#get-repository-clones"
         ><code>GET /repos/:owner/:repo/traffic/clones</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-top-referral-paths"
+      <a href="/en/rest/reference/repository-metrics#get-top-referral-paths"
         ><code>GET /repos/:owner/:repo/traffic/popular/paths</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-top-referral-sources"
+      <a href="/en/rest/reference/repository-metrics#get-top-referral-sources"
         ><code>GET /repos/:owner/:repo/traffic/popular/referrers</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-page-views"
+      <a href="/en/rest/reference/repository-metrics#get-page-views"
         ><code>GET /repos/:owner/:repo/traffic/views</code></a
       >
       (:read)
@@ -1526,13 +1534,13 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#list-commits"
+      <a href="/en/rest/reference/commits#list-commits"
         ><code>GET /repos/:owner/:repo/commits</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-commit"
+      <a href="/en/rest/reference/commits#get-a-commit"
         ><code>GET /repos/:owner/:repo/commits/:sha</code></a
       >
       (:read)
@@ -1557,7 +1565,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#compare-two-commits"
+      <a href="/en/rest/reference/commits#compare-two-commits"
         ><code>GET /repos/:owner/:repo/compare/:base...:head</code></a
       >
       (:read)
@@ -1581,7 +1589,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#merge-a-branch"
+      <a href="/en/rest/reference/branches#merge-a-branch"
         ><code>POST /repos/:owner/:repo/merges</code></a
       >
       (:write)
@@ -1602,13 +1610,13 @@
   <p><em>Branches</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-branches"
+      <a href="/en/rest/reference/branches#list-branches"
         ><code>GET /repos/:owner/:repo/branches</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-branch"
+      <a href="/en/rest/reference/branches#get-a-branch"
         ><code>GET /repos/:owner/:repo/branches/:branch</code></a
       >
       (:read)
@@ -1624,7 +1632,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#add-app-access-restrictions"
+      <a href="/en/rest/reference/branches#add-app-access-restrictions"
         ><code
           >POST
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
@@ -1633,7 +1641,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#set-app-access-restrictions"
+      <a href="/en/rest/reference/branches#set-app-access-restrictions"
         ><code
           >PUT
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
@@ -1642,7 +1650,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#remove-user-access-restrictions"
+      <a href="/en/rest/reference/branches#remove-user-access-restrictions"
         ><code
           >DELETE
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
@@ -1651,7 +1659,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#rename-a-branch"
+      <a href="/en/rest/reference/branches#rename-a-branch"
         ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
       >
       (:write)
@@ -1660,13 +1668,13 @@
   <p><em>Commit comments</em></p>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#update-a-commit-comment"
+      <a href="/en/rest/reference/commits#update-a-commit-comment"
         ><code>PATCH /repos/:owner/:repo/comments/:comment_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-commit-comment"
+      <a href="/en/rest/reference/commits#delete-a-commit-comment"
         ><code>DELETE /repos/:owner/:repo/comments/:comment_id</code></a
       >
       (:write)
@@ -1679,7 +1687,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-commit-comment"
+      <a href="/en/rest/reference/commits#create-a-commit-comment"
         ><code>POST /repos/:owner/:repo/commits/:sha/comments</code></a
       >
       (:read)
@@ -1975,31 +1983,31 @@
   </h3>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-deployments"
+      <a href="/en/rest/reference/deployments#list-deployments"
         ><code>GET /repos/:owner/:repo/deployments</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-deployment"
+      <a href="/en/rest/reference/deployments#create-a-deployment"
         ><code>POST /repos/:owner/:repo/deployments</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-deployment"
+      <a href="/en/rest/reference/deployments#get-a-deployment"
         ><code>GET /repos/:owner/:repo/deployments/:deployment_id</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-deployment"
+      <a href="/en/rest/reference/deployments#delete-a-deployment"
         ><code>DELETE /repos/:owner/:repo/deployments/:deployment_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#list-deployment-statuses"
+      <a href="/en/rest/reference/deployments#list-deployment-statuses"
         ><code
           >GET /repos/:owner/:repo/deployments/:deployment_id/statuses</code
         ></a
@@ -2007,7 +2015,7 @@
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-deployment-status"
+      <a href="/en/rest/reference/deployments#create-a-deployment-status"
         ><code
           >POST /repos/:owner/:repo/deployments/:deployment_id/statuses</code
         ></a
@@ -2015,7 +2023,7 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-deployment-status"
+      <a href="/en/rest/reference/deployments#get-a-deployment-status"
         ><code
           >GET
           /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id</code
@@ -3341,56 +3349,56 @@
   </h3>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#get-a-github-pages-site"
+      <a href="/en/rest/reference/pages#get-a-github-pages-site"
         ><code>GET /repos/:owner/:repo/pages</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-github-pages-site"
+      <a href="/en/rest/reference/pages#create-a-github-pages-site"
         ><code>POST /repos/:owner/:repo/pages</code></a
       >
       (:write)
     </li>
     <li>
       <a
-        href="/en/rest/reference/repos#update-information-about-a-github-pages-site"
+        href="/en/rest/reference/pages#update-information-about-a-github-pages-site"
         ><code>PUT /repos/:owner/:repo/pages</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-github-pages-site"
+      <a href="/en/rest/reference/pages#delete-a-github-pages-site"
         ><code>DELETE /repos/:owner/:repo/pages</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#list-github-pages-builds"
+      <a href="/en/rest/reference/pages#list-github-pages-builds"
         ><code>GET /repos/:owner/:repo/pages/builds</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#request-a-github-pages-build"
+      <a href="/en/rest/reference/pages#request-a-github-pages-build"
         ><code>POST /repos/:owner/:repo/pages/builds</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-github-pages-build"
+      <a href="/en/rest/reference/pages#get-github-pages-build"
         ><code>GET /repos/:owner/:repo/pages/builds/:build_id</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-latest-pages-build"
+      <a href="/en/rest/reference/pages#get-latest-pages-build"
         ><code>GET /repos/:owner/:repo/pages/builds/latest</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-dns-health-check-for-github-pages"
+      <a href="/en/rest/reference/pages#get-a-dns-health-check-for-github-pages"
         ><code>GET /repos/:owner/:repo/pages/health</code></a
       >
       (:write)
@@ -3976,37 +3984,37 @@
   </h3>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#list-repository-webhooks"
+      <a href="/en/rest/reference/webhooks#list-repository-webhooks"
         ><code>GET /repos/:owner/:repo/hooks</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-repository-webhook"
+      <a href="/en/rest/reference/webhooks#create-a-repository-webhook"
         ><code>POST /repos/:owner/:repo/hooks</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-repository-webhook"
+      <a href="/en/rest/reference/webhooks#get-a-repository-webhook"
         ><code>GET /repos/:owner/:repo/hooks/:hook_id</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#update-a-repository-webhook"
+      <a href="/en/rest/reference/webhooks#update-a-repository-webhook"
         ><code>PATCH /repos/:owner/:repo/hooks/:hook_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#delete-a-repository-webhook"
+      <a href="/en/rest/reference/webhooks#delete-a-repository-webhook"
         ><code>DELETE /repos/:owner/:repo/hooks/:hook_id</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#ping-a-repository-webhook"
+      <a href="/en/rest/reference/webhooks#ping-a-repository-webhook"
         ><code>POST /repos/:owner/:repo/hooks/:hook_id/pings</code></a
       >
       (:read)
@@ -4651,19 +4659,19 @@
   <ul>
     <li>
       <a
-        href="/en/rest/reference/repos#get-the-combined-status-for-a-specific-reference"
+        href="/en/rest/reference/commits#get-the-combined-status-for-a-specific-reference"
         ><code>GET /repos/:owner/:repo/commits/:ref/status</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#list-commit-statuses-for-a-reference"
+      <a href="/en/rest/reference/commits#list-commit-statuses-for-a-reference"
         ><code>GET /repos/:owner/:repo/commits/:ref/statuses</code></a
       >
       (:read)
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-commit-status"
+      <a href="/en/rest/reference/commits#create-a-commit-status"
         ><code>POST /repos/:owner/:repo/statuses/:sha</code></a
       >
       (:write)
