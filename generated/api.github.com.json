@@ -84,6 +84,7 @@
         "GET /repos/{owner}/{repo}/actions/artifacts",
         "GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}",
         "GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip",
+        "GET /repos/{owner}/{repo}/actions/cache/usage",
         "GET /repos/{owner}/{repo}/actions/jobs/{job_id}",
         "GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs",
         "GET /repos/{owner}/{repo}/actions/runs",
@@ -127,7 +128,8 @@
         "GET /repos/{owner}/{repo}/traffic/clones",
         "GET /repos/{owner}/{repo}/traffic/popular/paths",
         "GET /repos/{owner}/{repo}/traffic/popular/referrers",
-        "GET /repos/{owner}/{repo}/traffic/views"
+        "GET /repos/{owner}/{repo}/traffic/views",
+        "GET /repos/{owner}/{repo}/vulnerability-alerts"
       ],
       "write": [
         "DELETE /repos/{owner}/{repo}",
@@ -152,7 +154,6 @@
         "DELETE /teams/{team_id}/repos/{owner}/{repo}",
         "DELETE /user/repository_invitations/{invitation_id}",
         "GET /repos/{owner}/{repo}/pages/health",
-        "GET /repos/{owner}/{repo}/vulnerability-alerts",
         "PATCH /repos/{owner}/{repo}",
         "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
         "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
@@ -207,6 +208,11 @@
         "POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest"
       ]
     },
+    "codespaces": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-codespaces",
+      "read": ["GET /repos/{owner}/{repo}/codespaces/machines"],
+      "write": []
+    },
     "contents": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-contents",
       "read": [
@@ -228,6 +234,7 @@
         "GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations",
         "GET /repos/{owner}/{repo}/check-suites/{check_suite_id}",
         "GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs",
+        "GET /repos/{owner}/{repo}/codeowners/errors",
         "GET /repos/{owner}/{repo}/commits",
         "GET /repos/{owner}/{repo}/commits/{sha}",
         "GET /repos/{owner}/{repo}/commits/{sha}/check-runs",
@@ -252,8 +259,6 @@
         "GET /repos/{owner}/{repo}/releases/{release_id}",
         "GET /repos/{owner}/{repo}/releases/{release_id}/assets",
         "GET /repos/{owner}/{repo}/{archive_format}/{ref}",
-        "POST /repos/{owner}/{repo}/comments/{comment_id}/reactions",
-        "POST /repos/{owner}/{repo}/commits/{sha}/comments",
         "POST /repos/{owner}/{repo}/forks"
       ],
       "write": [
@@ -289,6 +294,8 @@
         "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
         "POST /repos/{owner}/{repo}/branches/{branch}/rename",
         "POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest",
+        "POST /repos/{owner}/{repo}/comments/{comment_id}/reactions",
+        "POST /repos/{owner}/{repo}/commits/{sha}/comments",
         "POST /repos/{owner}/{repo}/dispatches",
         "POST /repos/{owner}/{repo}/git/blobs",
         "POST /repos/{owner}/{repo}/git/commits",
@@ -466,7 +473,11 @@
     },
     "organization_administration": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-organization-administration",
-      "read": ["GET /orgs/{org}/interaction-limits"],
+      "read": [
+        "GET /orgs/{org}/actions/cache/usage",
+        "GET /orgs/{org}/actions/cache/usage-by-repository",
+        "GET /orgs/{org}/interaction-limits"
+      ],
       "write": [
         "DELETE /orgs/{org}/interaction-limits",
         "PATCH /orgs/{org}",
@@ -681,19 +692,31 @@
         "PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}"
       ]
     },
-    "secret_scanning_alerts": {
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-secret-scanning-alerts",
+    "dependabot_secrets": {
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-dependabot_secrets",
       "read": [
-        "GET /repos/{owner}/{repo}/secret-scanning/alerts",
-        "GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"
+        "GET /orgs/{org}/dependabot/secrets",
+        "GET /orgs/{org}/dependabot/secrets/public-key",
+        "GET /orgs/{org}/dependabot/secrets/{secret_name}",
+        "GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories",
+        "GET /repos/{owner}/{repo}/dependabot/secrets",
+        "GET /repos/{owner}/{repo}/dependabot/secrets/public-key",
+        "GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}"
       ],
       "write": [
-        "PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"
+        "DELETE /orgs/{org}/dependabot/secrets/{secret_name}",
+        "DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}",
+        "DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}",
+        "PUT /orgs/{org}/dependabot/secrets/{secret_name}",
+        "PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories",
+        "PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}",
+        "PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}"
       ]
     },
     "security_events": {
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#permission-on-security-events",
       "read": [
+        "GET /orgs/{org}/code-scanning/alerts",
         "GET /repos/{owner}/{repo}/code-scanning/alerts",
         "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}",
         "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances",
@@ -903,11 +926,11 @@
     },
     "/repos/{owner}/{repo}/comments/{comment_id}/reactions": {
       "GET": { "permission": "meta", "access": "read" },
-      "POST": { "permission": "contents", "access": "read" }
+      "POST": { "permission": "contents", "access": "write" }
     },
     "/repos/{owner}/{repo}/commits/{sha}/comments": {
       "GET": { "permission": "meta", "access": "read" },
-      "POST": { "permission": "contents", "access": "read" }
+      "POST": { "permission": "contents", "access": "write" }
     },
     "/events": { "GET": { "permission": "meta", "access": "read" } },
     "/networks/{owner}/{repo}/events": {
@@ -968,6 +991,9 @@
     },
     "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip": {
       "GET": { "permission": "contents", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/actions/cache/usage": {
+      "GET": { "permission": "actions", "access": "read" }
     },
     "/repos/{owner}/{repo}/actions/jobs/{job_id}": {
       "GET": { "permission": "contents", "access": "read" }
@@ -1050,7 +1076,7 @@
       "POST": { "permission": "administration", "access": "write" }
     },
     "/repos/{owner}/{repo}/vulnerability-alerts": {
-      "GET": { "permission": "administration", "access": "write" },
+      "GET": { "permission": "administration", "access": "read" },
       "PUT": { "permission": "administration", "access": "write" },
       "DELETE": { "permission": "administration", "access": "write" }
     },
@@ -1180,6 +1206,9 @@
     "/repos/{owner}/{repo}/commits/{sha}/check-suites": {
       "GET": { "permission": "contents", "access": "read" }
     },
+    "/repos/{owner}/{repo}/codespaces/machines": {
+      "GET": { "permission": "codespaces", "access": "read" }
+    },
     "/repos/{owner}/{repo}/{archive_format}/{ref}": {
       "GET": { "permission": "contents", "access": "read" }
     },
@@ -1193,6 +1222,9 @@
     },
     "/repos/{owner}/{repo}/actions/secrets/public-key": {
       "GET": { "permission": "secrets", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/codeowners/errors": {
+      "GET": { "permission": "contents", "access": "read" }
     },
     "/repos/{owner}/{repo}/commits": {
       "GET": { "permission": "contents", "access": "read" }
@@ -1556,6 +1588,12 @@
     "/teams/{team_id}/teams": {
       "GET": { "permission": "members", "access": "read" }
     },
+    "/orgs/{org}/actions/cache/usage": {
+      "GET": { "permission": "organization_administration", "access": "read" }
+    },
+    "/orgs/{org}/actions/cache/usage-by-repository": {
+      "GET": { "permission": "organization_administration", "access": "read" }
+    },
     "/orgs/{org}/interaction-limits": {
       "GET": { "permission": "organization_administration", "access": "read" },
       "PUT": { "permission": "organization_administration", "access": "write" },
@@ -1735,12 +1773,35 @@
       "PUT": { "permission": "secrets", "access": "write" },
       "DELETE": { "permission": "secrets", "access": "write" }
     },
-    "/repos/{owner}/{repo}/secret-scanning/alerts": {
-      "GET": { "permission": "secret_scanning_alerts", "access": "read" }
+    "/repos/{owner}/{repo}/dependabot/secrets/public-key": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" }
     },
-    "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}": {
-      "GET": { "permission": "secret_scanning_alerts", "access": "read" },
-      "PATCH": { "permission": "secret_scanning_alerts", "access": "write" }
+    "/repos/{owner}/{repo}/dependabot/secrets": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" },
+      "PUT": { "permission": "dependabot_secrets", "access": "write" },
+      "DELETE": { "permission": "dependabot_secrets", "access": "write" }
+    },
+    "/orgs/{org}/dependabot/secrets/public-key": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" }
+    },
+    "/orgs/{org}/dependabot/secrets": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" }
+    },
+    "/orgs/{org}/dependabot/secrets/{secret_name}": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" },
+      "PUT": { "permission": "dependabot_secrets", "access": "write" },
+      "DELETE": { "permission": "dependabot_secrets", "access": "write" }
+    },
+    "/orgs/{org}/dependabot/secrets/{secret_name}/repositories": {
+      "GET": { "permission": "dependabot_secrets", "access": "read" },
+      "PUT": { "permission": "dependabot_secrets", "access": "write" }
+    },
+    "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}": {
+      "PUT": { "permission": "dependabot_secrets", "access": "write" },
+      "DELETE": { "permission": "dependabot_secrets", "access": "write" }
     },
     "/repos/{owner}/{repo}/code-scanning/alerts": {
       "GET": { "permission": "security_events", "access": "read" }
@@ -1763,6 +1824,9 @@
       "POST": { "permission": "security_events", "access": "write" }
     },
     "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}": {
+      "GET": { "permission": "security_events", "access": "read" }
+    },
+    "/orgs/{org}/code-scanning/alerts": {
       "GET": { "permission": "security_events", "access": "read" }
     },
     "/orgs/{org}/actions/runners/downloads": {
