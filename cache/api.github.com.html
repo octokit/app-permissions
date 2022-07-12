@@ -505,6 +505,13 @@
       (:read)
     </li>
     <li>
+      <a
+        href="/en/rest/reference/actions#get-github-actions-cache-usage-for-a-repository"
+        ><code>GET /repos/:owner/:repo/actions/cache/usage</code></a
+      >
+      (:read)
+    </li>
+    <li>
       <a href="/en/rest/reference/actions#get-a-job-for-a-workflow-run"
         ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
       >
@@ -784,7 +791,7 @@
       <a href="/en/rest/reference/repos#enable-vulnerability-alerts"
         ><code>GET /repos/:owner/:repo/vulnerability-alerts</code></a
       >
-      (:write)
+      (:read)
     </li>
     <li>
       <a href="/en/rest/reference/repos#enable-vulnerability-alerts"
@@ -1336,6 +1343,36 @@
       (:read)
     </li>
   </ul>
+  <h3 id="permission-on-codespaces">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#permission-on-codespaces"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Permission on "codespaces"
+  </h3>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/codespaces#list-available-machine-types-for-a-repository"
+        ><code>GET /repos/:owner/:repo/codespaces/machines</code></a
+      >
+    </li>
+  </ul>
   <h3 id="permission-on-contents">
     <a
       aria-hidden=""
@@ -1360,251 +1397,348 @@
   </h3>
   <ul>
     <li>
-      <a href="/en/rest/reference/repos#download-a-repository-archive"
-        ><code>GET /repos/:owner/:repo/:archive_format/:ref</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/repos#download-a-repository-archive"
+          ><code>GET /repos/:owner/:repo/:archive_format/:ref</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-an-artifact"
-        ><code>GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#get-an-artifact"
+          ><code
+            >GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#delete-an-artifact"
-        ><code
-          >DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code
-        ></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#delete-an-artifact"
+          ><code
+            >DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code
+          ></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#download-an-artifact"
-        ><code
-          >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
-        ></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#download-an-artifact"
+          ><code
+            >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-a-job-for-a-workflow-run"
-        ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#get-a-job-for-a-workflow-run"
+          ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#download-job-logs-for-a-workflow-run"
-        ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
-      >
-      (:read)
+      <p>
+        <a
+          href="/en/rest/reference/actions#download-job-logs-for-a-workflow-run"
+          ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-workflow-runs-for-a-repository"
-        ><code>GET /repos/:owner/:repo/actions/runs</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#list-workflow-runs-for-a-repository"
+          ><code>GET /repos/:owner/:repo/actions/runs</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-a-workflow-run"
-        ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#get-a-workflow-run"
+          ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-workflow-run-artifacts"
-        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#list-workflow-run-artifacts"
+          ><code
+            >GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#cancel-a-workflow-run"
-        ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#cancel-a-workflow-run"
+          ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-jobs-for-a-workflow-run"
-        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#list-jobs-for-a-workflow-run"
+          ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#download-workflow-run-logs"
-        ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#download-workflow-run-logs"
+          ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#delete-workflow-run-logs"
-        ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#delete-workflow-run-logs"
+          ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#re-run-a-workflow"
-        ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#re-run-a-workflow"
+          ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-repository-secrets"
-        ><code>GET /repos/:owner/:repo/actions/secrets</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#list-repository-secrets"
+          ><code>GET /repos/:owner/:repo/actions/secrets</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-a-repository-secret"
-        ><code>GET /repos/:owner/:repo/actions/secrets/:name</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#get-a-repository-secret"
+          ><code>GET /repos/:owner/:repo/actions/secrets/:name</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#create-or-update-a-repository-secret"
-        ><code>PUT /repos/:owner/:repo/actions/secrets/:name</code></a
-      >
-      (:write)
+      <p>
+        <a
+          href="/en/rest/reference/actions#create-or-update-a-repository-secret"
+          ><code>PUT /repos/:owner/:repo/actions/secrets/:name</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#delete-a-repository-secret"
-        ><code>DELETE /repos/:owner/:repo/actions/secrets/:name</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#delete-a-repository-secret"
+          ><code>DELETE /repos/:owner/:repo/actions/secrets/:name</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-a-repository-public-key"
-        ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/actions#get-a-repository-public-key"
+          ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-repository-workflows"
-        ><code>GET /repos/:owner/:repo/actions/workflows</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#list-repository-workflows"
+          ><code>GET /repos/:owner/:repo/actions/workflows</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#get-a-workflow"
-        ><code>GET /repos/:owner/:repo/actions/workflows/:workflow_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#get-a-workflow"
+          ><code
+            >GET /repos/:owner/:repo/actions/workflows/:workflow_id</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/actions#list-workflow-runs"
-        ><code
-          >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
-        ></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/actions#list-workflow-runs"
+          ><code
+            >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#get-a-check-run"
-        ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/checks#get-a-check-run"
+          ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#list-check-run-annotations"
-        ><code
-          >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
-        ></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/checks#list-check-run-annotations"
+          ><code
+            >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#get-a-check-suite"
-        ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/checks#get-a-check-suite"
+          ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#list-check-runs-in-a-check-suite"
-        ><code
-          >GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
-        ></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/checks#list-check-runs-in-a-check-suite"
+          ><code
+            >GET
+            /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
+          ></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#rerequest-a-check-suite"
-        ><code
-          >POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
-        ></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/checks#rerequest-a-check-suite"
+          ><code
+            >POST
+            /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
+          ></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/commits#list-commits"
-        ><code>GET /repos/:owner/:repo/commits</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/repos#list-codeowners-errors"
+          ><code>GET /repos/:owner/:repo/codeowners/errors</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/commits#get-a-commit"
-        ><code>GET /repos/:owner/:repo/commits/:sha</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/commits#list-commits"
+          ><code>GET /repos/:owner/:repo/commits</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#list-check-runs-for-a-git-reference"
-        ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/commits#get-a-commit"
+          ><code>GET /repos/:owner/:repo/commits/:sha</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/checks#list-check-suites-for-a-git-reference"
-        ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/checks#list-check-runs-for-a-git-reference"
+          ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a
-        href="/en/rest/reference/codes-of-conduct#get-the-code-of-conduct-for-a-repository"
-        ><code>GET /repos/:owner/:repo/community/code_of_conduct</code></a
-      >
-      (:read)
+      <p>
+        <a
+          href="/en/rest/reference/checks#list-check-suites-for-a-git-reference"
+          ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/commits#compare-two-commits"
-        ><code>GET /repos/:owner/:repo/compare/:base...:head</code></a
-      >
-      (:read)
+      <p>
+        <a
+          href="/en/rest/reference/codes-of-conduct#get-the-code-of-conduct-for-a-repository"
+          ><code>GET /repos/:owner/:repo/community/code_of_conduct</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-repository-content"
-        ><code>GET /repos/:owner/:repo/contents/:path</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/commits#compare-two-commits"
+          ><code>GET /repos/:owner/:repo/compare/:base...:head</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-repository-dispatch-event"
-        ><code>POST /repos/:owner/:repo/dispatches</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/repos#get-repository-content"
+          ><code>GET /repos/:owner/:repo/contents/:path</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/repos#create-a-fork"
-        ><code>POST /repos/:owner/:repo/forks</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/repos#create-a-repository-dispatch-event"
+          ><code>POST /repos/:owner/:repo/dispatches</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/branches#merge-a-branch"
-        ><code>POST /repos/:owner/:repo/merges</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/repos#create-a-fork"
+          ><code>POST /repos/:owner/:repo/forks</code></a
+        >
+        (:read)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/pulls#merge-a-pull-request"
-        ><code>PUT /repos/:owner/:repo/pulls/:pull_number/merge</code></a
-      >
-      (:write)
+      <p>
+        <a href="/en/rest/reference/branches#merge-a-branch"
+          ><code>POST /repos/:owner/:repo/merges</code></a
+        >
+        (:write)
+      </p>
     </li>
     <li>
-      <a href="/en/rest/reference/repos#get-a-repository-readme"
-        ><code>GET /repos/:owner/:repo/readme(?:/(.*))?</code></a
-      >
-      (:read)
+      <p>
+        <a href="/en/rest/reference/pulls#merge-a-pull-request"
+          ><code>PUT /repos/:owner/:repo/pulls/:pull_number/merge</code></a
+        >
+        (:write)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a href="/en/rest/reference/repos#get-a-repository-readme"
+          ><code>GET /repos/:owner/:repo/readme(?:/(.*))?</code></a
+        >
+        (:read)
+      </p>
     </li>
   </ul>
   <p><em>Branches</em></p>
@@ -1684,13 +1818,13 @@
         href="/en/rest/reference/reactions#create-reaction-for-a-commit-comment"
         ><code>POST /repos/:owner/:repo/comments/:comment_id/reactions</code></a
       >
-      (:read)
+      (:write)
     </li>
     <li>
       <a href="/en/rest/reference/commits#create-a-commit-comment"
         ><code>POST /repos/:owner/:repo/commits/:sha/comments</code></a
       >
-      (:read)
+      (:write)
     </li>
   </ul>
   <p><em>Git</em></p>
@@ -2743,13 +2877,13 @@
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/teams#list-idp-groups-for-an-organization"
+      <a href="/en/rest/teams/team-sync#list-idp-groups-for-an-organization"
         ><code>GET /orgs/:org/team-sync/groups</code></a
       >
       (:write)
     </li>
     <li>
-      <a href="/en/rest/reference/teams#get-a-team-by-name"
+      <a href="/en/rest/teams/teams#get-a-team-by-name"
         ><code>GET /orgs/:org/team/:team_id</code></a
       >
       (:read)
@@ -3027,6 +3161,20 @@
         ><code>PATCH /orgs/:org</code></a
       >
       (:write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#get-github-actions-cache-usage-for-an-organization"
+        ><code>GET /orgs/:org/actions/cache/usage</code></a
+      >
+      (:read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#list-repositories-with-github-actions-cache-usage-for-an-organization"
+        ><code>GET /orgs/:org/actions/cache/usage-by-repository</code></a
+      >
+      (:read)
     </li>
     <li>
       <a
@@ -4416,64 +4564,6 @@
       (:write)
     </li>
   </ul>
-  <h3 id="permission-on-secret-scanning-alerts">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-secret-scanning-alerts"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "secret scanning alerts"
-  </h3>
-  <ul>
-    <li>
-      <a
-        href="/en/rest/reference/secret-scanning#list-secret-scanning-alerts-for-a-repository"
-        ><code>GET /repos/:owner/:repo/secret-scanning/alerts</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/secret-scanning#get-a-secret-scanning-alert"
-        ><code
-          >GET /repos/:owner/:repo/secret-scanning/alerts/:alert_number</code
-        ></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/secret-scanning#update-a-secret-scanning-alert"
-        ><code
-          >PATCH /repos/:owner/:repo/secret-scanning/alerts/:alert_number</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/secret-scanning#list-locations-for-a-secret-scanning-alert"
-        ><code
-          >GET
-          /repos/:owner/:repo/secret-scanning/alerts/:alert_number/locations</code
-        ></a
-      >
-      (:read)
-    </li>
-  </ul>
   <h3 id="permission-on-security-events">
     <a
       aria-hidden=""
@@ -4566,6 +4656,13 @@
       <a
         href="/en/rest/reference/code-scanning#get-information-about-a-sarif-upload"
         ><code>GET /repos/:owner/:repo/code-scanning/sarifs/:sarif_id</code></a
+      >
+      (:read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-by-organization"
+        ><code>GET /orgs/:org/code-scanning/alerts</code></a
       >
       (:read)
     </li>
