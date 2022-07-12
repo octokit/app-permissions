@@ -18,3 +18,5 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
+      # make sure the update script does not break
+      - run: node scripts/update
