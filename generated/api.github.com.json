@@ -548,6 +548,7 @@
         "GET /repos/{owner}/{repo}/pages/health",
         "POST /repos/{owner}/{repo}/pages",
         "POST /repos/{owner}/{repo}/pages/builds",
+        "POST /repos/{owner}/{repo}/pages/deployment",
         "PUT /repos/{owner}/{repo}/pages"
       ]
     },
@@ -1675,6 +1676,9 @@
     },
     "/repos/{owner}/{repo}/pages/builds/latest": {
       "GET": { "permission": "pages", "access": "read" }
+    },
+    "/repos/{owner}/{repo}/pages/deployment": {
+      "POST": { "permission": "pages", "access": "write" }
     },
     "/repos/{owner}/{repo}/pulls": {
       "GET": { "permission": "pull_requests", "access": "read" },
