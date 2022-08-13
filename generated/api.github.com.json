@@ -431,8 +431,6 @@
         "GET /orgs/{org}/team/{team_id}",
         "GET /orgs/{org}/teams",
         "GET /orgs/{org}/teams/{team_slug}",
-        "GET /scim/v2/orgs/{org}/Users",
-        "GET /scim/v2/orgs/{org}/Users/{external_identity_guid}",
         "GET /teams/{team_id}/invitations",
         "GET /teams/{team_id}/members",
         "GET /teams/{team_id}/memberships/{username}",
@@ -457,6 +455,8 @@
         "DELETE /teams/{team_id}/repos/{owner}/{repo}",
         "GET /organizations/{org_id}/team/{team_id}/team-sync/group-mappings",
         "GET /orgs/{org}/team-sync/groups",
+        "GET /scim/v2/orgs/{org}/Users",
+        "GET /scim/v2/orgs/{org}/Users/{external_identity_guid}",
         "PATCH /organizations/{org_id}/team/{team_id}/team-sync/group-mappings",
         "PATCH /scim/v2/orgs/{org}/Users/{external_identity_guid}",
         "PATCH /teams/{team_id}",
@@ -1525,11 +1525,11 @@
       "GET": { "permission": "members", "access": "read" }
     },
     "/scim/v2/orgs/{org}/Users": {
-      "GET": { "permission": "members", "access": "read" },
+      "GET": { "permission": "members", "access": "write" },
       "POST": { "permission": "members", "access": "write" }
     },
     "/scim/v2/orgs/{org}/Users/{external_identity_guid}": {
-      "GET": { "permission": "members", "access": "read" },
+      "GET": { "permission": "members", "access": "write" },
       "PUT": { "permission": "members", "access": "write" },
       "PATCH": { "permission": "members", "access": "write" },
       "DELETE": { "permission": "members", "access": "write" }
