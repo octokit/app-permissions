@@ -28,12 +28,9 @@
       >Setting permissions for GitHub Apps</a
     >."
   </p>
-  <h2 id="metadata-permissions">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#metadata-permissions"
+  <p><span id="metadata-permissions"></span></p>
+  <h2 id="metadata">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#metadata"
       ><svg
         aria-hidden=""
         role="img"
@@ -48,20 +45,21 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Metadata permissions
+    >Metadata
   </h2>
   <p>
-    GitHub Apps have the <code>Read-only</code> metadata permission by default.
-    The metadata permission provides access to a collection of read-only
-    endpoints with metadata for various resources. These endpoints do not leak
-    sensitive private repository information.
+    GitHub Apps have the <strong>Read-only</strong> metadata permission by
+    default. The metadata permission provides access to a collection of
+    read-only endpoints with metadata for various resources. These endpoints do
+    not leak sensitive private repository information.
   </p>
   <p>
-    If you set the metadata permission to <code>No access</code> and select a
-    permission that requires repository access, GitHub will override your
-    selection and set the metadata permission back to <code>Read-only</code>. To
-    set the metadata permission to <code>No access</code>, you must set all
-    permissions that require repository access to <code>No access</code> first.
+    If you set the metadata permission to <strong>No access</strong> and select
+    a permission that requires repository access, GitHub will override your
+    selection and set the metadata permission back to
+    <strong>Read-only</strong>. To set the metadata permission to
+    <strong>No access</strong>, you must set all permissions that require
+    repository access to <strong>No access</strong> first.
   </p>
   <ul>
     <li>
@@ -455,31 +453,6 @@
       >
     </li>
   </ul>
-  <h3 id="keys">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Keys
-  </h3>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/users#list-public-keys-for-a-user"
-        ><code>GET /users/:username/keys</code></a
-      >
-    </li>
-  </ul>
   <h3 id="organization-members">
     <a
       aria-hidden=""
@@ -580,12 +553,8 @@
       >
     </li>
   </ul>
-  <h2 id="permission-on-actions">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-actions"
+  <h3 id="ssh-keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#ssh-keys"
       ><svg
         aria-hidden=""
         role="img"
@@ -600,20 +569,46 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "actions"
+    >SSH keys
+  </h3>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/users#list-public-keys-for-a-user"
+        ><code>GET /users/:username/keys</code></a
+      >
+    </li>
+  </ul>
+  <p><span id="permission-on-actions"></span></p>
+  <h2 id="actions">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#actions"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Actions
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/actions#list-artifacts-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/artifacts</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-an-artifact"
         ><code>GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#delete-an-artifact"
@@ -621,7 +616,7 @@
           >DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#download-an-artifact"
@@ -629,93 +624,93 @@
           >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-github-actions-cache-usage-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/cache/usage</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-a-job-for-a-workflow-run"
         ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#download-job-logs-for-a-workflow-run"
         ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-workflow-runs-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/runs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-a-workflow-run"
         ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#approve-a-workflow-run-for-a-fork-pull-request"
         ><code>POST /repos/:owner/:repo/actions/runs/:run_id/approve</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-workflow-run-artifacts"
         ><code>GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#cancel-a-workflow-run"
         ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-jobs-for-a-workflow-run"
         ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#download-workflow-run-logs"
         ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#delete-workflow-run-logs"
         ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#re-run-a-workflow"
         ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-repository-workflows"
         ><code>GET /repos/:owner/:repo/actions/workflows</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-a-workflow"
         ><code>GET /repos/:owner/:repo/actions/workflows/:workflow_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-workflow-runs"
@@ -723,15 +718,12 @@
           >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
         ></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-administration">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-administration"
+  <p><span id="permission-on-administration"></span></p>
+  <h2 id="administration">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#administration"
       ><svg
         aria-hidden=""
         role="img"
@@ -746,54 +738,54 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "administration"
+    >Administration
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/repos#create-an-organization-repository"
         ><code>POST /orgs/:org/repos</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#update-a-repository"
         ><code>PATCH /repos/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#delete-a-repository"
         ><code>DELETE /repos/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#list-runner-applications-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/runners/downloads</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#list-self-hosted-runners-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/runners</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-a-self-hosted-runner-for-a-repository"
         ><code>GET /repos/:owner/:repo/actions/runners/:runner_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#delete-a-self-hosted-runner-from-a-repository"
         ><code>DELETE /repos/:owner/:repo/actions/runners/:runner_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -802,7 +794,7 @@
           >GET /repos/:owner/:repo/actions/runners/:runner_id/labels</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -811,7 +803,7 @@
           >POST /repos/:owner/:repo/actions/runners/:runner_id/labels</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -820,7 +812,7 @@
           >PUT /repos/:owner/:repo/actions/runners/:runner_id/labels</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -829,7 +821,7 @@
           >DELETE /repos/:owner/:repo/actions/runners/:runner_id/labels</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -839,7 +831,7 @@
           /repos/:owner/:repo/actions/runners/:runner_id/labels/:name</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -848,101 +840,101 @@
           >POST /repos/:owner/:repo/actions/runners/registration-token</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#create-a-remove-token-for-a-repository"
         ><code>POST /repos/:owner/:repo/actions/runners/remove-token</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#enable-automated-security-fixes"
         ><code>PUT /repos/:owner/:repo/automated-security-fixes</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#disable-automated-security-fixes"
         ><code>DELETE /repos/:owner/:repo/automated-security-fixes</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#create-a-fork"
         ><code>POST /repos/:owner/:repo/forks</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#get-interaction-restrictions-for-a-repository"
         ><code>GET /repos/:owner/:repo/interaction-limits</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#set-interaction-restrictions-for-a-repository"
         ><code>PUT /repos/:owner/:repo/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#remove-interaction-restrictions-for-a-repository"
         ><code>DELETE /repos/:owner/:repo/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pages#get-a-dns-health-check-for-github-pages"
         ><code>GET /repos/:owner/:repo/pages/health</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#replace-all-repository-topics"
         ><code>PUT /repos/:owner/:repo/topics</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#transfer-a-repository"
         ><code>POST /repos/:owner/:repo/transfer</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#enable-vulnerability-alerts"
         ><code>GET /repos/:owner/:repo/vulnerability-alerts</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos#enable-vulnerability-alerts"
         ><code>PUT /repos/:owner/:repo/vulnerability-alerts</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#disable-vulnerability-alerts"
         ><code>DELETE /repos/:owner/:repo/vulnerability-alerts</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/collaborators#accept-a-repository-invitation"
         ><code>PATCH /user/repository_invitations/:invitation_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/collaborators#decline-a-repository-invitation"
         ><code>DELETE /user/repository_invitations/:invitation_id</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="branches">
@@ -968,19 +960,19 @@
       <a href="/en/rest/reference/branches#get-branch-protection"
         ><code>GET /repos/:owner/:repo/branches/:branch/protection</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#update-branch-protection"
         ><code>PUT /repos/:owner/:repo/branches/:branch/protection</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#delete-branch-protection"
         ><code>DELETE /repos/:owner/:repo/branches/:branch/protection</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-admin-branch-protection"
@@ -989,7 +981,7 @@
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#set-admin-branch-protection"
@@ -998,7 +990,7 @@
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#delete-admin-branch-protection"
@@ -1007,7 +999,7 @@
           /repos/:owner/:repo/branches/:branch/protection/enforce_admins</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-pull-request-review-protection"
@@ -1016,7 +1008,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -1026,7 +1018,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -1036,7 +1028,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-commit-signature-protection"
@@ -1045,7 +1037,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#create-commit-signature-protection"
@@ -1054,7 +1046,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#delete-commit-signature-protection"
@@ -1063,7 +1055,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_signatures</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-status-checks-protection"
@@ -1072,7 +1064,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#update-status-check-protection"
@@ -1081,7 +1073,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#remove-status-check-protection"
@@ -1090,7 +1082,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-all-status-check-contexts"
@@ -1099,7 +1091,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#add-status-check-contexts"
@@ -1108,7 +1100,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#set-status-check-contexts"
@@ -1117,7 +1109,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#remove-status-check-contexts"
@@ -1126,7 +1118,7 @@
           /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-access-restrictions"
@@ -1135,7 +1127,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#delete-access-restrictions"
@@ -1144,7 +1136,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -1154,7 +1146,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#add-team-access-restrictions"
@@ -1163,7 +1155,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#set-team-access-restrictions"
@@ -1172,7 +1164,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#remove-team-access-restrictions"
@@ -1181,7 +1173,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/teams</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -1191,7 +1183,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#add-user-access-restrictions"
@@ -1200,7 +1192,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#set-user-access-restrictions"
@@ -1209,7 +1201,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#remove-user-access-restrictions"
@@ -1218,13 +1210,13 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/users</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#rename-a-branch"
         ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="collaborators-1">
@@ -1254,14 +1246,14 @@
       <a href="/en/rest/reference/collaborators#add-a-repository-collaborator"
         ><code>PUT /repos/:owner/:repo/collaborators/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/collaborators#remove-a-repository-collaborator"
         ><code>DELETE /repos/:owner/:repo/collaborators/:username</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="invitations">
@@ -1287,23 +1279,23 @@
       <a href="/en/rest/reference/collaborators#list-repository-invitations"
         ><code>GET /repos/:owner/:repo/invitations</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/collaborators#update-a-repository-invitation"
         ><code>PATCH /repos/:owner/:repo/invitations/:invitation_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/collaborators#delete-a-repository-invitation"
         ><code>DELETE /repos/:owner/:repo/invitations/:invitation_id</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h3 id="keys-1">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys-1"
+  <h3 id="ssh-keys-1">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#ssh-keys-1"
       ><svg
         aria-hidden=""
         role="img"
@@ -1318,32 +1310,32 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Keys
+    >SSH keys
   </h3>
   <ul>
     <li>
       <a href="/en/rest/reference/deployments#list-deploy-keys"
         ><code>GET /repos/:owner/:repo/keys</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#create-a-deploy-key"
         ><code>POST /repos/:owner/:repo/keys</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#get-a-deploy-key"
         ><code>GET /repos/:owner/:repo/keys/:key_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#delete-a-deploy-key"
         ><code>DELETE /repos/:owner/:repo/keys/:key_id</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="teams">
@@ -1369,20 +1361,20 @@
       <a href="/en/rest/reference/repos#list-repository-teams"
         ><code>GET /repos/:owner/:repo/teams</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/teams#add-or-update-team-repository-permissions"
         ><code>PUT /teams/:team_id/repos/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#remove-a-repository-from-a-team"
         ><code>DELETE /teams/:team_id/repos/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="traffic">
@@ -1408,33 +1400,30 @@
       <a href="/en/rest/reference/repository-metrics#get-repository-clones"
         ><code>GET /repos/:owner/:repo/traffic/clones</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repository-metrics#get-top-referral-paths"
         ><code>GET /repos/:owner/:repo/traffic/popular/paths</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repository-metrics#get-top-referral-sources"
         ><code>GET /repos/:owner/:repo/traffic/popular/referrers</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repository-metrics#get-page-views"
         ><code>GET /repos/:owner/:repo/traffic/views</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-blocking">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-blocking"
+  <p><span id="permission-on-blocking"></span></p>
+  <h2 id="blocking-users">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#blocking-users"
       ><svg
         aria-hidden=""
         role="img"
@@ -1449,7 +1438,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "blocking"
+    >Blocking users
   </h2>
   <ul>
     <li>
@@ -1457,34 +1446,31 @@
         href="/en/rest/reference/users#list-users-blocked-by-the-authenticated-user"
         ><code>GET /user/blocks</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#check-if-a-user-is-blocked-by-the-authenticated-user"
         ><code>GET /user/blocks/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/users#block-a-user"
         ><code>PUT /user/blocks/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/users#unblock-a-user"
         ><code>DELETE /user/blocks/:username</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-checks">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-checks"
+  <p><span id="permission-on-checks"></span></p>
+  <h2 id="checks">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#checks"
       ><svg
         aria-hidden=""
         role="img"
@@ -1499,26 +1485,26 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "checks"
+    >Checks
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/checks#create-a-check-run"
         ><code>POST /repos/:owner/:repo/check-runs</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/checks#get-a-check-run"
         ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/checks#update-a-check-run"
         ><code>PATCH /repos/:owner/:repo/check-runs/:check_run_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/checks#list-check-run-annotations"
@@ -1526,19 +1512,19 @@
           >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/checks#create-a-check-suite"
         ><code>POST /repos/:owner/:repo/check-suites</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/checks#get-a-check-suite"
         ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/checks#list-check-runs-in-a-check-suite"
@@ -1546,7 +1532,7 @@
           >GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/checks#rerequest-a-check-suite"
@@ -1554,34 +1540,35 @@
           >POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/checks#update-repository-preferences-for-check-suites"
         ><code>PATCH /repos/:owner/:repo/check-suites/preferences</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/checks#list-check-runs-for-a-git-reference"
         ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/checks#list-check-suites-for-a-git-reference"
         ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-codespaces">
+  <p><span id="permission-on-security-events"></span></p>
+  <h2 id="code-scanning-alerts">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-codespaces"
+      href="#code-scanning-alerts"
       ><svg
         aria-hidden=""
         role="img"
@@ -1596,7 +1583,107 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "codespaces"
+    >Code scanning alerts
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository"
+        ><code>GET /repos/:owner/:repo/code-scanning/alerts</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/code-scanning#get-a-code-scanning-alert"
+        ><code
+          >GET /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/code-scanning#update-a-code-scanning-alert"
+        ><code
+          >PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert"
+        ><code
+          >GET
+          /repos/:owner/:repo/code-scanning/alerts/:alert_number/instances</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository"
+        ><code>GET /repos/:owner/:repo/code-scanning/analyses</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository"
+        ><code
+          >GET /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository"
+        ><code
+          >DELETE /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#upload-an-analysis-as-sarif-data"
+        ><code>POST /repos/:owner/:repo/code-scanning/sarifs</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#get-information-about-a-sarif-upload"
+        ><code>GET /repos/:owner/:repo/code-scanning/sarifs/:sarif_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-by-organization"
+        ><code>GET /orgs/:org/code-scanning/alerts</code></a
+      >
+      (read)
+    </li>
+  </ul>
+  <p><span id="permission-on-codespaces"></span></p>
+  <h2 id="codespaces">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#codespaces"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Codespaces
   </h2>
   <ul>
     <li>
@@ -1606,12 +1693,13 @@
       >
     </li>
   </ul>
-  <h2 id="permission-on-contents">
+  <p><span id="permission-on-statuses"></span></p>
+  <h2 id="commit-statuses">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-contents"
+      href="#commit-statuses"
       ><svg
         aria-hidden=""
         role="img"
@@ -1626,7 +1714,47 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "contents"
+    >Commit statuses
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/commits#get-the-combined-status-for-a-specific-reference"
+        ><code>GET /repos/:owner/:repo/commits/:ref/status</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/commits#list-commit-statuses-for-a-reference"
+        ><code>GET /repos/:owner/:repo/commits/:ref/statuses</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/commits#create-a-commit-status"
+        ><code>POST /repos/:owner/:repo/statuses/:sha</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-contents"></span></p>
+  <h2 id="contents">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#contents"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Contents
   </h2>
   <ul>
     <li>
@@ -1634,7 +1762,7 @@
         <a href="/en/rest/reference/repos#download-a-repository-archive"
           ><code>GET /repos/:owner/:repo/:archive_format/:ref</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1644,7 +1772,7 @@
             >GET /repos/:owner/:repo/actions/artifacts/:artifact_id</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1654,7 +1782,7 @@
             >DELETE /repos/:owner/:repo/actions/artifacts/:artifact_id</code
           ></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1664,7 +1792,7 @@
             >GET /repos/:owner/:repo/actions/artifacts/:artifact_id/zip</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1672,7 +1800,7 @@
         <a href="/en/rest/reference/actions#get-a-job-for-a-workflow-run"
           ><code>GET /repos/:owner/:repo/actions/jobs/:job_id</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1681,7 +1809,7 @@
           href="/en/rest/reference/actions#download-job-logs-for-a-workflow-run"
           ><code>GET /repos/:owner/:repo/actions/jobs/:job_id/logs</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1689,7 +1817,7 @@
         <a href="/en/rest/reference/actions#list-workflow-runs-for-a-repository"
           ><code>GET /repos/:owner/:repo/actions/runs</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1697,7 +1825,7 @@
         <a href="/en/rest/reference/actions#get-a-workflow-run"
           ><code>GET /repos/:owner/:repo/actions/runs/:run_id</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1707,7 +1835,7 @@
             >GET /repos/:owner/:repo/actions/runs/:run_id/artifacts</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1715,7 +1843,7 @@
         <a href="/en/rest/reference/actions#cancel-a-workflow-run"
           ><code>POST /repos/:owner/:repo/actions/runs/:run_id/cancel</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1723,7 +1851,7 @@
         <a href="/en/rest/reference/actions#list-jobs-for-a-workflow-run"
           ><code>GET /repos/:owner/:repo/actions/runs/:run_id/jobs</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1731,7 +1859,7 @@
         <a href="/en/rest/reference/actions#download-workflow-run-logs"
           ><code>GET /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1739,7 +1867,7 @@
         <a href="/en/rest/reference/actions#delete-workflow-run-logs"
           ><code>DELETE /repos/:owner/:repo/actions/runs/:run_id/logs</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1747,7 +1875,7 @@
         <a href="/en/rest/reference/actions#re-run-a-workflow"
           ><code>POST /repos/:owner/:repo/actions/runs/:run_id/rerun</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1755,7 +1883,7 @@
         <a href="/en/rest/reference/actions#list-repository-secrets"
           ><code>GET /repos/:owner/:repo/actions/secrets</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1763,7 +1891,7 @@
         <a href="/en/rest/reference/actions#get-a-repository-secret"
           ><code>GET /repos/:owner/:repo/actions/secrets/:name</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1772,7 +1900,7 @@
           href="/en/rest/reference/actions#create-or-update-a-repository-secret"
           ><code>PUT /repos/:owner/:repo/actions/secrets/:name</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1780,7 +1908,7 @@
         <a href="/en/rest/reference/actions#delete-a-repository-secret"
           ><code>DELETE /repos/:owner/:repo/actions/secrets/:name</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1788,7 +1916,7 @@
         <a href="/en/rest/reference/actions#get-a-repository-public-key"
           ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1796,7 +1924,7 @@
         <a href="/en/rest/reference/actions#list-repository-workflows"
           ><code>GET /repos/:owner/:repo/actions/workflows</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1806,7 +1934,7 @@
             >GET /repos/:owner/:repo/actions/workflows/:workflow_id</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1816,7 +1944,7 @@
             >GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1824,7 +1952,7 @@
         <a href="/en/rest/reference/checks#get-a-check-run"
           ><code>GET /repos/:owner/:repo/check-runs/:check_run_id</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1834,7 +1962,7 @@
             >GET /repos/:owner/:repo/check-runs/:check_run_id/annotations</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1842,7 +1970,7 @@
         <a href="/en/rest/reference/checks#get-a-check-suite"
           ><code>GET /repos/:owner/:repo/check-suites/:check_suite_id</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1853,7 +1981,7 @@
             /repos/:owner/:repo/check-suites/:check_suite_id/check-runs</code
           ></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1864,7 +1992,7 @@
             /repos/:owner/:repo/check-suites/:check_suite_id/rerequest</code
           ></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1872,7 +2000,7 @@
         <a href="/en/rest/reference/repos#list-codeowners-errors"
           ><code>GET /repos/:owner/:repo/codeowners/errors</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1880,7 +2008,7 @@
         <a href="/en/rest/reference/commits#list-commits"
           ><code>GET /repos/:owner/:repo/commits</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1888,7 +2016,7 @@
         <a href="/en/rest/reference/commits#get-a-commit"
           ><code>GET /repos/:owner/:repo/commits/:sha</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1896,7 +2024,7 @@
         <a href="/en/rest/reference/checks#list-check-runs-for-a-git-reference"
           ><code>GET /repos/:owner/:repo/commits/:sha/check-runs</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1905,7 +2033,7 @@
           href="/en/rest/reference/checks#list-check-suites-for-a-git-reference"
           ><code>GET /repos/:owner/:repo/commits/:sha/check-suites</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1914,7 +2042,7 @@
           href="/en/rest/reference/codes-of-conduct#get-the-code-of-conduct-for-a-repository"
           ><code>GET /repos/:owner/:repo/community/code_of_conduct</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1922,7 +2050,7 @@
         <a href="/en/rest/reference/commits#compare-two-commits"
           ><code>GET /repos/:owner/:repo/compare/:base...:head</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1930,7 +2058,7 @@
         <a href="/en/rest/reference/repos#get-repository-content"
           ><code>GET /repos/:owner/:repo/contents/:path</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1938,7 +2066,7 @@
         <a href="/en/rest/reference/repos#create-a-repository-dispatch-event"
           ><code>POST /repos/:owner/:repo/dispatches</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1946,7 +2074,7 @@
         <a href="/en/rest/reference/repos#create-a-fork"
           ><code>POST /repos/:owner/:repo/forks</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
     <li>
@@ -1954,7 +2082,7 @@
         <a href="/en/rest/reference/branches#merge-a-branch"
           ><code>POST /repos/:owner/:repo/merges</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1962,7 +2090,7 @@
         <a href="/en/rest/reference/pulls#merge-a-pull-request"
           ><code>PUT /repos/:owner/:repo/pulls/:pull_number/merge</code></a
         >
-        (:write)
+        (write)
       </p>
     </li>
     <li>
@@ -1970,7 +2098,7 @@
         <a href="/en/rest/reference/repos#get-a-repository-readme"
           ><code>GET /repos/:owner/:repo/readme(?:/(.*))?</code></a
         >
-        (:read)
+        (read)
       </p>
     </li>
   </ul>
@@ -1997,13 +2125,13 @@
       <a href="/en/rest/reference/branches#list-branches"
         ><code>GET /repos/:owner/:repo/branches</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/branches#get-a-branch"
         ><code>GET /repos/:owner/:repo/branches/:branch</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -2013,7 +2141,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#add-app-access-restrictions"
@@ -2022,7 +2150,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#set-app-access-restrictions"
@@ -2031,7 +2159,7 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#remove-user-access-restrictions"
@@ -2040,13 +2168,13 @@
           /repos/:owner/:repo/branches/:branch/protection/restrictions/apps</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/branches#rename-a-branch"
         ><code>POST /repos/:owner/:repo/branches/:branch/rename</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="commit-comments-1">
@@ -2076,26 +2204,26 @@
       <a href="/en/rest/reference/commits#update-a-commit-comment"
         ><code>PATCH /repos/:owner/:repo/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/commits#delete-a-commit-comment"
         ><code>DELETE /repos/:owner/:repo/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/reactions#create-reaction-for-a-commit-comment"
         ><code>POST /repos/:owner/:repo/comments/:comment_id/reactions</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/commits#create-a-commit-comment"
         ><code>POST /repos/:owner/:repo/commits/:sha/comments</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="git-1">
@@ -2121,79 +2249,79 @@
       <a href="/en/rest/reference/git#create-a-blob"
         ><code>POST /repos/:owner/:repo/git/blobs</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#get-a-blob"
         ><code>GET /repos/:owner/:repo/git/blobs/:sha</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/git#create-a-commit"
         ><code>POST /repos/:owner/:repo/git/commits</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#get-a-commit"
         ><code>GET /repos/:owner/:repo/git/commits/:commit_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/git#create-a-reference"
         ><code>POST /repos/:owner/:repo/git/refs</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#get-a-reference"
         ><code>GET /repos/:owner/:repo/git/ref/:ref</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/git#list-matching-references"
         ><code>GET /repos/:owner/:repo/git/matching-refs/:ref</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/git#update-a-reference"
         ><code>PATCH /repos/:owner/:repo/git/refs/:ref</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#delete-a-reference"
         ><code>DELETE /repos/:owner/:repo/git/refs/:ref</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#create-a-tag-object"
         ><code>POST /repos/:owner/:repo/git/tags</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#get-a-tag"
         ><code>GET /repos/:owner/:repo/git/tags/:tag_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/git#create-a-tree"
         ><code>POST /repos/:owner/:repo/git/trees</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/git#get-a-tree"
         ><code>GET /repos/:owner/:repo/git/trees/:sha</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
   <h3 id="import">
@@ -2219,49 +2347,49 @@
       <a href="/en/rest/reference/migrations#get-an-import-status"
         ><code>GET /repos/:owner/:repo/import</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#start-an-import"
         ><code>PUT /repos/:owner/:repo/import</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#update-an-import"
         ><code>PATCH /repos/:owner/:repo/import</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#cancel-an-import"
         ><code>DELETE /repos/:owner/:repo/import</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#get-commit-authors"
         ><code>GET /repos/:owner/:repo/import/authors</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#map-a-commit-author"
         ><code>PATCH /repos/:owner/:repo/import/authors/:author_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#get-large-files"
         ><code>GET /repos/:owner/:repo/import/large_files</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/migrations#update-git-lfs-preference"
         ><code>PATCH /repos/:owner/:repo/import/lfs</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="reactions">
@@ -2287,7 +2415,7 @@
       <a href="/en/rest/reference/reactions#delete-a-reaction-legacy"
         ><code>DELETE /reactions/:reaction_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-a-commit-comment-reaction"
@@ -2296,7 +2424,7 @@
           /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-reaction"
@@ -2305,7 +2433,7 @@
           /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-comment-reaction"
@@ -2314,7 +2442,7 @@
           /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -2324,7 +2452,7 @@
           /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-team-discussion-reaction"
@@ -2333,7 +2461,7 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -2343,7 +2471,7 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="releases">
@@ -2369,75 +2497,75 @@
       <a href="/en/rest/reference/repos/#list-releases"
         ><code>GET /repos/:owner/:repo/releases</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#create-a-release"
         ><code>POST /repos/:owner/:repo/releases</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#get-a-release"
         ><code>GET /repos/:owner/:repo/releases/:release_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#update-a-release"
         ><code>PATCH /repos/:owner/:repo/releases/:release_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#delete-a-release"
         ><code>DELETE /repos/:owner/:repo/releases/:release_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#list-release-assets"
         ><code>GET /repos/:owner/:repo/releases/:release_id/assets</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#get-a-release-asset"
         ><code>GET /repos/:owner/:repo/releases/assets/:asset_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#update-a-release-asset"
         ><code>PATCH /repos/:owner/:repo/releases/assets/:asset_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#delete-a-release-asset"
         ><code>DELETE /repos/:owner/:repo/releases/assets/:asset_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#get-the-latest-release"
         ><code>GET /repos/:owner/:repo/releases/latest</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos/#get-a-release-by-tag-name"
         ><code>GET /repos/:owner/:repo/releases/tags/:tag</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-deployments">
+  <h2 id="dependabot-alerts">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-deployments"
+      href="#dependabot-alerts"
       ><svg
         aria-hidden=""
         role="img"
@@ -2452,32 +2580,201 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "deployments"
+    >Dependabot alerts
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/dependabot/alerts#list-dependabot-alerts-for-a-repository"
+        ><code>GET /repos/:owner/:repo/dependabot/alerts</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/dependabot/alerts#get-a-dependabot-alert"
+        ><code>GET /repos/:owner/:repo/dependabot/alerts/:alert_number</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/dependabot/alerts#update-a-dependabot-alert"
+        ><code
+          >PATCH /repos/:owner/:repo/dependabot/alerts/:alert_number</code
+        ></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-dependabot-secrets"></span></p>
+  <h2 id="dependabot-secrets">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#dependabot-secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Dependabot secrets
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/dependabot#get-a-repository-public-key"
+        ><code>GET /repos/:owner/:repo/dependabot/secrets/public-key</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#list-repository-secrets"
+        ><code>GET /repos/:owner/:repo/dependabot/secrets</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#get-a-repository-secret"
+        ><code>GET /repos/:owner/:repo/dependabot/secrets/:secret_name</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#create-or-update-a-repository-secret"
+        ><code>PUT /repos/:owner/:repo/dependabot/secrets/:secret_name</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#delete-a-repository-secret"
+        ><code
+          >DELETE /repos/:owner/:repo/dependabot/secrets/:secret_name</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#get-an-organization-public-key"
+        ><code>GET /orgs/:org/dependabot/secrets/public-key</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#list-organization-secrets"
+        ><code>GET /orgs/:org/dependabot/secrets</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#get-an-organization-secret"
+        ><code>GET /orgs/:org/dependabot/secrets/:secret_name</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#create-or-update-an-organization-secret"
+        ><code>PUT /orgs/:org/dependabot/secrets/:secret_name</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#list-selected-repositories-for-an-organization-secret"
+        ><code
+          >GET /orgs/:org/dependabot/secrets/:secret_name/repositories</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#set-selected-repositories-for-an-organization-secret"
+        ><code
+          >PUT /orgs/:org/dependabot/secrets/:secret_name/repositories</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#add-selected-repository-to-an-organization-secret"
+        ><code
+          >PUT
+          /orgs/:org/dependabot/secrets/:secret_name/repositories/:repository_id</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/dependabot#remove-selected-repository-from-an-organization-secret"
+        ><code
+          >DELETE
+          /orgs/:org/dependabot/secrets/:secret_name/repositories/:repository_id</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/dependabot#delete-an-organization-secret"
+        ><code>DELETE /orgs/:org/dependabot/secrets/:secret_name</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-deployments"></span></p>
+  <h2 id="deployments">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#deployments"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Deployments
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/deployments#list-deployments"
         ><code>GET /repos/:owner/:repo/deployments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#create-a-deployment"
         ><code>POST /repos/:owner/:repo/deployments</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#get-a-deployment"
         ><code>GET /repos/:owner/:repo/deployments/:deployment_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#delete-a-deployment"
         ><code>DELETE /repos/:owner/:repo/deployments/:deployment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#list-deployment-statuses"
@@ -2485,7 +2782,7 @@
           >GET /repos/:owner/:repo/deployments/:deployment_id/statuses</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#create-a-deployment-status"
@@ -2493,7 +2790,7 @@
           >POST /repos/:owner/:repo/deployments/:deployment_id/statuses</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/deployments#get-a-deployment-status"
@@ -2502,15 +2799,16 @@
           /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id</code
         ></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-emails">
+  <p><span id="permission-on-emails"></span></p>
+  <h2 id="email-addresses">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-emails"
+      href="#email-addresses"
       ><svg
         aria-hidden=""
         role="img"
@@ -2525,7 +2823,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "emails"
+    >Email addresses
   </h2>
   <ul>
     <li>
@@ -2533,43 +2831,40 @@
         href="/en/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user"
         ><code>PATCH /user/email/visibility</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#list-email-addresses-for-the-authenticated-user"
         ><code>GET /user/emails</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#add-an-email-address-for-the-authenticated-user"
         ><code>POST /user/emails</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#delete-an-email-address-for-the-authenticated-user"
         ><code>DELETE /user/emails</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#list-public-email-addresses-for-the-authenticated-user"
         ><code>GET /user/public_emails</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-followers">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-followers"
+  <p><span id="permission-on-followers"></span></p>
+  <h2 id="followers">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
       ><svg
         aria-hidden=""
         role="img"
@@ -2584,47 +2879,44 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "followers"
+    >Followers
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/users#list-followers-of-a-user"
         ><code>GET /user/followers</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/users#list-the-people-a-user-follows"
         ><code>GET /user/following</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#check-if-a-person-is-followed-by-the-authenticated-user"
         ><code>GET /user/following/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/users#follow-a-user"
         ><code>PUT /user/following/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/users#unfollow-a-user"
         ><code>DELETE /user/following/:username</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-gpg-keys">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-gpg-keys"
+  <p><span id="permission-on-keys"></span></p>
+  <h2 id="git-ssh-keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#git-ssh-keys"
       ><svg
         aria-hidden=""
         role="img"
@@ -2639,7 +2931,56 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "gpg keys"
+    >Git SSH keys
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/users#list-public-ssh-keys-for-the-authenticated-user"
+        ><code>GET /user/keys</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#create-a-public-ssh-key-for-the-authenticated-user"
+        ><code>POST /user/keys</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user"
+        ><code>GET /user/keys/:key_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#delete-a-public-ssh-key-for-the-authenticated-user"
+        ><code>DELETE /user/keys/:key_id</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-gpg-keys"></span></p>
+  <h2 id="gpg-keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gpg-keys"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >GPG keys
   </h2>
   <ul>
     <li>
@@ -2647,36 +2988,37 @@
         href="/en/rest/reference/users#list-gpg-keys-for-the-authenticated-user"
         ><code>GET /user/gpg_keys</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#create-a-gpg-key-for-the-authenticated-user"
         ><code>POST /user/gpg_keys</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#get-a-gpg-key-for-the-authenticated-user"
         ><code>GET /user/gpg_keys/:gpg_key_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/users#delete-a-gpg-key-for-the-authenticated-user"
         ><code>DELETE /user/gpg_keys/:gpg_key_id</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-interaction-limits">
+  <p><span id="permission-on-interaction-limits"></span></p>
+  <h2 id="interaction-limits">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-interaction-limits"
+      href="#interaction-limits"
       ><svg
         aria-hidden=""
         role="img"
@@ -2691,7 +3033,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "interaction limits"
+    >Interaction limits
   </h2>
   <ul>
     <li>
@@ -2699,29 +3041,26 @@
         href="/en/rest/reference/interactions#get-interaction-restrictions-for-your-public-repositories"
         ><code>GET /user/interaction-limits</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#set-interaction-restrictions-for-your-public-repositories"
         ><code>PUT /user/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#remove-interaction-restrictions-from-your-public-repositories"
         ><code>DELETE /user/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-issues">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-issues"
+  <p><span id="permission-on-issues"></span></p>
+  <h2 id="issues">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
       ><svg
         aria-hidden=""
         role="img"
@@ -2736,7 +3075,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "issues"
+    >Issues
   </h2>
   <p>
     Issues and pull requests are closely related. For more information, see "<a
@@ -2752,91 +3091,91 @@
       <a href="/en/rest/reference/issues#list-repository-issues"
         ><code>GET /repos/:owner/:repo/issues</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-an-issue"
         ><code>POST /repos/:owner/:repo/issues</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-an-issue"
         ><code>PATCH /repos/:owner/:repo/issues/:issue_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-issue-comments"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-an-issue-comment"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/comments</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#lock-an-issue"
         ><code>PUT /repos/:owner/:repo/issues/:issue_number/lock</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#unlock-an-issue"
         ><code>DELETE /repos/:owner/:repo/issues/:issue_number/lock</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#list-reactions-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/reactions</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#create-reaction-for-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-timeline-events-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/timeline</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-issue-comments-for-a-repository"
         ><code>GET /repos/:owner/:repo/issues/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-an-issue-comment"
         ><code>GET /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-an-issue-comment"
         ><code>PATCH /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-an-issue-comment"
         ><code>DELETE /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#list-reactions-for-an-issue-comment"
@@ -2844,7 +3183,7 @@
           >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -2853,7 +3192,7 @@
           >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="assignees">
@@ -2879,19 +3218,19 @@
       <a href="/en/rest/reference/issues#list-assignees"
         ><code>GET /repos/:owner/:repo/assignees</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#check-if-a-user-can-be-assigned"
         ><code>GET /repos/:owner/:repo/assignees/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#add-assignees-to-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/assignees</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-assignees-from-an-issue"
@@ -2899,7 +3238,7 @@
           >DELETE /repos/:owner/:repo/issues/:issue_number/assignees</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="events-1">
@@ -2925,13 +3264,13 @@
       <a href="/en/rest/reference/issues#list-issue-events"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/events</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-an-issue-event"
         ><code>GET /repos/:owner/:repo/issues/events/:event_id</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
   <h3 id="labels">
@@ -2957,25 +3296,25 @@
       <a href="/en/rest/reference/issues#list-labels-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#add-labels-to-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#set-labels-for-an-issue"
         ><code>PUT /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-all-labels-from-an-issue"
         ><code>DELETE /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-a-label-from-an-issue"
@@ -2983,37 +3322,37 @@
           >DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-labels-for-a-repository"
         ><code>GET /repos/:owner/:repo/labels</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-a-label"
         ><code>POST /repos/:owner/:repo/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-a-label"
         ><code>GET /repos/:owner/:repo/labels/:name</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-a-label"
         ><code>PATCH /repos/:owner/:repo/labels/:name</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-a-label"
         ><code>DELETE /repos/:owner/:repo/labels/:name</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="milestones">
@@ -3039,31 +3378,31 @@
       <a href="/en/rest/reference/issues#list-milestones"
         ><code>GET /repos/:owner/:repo/milestones</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-a-milestone"
         ><code>POST /repos/:owner/:repo/milestones</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-a-milestone"
         ><code>GET /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-a-milestone"
         ><code>PATCH /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-a-milestone"
         ><code>DELETE /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-labels-for-issues-in-a-milestone"
@@ -3071,7 +3410,7 @@
           >GET /repos/:owner/:repo/milestones/:milestone_number/labels</code
         ></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
   <h3 id="reactions-1">
@@ -3099,7 +3438,7 @@
           >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -3108,25 +3447,25 @@
           >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#list-reactions-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/reactions</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#create-reaction-for-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-a-reaction-legacy"
         ><code>DELETE /reactions/:reaction_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-a-commit-comment-reaction"
@@ -3135,7 +3474,7 @@
           /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-reaction"
@@ -3144,7 +3483,7 @@
           /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-comment-reaction"
@@ -3153,7 +3492,7 @@
           /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -3163,7 +3502,7 @@
           /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-team-discussion-reaction"
@@ -3172,7 +3511,7 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -3182,15 +3521,12 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-keys">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-keys"
+  <p><span id="permission-on-members"></span></p>
+  <h2 id="members">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#members"
       ><svg
         aria-hidden=""
         role="img"
@@ -3205,77 +3541,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "keys"
-  </h2>
-  <h3 id="keys-2">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys-2"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Keys
-  </h3>
-  <ul>
-    <li>
-      <a
-        href="/en/rest/reference/users#list-public-ssh-keys-for-the-authenticated-user"
-        ><code>GET /user/keys</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/users#create-a-public-ssh-key-for-the-authenticated-user"
-        ><code>POST /user/keys</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user"
-        ><code>GET /user/keys/:key_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/users#delete-a-public-ssh-key-for-the-authenticated-user"
-        ><code>DELETE /user/keys/:key_id</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-members">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-members"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "members"
+    >Members
   </h2>
   <ul>
     <li>
@@ -3285,7 +3551,7 @@
           /organizations/:org_id/team/:team_id/team-sync/group-mappings</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#create-or-update-idp-group-connections"
@@ -3294,78 +3560,78 @@
           /organizations/:org_id/team/:team_id/team-sync/group-mappings</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#list-outside-collaborators-for-an-organization"
         ><code>GET /orgs/:org/outside_collaborators</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#convert-an-organization-member-to-outside-collaborator"
         ><code>PUT /orgs/:org/outside_collaborators/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#remove-outside-collaborator-from-an-organization"
         ><code>DELETE /orgs/:org/outside_collaborators/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/teams/team-sync#list-idp-groups-for-an-organization"
         ><code>GET /orgs/:org/team-sync/groups</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/teams/teams#get-a-team-by-name"
         ><code>GET /orgs/:org/team/:team_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/scim#list-scim-provisioned-identities"
         ><code>GET /scim/v2/orgs/:org/Users</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/scim#provision-and-invite-a-scim-user"
         ><code>POST /scim/v2/orgs/:org/Users</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/scim#get-scim-provisioning-information-for-a-user"
         ><code>GET /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/scim#set-scim-information-for-a-provisioned-user"
         ><code>PUT /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/scim#update-an-attribute-for-a-scim-user"
         ><code>PATCH /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/scim#delete-a-scim-user-from-an-organization"
         ><code>DELETE /scim/v2/orgs/:org/Users/:external_identity_guid</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="invitations-1">
@@ -3391,25 +3657,25 @@
       <a href="/en/rest/reference/orgs#list-pending-organization-invitations"
         ><code>GET /orgs/:org/invitations</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#create-an-organization-invitation"
         ><code>POST /orgs/:org/invitations</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#list-organization-invitation-teams"
         ><code>GET /orgs/:org/invitations/:invitation_id/teams</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-pending-team-invitations"
         ><code>GET /teams/:team_id/invitations</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
   <h3 id="organization-members-1">
@@ -3439,61 +3705,61 @@
       <a href="/en/rest/reference/orgs#remove-an-organization-member"
         ><code>DELETE /orgs/:org/members/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#get-organization-membership-for-a-user"
         ><code>GET /orgs/:org/memberships/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#set-organization-membership-for-a-user"
         ><code>PUT /orgs/:org/memberships/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#remove-organization-membership-for-a-user"
         ><code>DELETE /orgs/:org/memberships/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#set-public-organization-membership-for-the-authenticated-user"
         ><code>PUT /orgs/:org/public_members/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#remove-public-organization-membership-for-the-authenticated-user"
         ><code>DELETE /orgs/:org/public_members/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#list-organization-memberships-for-the-authenticated-user"
         ><code>GET /user/memberships/orgs</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#get-an-organization-membership-for-the-authenticated-user"
         ><code>GET /user/memberships/orgs/:org</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#update-an-organization-membership-for-the-authenticated-user"
         ><code>PATCH /user/memberships/orgs/:org</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="team-members">
@@ -3519,26 +3785,26 @@
       <a href="/en/rest/reference/teams#list-team-members"
         ><code>GET /teams/:team_id/members</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#get-team-membership-for-a-user"
         ><code>GET /teams/:team_id/memberships/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/teams#add-or-update-team-membership-for-a-user"
         ><code>PUT /teams/:team_id/memberships/:username</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#remove-team-membership-for-a-user"
         ><code>DELETE /teams/:team_id/memberships/:username</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="teams-1">
@@ -3564,94 +3830,95 @@
       <a href="/en/rest/reference/teams#list-teams"
         ><code>GET /orgs/:org/teams</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#create-a-team"
         ><code>POST /orgs/:org/teams</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#get-a-team-by-name"
         ><code>GET /orgs/:org/teams/:team_slug</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#update-a-team"
         ><code>PATCH /teams/:team_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#delete-a-team"
         ><code>DELETE /teams/:team_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-team-projects"
         ><code>GET /teams/:team_id/projects</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#check-team-permissions-for-a-project"
         ><code>GET /teams/:team_id/projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#add-or-update-team-project-permissions"
         ><code>PUT /teams/:team_id/projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#remove-a-project-from-a-team"
         ><code>DELETE /teams/:team_id/projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-team-repositories"
         ><code>GET /teams/:team_id/repos</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#check-team-permissions-for-a-repository"
         ><code>GET /teams/:team_id/repos/:owner/:repo</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/teams#add-or-update-team-repository-permissions"
         ><code>PUT /teams/:team_id/repos/:owner/:repo</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#remove-a-repository-from-a-team"
         ><code>DELETE /teams/:team_id/repos/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-child-teams"
         ><code>GET /teams/:team_id/teams</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-organization-administration">
+  <p><span id="permission-on-organization-administration"></span></p>
+  <h2 id="organization-administration">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-organization-administration"
+      href="#organization-administration"
       ><svg
         aria-hidden=""
         role="img"
@@ -3666,57 +3933,58 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "organization administration"
+    >Organization administration
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/orgs#update-an-organization"
         ><code>PATCH /orgs/:org</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-github-actions-cache-usage-for-an-organization"
         ><code>GET /orgs/:org/actions/cache/usage</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#list-repositories-with-github-actions-cache-usage-for-an-organization"
         ><code>GET /orgs/:org/actions/cache/usage-by-repository</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#get-interaction-restrictions-for-an-organization"
         ><code>GET /orgs/:org/interaction-limits</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#set-interaction-restrictions-for-an-organization"
         ><code>PUT /orgs/:org/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#remove-interaction-restrictions-for-an-organization"
         ><code>DELETE /orgs/:org/interaction-limits</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-organization-events">
+  <p><span id="permission-on-organization-events"></span></p>
+  <h2 id="organization-events">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-organization-events"
+      href="#organization-events"
       ><svg
         aria-hidden=""
         role="img"
@@ -3731,7 +3999,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "organization events"
+    >Organization events
   </h2>
   <ul>
     <li>
@@ -3739,15 +4007,16 @@
         href="/en/rest/reference/activity#list-organization-events-for-the-authenticated-user"
         ><code>GET /users/:username/events/orgs/:org</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-organization-hooks">
+  <p><span id="permission-on-organization-projects"></span></p>
+  <h2 id="organization-projects">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-organization-hooks"
+      href="#organization-projects"
       ><svg
         aria-hidden=""
         role="img"
@@ -3762,44 +4031,225 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "organization hooks"
+    >Organization projects
   </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/projects#create-an-organization-project"
+        ><code>POST /orgs/:org/projects</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#get-a-project"
+        ><code>GET /projects/:project_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#update-a-project"
+        ><code>PATCH /projects/:project_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#delete-a-project"
+        ><code>DELETE /projects/:project_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#create-a-project-card"
+        ><code>POST /projects/:project_id/cards</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#list-project-columns"
+        ><code>GET /projects/:project_id/columns</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#create-a-project-column"
+        ><code>POST /projects/:project_id/columns</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#get-a-project-column"
+        ><code>GET /projects/columns/:column_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#update-a-project-column"
+        ><code>PATCH /projects/columns/:column_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#delete-a-project-column"
+        ><code>DELETE /projects/columns/:column_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#list-project-cards"
+        ><code>GET /projects/columns/:column_id/cards</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#create-a-project-card"
+        ><code>POST /projects/columns/:column_id/cards</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#move-a-project-column"
+        ><code>POST /projects/columns/:column_id/moves</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#get-a-project-card"
+        ><code>GET /projects/columns/cards/:card_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#update-a-project-card"
+        ><code>PATCH /projects/columns/cards/:card_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#delete-a-project-card"
+        ><code>DELETE /projects/columns/cards/:card_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/projects#move-a-project-card"
+        ><code>POST /projects/columns/cards/:card_id/moves</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-organization-user-blocking"></span></p>
+  <h2 id="organization-user-blocking">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#organization-user-blocking"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Organization user blocking
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/orgs#list-users-blocked-by-an-organization"
+        ><code>GET /orgs/:org/blocks</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/orgs#check-if-a-user-is-blocked-by-an-organization"
+        ><code>GET /orgs/:org/blocks/:username</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/orgs#block-a-user-from-an-organization"
+        ><code>PUT /orgs/:org/blocks/:username</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/orgs#unblock-a-user-from-an-organization"
+        ><code>DELETE /orgs/:org/blocks/:username</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-organization-hooks"></span></p>
+  <h2 id="organization-webhooks">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#organization-webhooks"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Organization webhooks
+  </h2>
+  <p>
+    GitHub Pages can only be created or unpublished by a repository owner or
+    administrator.
+  </p>
   <ul>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#list-organization-webhooks"
         ><code>GET /orgs/:org/hooks</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#create-an-organization-webhook"
         ><code>POST /orgs/:org/hooks</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#get-an-organization-webhook"
         ><code>GET /orgs/:org/hooks/:hook_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#update-an-organization-webhook"
         ><code>PATCH /orgs/:org/hooks/:hook_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#delete-an-organization-webhook"
         ><code>DELETE /orgs/:org/hooks/:hook_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#webhooks/#ping-an-organization-webhook"
         ><code>POST /orgs/:org/hooks/:hook_id/pings</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="teams-2">
@@ -3825,15 +4275,12 @@
       <a href="/en/rest/reference/teams#remove-a-project-from-a-team"
         ><code>DELETE /teams/:team_id/projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-organization-projects">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-organization-projects"
+  <p><span id="permission-on-pages"></span></p>
+  <h2 id="pages">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#pages"
       ><svg
         aria-hidden=""
         role="img"
@@ -3848,182 +4295,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "organization projects"
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/projects#create-an-organization-project"
-        ><code>POST /orgs/:org/projects</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#get-a-project"
-        ><code>GET /projects/:project_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#update-a-project"
-        ><code>PATCH /projects/:project_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#delete-a-project"
-        ><code>DELETE /projects/:project_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#create-a-project-card"
-        ><code>POST /projects/:project_id/cards</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#list-project-columns"
-        ><code>GET /projects/:project_id/columns</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#create-a-project-column"
-        ><code>POST /projects/:project_id/columns</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#get-a-project-column"
-        ><code>GET /projects/columns/:column_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#update-a-project-column"
-        ><code>PATCH /projects/columns/:column_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#delete-a-project-column"
-        ><code>DELETE /projects/columns/:column_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#list-project-cards"
-        ><code>GET /projects/columns/:column_id/cards</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#create-a-project-card"
-        ><code>POST /projects/columns/:column_id/cards</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#move-a-project-column"
-        ><code>POST /projects/columns/:column_id/moves</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#get-a-project-card"
-        ><code>GET /projects/columns/cards/:card_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#update-a-project-card"
-        ><code>PATCH /projects/columns/cards/:card_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#delete-a-project-card"
-        ><code>DELETE /projects/columns/cards/:card_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/projects#move-a-project-card"
-        ><code>POST /projects/columns/cards/:card_id/moves</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-organization-user-blocking">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-organization-user-blocking"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "organization user blocking"
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/orgs#list-users-blocked-by-an-organization"
-        ><code>GET /orgs/:org/blocks</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/orgs#check-if-a-user-is-blocked-by-an-organization"
-        ><code>GET /orgs/:org/blocks/:username</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/orgs#block-a-user-from-an-organization"
-        ><code>PUT /orgs/:org/blocks/:username</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/orgs#unblock-a-user-from-an-organization"
-        ><code>DELETE /orgs/:org/blocks/:username</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-pages">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-pages"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "pages"
+    >Pages
   </h2>
   <p>
     GitHub Pages can only be created or unpublished by a repository owner or
@@ -4034,58 +4306,55 @@
       <a href="/en/rest/reference/pages#get-a-github-pages-site"
         ><code>GET /repos/:owner/:repo/pages</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/pages#update-information-about-a-github-pages-site"
         ><code>PUT /repos/:owner/:repo/pages</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pages#list-github-pages-builds"
         ><code>GET /repos/:owner/:repo/pages/builds</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pages#request-a-github-pages-build"
         ><code>POST /repos/:owner/:repo/pages/builds</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pages#get-github-pages-build"
         ><code>GET /repos/:owner/:repo/pages/builds/:build_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pages#get-latest-pages-build"
         ><code>GET /repos/:owner/:repo/pages/builds/latest</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pages#get-a-dns-health-check-for-github-pages"
         ><code>GET /repos/:owner/:repo/pages/health</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#create-a-github-pages-deployment"
         ><code>POST /repos/:owner/:repo/pages/deployment</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-pull-requests">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-pull-requests"
+  <p><span id="permission-on-profile"></span></p>
+  <h2 id="profile">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#profile"
       ><svg
         aria-hidden=""
         role="img"
@@ -4100,7 +4369,34 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "pull requests"
+    >Profile
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/users#update-the-authenticated-user"
+        ><code>PATCH /user</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <p><span id="permission-on-pull-requests"></span></p>
+  <h2 id="pull-requests">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#pull-requests"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Pull requests
   </h2>
   <p>
     Pull requests and issues are closely related. If your GitHub App has
@@ -4114,142 +4410,142 @@
       <a href="/en/rest/reference/issues#update-an-issue"
         ><code>PATCH /repos/:owner/:repo/issues/:issue_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-issue-comments"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-an-issue-comment"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/comments</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#lock-an-issue"
         ><code>PUT /repos/:owner/:repo/issues/:issue_number/lock</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#unlock-an-issue"
         ><code>DELETE /repos/:owner/:repo/issues/:issue_number/lock</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-timeline-events-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/timeline</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-issue-comments-for-a-repository"
         ><code>GET /repos/:owner/:repo/issues/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-an-issue-comment"
         ><code>GET /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-an-issue-comment"
         ><code>PATCH /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-an-issue-comment"
         ><code>DELETE /repos/:owner/:repo/issues/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-pull-requests"
         ><code>GET /repos/:owner/:repo/pulls</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#create-a-pull-request"
         ><code>POST /repos/:owner/:repo/pulls</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#get-a-pull-request"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#update-a-pull-request"
         ><code>PATCH /repos/:owner/:repo/pulls/:pull_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-review-comments-on-a-pull-request"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/pulls#create-a-review-comment-for-a-pull-request"
         ><code>POST /repos/:owner/:repo/pulls/:pull_number/comments</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-commits-on-a-pull-request"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number/commits</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-pull-requests-files"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number/files</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#check-if-a-pull-request-has-been-merged"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number/merge</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-review-comments-in-a-repository"
         ><code>GET /repos/:owner/:repo/pulls/comments</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#get-a-review-comment-for-a-pull-request"
         ><code>GET /repos/:owner/:repo/pulls/comments/:comment_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/pulls#update-a-review-comment-for-a-pull-request"
         ><code>PATCH /repos/:owner/:repo/pulls/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/pulls#delete-a-review-comment-for-a-pull-request"
         ><code>DELETE /repos/:owner/:repo/pulls/comments/:comment_id</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="assignees-1">
@@ -4275,19 +4571,19 @@
       <a href="/en/rest/reference/issues#list-assignees"
         ><code>GET /repos/:owner/:repo/assignees</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#check-if-a-user-can-be-assigned"
         ><code>GET /repos/:owner/:repo/assignees/:username</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#add-assignees-to-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/assignees</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-assignees-from-an-issue"
@@ -4295,7 +4591,7 @@
           >DELETE /repos/:owner/:repo/issues/:issue_number/assignees</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="events-2">
@@ -4321,13 +4617,13 @@
       <a href="/en/rest/reference/issues#list-issue-events"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/events</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-an-issue-event"
         ><code>GET /repos/:owner/:repo/issues/events/:event_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#submit-a-review-for-a-pull-request"
@@ -4336,7 +4632,7 @@
           /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="labels-1">
@@ -4362,25 +4658,25 @@
       <a href="/en/rest/reference/issues#list-labels-for-an-issue"
         ><code>GET /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#add-labels-to-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#set-labels-for-an-issue"
         ><code>PUT /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-all-labels-from-an-issue"
         ><code>DELETE /repos/:owner/:repo/issues/:issue_number/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#remove-a-label-from-an-issue"
@@ -4388,37 +4684,37 @@
           >DELETE /repos/:owner/:repo/issues/:issue_number/labels/:name</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-labels-for-a-repository"
         ><code>GET /repos/:owner/:repo/labels</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-a-label"
         ><code>POST /repos/:owner/:repo/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-a-label"
         ><code>GET /repos/:owner/:repo/labels/:name</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-a-label"
         ><code>PATCH /repos/:owner/:repo/labels/:name</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-a-label"
         ><code>DELETE /repos/:owner/:repo/labels/:name</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="milestones-1">
@@ -4444,31 +4740,31 @@
       <a href="/en/rest/reference/issues#list-milestones"
         ><code>GET /repos/:owner/:repo/milestones</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#create-a-milestone"
         ><code>POST /repos/:owner/:repo/milestones</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#get-a-milestone"
         ><code>GET /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-a-milestone"
         ><code>PATCH /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-a-milestone"
         ><code>DELETE /repos/:owner/:repo/milestones/:milestone_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-labels-for-issues-in-a-milestone"
@@ -4476,7 +4772,7 @@
           >GET /repos/:owner/:repo/milestones/:milestone_number/labels</code
         ></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
   <h3 id="reactions-2">
@@ -4502,7 +4798,7 @@
       <a href="/en/rest/reference/reactions#create-reaction-for-an-issue"
         ><code>POST /repos/:owner/:repo/issues/:issue_number/reactions</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#list-reactions-for-an-issue-comment"
@@ -4510,7 +4806,7 @@
           >GET /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -4519,7 +4815,7 @@
           >POST /repos/:owner/:repo/issues/comments/:comment_id/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -4528,7 +4824,7 @@
           >GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -4537,13 +4833,13 @@
           >POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-a-reaction-legacy"
         ><code>DELETE /reactions/:reaction_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-a-commit-comment-reaction"
@@ -4552,7 +4848,7 @@
           /repos/:owner/:repo/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-reaction"
@@ -4561,7 +4857,7 @@
           /repos/:owner/:repo/issues/:issue_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-an-issue-comment-reaction"
@@ -4570,7 +4866,7 @@
           /repos/:owner/:repo/issues/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -4580,7 +4876,7 @@
           /repos/:owner/:repo/pulls/comments/:comment_id/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/reactions#delete-team-discussion-reaction"
@@ -4589,7 +4885,7 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -4599,7 +4895,7 @@
           /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="requested-reviewers">
@@ -4632,7 +4928,7 @@
           >GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#request-reviewers-for-a-pull-request"
@@ -4640,7 +4936,7 @@
           >POST /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -4650,7 +4946,7 @@
           /repos/:owner/:repo/pulls/:pull_number/requested_reviewers</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="reviews">
@@ -4676,13 +4972,13 @@
       <a href="/en/rest/reference/pulls#list-reviews-for-a-pull-request"
         ><code>GET /repos/:owner/:repo/pulls/:pull_number/reviews</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#create-a-review-for-a-pull-request"
         ><code>POST /repos/:owner/:repo/pulls/:pull_number/reviews</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#get-a-review-for-a-pull-request"
@@ -4690,7 +4986,7 @@
           >GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#update-a-review-for-a-pull-request"
@@ -4698,7 +4994,7 @@
           >PUT /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -4708,7 +5004,7 @@
           /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#list-comments-for-a-pull-request-review"
@@ -4717,7 +5013,7 @@
           /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/pulls#dismiss-a-review-for-a-pull-request"
@@ -4726,15 +5022,16 @@
           /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/dismissals</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-profile">
+  <p><span id="permission-on-repository-projects"></span></p>
+  <h2 id="repository-projects">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-profile"
+      href="#repository-projects"
       ><svg
         aria-hidden=""
         role="img"
@@ -4749,212 +5046,116 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "profile"
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/users#update-the-authenticated-user"
-        ><code>PATCH /user</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-repository-hooks">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-repository-hooks"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "repository hooks"
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/webhooks#list-repository-webhooks"
-        ><code>GET /repos/:owner/:repo/hooks</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/webhooks#create-a-repository-webhook"
-        ><code>POST /repos/:owner/:repo/hooks</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/webhooks#get-a-repository-webhook"
-        ><code>GET /repos/:owner/:repo/hooks/:hook_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/webhooks#update-a-repository-webhook"
-        ><code>PATCH /repos/:owner/:repo/hooks/:hook_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/webhooks#delete-a-repository-webhook"
-        ><code>DELETE /repos/:owner/:repo/hooks/:hook_id</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/webhooks#ping-a-repository-webhook"
-        ><code>POST /repos/:owner/:repo/hooks/:hook_id/pings</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/repos#test-the-push-repository-webhook"
-        ><code>POST /repos/:owner/:repo/hooks/:hook_id/tests</code></a
-      >
-      (:read)
-    </li>
-  </ul>
-  <h2 id="permission-on-repository-projects">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-repository-projects"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "repository projects"
+    >Repository projects
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/projects#get-a-project"
         ><code>GET /projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#update-a-project"
         ><code>PATCH /projects/:project_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#delete-a-project"
         ><code>DELETE /projects/:project_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#create-a-project-card"
         ><code>POST /projects/:project_id/cards</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#list-project-columns"
         ><code>GET /projects/:project_id/columns</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#create-a-project-column"
         ><code>POST /projects/:project_id/columns</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#get-a-project-column"
         ><code>GET /projects/columns/:column_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#update-a-project-column"
         ><code>PATCH /projects/columns/:column_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#delete-a-project-column"
         ><code>DELETE /projects/columns/:column_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#list-project-cards"
         ><code>GET /projects/columns/:column_id/cards</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#create-a-project-card"
         ><code>POST /projects/columns/:column_id/cards</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#move-a-project-column"
         ><code>POST /projects/columns/:column_id/moves</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#get-a-project-card"
         ><code>GET /projects/columns/cards/:card_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#update-a-project-card"
         ><code>PATCH /projects/columns/cards/:card_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#delete-a-project-card"
         ><code>DELETE /projects/columns/cards/:card_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#move-a-project-card"
         ><code>POST /projects/columns/cards/:card_id/moves</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/projects#list-repository-projects"
         ><code>GET /repos/:owner/:repo/projects</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/projects#create-a-repository-project"
         ><code>POST /repos/:owner/:repo/projects</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
   <h3 id="teams-3">
@@ -4980,15 +5181,16 @@
       <a href="/en/rest/reference/teams#remove-a-project-from-a-team"
         ><code>DELETE /teams/:team_id/projects/:project_id</code></a
       >
-      (:read)
+      (read)
     </li>
   </ul>
-  <h2 id="permission-on-secrets">
+  <p><span id="permission-on-repository-hooks"></span></p>
+  <h2 id="repository-webhooks">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-secrets"
+      href="#repository-webhooks"
       ><svg
         aria-hidden=""
         role="img"
@@ -5003,63 +5205,126 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "secrets"
+    >Repository webhooks
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/reference/webhooks#list-repository-webhooks"
+        ><code>GET /repos/:owner/:repo/hooks</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/webhooks#create-a-repository-webhook"
+        ><code>POST /repos/:owner/:repo/hooks</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/webhooks#get-a-repository-webhook"
+        ><code>GET /repos/:owner/:repo/hooks/:hook_id</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/webhooks#update-a-repository-webhook"
+        ><code>PATCH /repos/:owner/:repo/hooks/:hook_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/webhooks#delete-a-repository-webhook"
+        ><code>DELETE /repos/:owner/:repo/hooks/:hook_id</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/webhooks#ping-a-repository-webhook"
+        ><code>POST /repos/:owner/:repo/hooks/:hook_id/pings</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/repos#test-the-push-repository-webhook"
+        ><code>POST /repos/:owner/:repo/hooks/:hook_id/tests</code></a
+      >
+      (read)
+    </li>
+  </ul>
+  <p><span id="permission-on-secrets"></span></p>
+  <h2 id="secrets">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Secrets
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/actions#get-a-repository-public-key"
         ><code>GET /repos/:owner/:repo/actions/secrets/public-key</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-repository-secrets"
         ><code>GET /repos/:owner/:repo/actions/secrets</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-a-repository-secret"
         ><code>GET /repos/:owner/:repo/actions/secrets/:secret_name</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#create-or-update-a-repository-secret"
         ><code>PUT /repos/:owner/:repo/actions/secrets/:secret_name</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#delete-a-repository-secret"
         ><code>DELETE /repos/:owner/:repo/actions/secrets/:secret_name</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-an-organization-public-key"
         ><code>GET /orgs/:org/actions/secrets/public-key</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#list-organization-secrets"
         ><code>GET /orgs/:org/actions/secrets</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-an-organization-secret"
         ><code>GET /orgs/:org/actions/secrets/:secret_name</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#create-or-update-an-organization-secret"
         ><code>PUT /orgs/:org/actions/secrets/:secret_name</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5068,7 +5333,7 @@
           >GET /orgs/:org/actions/secrets/:secret_name/repositories</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -5077,7 +5342,7 @@
           >PUT /orgs/:org/actions/secrets/:secret_name/repositories</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5087,7 +5352,7 @@
           /orgs/:org/actions/secrets/:secret_name/repositories/:repository_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5097,21 +5362,22 @@
           /orgs/:org/actions/secrets/:secret_name/repositories/:repository_id</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#delete-an-organization-secret"
         ><code>DELETE /orgs/:org/actions/secrets/:secret_name</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-dependabot_secrets">
+  <p><span id="permission-on-self-hosted-runners"></span></p>
+  <h2 id="self-hosted-runners">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-dependabot_secrets"
+      href="#self-hosted-runners"
       ><svg
         aria-hidden=""
         role="img"
@@ -5126,236 +5392,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "dependabot_secrets"
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/reference/dependabot#get-a-repository-public-key"
-        ><code>GET /repos/:owner/:repo/dependabot/secrets/public-key</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#list-repository-secrets"
-        ><code>GET /repos/:owner/:repo/dependabot/secrets</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#get-a-repository-secret"
-        ><code>GET /repos/:owner/:repo/dependabot/secrets/:secret_name</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#create-or-update-a-repository-secret"
-        ><code>PUT /repos/:owner/:repo/dependabot/secrets/:secret_name</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#delete-a-repository-secret"
-        ><code
-          >DELETE /repos/:owner/:repo/dependabot/secrets/:secret_name</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#get-an-organization-public-key"
-        ><code>GET /orgs/:org/dependabot/secrets/public-key</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#list-organization-secrets"
-        ><code>GET /orgs/:org/dependabot/secrets</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#get-an-organization-secret"
-        ><code>GET /orgs/:org/dependabot/secrets/:secret_name</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#create-or-update-an-organization-secret"
-        ><code>PUT /orgs/:org/dependabot/secrets/:secret_name</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#list-selected-repositories-for-an-organization-secret"
-        ><code
-          >GET /orgs/:org/dependabot/secrets/:secret_name/repositories</code
-        ></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#set-selected-repositories-for-an-organization-secret"
-        ><code
-          >PUT /orgs/:org/dependabot/secrets/:secret_name/repositories</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#add-selected-repository-to-an-organization-secret"
-        ><code
-          >PUT
-          /orgs/:org/dependabot/secrets/:secret_name/repositories/:repository_id</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/dependabot#remove-selected-repository-from-an-organization-secret"
-        ><code
-          >DELETE
-          /orgs/:org/dependabot/secrets/:secret_name/repositories/:repository_id</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a href="/en/rest/reference/dependabot#delete-an-organization-secret"
-        ><code>DELETE /orgs/:org/dependabot/secrets/:secret_name</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-security-events">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-security-events"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "security events"
-  </h2>
-  <ul>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository"
-        ><code>GET /repos/:owner/:repo/code-scanning/alerts</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/code-scanning#get-a-code-scanning-alert"
-        ><code
-          >GET /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
-        ></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/code-scanning#update-a-code-scanning-alert"
-        ><code
-          >PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert"
-        ><code
-          >GET
-          /repos/:owner/:repo/code-scanning/alerts/:alert_number/instances</code
-        ></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository"
-        ><code>GET /repos/:owner/:repo/code-scanning/analyses</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository"
-        ><code
-          >GET /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
-        ></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository"
-        ><code
-          >DELETE /repos/:owner/:repo/code-scanning/analyses/:analysis_id</code
-        ></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#upload-an-analysis-as-sarif-data"
-        ><code>POST /repos/:owner/:repo/code-scanning/sarifs</code></a
-      >
-      (:write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#get-information-about-a-sarif-upload"
-        ><code>GET /repos/:owner/:repo/code-scanning/sarifs/:sarif_id</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/code-scanning#list-code-scanning-alerts-by-organization"
-        ><code>GET /orgs/:org/code-scanning/alerts</code></a
-      >
-      (:read)
-    </li>
-  </ul>
-  <h2 id="permission-on-self-hosted-runners">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-self-hosted-runners"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "self-hosted runners"
+    >Self-hosted runners
   </h2>
   <ul>
     <li>
@@ -5363,70 +5400,70 @@
         href="/en/rest/reference/actions#list-runner-applications-for-an-organization"
         ><code>GET /orgs/:org/actions/runners/downloads</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#create-a-registration-token-for-an-organization"
         ><code>POST /orgs/:org/actions/runners/registration-token</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#list-self-hosted-runners-for-an-organization"
         ><code>GET /orgs/:org/actions/runners</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-a-self-hosted-runner-for-an-organization"
         ><code>GET /orgs/:org/actions/runners/:runner_id</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#create-a-remove-token-for-an-organization"
         ><code>POST /orgs/:org/actions/runners/remove-token</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#delete-a-self-hosted-runner-from-an-organization"
         ><code>DELETE /orgs/:org/actions/runners/:runner_id</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#list-labels-for-a-self-hosted-runner-for-an-organization"
         ><code>GET /orgs/:org/actions/runners/:runner_id/labels</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#add-custom-labels-to-a-self-hosted-runner-for-an-organization"
         ><code>POST /orgs/:org/actions/runners/:runner_id/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#set-custom-labels-for-a-self-hosted-runner-for-an-organization"
         ><code>PUT /orgs/:org/actions/runners/:runner_id/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#remove-all-custom-labels-from-a-self-hosted-runner-for-an-organization"
         ><code>DELETE /orgs/:org/actions/runners/:runner_id/labels</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5435,15 +5472,12 @@
           >DELETE /orgs/:org/actions/runners/:runner_id/labels/:name</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-single-file">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-single-file"
+  <p><span id="permission-on-single-file"></span></p>
+  <h2 id="single-file">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#single-file"
       ><svg
         aria-hidden=""
         role="img"
@@ -5458,34 +5492,31 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "single file"
+    >Single file
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/repos#get-repository-content"
         ><code>GET /repos/:owner/:repo/contents/:path</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos#create-or-update-file-contents"
         ><code>PUT /repos/:owner/:repo/contents/:path</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/repos#delete-a-file"
         ><code>DELETE /repos/:owner/:repo/contents/:path</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-starring">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-starring"
+  <p><span id="permission-on-starring"></span></p>
+  <h2 id="starring">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#starring"
       ><svg
         aria-hidden=""
         role="img"
@@ -5500,7 +5531,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "starring"
+    >Starring
   </h2>
   <ul>
     <li>
@@ -5508,29 +5539,30 @@
         href="/en/rest/reference/activity#check-if-a-repository-is-starred-by-the-authenticated-user"
         ><code>GET /user/starred/:owner/:repo</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/activity#star-a-repository-for-the-authenticated-user"
         ><code>PUT /user/starred/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/activity#unstar-a-repository-for-the-authenticated-user"
         ><code>DELETE /user/starred/:owner/:repo</code></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
-  <h2 id="permission-on-statuses">
+  <p><span id="permission-on-team-discussions"></span></p>
+  <h2 id="team-discussions">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#permission-on-statuses"
+      href="#team-discussions"
       ><svg
         aria-hidden=""
         role="img"
@@ -5545,81 +5577,38 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Permission on "statuses"
-  </h2>
-  <ul>
-    <li>
-      <a
-        href="/en/rest/reference/commits#get-the-combined-status-for-a-specific-reference"
-        ><code>GET /repos/:owner/:repo/commits/:ref/status</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/commits#list-commit-statuses-for-a-reference"
-        ><code>GET /repos/:owner/:repo/commits/:ref/statuses</code></a
-      >
-      (:read)
-    </li>
-    <li>
-      <a href="/en/rest/reference/commits#create-a-commit-status"
-        ><code>POST /repos/:owner/:repo/statuses/:sha</code></a
-      >
-      (:write)
-    </li>
-  </ul>
-  <h2 id="permission-on-team-discussions">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#permission-on-team-discussions"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Permission on "team discussions"
+    >Team discussions
   </h2>
   <ul>
     <li>
       <a href="/en/rest/reference/teams#list-discussions"
         ><code>GET /teams/:team_id/discussions</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#create-a-discussion"
         ><code>POST /teams/:team_id/discussions</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#get-a-discussion"
         ><code>GET /teams/:team_id/discussions/:discussion_number</code></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#update-a-discussion"
         ><code>PATCH /teams/:team_id/discussions/:discussion_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#delete-a-discussion"
         ><code>DELETE /teams/:team_id/discussions/:discussion_number</code></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-discussion-comments"
@@ -5627,7 +5616,7 @@
           >GET /teams/:team_id/discussions/:discussion_number/comments</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#create-a-discussion-comment"
@@ -5635,7 +5624,7 @@
           >POST /teams/:team_id/discussions/:discussion_number/comments</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#get-a-discussion-comment"
@@ -5644,7 +5633,7 @@
           /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#update-a-discussion-comment"
@@ -5653,7 +5642,7 @@
           /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#delete-a-discussion-comment"
@@ -5662,7 +5651,7 @@
           /teams/:team_id/discussions/:discussion_number/comments/:comment_number</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5672,7 +5661,7 @@
           /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -5682,7 +5671,7 @@
           /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
     <li>
       <a
@@ -5691,7 +5680,7 @@
           >GET /teams/:team_id/discussions/:discussion_number/reactions</code
         ></a
       >
-      (:read)
+      (read)
     </li>
     <li>
       <a
@@ -5700,7 +5689,7 @@
           >POST /teams/:team_id/discussions/:discussion_number/reactions</code
         ></a
       >
-      (:write)
+      (write)
     </li>
   </ul>
 </div>
