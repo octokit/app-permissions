@@ -13,17 +13,23 @@ assert(
 assert("paths" in dotcomPermissions, '"api.github.com" export has "paths" key');
 
 assert(
-  "meta" in dotcomPermissions.permissions,
-  '"permissions" export has "meta" key'
+  "metadata" in dotcomPermissions.permissions,
+  '"permissions" export has "metadata" key'
 );
 assert(
   typeof dotcomPermissions.paths["/"].GET === "object",
   '"paths" export has ["/"]["GET"] keys'
 );
 
-const metaPermission = dotcomPermissions.permissions.meta;
-assert(Array.isArray(metaPermission.read), 'meta permission has "read" key');
-assert(Array.isArray(metaPermission.write), 'meta permission has "write" key');
+const metaPermission = dotcomPermissions.permissions.metadata;
+assert(
+  Array.isArray(metaPermission.read),
+  'metadata permission has "read" key'
+);
+assert(
+  Array.isArray(metaPermission.write),
+  'metadata permission has "write" key'
+);
 
 const rootPath = dotcomPermissions.paths["/"].GET;
 assert(
