@@ -116,7 +116,7 @@ async function update(options) {
 
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
-        .nextUntil("h3", "ul")
+        .nextUntil("h2")
         .find("li")
         .map((i, el) => {
           const documentationUrl =
