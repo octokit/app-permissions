@@ -47,4 +47,4 @@ jobs:
           author: Octokit Bot <octokitbot@martynus.net>
           path: generated/
           commit-message: "WIP: app permissions update"
-          labels: maintenance
+          labels: "Type: maintenance"
