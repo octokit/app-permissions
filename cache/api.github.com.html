@@ -404,6 +404,30 @@
     </li>
     <li>
       <p>
+        <a
+          href="/en/rest/actions/workflow-runs#list-workflow-runs-for-a-required-workflow"
+          ><code
+            >GET
+            /repos/{owner}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}/runs</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions/required-workflows#get-required-workflow-usage"
+          ><code
+            >GET
+            /repos/{org}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}/timing</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
         <a href="/en/rest/reference/actions#list-repository-variables"
           ><code>GET /repos/{owner}/{repo}/actions/variables</code></a
         >
@@ -1218,8 +1242,8 @@
   <ul>
     <li>
       <a
-        href="/en/rest/reference/users#list-users-blocked-by-the-authenticated-user"
-        ><code>GET /user/blocks</code></a
+        href="/en/rest/reference/codespaces#list-codespaces-for-the-authenticated-user"
+        ><code>GET /user/codespaces</code></a
       >
       (read)
     </li>
@@ -1243,8 +1267,12 @@
       (write)
     </li>
   </ul>
-  <h2 id="checks">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#checks"
+  <h2 id="codespaces-lifecycle-admin">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#codespaces-lifecycle-admin"
       ><svg
         aria-hidden=""
         role="img"
@@ -1259,7 +1287,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Checks
+    >Codespaces lifecycle admin
   </h2>
   <ul>
     <li>
@@ -1281,7 +1309,8 @@
       (write)
     </li>
     <li>
-      <a href="/en/rest/reference/checks#list-check-run-annotations"
+      <a
+        href="/en/rest/codespaces/codespaces#get-details-about-a-codespace-export"
         ><code
           >GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations</code
         ></a
@@ -1326,12 +1355,36 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="codespaces-metadata">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#codespaces-metadata"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Codespaces metadata
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/reference/checks#update-repository-preferences-for-check-suites"
         ><code>PATCH /repos/{owner}/{repo}/check-suites/preferences</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -1471,7 +1524,7 @@
           >GET /user/codespaces/{codespace_name}/exports/{export_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2094,6 +2147,59 @@
           >DELETE /repos/{owner}/{repo}/deployments/{deployment_id}</code
         ></a
       >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/repos#list-deployments"
+        ><code>GET /repos/{owner}/{repo}/deployments</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/repos#create-a-deployment"
+        ><code>POST /repos/{owner}/{repo}/deployments</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <h2 id="emails">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#emails"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Emails
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user"
+        ><code>PATCH /user/email/visibility</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#list-email-addresses-for-the-authenticated-user"
+        ><code>GET /user/emails</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#add-an-email-address-for-the-authenticated-user"
+        ><code>POST /user/emails</code></a
+      >
       (write)
     </li>
   </ul>
@@ -2183,14 +2289,14 @@
           /enterprises/{enterprise}/settings/billing/advanced-security</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-github-actions-cache-usage-for-an-enterprise"
         ><code>GET /enterprises/{enterprise}/actions/cache/usage</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="followers">
@@ -2396,7 +2502,7 @@
         href="/en/rest/reference/users#list-gpg-keys-for-the-authenticated-user"
         ><code>GET /user/gpg_keys</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2410,7 +2516,7 @@
         href="/en/rest/reference/users#get-a-gpg-key-for-the-authenticated-user"
         ><code>GET /user/gpg_keys/{gpg_key_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2498,7 +2604,7 @@
           >DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-issue-comments"
@@ -2508,6 +2614,26 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="issues">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Issues
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reference/issues#create-an-issue-comment"
         ><code
@@ -2534,7 +2660,7 @@
           >PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#delete-an-issue-comment"
@@ -2598,13 +2724,13 @@
       <a href="/en/rest/reference/issues/#update-an-issue"
         ><code>PATCH /repos/{owner}/{repo}/issues/{issue_number}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#lock-an-issue"
         ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/issues#unlock-an-issue"
@@ -2656,7 +2782,7 @@
           >GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#list-milestones"
@@ -2674,7 +2800,7 @@
       <a href="/en/rest/reference/issues#get-a-milestone"
         ><code>GET /repos/{owner}/{repo}/milestones/{milestone_number}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#update-a-milestone"
@@ -2865,7 +2991,7 @@
       <a href="/en/rest/reference/orgs#get-organization-membership-for-a-user"
         ><code>GET /orgs/{org}/memberships/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#set-organization-membership-for-a-user"
@@ -2905,14 +3031,14 @@
         href="/en/rest/reference/orgs#remove-public-organization-membership-for-the-authenticated-user"
         ><code>DELETE /orgs/{org}/public_members/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/orgs#list-outside-collaborators-for-an-organization"
         ><code>GET /orgs/{org}/outside_collaborators</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2938,7 +3064,7 @@
       <a href="/en/rest/reference/teams#check-team-permissions-for-a-project"
         ><code>GET /orgs/{org}/teams/{team_slug}/projects/{project_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#add-or-update-team-project-permissions"
@@ -2998,7 +3124,7 @@
       <a href="/en/rest/reference/teams#list-pending-team-invitations"
         ><code>GET /orgs/{org}/teams/{team_slug}/invitations</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/teams#list-team-members"
@@ -3157,7 +3283,7 @@
       <a href="/en/rest/reference/gists#create-a-gist"
         ><code>POST /gists</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/gists/#update-a-gist"
@@ -3377,6 +3503,46 @@
       >
       (read)
     </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#list-selected-repositories-required-workflows"
+        ><code
+          >GET
+          orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#add-a-repository-to-selected-repositories-list-for-a-required-workflow'"
+        ><code
+          >PUT
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id</code
+        >}</a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-a-repository-from-selected-repositories-list-for-a-required-workflow"
+        ><code
+          >DELETE
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#set-selected-repositories-for-a-required-workflow"
+        ><code
+          >PUT
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories</code
+        ></a
+      >
+      (read)
+    </li>
   </ul>
   <h2 id="notifications">
     <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#notifications"
@@ -3456,6 +3622,30 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="organization-administration">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#organization-administration"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Organization administration
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/reference/enterprise-admin#get-github-enterprise-server-statistics"
@@ -3478,14 +3668,14 @@
         href="/en/rest/reference/interactions#set-interaction-restrictions-for-an-organization"
         ><code>PUT /orgs/{org}/interaction-limits</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/reference/interactions#remove-interaction-restrictions-for-an-organization"
         ><code>DELETE /orgs/{org}/interaction-limits</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3527,7 +3717,7 @@
         href="/en/rest/reference/actions#set-selected-repositories-enabled-for-github-actions-in-an-organization"
         ><code>PUT /orgs/{org}/actions/permissions/repositories</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3585,6 +3775,85 @@
         ><code>GET /orgs/{org}/installations</code></a
       >
       (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/actions#list-required-workflows"
+        ><code>GET /orgs/{org}/actions/required_workflows</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/actions#get-a-required-workflow"
+        ><code
+          >GET
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#list-selected-repositories-required-workflows"
+        ><code
+          >GET
+          orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/actions#create-a-required-workflow"
+        ><code>POST /orgs/{org}/actions/required_workflows</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/reference/actions#delete-a-required-workflow"
+        ><code
+          >DELETE
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/actions#update-a-required-workflow"
+        ><code
+          >PATCH
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#add-a-repository-to-selected-repositories-list-for-a-required-workflow'"
+        ><code
+          >PUT
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id</code
+        >}</a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#remove-a-repository-from-selected-repositories-list-for-a-required-workflow"
+        ><code
+          >DELETE
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/actions#set-selected-repositories-for-a-required-workflow"
+        ><code
+          >PUT
+          /orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories</code
+        ></a
+      >
+      (write)
     </li>
   </ul>
   <h2 id="organization-codespaces">
