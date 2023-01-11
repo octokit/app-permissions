@@ -1242,8 +1242,17 @@
   <ul>
     <li>
       <a
-        href="/en/rest/reference/codespaces#list-devcontainers-in-a-repository-for-the-authenticated-user"
-        ><code>GET /repos/{owner}/{repo}/codespaces/devcontainers</code></a
+        href="/en/rest/reference/codespaces#remove-a-selected-repository-from-a-user-secret"
+        ><code
+          >DELETE
+          /user/codespaces/secrets/{secret_name}/repositories/{repository_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/reference/migrations#get-large-files"
+        ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
       >
       (read)
     </li>
@@ -1264,32 +1273,14 @@
       <a href="/en/rest/reference/users#unblock-a-user"
         ><code>DELETE /user/blocks/{username}</code></a
       >
-      (read)
+      (write)
     </li>
-  </ul>
-  <h2 id="codespaces-secrets">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-secrets"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
+    <li>
+      <a href="/en/rest/reference/git#create-a-reference"
+        ><code>POST /repos/{owner}/{repo}/git/refs</code></a
       >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces secrets
-  </h2>
-  <ul>
+      (write)
+    </li>
     <li>
       <a href="/en/rest/reference/checks#create-a-check-run"
         ><code>POST /repos/{owner}/{repo}/check-runs</code></a
@@ -1309,12 +1300,12 @@
       (write)
     </li>
     <li>
-      <a href="/en/rest/reference/codespaces#get-a-repository-secret"
+      <a href="/en/rest/reference/checks#list-check-run-annotations"
         ><code
           >GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/checks#rerequest-a-check-run"
@@ -1343,10 +1334,10 @@
       <a href="/en/rest/reference/checks#get-a-check-suite"
         ><code>GET /repos/{owner}/{repo}/check-suites/{check_suite_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
-      <a href="/en/rest/reference/codespaces#delete-a-repository-secret"
+      <a href="/en/rest/reference/checks#rerequest-a-check-suite"
         ><code
           >POST
           /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest</code
@@ -1395,20 +1386,20 @@
       <a href="/en/rest/reference/codespaces#list-in-organization"
         ><code>GET /orgs/{org}/codespaces</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/codespaces#list-codespaces-in-a-repository-for-the-authenticated-user"
         ><code>GET /repos/{owner}/{repo}/codespaces</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/codespaces#create-a-codespace-in-a-repository"
         ><code>POST /repos/{owner}/{repo}/codespaces</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -1506,7 +1497,7 @@
         href="/en/rest/reference/codespaces#start-a-codespace-for-the-authenticated-user"
         ><code>POST /user/codespaces/{codespace_name}/start</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -1677,14 +1668,14 @@
         href="/en/rest/reference/codespaces#get-public-key-for-the-authenticated-user"
         ><code>GET /user/codespaces/secrets/public-key</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/codespaces#list-selected-repositories-for-a-user-secret"
         ><code>GET /user/codespaces/secrets/{secret_name}/repositories</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -1714,11 +1705,35 @@
       (write)
     </li>
     <li>
-      <a href="/en/rest/reference/migrations#get-large-files"
-        ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
+      <a href="/en/rest/reference/repos#get-the-latest-release"
+        ><code>GET /repos/{owner}/{repo}/releases/latest</code></a
       >
       (read)
     </li>
+  </ul>
+  <h2 id="dependabot-secrets">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#dependabot-secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Dependabot secrets
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reference/repos#list-codeowners-errors"
         ><code>GET /repos/{owner}/{repo}/codeowners/errors</code></a
@@ -1914,30 +1929,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="dependabot-secrets">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#dependabot-secrets"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Dependabot secrets
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/reference/repos#get-a-release"
         ><code>GET /repos/{owner}/{repo}/releases/{release_id}</code></a
@@ -1968,26 +1959,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="deployments">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#deployments"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Deployments
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/reference/repos#update-a-release-asset"
         ><code>PATCH /repos/{owner}/{repo}/releases/assets/{asset_id}</code></a
@@ -2050,6 +2021,26 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="deployments">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#deployments"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Deployments
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/reference/dependabot#create-or-update-a-repository-secret"
@@ -2101,7 +2092,7 @@
           /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/repos#list-deployment-statuses"
@@ -2119,26 +2110,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="emails">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#emails"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Emails
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/reference/repos#get-a-deployment-status"
         ><code
@@ -2173,6 +2144,33 @@
         ></a
       >
       (read)
+    </li>
+  </ul>
+  <h2 id="emails">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#emails"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Emails
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user"
+        ><code>PATCH /user/email/visibility</code></a
+      >
+      (write)
     </li>
   </ul>
   <h2 id="emails">
@@ -2261,39 +2259,12 @@
           /enterprises/{enterprise}/settings/billing/advanced-security</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
         href="/en/rest/reference/actions#get-github-actions-cache-usage-for-an-enterprise"
         ><code>GET /enterprises/{enterprise}/actions/cache/usage</code></a
-      >
-      (read)
-    </li>
-  </ul>
-  <h2 id="followers">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Followers
-  </h2>
-  <ul>
-    <li>
-      <a
-        href="/en/rest/reference/users#list-followers-of-the-authenticated-user"
-        ><code>GET /user/followers</code></a
       >
       (read)
     </li>
@@ -2342,13 +2313,33 @@
       <a href="/en/rest/reference/users#follow-a-user"
         ><code>PUT /user/following/{username}</code></a
       >
-      (write)
+      (read)
     </li>
+  </ul>
+  <h2 id="followers">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Followers
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reference/users#unfollow-a-user"
         ><code>DELETE /user/following/{username}</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="gists">
@@ -2374,7 +2365,14 @@
       <a href="/en/rest/reference/gists#create-a-gist-comment"
         ><code>POST /gists/{gist_id}/comments</code></a
       >
-      (write)
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reference/users#list-the-people-the-authenticated-user-follows"
+        ><code>GET /user/following</code></a
+      >
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/gists#update-a-gist-comment"
@@ -2394,6 +2392,26 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="gists">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gists"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Gists
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reference/gists/#update-a-gist"
         ><code>PATCH /gists/{gist_id}</code></a
@@ -2501,7 +2519,7 @@
         href="/en/rest/reference/users#list-gpg-keys-for-the-authenticated-user"
         ><code>GET /user/gpg_keys</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2515,7 +2533,7 @@
         href="/en/rest/reference/users#get-a-gpg-key-for-the-authenticated-user"
         ><code>GET /user/gpg_keys/{gpg_key_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2703,7 +2721,7 @@
       <a href="/en/rest/reference/issues/#update-an-issue"
         ><code>PATCH /repos/{owner}/{repo}/issues/{issue_number}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#lock-an-issue"
@@ -2721,7 +2739,7 @@
       <a href="/en/rest/reference/issues#list-labels-for-an-issue"
         ><code>GET /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/issues#add-labels-to-an-issue"
@@ -2875,7 +2893,7 @@
         href="/en/rest/reference/users#list-public-ssh-keys-for-the-authenticated-user"
         ><code>GET /user/keys</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2883,13 +2901,6 @@
         ><code>POST /user/keys</code></a
       >
       (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user"
-        ><code>GET /user/keys/{key_id}</code></a
-      >
-      (read)
     </li>
   </ul>
   <h2 id="keys">
@@ -2913,8 +2924,8 @@
   <ul>
     <li>
       <a
-        href="/en/rest/reference/users#list-public-ssh-keys-for-the-authenticated-user"
-        ><code>GET /user/keys</code></a
+        href="/en/rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user"
+        ><code>GET /user/keys/{key_id}</code></a
       >
       (read)
     </li>
@@ -3112,7 +3123,7 @@
           >DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/teams#update-a-team"
@@ -3490,30 +3501,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="organization-administration">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#organization-administration"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Organization administration
-  </h2>
-  <ul>
     <li>
       <a
         href="/en/rest/metrics/statistics#get-the-hourly-commit-count-for-each-day"
@@ -3737,13 +3724,13 @@
         href="/en/rest/reference/actions#set-allowed-actions-for-an-organization"
         ><code>PUT /orgs/{org}/actions/permissions/selected-actions</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#get-default-workflow-permissions"
         ><code>GET /orgs/{org}/actions/permissions/workflow</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reference/actions#set-default-workflow-permissions"
@@ -3755,7 +3742,7 @@
       <a href="/en/rest/reference/orgs#list-security-manager-teams"
         ><code>GET /orgs/{org}/security-managers</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reference/orgs#add-a-security-manager-team"
