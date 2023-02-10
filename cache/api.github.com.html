@@ -1947,20 +1947,15 @@
         href="/en/rest/codespaces#list-devcontainers-in-a-repository-for-the-authenticated-user"
         ><code>GET /repos/{owner}/{repo}/codespaces/devcontainers</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/codespaces#list-available-machine-types-for-a-repository"
         ><code>GET /repos/{owner}/{repo}/codespaces/machines</code></a
       >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces user secrets
-  </h2>
-  <ul>
+      (read)
+    </li>
     <li>
       <a href="/en/rest/codespaces#list-machine-types-for-a-codespace"
         ><code>GET /user/codespaces/{codespace_name}/machines</code></a
@@ -2387,7 +2382,7 @@
       <a href="/en/rest/repos#get-a-release"
         ><code>GET /repos/{owner}/{repo}/releases/{release_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/repos#update-a-release"
@@ -2405,20 +2400,20 @@
       <a href="/en/rest/repos#list-release-assets"
         ><code>GET /repos/{owner}/{repo}/releases/{release_id}/assets</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
         href="/en/rest/branches/branches#sync-a-fork-branch-with-the-upstream-repository"
         ><code>POST /repos/{owner}/{repo}/merge-upstream</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/repos#generate-release-notes"
         ><code>POST /repos/{owner}/{repo}/releases/generate-notes</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/repos#list-codeowners-errors"
@@ -2492,7 +2487,7 @@
       <a href="/en/rest/migrations#map-a-commit-author"
         ><code>PATCH /repos/{owner}/{repo}/import/authors/{author_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/migrations#get-large-files"
@@ -2789,7 +2784,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/actions/variables#update-an-environment-variable"
@@ -2961,7 +2956,7 @@
         href="/en/rest/users#list-public-ssh-signing-keys-for-the-authenticated-user"
         ><code>GET /user/ssh_signing_keys</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2970,36 +2965,17 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="codespaces-metadata">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-metadata"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
+    <li>
+      <a href="/en/rest/users#get-a-ssh-signing-key-for-the-authenticated-user"
+        ><code>GET /user/ssh_signing_keys/{ssh_signing_key_id}</code></a
       >
         <path
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Codespaces metadata
+    >Codespaces user secrets
   </h2>
   <ul>
-    <li>
-      <a href="/en/rest/users#get-a-ssh-signing-key-for-the-authenticated-user"
-        ><code>GET /user/ssh_signing_keys/{ssh_signing_key_id}</code></a
-      >
-      (read)
-    </li>
     <li>
       <a
         href="/en/rest/users#delete-a-ssh-signing-key-for-the-authenticated-user"
@@ -3244,6 +3220,26 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="followers">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Followers
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#list-issue-comments"
         ><code
@@ -3278,19 +3274,9 @@
       >
       (write)
     </li>
-    <li>
-      <a href="/en/rest/issues#set-labels-for-an-issue"
-        ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
-      >
-      (write)
-    </li>
   </ul>
-  <h2 id="codespaces-lifecycle-admin">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-lifecycle-admin"
+  <h2 id="gists">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gists"
       ><svg
         aria-hidden=""
         role="img"
@@ -3305,9 +3291,15 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Codespaces lifecycle admin
+    >Gists
   </h2>
   <ul>
+    <li>
+      <a href="/en/rest/issues#set-labels-for-an-issue"
+        ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
+      >
+      (write)
+    </li>
     <li>
       <a href="/en/rest/issues#remove-all-labels-from-an-issue"
         ><code
@@ -3442,14 +3434,6 @@
       >
       (read)
     </li>
-    <li>
-      <a href="/en/rest/reactions#list-reactions-for-an-issue"
-        ><code
-          >GET /repos/{owner}/{repo}/issues/{issue_number}/reactions</code
-        ></a
-      >
-      (read)
-    </li>
   </ul>
   <h2 id="keys">
     <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys"
@@ -3494,7 +3478,7 @@
         href="/en/rest/users#delete-a-public-ssh-key-for-the-authenticated-user"
         ><code>DELETE /user/keys/{key_id}</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="members">
@@ -3526,13 +3510,13 @@
       <a href="/en/rest/orgs#check-organization-membership-for-a-user"
         ><code>GET /orgs/{org}/members/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#remove-an-organization-member"
         ><code>DELETE /orgs/{org}/members/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/orgs#get-organization-membership-for-a-user"
@@ -3563,13 +3547,13 @@
         href="/en/rest/orgs#convert-an-organization-member-to-outside-collaborator"
         ><code>PUT /orgs/{org}/outside_collaborators/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#remove-outside-collaborator-from-an-organization"
         ><code>DELETE /orgs/{org}/outside_collaborators/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/orgs#list-public-organization-members"
