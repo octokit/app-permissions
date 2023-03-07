@@ -2964,19 +2964,14 @@
         href="/en/rest/users#create-an-ssh-signing-key-for-the-authenticated-user"
         ><code>POST /user/ssh_signing_keys</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/users#get-a-ssh-signing-key-for-the-authenticated-user"
         ><code>GET /user/ssh_signing_keys/{ssh_signing_key_id}</code></a
       >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces user secrets
-  </h2>
-  <ul>
+      (read)
+    </li>
     <li>
       <a
         href="/en/rest/users#delete-a-ssh-signing-key-for-the-authenticated-user"
@@ -3221,26 +3216,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="followers">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Followers
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#list-issue-comments"
         ><code
@@ -3269,15 +3244,9 @@
       >
       (read)
     </li>
-    <li>
-      <a href="/en/rest/issues#add-labels-to-an-issue"
-        ><code>POST /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
-      >
-      (write)
-    </li>
   </ul>
-  <h2 id="gists">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gists"
+  <h2 id="followers">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#followers"
       ><svg
         aria-hidden=""
         role="img"
@@ -3292,9 +3261,15 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Gists
+    >Followers
   </h2>
   <ul>
+    <li>
+      <a href="/en/rest/issues#add-labels-to-an-issue"
+        ><code>POST /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
+      >
+      (write)
+    </li>
     <li>
       <a href="/en/rest/issues#set-labels-for-an-issue"
         ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
@@ -3324,6 +3299,26 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="gists">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gists"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Gists
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#unlock-an-issue"
         ><code>DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
@@ -3459,6 +3454,15 @@
       >
       (read)
     </li>
+    <li>
+      <a href="/en/rest/issues#check-if-a-user-can-be-assigned-to-a-issue"
+        ><code
+          >GET
+          /repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}</code
+        ></a
+      >
+      (read)
+    </li>
   </ul>
   <h2 id="keys">
     <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys"
@@ -3547,7 +3551,7 @@
       <a href="/en/rest/orgs#get-organization-membership-for-a-user"
         ><code>GET /orgs/{org}/memberships/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#set-organization-membership-for-a-user"
@@ -3565,7 +3569,7 @@
       <a href="/en/rest/orgs#list-outside-collaborators-for-an-organization"
         ><code>GET /orgs/{org}/outside_collaborators</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3632,7 +3636,7 @@
       <a href="/en/rest/teams#remove-team-member-legacy"
         ><code>DELETE /teams/{team_id}/members/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3654,7 +3658,7 @@
       <a href="/en/rest/orgs#list-failed-organization-invitations"
         ><code>GET /orgs/{org}/failed_invitations</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/orgs#list-pending-organization-invitations"
@@ -3672,7 +3676,7 @@
       <a href="/en/rest/orgs#cancel-an-organization-invitation"
         ><code>DELETE /orgs/{org}/invitations/{invitation_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#list-organization-invitation-teams"
@@ -3722,26 +3726,6 @@
         (read)
       </p>
     </li>
-  </ul>
-  <h2 id="keys">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Keys
-  </h2>
-  <ul>
     <li>
       <p>
         <a href="/en/rest/gists#create-a-gist-comment"
@@ -3957,6 +3941,8 @@
         (read)
       </p>
     </li>
+  </ul>
+  <ul>
     <li>
       <p>
         <a href="/en/rest/activity#list-repository-events"
