@@ -1730,6 +1730,30 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="codespaces-secrets">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#codespaces-secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Codespaces secrets
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/checks#list-check-runs-for-a-git-reference"
         ><code>GET /repos/{owner}/{repo}/commits/{ref}/check-runs</code></a
@@ -1776,35 +1800,11 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="codespaces-metadata">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-metadata"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces metadata
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/codespaces#get-codespaces-for-user-in-org"
         ><code>GET /orgs/{org}/members/{username}/codespaces</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/codespaces"
@@ -1815,73 +1815,67 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="codespaces-lifecycle-admin">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#codespaces-lifecycle-admin"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Codespaces lifecycle admin
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/codespaces#list-codespaces-in-a-repository-for-the-authenticated-user"
         ><code>GET /repos/{owner}/{repo}/codespaces</code></a
       >
+      (write)
+    </li>
+  </ul>
+  <h2 id="codespaces-user-secrets">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#codespaces-user-secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Codespaces user secrets
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/codespaces#list-secrets-for-the-authenticated-user"
+        ><code>GET /user/codespaces/secrets</code></a
+      >
       (read)
     </li>
-  </ul>
-  <h2 id="codespaces-secrets">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-secrets"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces secrets
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/codespaces#start-a-codespace-for-the-authenticated-user"
-        ><code>POST /user/codespaces/{codespace_name}/start</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/codespaces#stop-a-codespace-for-the-authenticated-user"
-        ><code>POST /user/codespaces/{codespace_name}/stop</code></a
-      >
-      (write)
-    </li>
-  </ul>
-  <h2 id="codespaces-metadata">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-metadata"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Codespaces metadata
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/codespaces#create-a-codespace-in-a-repository"
         ><code>POST /repos/{owner}/{repo}/codespaces</code></a
@@ -1902,13 +1896,19 @@
       >
       (write)
     </li>
+    <li>
+      <a href="/en/rest/codespaces#list-codespaces-for-the-authenticated-user"
+        ><code>GET /user/codespaces</code></a
+      >
+      (write)
+    </li>
   </ul>
-  <h2 id="codespaces-secrets">
+  <h2 id="codespaces-metadata">
     <a
       aria-hidden=""
       tabindex="-1"
       class="doctocat-link"
-      href="#codespaces-secrets"
+      href="#codespaces-metadata"
       ><svg
         aria-hidden=""
         role="img"
@@ -1923,15 +1923,9 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Codespaces secrets
+    >Codespaces metadata
   </h2>
   <ul>
-    <li>
-      <a href="/en/rest/codespaces#list-codespaces-for-the-authenticated-user"
-        ><code>GET /user/codespaces</code></a
-      >
-      (write)
-    </li>
     <li>
       <a
         href="/en/rest/codespaces#create-a-codespace-for-the-authenticated-user"
@@ -1943,7 +1937,7 @@
       <a href="/en/rest/codespaces#get-a-codespace-for-the-authenticated-user"
         ><code>GET /user/codespaces/{codespace_name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -1999,6 +1993,28 @@
       >
       (write)
     </li>
+    <li>
+      <a
+        href="/en/rest/codespaces/codespaces#export-a-codespace-for-the-authenticated-user"
+        ><code>POST /user/codespaces/{codespace_name}/exports</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/codespaces/codespaces#get-details-about-a-codespace-export"
+        ><code
+          >GET /user/codespaces/{codespace_name}/exports/{export_id}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/codespaces#start-a-codespace-for-the-authenticated-user"
+        ><code>POST /user/codespaces/{codespace_name}/start</code></a
+      >
+      (write)
+    </li>
   </ul>
   <h2 id="codespaces-user-secrets">
     <a
@@ -2030,26 +2046,23 @@
       (read)
     </li>
     <li>
-      <a
-        href="/en/rest/codespaces/codespaces#export-a-codespace-for-the-authenticated-user"
-        ><code>POST /user/codespaces/{codespace_name}/exports</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/codespaces/codespaces#get-details-about-a-codespace-export"
-        ><code
-          >GET /user/codespaces/{codespace_name}/exports/{export_id}</code
-        ></a
+      <a href="/en/rest/codespaces#get-public-key-for-the-authenticated-user"
+        ><code>GET /user/codespaces/secrets/public-key</code></a
       >
       (read)
     </li>
     <li>
-      <a href="/en/rest/codespaces#start-a-codespace-for-the-authenticated-user"
-        ><code>POST /user/codespaces/{codespace_name}/start</code></a
+      <a href="/en/rest/codespaces#get-a-secret-for-the-authenticated-user"
+        ><code>GET /user/codespaces/secrets/{secret_name}</code></a
       >
-      (write)
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/codespaces#create-or-update-a-secret-for-the-authenticated-user"
+        ><code>PUT /user/codespaces/secrets/{secret_name}</code></a
+      >
+      (read)
     </li>
     <li>
       <a href="/en/rest/codespaces#stop-a-codespace-for-the-authenticated-user"
@@ -2093,7 +2106,7 @@
         href="/en/rest/codespaces#list-available-machine-types-for-a-repository"
         ><code>GET /repos/{owner}/{repo}/codespaces/machines</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/codespaces#list-machine-types-for-a-codespace"
@@ -2135,7 +2148,7 @@
       <a href="/en/rest/codespaces#get-a-repository-public-key"
         ><code>GET /repos/{owner}/{repo}/codespaces/secrets/public-key</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/codespaces#get-a-repository-secret"
@@ -2208,7 +2221,7 @@
         href="/en/rest/codespaces#create-or-update-a-secret-for-the-authenticated-user"
         ><code>PUT /user/codespaces/secrets/{secret_name}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/codespaces#delete-a-secret-for-the-authenticated-user"
@@ -2226,7 +2239,7 @@
       <a href="/en/rest/codespaces#set-selected-repositories-for-a-user-secret"
         ><code>PUT /user/codespaces/secrets/{secret_name}/repositories</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/codespaces#add-a-selected-repository-to-a-user-secret"
@@ -2295,13 +2308,13 @@
       <a href="/en/rest/commits/comments#update-a-commit-comment"
         ><code>PATCH /repos/{owner}/{repo}/comments/{comment_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/commits/comments#delete-a-commit-comment"
         ><code>DELETE /repos/{owner}/{repo}/comments/{comment_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/reactions#create-reaction-for-a-commit-comment"
@@ -2318,13 +2331,13 @@
           /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/commits/commits#list-commits"
         ><code>GET /repos/{owner}/{repo}/commits</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/commits/commits#list-branches-for-head-commit"
@@ -2395,7 +2408,7 @@
       <a href="/en/rest/git#create-a-commit"
         ><code>POST /repos/{owner}/{repo}/git/commits</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/git#get-a-commit"
@@ -2425,7 +2438,7 @@
       <a href="/en/rest/git#update-a-reference"
         ><code>PATCH /repos/{owner}/{repo}/git/refs/{ref}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/git#delete-a-reference"
@@ -2443,13 +2456,13 @@
       <a href="/en/rest/git#get-a-tag"
         ><code>GET /repos/{owner}/{repo}/git/tags/{tag_sha}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/git#create-a-tree"
         ><code>POST /repos/{owner}/{repo}/git/trees</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/git#get-a-tree"
@@ -2461,7 +2474,7 @@
       <a href="/en/rest/branches/branches#merge-a-branch"
         ><code>POST /repos/{owner}/{repo}/merges</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/pulls#get-a-pull-request"
@@ -2473,7 +2486,7 @@
       <a href="/en/rest/pulls#merge-a-pull-request"
         ><code>PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/repos#list-releases"
@@ -2485,7 +2498,7 @@
       <a href="/en/rest/repos#create-a-release"
         ><code>POST /repos/{owner}/{repo}/releases</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/repos#get-a-release-asset"
@@ -2497,13 +2510,13 @@
       <a href="/en/rest/repos#update-a-release-asset"
         ><code>PATCH /repos/{owner}/{repo}/releases/assets/{asset_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/repos#delete-a-release-asset"
         ><code>DELETE /repos/{owner}/{repo}/releases/assets/{asset_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/repos#get-the-latest-release"
@@ -2552,7 +2565,7 @@
       <a href="/en/rest/repos#generate-release-notes"
         ><code>POST /repos/{owner}/{repo}/releases/generate-notes</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/repos#list-codeowners-errors"
@@ -2626,7 +2639,7 @@
       <a href="/en/rest/migrations#map-a-commit-author"
         ><code>PATCH /repos/{owner}/{repo}/import/authors/{author_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/migrations#get-large-files"
@@ -2690,7 +2703,7 @@
           >PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/dependabot#delete-a-repository-secret"
@@ -2698,7 +2711,7 @@
           >DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}</code
         ></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="deployments">
@@ -2869,7 +2882,7 @@
           /repositories/{repository_id}/environments/{environment_name}/secrets/public-key</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions#get-an-environment-secret"
@@ -2878,7 +2891,7 @@
           /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions#create-or-update-an-environment-secret"
@@ -2923,25 +2936,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/actions/variables#update-an-environment-variable"
-        ><code
-          >PATCH
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
-        ></a
-      >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/actions/variables#delete-an-environment-variable"
-        ><code
-          >DELETE
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
-        ></a
-      >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions/variables#update-an-environment-variable"
@@ -2998,7 +2993,7 @@
         href="/en/rest/users#check-if-a-person-is-followed-by-the-authenticated-user"
         ><code>GET /user/following/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/users#follow-a-user"
@@ -3208,7 +3203,7 @@
         href="/en/rest/interactions#get-interaction-restrictions-for-your-public-repositories"
         ><code>GET /user/interaction-limits</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3274,6 +3269,30 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="interaction-limits">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#interaction-limits"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Interaction limits
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#get-an-issue-comment"
         ><code>GET /repos/{owner}/{repo}/issues/comments/{comment_id}</code></a
@@ -3296,6 +3315,26 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="issues">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Issues
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reactions#list-reactions-for-an-issue-comment"
         ><code
@@ -3323,26 +3362,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="issues">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Issues
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#list-issue-events-for-a-repository"
         ><code>GET /repos/{owner}/{repo}/issues/events</code></a
@@ -3400,6 +3419,26 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="issues">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Issues
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#create-an-issue-comment"
         ><code
@@ -3455,30 +3494,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="git-signing-ssh-public-keys">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#git-signing-ssh-public-keys"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Git signing ssh public keys
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#unlock-an-issue"
         ><code>DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
@@ -3510,26 +3525,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="gpg-keys">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gpg-keys"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Gpg keys
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#list-timeline-events-for-an-issue"
         ><code
@@ -3567,6 +3562,80 @@
         ><code>DELETE /repos/{owner}/{repo}/labels/{name}</code></a
       >
       (write)
+    </li>
+    <li>
+      <a href="/en/rest/issues#list-milestones"
+        ><code>GET /repos/{owner}/{repo}/milestones</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/issues#create-a-milestone"
+        ><code>POST /repos/{owner}/{repo}/milestones</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/issues#get-a-milestone"
+        ><code>GET /repos/{owner}/{repo}/milestones/{milestone_number}</code></a
+      >
+      (read)
+    </li>
+  </ul>
+  <h2 id="gpg-keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gpg-keys"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Gpg keys
+  </h2>
+  <ul>
+    <li>
+      <a href="/en/rest/issues#update-a-milestone"
+        ><code
+          >PATCH /repos/{owner}/{repo}/milestones/{milestone_number}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/issues#list-labels-for-a-repository"
+        ><code>GET /repos/{owner}/{repo}/labels</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/issues#create-a-label"
+        ><code>POST /repos/{owner}/{repo}/labels</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/issues#delete-a-milestone"
+        ><code
+          >DELETE /repos/{owner}/{repo}/milestones/{milestone_number}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/issues#list-labels-for-issues-in-a-milestone"
+        ><code
+          >GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels</code
+        ></a
+      >
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#list-milestones"
