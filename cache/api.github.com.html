@@ -1831,6 +1831,8 @@
         (write)
       </p>
     </li>
+  </ul>
+  <ul>
     <li>
       <p>
         <a
@@ -1952,6 +1954,30 @@
         (read)
       </p>
     </li>
+  </ul>
+  <h2 id="dependabot-secrets">
+    <a
+      aria-hidden=""
+      tabindex="-1"
+      class="doctocat-link"
+      href="#dependabot-secrets"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Dependabot secrets
+  </h2>
+  <ul>
     <li>
       <p>
         <a
@@ -2170,18 +2196,6 @@
         (write)
       </p>
     </li>
-    <li>
-      <a href="/en/rest/migrations#get-large-files"
-        ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/migrations#update-git-lfs-preference"
-        ><code>PATCH /repos/{owner}/{repo}/import/lfs</code></a
-      >
-      (read)
-    </li>
   </ul>
   <h2 id="blocking">
     <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#blocking"
@@ -2230,7 +2244,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>PUT /user/blocks/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2273,7 +2287,7 @@
           /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2293,13 +2307,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>GET /repos/{owner}/{repo}/check-runs/{check_run_id}</code></a
       >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/users#add-an-email-address-for-the-authenticated-user"
-        ><code>POST /user/emails</code></a
-      >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2309,7 +2317,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2387,7 +2395,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>GET /repos/{owner}/{repo}/commits/{ref}/check-runs</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2397,16 +2405,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>GET /repos/{owner}/{repo}/commits/{ref}/check-suites</code></a
       >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/actions/variables#get-an-environment-variable"
-        ><code
-          >GET
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
-        ></a
-      >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2906,7 +2905,7 @@
           /user/codespaces/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="issues">
@@ -3396,7 +3395,7 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>POST /repos/{owner}/{repo}/releases/generate-notes</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3445,8 +3444,6 @@
       >
       (read)
     </li>
-  </ul>
-  <ul>
     <li>
       <a
         href="/en/rest/metrics/community#get-community-profile-metrics"
@@ -3455,7 +3452,7 @@
         data-intro="Use the REST API to retrieve information about your community profile."
         ><code>GET /repos/{owner}/{repo}/community/profile</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3495,7 +3492,7 @@
         data-intro="Use the REST API to migrate the repositories and users of your organization from GitHub.com to GitHub Enterprise Server."
         ><code>DELETE /repos/{owner}/{repo}/import</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3525,7 +3522,7 @@
         data-intro="Use the REST API to migrate the repositories and users of your organization from GitHub.com to GitHub Enterprise Server."
         ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3668,7 +3665,7 @@
         data-intro="Use the REST API to create and delete deployments and deployment environments."
         ><code>POST /repos/{owner}/{repo}/deployments</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3690,7 +3687,7 @@
           >DELETE /repos/{owner}/{repo}/deployments/{deployment_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3989,8 +3986,6 @@
       >
       (read)
     </li>
-  </ul>
-  <ul>
     <li>
       <a
         href="/en/rest/users#check-if-a-person-is-followed-by-the-authenticated-user"
@@ -4164,18 +4159,6 @@
         ><code>GET /user/ssh_signing_keys</code></a
       >
       (read)
-    </li>
-    <li>
-      <a href="/en/rest/actions/variables#update-an-organization-variable"
-        ><code>PATCH /orgs/{org}/actions/variables/{name}</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/actions/variables#delete-an-organization-variable"
-        ><code>DELETE /orgs/{org}/actions/variables/{name}</code></a
-      >
-      (write)
     </li>
     <li>
       <a
@@ -6843,7 +6826,7 @@
         data-intro="Use the REST API to list events and feeds and manage notifications, starring, and watching."
         ><code>GET /users/{username}/events/orgs/{org}</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-hooks">
@@ -6917,7 +6900,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>DELETE /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6937,7 +6920,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>PATCH /orgs/{org}/hooks/{hook_id}/config</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -7026,8 +7009,13 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>POST /orgs/{org}/projects</code></a
       >
-      (write)
-    </li>
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Organization dependabot secrets
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/projects#get-a-project-card"
@@ -7066,7 +7054,7 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>POST /projects/columns/cards/{card_id}/moves</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -7208,7 +7196,7 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>GET /projects/{project_id}/columns</code></a
       >
-      (admin)
+      (read)
     </li>
     <li>
       <a
@@ -7292,7 +7280,7 @@
         data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
         ><code>DELETE /orgs/{org}/actions/secrets/{secret_name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -7785,8 +7773,13 @@
         data-intro="Use the REST API to interact with GitHub Pages sites and builds."
         ><code>PUT /repos/{owner}/{repo}/pages</code></a
       >
-      (write)
-    </li>
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Pages
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/pages#delete-a-github-pages-site"
@@ -8158,7 +8151,17 @@
           >PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (write)
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#get-an-issue-comment"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/comments/{comment_id}</code></a
+      >
+      (read)
     </li>
     <li>
       <a
@@ -8180,7 +8183,7 @@
         data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
         ><code>GET /repos/{owner}/{repo}/issues/events/{event_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -8239,7 +8242,7 @@
           >GET /repos/{owner}/{repo}/issues/{issue_number}/comments</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -8358,7 +8361,7 @@
         data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
         ><code>GET /repos/{owner}/{repo}/labels</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -9164,7 +9167,7 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>GET /projects/{project_id}/columns</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -9504,6 +9507,19 @@
         data-intro="Use the REST API to retrieve and update code scanning alerts from a repository."
         ><code
           >GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/code-scanning#delete-a-code-scanning-analysis-from-a-repository"
+        data-product-title="REST API"
+        data-title="Code Scanning"
+        data-intro="Use the REST API to retrieve and update code scanning alerts from a repository."
+        ><code
+          >DELETE
+          /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}</code
         ></a
       >
       (read)
