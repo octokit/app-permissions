@@ -2198,7 +2198,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>PUT /user/blocks/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2208,7 +2208,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>DELETE /user/blocks/{username}</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="checks">
@@ -2271,7 +2271,29 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}</code></a
       >
-      (write)
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/deployments/deployments#get-a-deployment"
+        data-product-title="REST API"
+        data-title="Deployments"
+        data-intro="Use the REST API to create and delete deployments and deployment environments."
+        ><code>GET /repos/{owner}/{repo}/deployments/{deployment_id}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/deployments/deployments#delete-a-deployment"
+        data-product-title="REST API"
+        data-title="Deployments"
+        data-intro="Use the REST API to create and delete deployments and deployment environments."
+        ><code
+          >DELETE /repos/{owner}/{repo}/deployments/{deployment_id}</code
+        ></a
+      >
+      (read)
     </li>
     <li>
       <a
@@ -2373,6 +2395,58 @@
       >
       (write)
     </li>
+    <li>
+      <a
+        href="/en/rest/actions/variables#create-an-environment-variable"
+        data-product-title="REST API"
+        data-title="GitHub Actions Variables"
+        data-intro="Use the REST API to interact with variables in GitHub Actions."
+        ><code
+          >POST
+          /repositories/{repository_id}/environments/{environment_name}/variables</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/actions/variables#get-an-environment-variable"
+        data-product-title="REST API"
+        data-title="GitHub Actions Variables"
+        data-intro="Use the REST API to interact with variables in GitHub Actions."
+        ><code
+          >GET
+          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/actions/variables#update-an-environment-variable"
+        data-product-title="REST API"
+        data-title="GitHub Actions Variables"
+        data-intro="Use the REST API to interact with variables in GitHub Actions."
+        ><code
+          >PATCH
+          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/actions/variables#delete-an-environment-variable"
+        data-product-title="REST API"
+        data-title="GitHub Actions Variables"
+        data-intro="Use the REST API to interact with variables in GitHub Actions."
+        ><code
+          >DELETE
+          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
+        ></a
+      >
+      (write)
+    </li>
   </ul>
   <h2 id="codespaces">
     <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#codespaces"
@@ -2401,7 +2475,7 @@
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /orgs/{org}/codespaces</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2454,7 +2528,7 @@
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /repos/{owner}/{repo}/codespaces/new</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2476,7 +2550,7 @@
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /user/codespaces</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2793,17 +2867,7 @@
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /user/codespaces/secrets/{secret_name}</code></a
       >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/codespaces#get-a-repository-public-key"
-        data-product-title="REST API"
-        data-title="Codespaces"
-        data-intro="Use the REST API to manage GitHub Codespaces."
-        ><code>GET /repos/{owner}/{repo}/codespaces/secrets/public-key</code></a
-      >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2832,18 +2896,6 @@
         data-title="Codespaces"
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /user/codespaces/secrets/{secret_name}/repositories</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/codespaces#create-or-update-a-repository-secret"
-        data-product-title="REST API"
-        data-title="Codespaces"
-        data-intro="Use the REST API to manage GitHub Codespaces."
-        ><code
-          >PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}</code
-        ></a
       >
       (write)
     </li>
@@ -2884,12 +2936,8 @@
       (write)
     </li>
   </ul>
-  <h2 id="codespaces-user-secrets">
-    <a
-      aria-hidden=""
-      tabindex="-1"
-      class="doctocat-link"
-      href="#codespaces-user-secrets"
+  <h2 id="issues">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#issues"
       ><svg
         aria-hidden=""
         role="img"
@@ -2904,7 +2952,7 @@
           fill-rule="evenodd"
           d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
         ></path></svg></a
-    >Codespaces user secrets
+    >Issues
   </h2>
   <ul>
     <li>
@@ -3295,7 +3343,7 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>DELETE /repos/{owner}/{repo}/releases/assets/{asset_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3335,7 +3383,7 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>PATCH /repos/{owner}/{repo}/releases/{release_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3432,7 +3480,7 @@
         data-intro="Use the REST API to retrieve information about your community profile."
         ><code>GET /repos/{owner}/{repo}/community/profile</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3492,7 +3540,7 @@
         data-intro="Use the REST API to migrate the repositories and users of your organization from GitHub.com to GitHub Enterprise Server."
         ><code>PATCH /repos/{owner}/{repo}/import/authors/{author_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3502,7 +3550,7 @@
         data-intro="Use the REST API to migrate the repositories and users of your organization from GitHub.com to GitHub Enterprise Server."
         ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3774,7 +3822,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>PATCH /user/email/visibility</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="environments">
@@ -3898,7 +3946,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -4312,7 +4360,7 @@
         data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
         ><code>GET /repos/{owner}/{repo}/assignees</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -4386,7 +4434,7 @@
           >DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -4399,7 +4447,7 @@
           /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -6603,26 +6651,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="notifications">
-    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#notifications"
-      ><svg
-        aria-hidden=""
-        role="img"
-        class="octicon-link"
-        viewBox="0 0 16 16"
-        width="16"
-        height="16"
-        fill="currentColor"
-        style="display: inline-block; user-select: none; vertical-align: middle"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Notifications
-  </h2>
-  <ul>
     <li>
       <a
         href="/en/rest/codespaces#remove-selected-repository-from-an-organization-secret"
@@ -6634,7 +6662,7 @@
           /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-codespaces-settings">
@@ -6712,20 +6740,7 @@
         data-intro="Use the REST API to interact with Dependabot alerts and secrets for an organization or repository."
         ><code>GET /orgs/{org}/dependabot/secrets/public-key</code></a
       >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions/variables#add-selected-repository-to-an-organization-variable"
-        data-product-title="REST API"
-        data-title="GitHub Actions Variables"
-        data-intro="Use the REST API to interact with variables in GitHub Actions."
-        ><code
-          >PUT
-          /orgs/{org}/actions/variables/{name}/repositories/{repository_id}</code
-        ></a
-      >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6839,7 +6854,7 @@
         data-intro="Use the REST API to list events and feeds and manage notifications, starring, and watching."
         ><code>GET /users/{username}/events/orgs/{org}</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-hooks">
@@ -6903,7 +6918,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>PATCH /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6913,7 +6928,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>DELETE /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -6933,7 +6948,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>PATCH /orgs/{org}/hooks/{hook_id}/config</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6968,8 +6983,13 @@
           /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts</code
         ></a
       >
-      (write)
-    </li>
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Notifications
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/orgs#ping-an-organization-webhook"
@@ -6978,7 +6998,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>POST /orgs/{org}/hooks/{hook_id}/pings</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="organization-projects">
@@ -7067,7 +7087,7 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>POST /projects/columns/cards/{card_id}/moves</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -7283,7 +7303,7 @@
         data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
         ><code>PUT /orgs/{org}/actions/secrets/{secret_name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
