@@ -2198,7 +2198,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>PUT /user/blocks/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2208,7 +2208,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>DELETE /user/blocks/{username}</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="checks">
@@ -2271,29 +2271,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}</code></a
       >
-      (read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/deployments/deployments#get-a-deployment"
-        data-product-title="REST API"
-        data-title="Deployments"
-        data-intro="Use the REST API to create and delete deployments and deployment environments."
-        ><code>GET /repos/{owner}/{repo}/deployments/{deployment_id}</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/deployments/deployments#delete-a-deployment"
-        data-product-title="REST API"
-        data-title="Deployments"
-        data-intro="Use the REST API to create and delete deployments and deployment environments."
-        ><code
-          >DELETE /repos/{owner}/{repo}/deployments/{deployment_id}</code
-        ></a
-      >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2381,7 +2359,7 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code>GET /repos/{owner}/{repo}/commits/{ref}/check-suites</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -2391,58 +2369,6 @@
         data-intro="Use the REST API to build GitHub Apps that run powerful checks against the code changes in a repository."
         ><code
           >POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest</code
-        ></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions/variables#create-an-environment-variable"
-        data-product-title="REST API"
-        data-title="GitHub Actions Variables"
-        data-intro="Use the REST API to interact with variables in GitHub Actions."
-        ><code
-          >POST
-          /repositories/{repository_id}/environments/{environment_name}/variables</code
-        ></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions/variables#get-an-environment-variable"
-        data-product-title="REST API"
-        data-title="GitHub Actions Variables"
-        data-intro="Use the REST API to interact with variables in GitHub Actions."
-        ><code
-          >GET
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
-        ></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions/variables#update-an-environment-variable"
-        data-product-title="REST API"
-        data-title="GitHub Actions Variables"
-        data-intro="Use the REST API to interact with variables in GitHub Actions."
-        ><code
-          >PATCH
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
-        ></a
-      >
-      (write)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions/variables#delete-an-environment-variable"
-        data-product-title="REST API"
-        data-title="GitHub Actions Variables"
-        data-intro="Use the REST API to interact with variables in GitHub Actions."
-        ><code
-          >DELETE
-          /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
       (write)
@@ -6918,7 +6844,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>PATCH /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -6928,7 +6854,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>DELETE /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6948,7 +6874,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>PATCH /orgs/{org}/hooks/{hook_id}/config</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -6983,13 +6909,8 @@
           /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts</code
         ></a
       >
-        <path
-          fill-rule="evenodd"
-          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-        ></path></svg></a
-    >Notifications
-  </h2>
-  <ul>
+      (write)
+    </li>
     <li>
       <a
         href="/en/rest/orgs#ping-an-organization-webhook"
@@ -6998,7 +6919,7 @@
         data-intro="Use the REST API to control and manage all your GitHub organizations."
         ><code>POST /orgs/{org}/hooks/{hook_id}/pings</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-projects">
@@ -7087,7 +7008,7 @@
         data-intro="Use the REST API to create, list, update, delete and customize classic projects."
         ><code>POST /projects/columns/cards/{card_id}/moves</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -7303,7 +7224,7 @@
         data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
         ><code>PUT /orgs/{org}/actions/secrets/{secret_name}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -7363,7 +7284,7 @@
           /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="organization-self-hosted-runners">
