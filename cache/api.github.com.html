@@ -2823,7 +2823,7 @@
         data-intro="Use the REST API to manage GitHub Codespaces."
         ><code>GET /user/codespaces/secrets/{secret_name}/repositories</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3259,7 +3259,7 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>PATCH /repos/{owner}/{repo}/releases/assets/{asset_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3319,7 +3319,19 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>DELETE /repos/{owner}/{repo}/releases/{release_id}</code></a
       >
-      (write)
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/dependabot#get-a-repository-secret"
+        data-product-title="REST API"
+        data-title="Dependabot"
+        data-intro="Use the REST API to interact with Dependabot alerts and secrets for an organization or repository."
+        ><code
+          >GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}</code
+        ></a
+      >
+      (read)
     </li>
     <li>
       <a
@@ -3349,7 +3361,7 @@
         data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
         ><code>POST /repos/{owner}/{repo}/releases/generate-notes</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3406,7 +3418,7 @@
         data-intro="Use the REST API to retrieve information about your community profile."
         ><code>GET /repos/{owner}/{repo}/community/profile</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3476,7 +3488,7 @@
         data-intro="Use the REST API to migrate the repositories and users of your organization from GitHub.com to GitHub Enterprise Server."
         ><code>GET /repos/{owner}/{repo}/import/large_files</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3641,7 +3653,7 @@
           >DELETE /repos/{owner}/{repo}/deployments/{deployment_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3665,7 +3677,7 @@
           >POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -3872,7 +3884,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -4030,6 +4042,26 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="gpg-keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#gpg-keys"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Gpg keys
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/gists#update-a-gist-comment"
@@ -4077,6 +4109,16 @@
         data-title="Gists"
         data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
         ><code>DELETE /gists/{gist_id}/star</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/users#delete-a-gpg-key-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Users"
+        data-intro="Use the REST API to get public and private information about authenticated users."
+        ><code>DELETE /user/gpg_keys/{gpg_key_id}</code></a
       >
       (write)
     </li>
@@ -4172,7 +4214,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>GET /user/gpg_keys</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -4202,7 +4244,7 @@
         data-intro="Use the REST API to get public and private information about authenticated users."
         ><code>DELETE /user/gpg_keys/{gpg_key_id}</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="interaction-limits">
@@ -4290,6 +4332,1127 @@
     </li>
     <li>
       <a
+        href="/en/rest/reactions#delete-an-issue-comment-reaction"
+        data-product-title="REST API"
+        data-title="Reactions"
+        data-intro="Use the REST API to interact with reactions on GitHub."
+        ><code
+          >DELETE
+          /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-issue-events-for-a-repository"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/events</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#get-an-issue-event"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/events/{event_id}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#get-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/{issue_number}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#update-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>PATCH /repos/{owner}/{repo}/issues/{issue_number}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#add-assignees-to-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >POST /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#remove-assignees-from-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#check-if-a-user-can-be-assigned-to-a-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >GET
+          /repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-issue-comments"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >GET /repos/{owner}/{repo}/issues/{issue_number}/comments</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#create-an-issue-comment"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >POST /repos/{owner}/{repo}/issues/{issue_number}/comments</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-issue-events"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/{issue_number}/events</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-labels-for-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#add-labels-to-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>POST /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#set-labels-for-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#remove-all-labels-from-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#remove-a-label-from-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >DELETE
+          /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#lock-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#unlock-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reactions#list-reactions-for-an-issue"
+        data-product-title="REST API"
+        data-title="Reactions"
+        data-intro="Use the REST API to interact with reactions on GitHub."
+        ><code
+          >GET /repos/{owner}/{repo}/issues/{issue_number}/reactions</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reactions#create-reaction-for-an-issue"
+        data-product-title="REST API"
+        data-title="Reactions"
+        data-intro="Use the REST API to interact with reactions on GitHub."
+        ><code
+          >POST /repos/{owner}/{repo}/issues/{issue_number}/reactions</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/reactions#delete-an-issue-reaction"
+        data-product-title="REST API"
+        data-title="Reactions"
+        data-intro="Use the REST API to interact with reactions on GitHub."
+        ><code
+          >DELETE
+          /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-timeline-events-for-an-issue"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >GET /repos/{owner}/{repo}/issues/{issue_number}/timeline</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-labels-for-a-repository"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/labels</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#create-a-label"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>POST /repos/{owner}/{repo}/labels</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#get-a-label"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/labels/{name}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#update-a-label"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>PATCH /repos/{owner}/{repo}/labels/{name}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#delete-a-label"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>DELETE /repos/{owner}/{repo}/labels/{name}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-milestones"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/milestones</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#create-a-milestone"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>POST /repos/{owner}/{repo}/milestones</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#get-a-milestone"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code>GET /repos/{owner}/{repo}/milestones/{milestone_number}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#update-a-milestone"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >PATCH /repos/{owner}/{repo}/milestones/{milestone_number}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#delete-a-milestone"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >DELETE /repos/{owner}/{repo}/milestones/{milestone_number}</code
+        ></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/issues#list-labels-for-issues-in-a-milestone"
+        data-product-title="REST API"
+        data-title="Issues"
+        data-intro="Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones."
+        ><code
+          >GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels</code
+        ></a
+      >
+      (read)
+    </li>
+  </ul>
+  <h2 id="keys">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#keys"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Keys
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/users#list-public-ssh-keys-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Users"
+        data-intro="Use the REST API to get public and private information about authenticated users."
+        ><code>GET /user/keys</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/users#create-a-public-ssh-key-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Users"
+        data-intro="Use the REST API to get public and private information about authenticated users."
+        ><code>POST /user/keys</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/users#get-a-public-ssh-key-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Users"
+        data-intro="Use the REST API to get public and private information about authenticated users."
+        ><code>GET /user/keys/{key_id}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/users#delete-a-public-ssh-key-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Users"
+        data-intro="Use the REST API to get public and private information about authenticated users."
+        ><code>DELETE /user/keys/{key_id}</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <h2 id="members">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#members"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Members
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/orgs#list-organization-members"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/members</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#check-organization-membership-for-a-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/members/{username}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#remove-an-organization-member"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>DELETE /orgs/{org}/members/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#get-organization-membership-for-a-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/memberships/{username}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#set-organization-membership-for-a-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>PUT /orgs/{org}/memberships/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#remove-organization-membership-for-a-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>DELETE /orgs/{org}/memberships/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#list-outside-collaborators-for-an-organization"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/outside_collaborators</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#convert-an-organization-member-to-outside-collaborator"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>PUT /orgs/{org}/outside_collaborators/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#remove-outside-collaborator-from-an-organization"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>DELETE /orgs/{org}/outside_collaborators/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#list-public-organization-members"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/public_members</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#check-public-organization-membership-for-a-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/public_members/{username}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#set-public-organization-membership-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>PUT /orgs/{org}/public_members/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#remove-public-organization-membership-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>DELETE /orgs/{org}/public_members/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/teams#list-teams"
+        data-product-title="REST API"
+        data-title="Teams"
+        data-intro="Use the REST API to create and manage teams in your GitHub organization."
+        ><code>GET /orgs/{org}/teams</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/teams#create-a-team"
+        data-product-title="REST API"
+        data-title="Teams"
+        data-intro="Use the REST API to create and manage teams in your GitHub organization."
+        ><code>POST /orgs/{org}/teams</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/teams#get-team-member-legacy"
+        data-product-title="REST API"
+        data-title="Teams"
+        data-intro="Use the REST API to create and manage teams in your GitHub organization."
+        ><code>GET /teams/{team_id}/members/{username}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/teams#add-team-member-legacy"
+        data-product-title="REST API"
+        data-title="Teams"
+        data-intro="Use the REST API to create and manage teams in your GitHub organization."
+        ><code>PUT /teams/{team_id}/members/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/teams#remove-team-member-legacy"
+        data-product-title="REST API"
+        data-title="Teams"
+        data-intro="Use the REST API to create and manage teams in your GitHub organization."
+        ><code>DELETE /teams/{team_id}/members/{username}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#get-an-organization-membership-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /user/memberships/orgs/{org}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#update-an-organization-membership-for-the-authenticated-user"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>PATCH /user/memberships/orgs/{org}</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/orgs#list-failed-organization-invitations"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/failed_invitations</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#list-pending-organization-invitations"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/invitations</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#create-an-organization-invitation"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>POST /orgs/{org}/invitations</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#cancel-an-organization-invitation"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>DELETE /orgs/{org}/invitations/{invitation_id}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/orgs#list-organization-invitation-teams"
+        data-product-title="REST API"
+        data-title="Organizations"
+        data-intro="Use the REST API to control and manage all your GitHub organizations."
+        ><code>GET /orgs/{org}/invitations/{invitation_id}/teams</code></a
+      >
+      (read)
+    </li>
+  </ul>
+  <h2 id="metadata">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#metadata"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Metadata
+  </h2>
+  <ul>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#create-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>POST /gists</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#update-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>PATCH /gists/{gist_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#delete-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>DELETE /gists/{gist_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#create-a-gist-comment"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>POST /gists/{gist_id}/comments</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#get-a-gist-comment"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>GET /gists/{gist_id}/comments/{comment_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#update-a-gist-comment"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>PATCH /gists/{gist_id}/comments/{comment_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#delete-a-gist-comment"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>DELETE /gists/{gist_id}/comments/{comment_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#fork-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>POST /gists/{gist_id}/forks</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#star-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>PUT /gists/{gist_id}/star</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/gists#unstar-a-gist"
+          data-product-title="REST API"
+          data-title="Gists"
+          data-intro="Use the REST API to list, create, update and delete the public gists on GitHub."
+          ><code>DELETE /gists/{gist_id}/star</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/activity#list-notifications-for-the-authenticated-user"
+          data-product-title="REST API"
+          data-title="Activity"
+          data-intro="Use the REST API to list events and feeds and manage notifications, starring, and watching."
+          ><code>GET /notifications</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions#enable-a-selected-repository-for-github-actions-in-an-organization"
+          data-product-title="REST API"
+          data-title="Actions"
+          data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+          ><code
+            >PUT
+            /orgs/{org}/actions/permissions/repositories/{repository_id}</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions#disable-a-selected-repository-for-github-actions-in-an-organization"
+          data-product-title="REST API"
+          data-title="Actions"
+          data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+          ><code
+            >DELETE
+            /orgs/{org}/actions/permissions/repositories/{repository_id}</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions#remove-repository-access-to-a-self-hosted-runner-group-in-an-organization"
+          data-product-title="REST API"
+          data-title="Actions"
+          data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+          ><code
+            >DELETE
+            /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions#add-selected-repository-to-an-organization-secret"
+          data-product-title="REST API"
+          data-title="Actions"
+          data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+          ><code
+            >PUT
+            /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/actions#remove-selected-repository-from-an-organization-secret"
+          data-product-title="REST API"
+          data-title="Actions"
+          data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+          ><code
+            >DELETE
+            /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/repos#list-organization-repositories"
+          data-product-title="REST API"
+          data-title="Repositories"
+          data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
+          ><code>GET /orgs/{org}/repos</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/repos#get-a-repository"
+          data-product-title="REST API"
+          data-title="Repositories"
+          data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
+          ><code>GET /repos/{owner}/{repo}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/collaborators/collaborators#list-repository-collaborators"
+          data-product-title="REST API"
+          data-title="Collaborators"
+          data-intro="Use the REST API to manage collaborators for a repository."
+          ><code>GET /repos/{owner}/{repo}/collaborators</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/collaborators/collaborators#check-if-a-user-is-a-repository-collaborator"
+          data-product-title="REST API"
+          data-title="Collaborators"
+          data-intro="Use the REST API to manage collaborators for a repository."
+          ><code>GET /repos/{owner}/{repo}/collaborators/{username}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/collaborators/collaborators#get-repository-permissions-for-a-user"
+          data-product-title="REST API"
+          data-title="Collaborators"
+          data-intro="Use the REST API to manage collaborators for a repository."
+          ><code
+            >GET /repos/{owner}/{repo}/collaborators/{username}/permission</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/commits/comments#list-commit-comments-for-a-repository"
+          data-product-title="REST API"
+          data-title="Commit comments"
+          data-intro="Use the REST API to interact with commit comments."
+          ><code>GET /repos/{owner}/{repo}/comments</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/commits/comments#get-a-commit-comment"
+          data-product-title="REST API"
+          data-title="Commit comments"
+          data-intro="Use the REST API to interact with commit comments."
+          ><code>GET /repos/{owner}/{repo}/comments/{comment_id}</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/reactions#list-reactions-for-a-commit-comment"
+          data-product-title="REST API"
+          data-title="Reactions"
+          data-intro="Use the REST API to interact with reactions on GitHub."
+          ><code
+            >GET /repos/{owner}/{repo}/comments/{comment_id}/reactions</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/commits/comments#list-commit-comments"
+          data-product-title="REST API"
+          data-title="Commit comments"
+          data-intro="Use the REST API to interact with commit comments."
+          ><code
+            >GET /repos/{owner}/{repo}/commits/{commit_sha}/comments</code
+          ></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/repos#list-repository-contributors"
+          data-product-title="REST API"
+          data-title="Repositories"
+          data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
+          ><code>GET /repos/{owner}/{repo}/contributors</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/activity#list-repository-events"
+          data-product-title="REST API"
+          data-title="Activity"
+          data-intro="Use the REST API to list events and feeds and manage notifications, starring, and watching."
+          ><code>GET /repos/{owner}/{repo}/events</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/repos#list-forks"
+          data-product-title="REST API"
+          data-title="Repositories"
+          data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
+          ><code>GET /repos/{owner}/{repo}/forks</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/repos#list-repository-languages"
+          data-product-title="REST API"
+          data-title="Repositories"
+          data-intro="Use the REST API to create, manage and control the workflow of public and private GitHub repositories."
+          ><code>GET /repos/{owner}/{repo}/languages</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/licenses#get-the-license-for-a-repository"
+          data-product-title="REST API"
+          data-title="Licenses"
+          data-intro="Use the REST API to retrieve popular open source licenses and information about a particular project's license file."
+          ><code>GET /repos/{owner}/{repo}/license</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/activity#list-stargazers"
+          data-product-title="REST API"
+          data-title="Activity"
+          data-intro="Use the REST API to list events and feeds and manage notifications, starring, and watching."
+          ><code>GET /repos/{owner}/{repo}/stargazers</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/en/rest/metrics/statistics#get-the-weekly-commit-activity"
+          data-product-title="REST API"
+          data-title="Repository statistics"
+          data-intro="Use the REST API to fetch the data that GitHub uses for visualizing different types of repository activity."
+          ><code>GET /repos/{owner}/{repo}/stats/code_frequency</code></a
+        >
+        (read)
+      </p>
+    </li>
+    <li>
+      <a
         href="/en/rest/issues#check-if-a-user-can-be-assigned"
         data-product-title="REST API"
         data-title="Issues"
@@ -4360,7 +5523,7 @@
           >DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -4373,7 +5536,7 @@
           /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6577,6 +7740,26 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="notifications">
+    <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#notifications"
+      ><svg
+        aria-hidden=""
+        role="img"
+        class="octicon-link"
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="currentColor"
+        style="display: inline-block; user-select: none; vertical-align: middle"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Notifications
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/codespaces#remove-selected-repository-from-an-organization-secret"
@@ -6588,7 +7771,7 @@
           /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="organization-codespaces-settings">
@@ -6666,7 +7849,20 @@
         data-intro="Use the REST API to interact with Dependabot alerts and secrets for an organization or repository."
         ><code>GET /orgs/{org}/dependabot/secrets/public-key</code></a
       >
-      (read)
+      (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/actions/variables#add-selected-repository-to-an-organization-variable"
+        data-product-title="REST API"
+        data-title="GitHub Actions Variables"
+        data-intro="Use the REST API to interact with variables in GitHub Actions."
+        ><code
+          >PUT
+          /orgs/{org}/actions/variables/{name}/repositories/{repository_id}</code
+        ></a
+      >
+      (write)
     </li>
     <li>
       <a
@@ -7224,7 +8420,7 @@
         data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
         ><code>PUT /orgs/{org}/actions/secrets/{secret_name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -7284,7 +8480,7 @@
           /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-self-hosted-runners">
@@ -7678,6 +8874,19 @@
         ><code>DELETE /orgs/{org}/blocks/{username}</code></a
       >
       (write)
+    </li>
+    <li>
+      <a
+        href="/en/rest/actions#remove-selected-repository-from-an-organization-secret"
+        data-product-title="REST API"
+        data-title="Actions"
+        data-intro="Use the REST API to interact with GitHub Actions for an organization or repository."
+        ><code
+          >DELETE
+          /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}</code
+        ></a
+      >
+      (read)
     </li>
   </ul>
   <h2 id="pages">
