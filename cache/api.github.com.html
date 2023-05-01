@@ -2464,7 +2464,7 @@
       <a href="/en/rest/migrations#start-an-import"
         ><code>PUT /repos/{owner}/{repo}/import</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/migrations#update-an-import"
@@ -2476,7 +2476,7 @@
       <a href="/en/rest/migrations#cancel-an-import"
         ><code>DELETE /repos/{owner}/{repo}/import</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/migrations#get-commit-authors"
@@ -2488,7 +2488,7 @@
       <a href="/en/rest/migrations#map-a-commit-author"
         ><code>PATCH /repos/{owner}/{repo}/import/authors/{author_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/migrations#get-large-files"
@@ -3372,36 +3372,6 @@
           >PATCH /repos/{owner}/{repo}/milestones/{milestone_number}</code
         ></a
       >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/issues#list-labels-for-a-repository"
-        ><code>GET /repos/{owner}/{repo}/labels</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/issues#create-a-label"
-        ><code>POST /repos/{owner}/{repo}/labels</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/issues#get-a-label"
-        ><code>GET /repos/{owner}/{repo}/labels/{name}</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/issues#update-a-label"
-        ><code>PATCH /repos/{owner}/{repo}/labels/{name}</code></a
-      >
-      (write)
-    </li>
-    <li>
-      <a href="/en/rest/issues#delete-a-label"
-        ><code>DELETE /repos/{owner}/{repo}/labels/{name}</code></a
-      >
       (write)
     </li>
     <li>
@@ -3411,14 +3381,6 @@
         ></a
       >
       (write)
-    </li>
-    <li>
-      <a href="/en/rest/issues#list-labels-for-issues-in-a-milestone"
-        ><code
-          >GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels</code
-        ></a
-      >
-      (read)
     </li>
     <li>
       <a href="/en/rest/issues#list-labels-for-issues-in-a-milestone"
@@ -3459,7 +3421,7 @@
         href="/en/rest/users#create-a-public-ssh-key-for-the-authenticated-user"
         ><code>POST /user/keys</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/users#get-a-public-ssh-key-for-the-authenticated-user"
@@ -3651,7 +3613,7 @@
         href="/en/rest/orgs#update-an-organization-membership-for-the-authenticated-user"
         ><code>PATCH /user/memberships/orgs/{org}</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <ul>
@@ -3677,7 +3639,7 @@
       <a href="/en/rest/orgs#cancel-an-organization-invitation"
         ><code>DELETE /orgs/{org}/invitations/{invitation_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#list-organization-invitation-teams"
@@ -3734,14 +3696,6 @@
         >
         (read)
       </p>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="/en/rest/orgs#list-failed-organization-invitations"
-        ><code>GET /orgs/{org}/failed_invitations</code></a
-      >
-      (read)
     </li>
     <li>
       <p>
@@ -5088,7 +5042,7 @@
       <a href="/en/rest/projects#create-an-organization-project"
         ><code>POST /orgs/{org}/projects</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/projects#get-a-project-card"
@@ -5100,25 +5054,25 @@
       <a href="/en/rest/projects#update-a-project-card"
         ><code>PATCH /projects/columns/cards/{card_id}</code></a
       >
-      (read)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#delete-a-project-card"
         ><code>DELETE /projects/columns/cards/{card_id}</code></a
       >
-      (admin)
+      (read)
     </li>
     <li>
       <a href="/en/rest/projects#move-a-project-card"
         ><code>POST /projects/columns/cards/{card_id}/moves</code></a
       >
-      (read)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#get-a-project-column"
         ><code>GET /projects/columns/{column_id}</code></a
       >
-      (admin)
+      (read)
     </li>
     <li>
       <a href="/en/rest/projects#update-a-project-column"
@@ -5160,7 +5114,7 @@
       <a href="/en/rest/projects#update-a-project"
         ><code>PATCH /projects/{project_id}</code></a
       >
-      (admin)
+      (read)
     </li>
     <li>
       <a href="/en/rest/projects#delete-a-project"
@@ -5198,7 +5152,15 @@
       <a href="/en/rest/projects#list-project-columns"
         ><code>GET /projects/{project_id}/columns</code></a
       >
-      (write)
+      (admin)
+    </li>
+    <li>
+      <a href="/en/rest/projects#get-project-permission-for-a-user"
+        ><code
+          >GET /projects/{project_id}/collaborators/{username}/permission</code
+        ></a
+      >
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#create-a-project-column"
@@ -5680,7 +5642,7 @@
       <a href="/en/rest/pages#get-a-dns-health-check-for-github-pages"
         ><code>GET /repos/{owner}/{repo}/pages/health</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="personal-access-token-requests">
@@ -5787,7 +5749,7 @@
           >POST /organizations/{org}/personal-access-tokens/{pat_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -5797,7 +5759,7 @@
           /organizations/{org}/personal-access-tokens/{pat_id}/repositories</code
         ></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="plan">
@@ -5823,13 +5785,18 @@
       <a href="/en/rest/billing#get-github-actions-billing-for-a-user"
         ><code>GET /users/{username}/settings/billing/actions</code></a
       >
-      (read)
-    </li>
+        <path
+          fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+        ></path></svg></a
+    >Pull requests
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/billing#get-github-packages-billing-for-a-user"
         ><code>GET /users/{username}/settings/billing/packages</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/billing#get-shared-storage-billing-for-a-user"
@@ -5841,13 +5808,11 @@
       <a href="/en/rest/users#update-the-authenticated-user"
         ><code>PATCH /user</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
-      <a href="/en/rest/issues#remove-assignees-from-an-issue"
-        ><code
-          >DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
-        ></a
+      <a href="/en/rest/issues#get-an-issue-comment"
+        ><code>GET /repos/{owner}/{repo}/issues/comments/{comment_id}</code></a
       >
         <path
           fill-rule="evenodd"
