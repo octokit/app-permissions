@@ -1923,6 +1923,16 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="codespaces-lifecycle-admin" tabindex="-1">
+    <a class="heading-link" href="#codespaces-lifecycle-admin"
+      >Codespaces lifecycle admin<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/codespaces#delete-a-secret-for-the-authenticated-user"
         ><code>DELETE /user/codespaces/secrets/{secret_name}</code></a
@@ -1985,6 +1995,16 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="codespaces-user-secrets" tabindex="-1">
+    <a class="heading-link" href="#codespaces-user-secrets"
+      >Codespaces user secrets<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/branches/branches#rename-a-branch"
         ><code>POST /repos/{owner}/{repo}/branches/{branch}/rename</code></a
@@ -2362,6 +2382,13 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="deployments" tabindex="-1">
+    <a class="heading-link" href="#deployments"
+      >Deployments<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/dependabot#get-a-repository-secret"
         ><code
@@ -2406,13 +2433,13 @@
       <a href="/en/rest/deployments/deployments#list-deployments"
         ><code>GET /repos/{owner}/{repo}/deployments</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/deployments/deployments#create-a-deployment"
         ><code>POST /repos/{owner}/{repo}/deployments</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/deployments/deployments#get-a-deployment"
@@ -2434,8 +2461,15 @@
           >GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses</code
         ></a
       >
-      (read)
+      (write)
     </li>
+  </ul>
+  <h2 id="emails" tabindex="-1">
+    <a class="heading-link" href="#emails"
+      >Emails<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/deployments/statuses#create-a-deployment-status"
         ><code
@@ -2479,6 +2513,13 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="environments" tabindex="-1">
+    <a class="heading-link" href="#environments"
+      >Environments<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/users#list-public-email-addresses-for-the-authenticated-user"
@@ -2552,7 +2593,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions/variables#create-an-environment-variable"
@@ -2588,7 +2629,7 @@
           /repositories/{repository_id}/environments/{environment_name}/variables/{name}</code
         ></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="followers" tabindex="-1">
@@ -2601,7 +2642,7 @@
       <a href="/en/rest/users#list-followers-of-the-authenticated-user"
         ><code>GET /user/followers</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/users#list-the-people-the-authenticated-user-follows"
@@ -2614,13 +2655,13 @@
         href="/en/rest/users#check-if-a-person-is-followed-by-the-authenticated-user"
         ><code>GET /user/following/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/users#follow-a-user"
         ><code>PUT /user/following/{username}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/users#unfollow-a-user"
@@ -2643,25 +2684,35 @@
       <a href="/en/rest/gists#update-a-gist"
         ><code>PATCH /gists/{gist_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/gists#delete-a-gist"
         ><code>DELETE /gists/{gist_id}</code></a
       >
-      (read)
+      (write)
     </li>
+  </ul>
+  <h2 id="git-signing-ssh-public-keys" tabindex="-1">
+    <a class="heading-link" href="#git-signing-ssh-public-keys"
+      >Git signing ssh public keys<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/gists#create-a-gist-comment"
         ><code>POST /gists/{gist_id}/comments</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/gists#update-a-gist-comment"
         ><code>PATCH /gists/{gist_id}/comments/{comment_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/gists#delete-a-gist-comment"
@@ -2675,6 +2726,13 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="gpg-keys" tabindex="-1">
+    <a class="heading-link" href="#gpg-keys"
+      >Gpg keys<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/gists#star-a-gist"
         ><code>PUT /gists/{gist_id}/star</code></a
@@ -2702,7 +2760,7 @@
         href="/en/rest/users#list-public-ssh-signing-keys-for-the-authenticated-user"
         ><code>GET /user/ssh_signing_keys</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -2711,6 +2769,16 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="interaction-limits" tabindex="-1">
+    <a class="heading-link" href="#interaction-limits"
+      >Interaction limits<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/users#get-a-ssh-signing-key-for-the-authenticated-user"
         ><code>GET /user/ssh_signing_keys/{ssh_signing_key_id}</code></a
@@ -2722,7 +2790,7 @@
         href="/en/rest/users#delete-a-ssh-signing-key-for-the-authenticated-user"
         ><code>DELETE /user/ssh_signing_keys/{ssh_signing_key_id}</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="gpg-keys" tabindex="-1">
@@ -2741,7 +2809,7 @@
       <a href="/en/rest/users#create-a-gpg-key-for-the-authenticated-user"
         ><code>POST /user/gpg_keys</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/users#get-a-gpg-key-for-the-authenticated-user"
@@ -2753,7 +2821,7 @@
       <a href="/en/rest/users#delete-a-gpg-key-for-the-authenticated-user"
         ><code>DELETE /user/gpg_keys/{gpg_key_id}</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
   <h2 id="interaction-limits" tabindex="-1">
@@ -2809,18 +2877,8 @@
       <a href="/en/rest/issues#list-repository-issues"
         ><code>GET /repos/{owner}/{repo}/issues</code></a
       >
-      (read)
+      (write)
     </li>
-  </ul>
-  <h2 id="codespaces-secrets" tabindex="-1">
-    <a class="heading-link" href="#codespaces-secrets"
-      >Codespaces secrets<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#create-an-issue"
         ><code>POST /repos/{owner}/{repo}/issues</code></a
@@ -2837,7 +2895,7 @@
       <a href="/en/rest/issues#get-an-issue-comment"
         ><code>GET /repos/{owner}/{repo}/issues/comments/{comment_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#update-an-issue-comment"
@@ -2853,8 +2911,15 @@
           >DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
+  </ul>
+  <h2 id="emails" tabindex="-1">
+    <a class="heading-link" href="#emails"
+      >Emails<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/reactions#list-reactions-for-an-issue-comment"
         ><code
@@ -2871,7 +2936,7 @@
           /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reactions#delete-an-issue-comment-reaction"
@@ -2880,21 +2945,21 @@
           /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
-  </ul>
-  <h2 id="emails" tabindex="-1">
-    <a class="heading-link" href="#emails"
-      >Emails<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#list-issue-events-for-a-repository"
         ><code>GET /repos/{owner}/{repo}/issues/events</code></a
       >
-      (read)
+      (write)
     </li>
+  </ul>
+  <h2 id="environments" tabindex="-1">
+    <a class="heading-link" href="#environments"
+      >Environments<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#get-an-issue-event"
         ><code>GET /repos/{owner}/{repo}/issues/events/{event_id}</code></a
@@ -2921,20 +2986,13 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="environments" tabindex="-1">
-    <a class="heading-link" href="#environments"
-      >Environments<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#remove-assignees-from-an-issue"
         ><code
           >DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#check-if-a-user-can-be-assigned-to-a-issue"
@@ -2971,8 +3029,15 @@
       <a href="/en/rest/issues#list-labels-for-an-issue"
         ><code>GET /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
       >
-      (write)
+      (read)
     </li>
+  </ul>
+  <h2 id="followers" tabindex="-1">
+    <a class="heading-link" href="#followers"
+      >Followers<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/issues#add-labels-to-an-issue"
         ><code>POST /repos/{owner}/{repo}/issues/{issue_number}/labels</code></a
@@ -3008,13 +3073,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="followers" tabindex="-1">
-    <a class="heading-link" href="#followers"
-      >Followers<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/issues#unlock-an-issue"
         ><code>DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
@@ -3035,7 +3093,7 @@
           >POST /repos/{owner}/{repo}/issues/{issue_number}/reactions</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/reactions#delete-an-issue-reaction"
@@ -3044,7 +3102,7 @@
           /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#list-timeline-events-for-an-issue"
@@ -3070,25 +3128,25 @@
       <a href="/en/rest/issues#get-a-label"
         ><code>GET /repos/{owner}/{repo}/labels/{name}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#update-a-label"
         ><code>PATCH /repos/{owner}/{repo}/labels/{name}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#delete-a-label"
         ><code>DELETE /repos/{owner}/{repo}/labels/{name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#list-milestones"
         ><code>GET /repos/{owner}/{repo}/milestones</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#create-a-milestone"
@@ -3100,7 +3158,7 @@
       <a href="/en/rest/issues#get-a-milestone"
         ><code>GET /repos/{owner}/{repo}/milestones/{milestone_number}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#update-a-milestone"
@@ -3176,7 +3234,7 @@
       <a href="/en/rest/orgs#check-organization-membership-for-a-user"
         ><code>GET /orgs/{org}/members/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#remove-an-organization-member"
@@ -3193,12 +3251,6 @@
     <li>
       <a href="/en/rest/orgs#set-organization-membership-for-a-user"
         ><code>PUT /orgs/{org}/memberships/{username}</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/issues#check-if-a-user-can-be-assigned"
-        ><code>GET /repos/{owner}/{repo}/assignees/{assignee}</code></a
       >
       (read)
     </li>
@@ -3231,27 +3283,27 @@
       <a href="/en/rest/orgs#list-public-organization-members"
         ><code>GET /orgs/{org}/public_members</code></a
       >
-      (write)
+      (read)
     </li>
-  </ul>
-  <h2 id="deployments" tabindex="-1">
-    <a class="heading-link" href="#deployments"
-      >Deployments<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/orgs#check-public-organization-membership-for-a-user"
         ><code>GET /orgs/{org}/public_members/{username}</code></a
       >
       (read)
     </li>
+  </ul>
+  <h2 id="emails" tabindex="-1">
+    <a class="heading-link" href="#emails"
+      >Emails<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/orgs#set-public-organization-membership-for-the-authenticated-user"
         ><code>PUT /orgs/{org}/public_members/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -3290,13 +3342,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="emails" tabindex="-1">
-    <a class="heading-link" href="#emails"
-      >Emails<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/teams/members#add-or-update-team-membership-for-a-user"
         ><code
@@ -3329,15 +3374,8 @@
       <a href="/en/rest/teams#remove-team-member-legacy"
         ><code>DELETE /teams/{team_id}/members/{username}</code></a
       >
-      (read)
+      (write)
     </li>
-  </ul>
-  <h2 id="environments" tabindex="-1">
-    <a class="heading-link" href="#environments"
-      >Environments<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a
         href="/en/rest/orgs#get-an-organization-membership-for-the-authenticated-user"
@@ -3526,6 +3564,13 @@
         (read)
       </p>
     </li>
+  </ul>
+  <h2 id="deployments" tabindex="-1">
+    <a class="heading-link" href="#deployments"
+      >Deployments<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <p>
         <a
@@ -3685,13 +3730,6 @@
         (read)
       </p>
     </li>
-  </ul>
-  <h2 id="deployments" tabindex="-1">
-    <a class="heading-link" href="#deployments"
-      >Deployments<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <p>
         <a
@@ -3950,7 +3988,7 @@
       <a href="/en/rest/actions/variables#delete-an-organization-variable"
         ><code>DELETE /orgs/{org}/actions/variables/{name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -4259,6 +4297,16 @@
         (read)
       </p>
     </li>
+  </ul>
+  <h2 id="organization-dependabot-secrets" tabindex="-1">
+    <a class="heading-link" href="#organization-dependabot-secrets"
+      >Organization dependabot secrets<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <p>
         <a
@@ -4277,6 +4325,16 @@
         (write)
       </p>
     </li>
+  </ul>
+  <h2 id="organization-codespaces-settings" tabindex="-1">
+    <a class="heading-link" href="#organization-codespaces-settings"
+      >Organization codespaces settings<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <p>
         <a
@@ -4410,7 +4468,7 @@
           /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -4452,34 +4510,14 @@
       <a href="/en/rest/dependabot#list-organization-secrets"
         ><code>GET /orgs/{org}/dependabot/secrets</code></a
       >
-      (write)
+      (read)
     </li>
-  </ul>
-  <h2 id="organization-codespaces-settings" tabindex="-1">
-    <a class="heading-link" href="#organization-codespaces-settings"
-      >Organization codespaces settings<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/dependabot#get-an-organization-public-key"
         ><code>GET /orgs/{org}/dependabot/secrets/public-key</code></a
       >
       (read)
     </li>
-  </ul>
-  <h2 id="organization-dependabot-secrets" tabindex="-1">
-    <a class="heading-link" href="#organization-dependabot-secrets"
-      >Organization dependabot secrets<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/dependabot#get-an-organization-secret"
         ><code>GET /orgs/{org}/dependabot/secrets/{secret_name}</code></a
@@ -4492,16 +4530,6 @@
       >
       (write)
     </li>
-  </ul>
-  <h2 id="organization-codespaces-settings" tabindex="-1">
-    <a class="heading-link" href="#organization-codespaces-settings"
-      >Organization codespaces settings<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/dependabot#delete-an-organization-secret"
         ><code>DELETE /orgs/{org}/dependabot/secrets/{secret_name}</code></a
@@ -4577,28 +4605,28 @@
       <a href="/en/rest/orgs#list-organization-webhooks"
         ><code>GET /orgs/{org}/hooks</code></a
       >
-      (write)
+      (read)
     </li>
-    <li>
-      <a
-        href="/en/rest/dependabot#add-selected-repository-to-an-organization-secret"
-        ><code
-          >PUT
-          /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}</code
-        ></a
-      >
-      (write)
-    </li>
+  </ul>
+  <h2 id="organization-hooks" tabindex="-1">
+    <a class="heading-link" href="#organization-hooks"
+      >Organization hooks<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/orgs#create-an-organization-webhook"
         ><code>POST /orgs/{org}/hooks</code></a
       >
-      (write)
+      (read)
     </li>
   </ul>
-  <h2 id="organization-events" tabindex="-1">
-    <a class="heading-link" href="#organization-events"
-      >Organization events<span
+  <h2 id="organization-projects" tabindex="-1">
+    <a class="heading-link" href="#organization-projects"
+      >Organization projects<span
         class="heading-link-symbol"
         aria-hidden="true"
       ></span
@@ -4612,9 +4640,9 @@
       (read)
     </li>
   </ul>
-  <h2 id="organization-hooks" tabindex="-1">
-    <a class="heading-link" href="#organization-hooks"
-      >Organization hooks<span
+  <h2 id="organization-dependabot-secrets" tabindex="-1">
+    <a class="heading-link" href="#organization-dependabot-secrets"
+      >Organization dependabot secrets<span
         class="heading-link-symbol"
         aria-hidden="true"
       ></span
@@ -4631,7 +4659,7 @@
       <a href="/en/rest/orgs#delete-an-organization-webhook"
         ><code>DELETE /orgs/{org}/hooks/{hook_id}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/orgs#get-a-webhook-configuration-for-an-organization"
@@ -4643,7 +4671,7 @@
       <a href="/en/rest/orgs#update-a-webhook-configuration-for-an-organization"
         ><code>PATCH /orgs/{org}/hooks/{hook_id}/config</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/orgs#list-deliveries-for-an-organization-webhook"
@@ -4659,16 +4687,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="organization-events" tabindex="-1">
-    <a class="heading-link" href="#organization-events"
-      >Organization events<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/orgs#redeliver-a-delivery-for-an-organization-webhook"
         ><code
@@ -4676,23 +4694,13 @@
           /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts</code
         ></a
       >
-      (read)
+      (write)
     </li>
-  </ul>
-  <h2 id="organization-hooks" tabindex="-1">
-    <a class="heading-link" href="#organization-hooks"
-      >Organization hooks<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/orgs#ping-an-organization-webhook"
         ><code>POST /orgs/{org}/hooks/{hook_id}/pings</code></a
       >
-      (read)
+      (write)
     </li>
   </ul>
   <h2 id="organization-projects" tabindex="-1">
@@ -4710,16 +4718,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="organization-dependabot-secrets" tabindex="-1">
-    <a class="heading-link" href="#organization-dependabot-secrets"
-      >Organization dependabot secrets<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/projects#create-an-organization-project"
         ><code>POST /orgs/{org}/projects</code></a
@@ -4733,9 +4731,9 @@
       (read)
     </li>
   </ul>
-  <h2 id="organization-projects" tabindex="-1">
-    <a class="heading-link" href="#organization-projects"
-      >Organization projects<span
+  <h2 id="organization-hooks" tabindex="-1">
+    <a class="heading-link" href="#organization-hooks"
+      >Organization hooks<span
         class="heading-link-symbol"
         aria-hidden="true"
       ></span
@@ -4764,30 +4762,20 @@
       <a href="/en/rest/projects#get-a-project-column"
         ><code>GET /projects/columns/{column_id}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/projects#update-a-project-column"
         ><code>PATCH /projects/columns/{column_id}</code></a
       >
-      (write)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#delete-a-project-column"
         ><code>DELETE /projects/columns/{column_id}</code></a
       >
-      (write)
+      (admin)
     </li>
-  </ul>
-  <h2 id="organization-projects" tabindex="-1">
-    <a class="heading-link" href="#organization-projects"
-      >Organization projects<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a href="/en/rest/projects#list-project-cards"
         ><code>GET /projects/columns/{column_id}/cards</code></a
@@ -4798,29 +4786,13 @@
       <a href="/en/rest/projects#create-a-project-card"
         ><code>POST /projects/columns/{column_id}/cards</code></a
       >
-      (read)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#move-a-project-column"
         ><code>POST /projects/columns/{column_id}/moves</code></a
       >
-      (read)
-    </li>
-  </ul>
-  <h2 id="organization-hooks" tabindex="-1">
-    <a class="heading-link" href="#organization-hooks"
-      >Organization hooks<span
-        class="heading-link-symbol"
-        aria-hidden="true"
-      ></span
-    ></a>
-  </h2>
-  <ul>
-    <li>
-      <a href="/en/rest/projects#delete-a-project-column"
-        ><code>DELETE /projects/columns/{column_id}</code></a
-      >
-      (read)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#get-a-project"
@@ -4870,7 +4842,7 @@
       <a href="/en/rest/projects#list-project-columns"
         ><code>GET /projects/{project_id}/columns</code></a
       >
-      (read)
+      (admin)
     </li>
     <li>
       <a href="/en/rest/projects#create-a-project-column"
@@ -4898,33 +4870,6 @@
       <a href="/en/rest/actions#get-an-organization-public-key"
         ><code>GET /orgs/{org}/actions/secrets/public-key</code></a
       >
-      (admin)
-    </li>
-    <li>
-      <a href="/en/rest/actions#get-an-organization-secret"
-        ><code>GET /orgs/{org}/actions/secrets/{secret_name}</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a href="/en/rest/actions#create-or-update-an-organization-secret"
-        ><code>PUT /orgs/{org}/actions/secrets/{secret_name}</code></a
-      >
-      (admin)
-    </li>
-    <li>
-      <a href="/en/rest/actions#delete-an-organization-secret"
-        ><code>DELETE /orgs/{org}/actions/secrets/{secret_name}</code></a
-      >
-      (read)
-    </li>
-    <li>
-      <a
-        href="/en/rest/actions#list-selected-repositories-for-an-organization-secret"
-        ><code
-          >GET /orgs/{org}/actions/secrets/{secret_name}/repositories</code
-        ></a
-      >
       (read)
     </li>
   </ul>
@@ -4937,6 +4882,43 @@
     ></a>
   </h2>
   <ul>
+    <li>
+      <a href="/en/rest/actions#get-an-organization-secret"
+        ><code>GET /orgs/{org}/actions/secrets/{secret_name}</code></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/actions#create-or-update-an-organization-secret"
+        ><code>PUT /orgs/{org}/actions/secrets/{secret_name}</code></a
+      >
+      (write)
+    </li>
+    <li>
+      <a href="/en/rest/actions#delete-an-organization-secret"
+        ><code>DELETE /orgs/{org}/actions/secrets/{secret_name}</code></a
+      >
+      (write)
+    </li>
+  </ul>
+  <h2 id="organization-self-hosted-runners" tabindex="-1">
+    <a class="heading-link" href="#organization-self-hosted-runners"
+      >Organization self hosted runners<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
+    <li>
+      <a
+        href="/en/rest/actions#list-selected-repositories-for-an-organization-secret"
+        ><code
+          >GET /orgs/{org}/actions/secrets/{secret_name}/repositories</code
+        ></a
+      >
+      (read)
+    </li>
     <li>
       <a
         href="/en/rest/actions#set-selected-repositories-for-an-organization-secret"
@@ -5170,6 +5152,16 @@
         (read)
       </p>
     </li>
+  </ul>
+  <h2 id="organization-user-blocking" tabindex="-1">
+    <a class="heading-link" href="#organization-user-blocking"
+      >Organization user blocking<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <p>
         <a
@@ -5228,7 +5220,7 @@
       <a href="/en/rest/orgs#check-if-a-user-is-blocked-by-an-organization"
         ><code>GET /orgs/{org}/blocks/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/orgs#block-a-user-from-an-organization"
@@ -5259,7 +5251,7 @@
       <a href="/en/rest/pages#create-a-github-pages-site"
         ><code>POST /repos/{owner}/{repo}/pages</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/pages#update-information-about-a-github-pages-site"
@@ -5274,9 +5266,12 @@
       (write)
     </li>
   </ul>
-  <h2 id="pages" tabindex="-1">
-    <a class="heading-link" href="#pages"
-      >Pages<span class="heading-link-symbol" aria-hidden="true"></span
+  <h2 id="personal-access-token-requests" tabindex="-1">
+    <a class="heading-link" href="#personal-access-token-requests"
+      >Personal access token requests<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
     ></a>
   </h2>
   <ul>
@@ -5304,6 +5299,16 @@
       >
       (read)
     </li>
+  </ul>
+  <h2 id="personal-access-tokens" tabindex="-1">
+    <a class="heading-link" href="#personal-access-tokens"
+      >Personal access tokens<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/pages#create-a-github-pages-deployment"
         ><code>POST /repos/{owner}/{repo}/pages/deployment</code></a
@@ -5340,7 +5345,7 @@
           >POST /organizations/{org}/personal-access-token-requests</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -5393,8 +5398,15 @@
           >POST /organizations/{org}/personal-access-tokens/{pat_id}</code
         ></a
       >
-      (write)
+      (read)
     </li>
+  </ul>
+  <h2 id="profile" tabindex="-1">
+    <a class="heading-link" href="#profile"
+      >Profile<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a
         href="/en/rest/orgs/orgs#list-repositories-a-fine-grained-personal-access-token-has-access-to"
@@ -5467,13 +5479,13 @@
         href="/en/rest/commits/commits#list-pull-requests-associated-with-a-commit"
         ><code>GET /repos/{owner}/{repo}/commits/{commit_sha}/pulls</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#list-issue-comments-for-a-repository"
         ><code>GET /repos/{owner}/{repo}/issues/comments</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#get-an-issue-comment"
@@ -5487,7 +5499,7 @@
           >PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#delete-an-issue-comment"
@@ -5507,7 +5519,7 @@
       <a href="/en/rest/issues#update-an-issue"
         ><code>PATCH /repos/{owner}/{repo}/issues/{issue_number}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#add-assignees-to-an-issue"
@@ -5515,7 +5527,7 @@
           >POST /repos/{owner}/{repo}/issues/{issue_number}/assignees</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#remove-assignees-from-an-issue"
@@ -5532,7 +5544,7 @@
           /repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/issues#list-issue-comments"
@@ -5595,7 +5607,7 @@
       <a href="/en/rest/issues#lock-an-issue"
         ><code>PUT /repos/{owner}/{repo}/issues/{issue_number}/lock</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#unlock-an-issue"
@@ -5657,7 +5669,7 @@
       <a href="/en/rest/issues#get-a-milestone"
         ><code>GET /repos/{owner}/{repo}/milestones/{milestone_number}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/issues#update-a-milestone"
@@ -5687,7 +5699,7 @@
       <a href="/en/rest/pulls#list-pull-requests"
         ><code>GET /repos/{owner}/{repo}/pulls</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/pulls#create-a-pull-request"
@@ -5807,7 +5819,7 @@
           /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/pulls#request-reviewers-for-a-pull-request"
@@ -5816,7 +5828,7 @@
           /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/pulls#remove-requested-reviewers-from-a-pull-request"
@@ -6045,8 +6057,18 @@
       <a href="/en/rest/projects#move-a-project-card"
         ><code>POST /projects/columns/cards/{card_id}/moves</code></a
       >
-      (write)
+      (read)
     </li>
+  </ul>
+  <h2 id="repository-projects" tabindex="-1">
+    <a class="heading-link" href="#repository-projects"
+      >Repository projects<span
+        class="heading-link-symbol"
+        aria-hidden="true"
+      ></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/projects#get-a-project-column"
         ><code>GET /projects/columns/{column_id}</code></a
@@ -6117,7 +6139,7 @@
       <a href="/en/rest/projects#remove-project-collaborator"
         ><code>DELETE /projects/{project_id}/collaborators/{username}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/projects#get-project-permission-for-a-user"
@@ -6183,7 +6205,7 @@
           /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a
@@ -6231,7 +6253,7 @@
       <a href="/en/rest/actions#create-or-update-a-repository-secret"
         ><code>PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions#delete-a-repository-secret"
@@ -6241,6 +6263,13 @@
       >
       (write)
     </li>
+  </ul>
+  <h2 id="secrets" tabindex="-1">
+    <a class="heading-link" href="#secrets"
+      >Secrets<span class="heading-link-symbol" aria-hidden="true"></span
+    ></a>
+  </h2>
+  <ul>
     <li>
       <a href="/en/rest/actions#list-environment-secrets"
         ><code
@@ -6248,7 +6277,7 @@
           /repositories/{repository_id}/environments/{environment_name}/secrets</code
         ></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a href="/en/rest/actions#get-an-environment-public-key"
@@ -6275,12 +6304,21 @@
           /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/actions#delete-an-environment-secret"
         ><code
           >DELETE
+          /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}</code
+        ></a
+      >
+      (read)
+    </li>
+    <li>
+      <a href="/en/rest/actions#create-or-update-an-environment-secret"
+        ><code
+          >PUT
           /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}</code
         ></a
       >
@@ -6303,14 +6341,6 @@
       >
       (read)
     </li>
-    <li>
-      <a href="/en/rest/code-scanning#get-a-code-scanning-alert"
-        ><code
-          >GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}</code
-        ></a
-      >
-      (read)
-    </li>
   </ul>
   <h2 id="secrets" tabindex="-1">
     <a class="heading-link" href="#secrets"
@@ -6319,18 +6349,17 @@
   </h2>
   <ul>
     <li>
-      <a href="/en/rest/code-scanning#update-a-code-scanning-alert"
+      <a href="/en/rest/code-scanning#get-a-code-scanning-alert"
         ><code
-          >PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}</code
+          >GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}</code
         ></a
       >
       (read)
     </li>
     <li>
-      <a href="/en/rest/code-scanning#list-instances-of-a-code-scanning-alert"
+      <a href="/en/rest/code-scanning#update-a-code-scanning-alert"
         ><code
-          >GET
-          /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances</code
+          >PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}</code
         ></a
       >
       (read)
@@ -6345,6 +6374,15 @@
     ></a>
   </h2>
   <ul>
+    <li>
+      <a href="/en/rest/code-scanning#list-instances-of-a-code-scanning-alert"
+        ><code
+          >GET
+          /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances</code
+        ></a
+      >
+      (read)
+    </li>
     <li>
       <a
         href="/en/rest/code-scanning#list-code-scanning-analyses-for-a-repository"
@@ -6369,13 +6407,13 @@
           /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}</code
         ></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/code-scanning#upload-a-sarif-file"
         ><code>POST /repos/{owner}/{repo}/code-scanning/sarifs</code></a
       >
-      (write)
+      (read)
     </li>
     <li>
       <a
@@ -6428,13 +6466,6 @@
       >
       (read)
     </li>
-  </ul>
-  <h2 id="starring" tabindex="-1">
-    <a class="heading-link" href="#starring"
-      >Starring<span class="heading-link-symbol" aria-hidden="true"></span
-    ></a>
-  </h2>
-  <ul>
     <li>
       <a
         href="/en/rest/activity#check-if-a-repository-is-starred-by-the-authenticated-user"
@@ -6446,7 +6477,7 @@
       <a href="/en/rest/activity#star-a-repository-for-the-authenticated-user"
         ><code>PUT /user/starred/{owner}/{repo}</code></a
       >
-      (read)
+      (write)
     </li>
     <li>
       <a href="/en/rest/activity#unstar-a-repository-for-the-authenticated-user"
