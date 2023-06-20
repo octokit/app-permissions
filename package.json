@@ -7,10 +7,10 @@
   "description": "machine-readable, always up-to-date GitHub App permissions",
   "main": "index.js",
   "scripts": {
-    "lint": "prettier --check '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
-    "lint:fix": "prettier --write '{scripts,test,generated}/**/*.{js,md,json}' *.md package.json",
+    "lint": "prettier --check '{scripts,test,generated}/**/*.{mjs,md,json}' *.md package.json",
+    "lint:fix": "prettier --write '{scripts,test,generated}/**/*.{mjs,md,json}' *.md package.json",
     "pretest": "npm run -s lint",
-    "test": "node test/smoke-test.js"
+    "test": "node test/smoke-test.mjs"
   },
   "repository": "github:octokit/app-permissions",
   "keywords": [
@@ -19,8 +19,8 @@
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "MIT",
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "got": "^11.5.2",
+    "cheerio": "^1.0.0-rc.12",
+    "got": "^13.0.0",
     "minimist": "^1.2.5",
     "prettier": "^2.1.0"
   },

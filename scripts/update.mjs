@@ -1,9 +1,9 @@
-const { writeFileSync, readFileSync } = require("fs");
+import { writeFileSync, readFileSync } from "fs";
 
-const cheerio = require("cheerio");
-const got = require("got");
-const minimist = require("minimist");
-const prettier = require("prettier");
+import { load } from "cheerio";
+import got from "got";
+import minimist from "minimist";
+import prettier from "prettier";
 
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
@@ -18,7 +18,7 @@ async function update(options) {
 
   if (updateCached) {
     const { body } = await got(PERMISSIONS_DOCUMENTATION_URL);
-    const $ = cheerio.load(body);
+    const $ = load(body);
 
     // get only the HTML we care about to avoid unnecessary cache updates
     const html = $("#article-contents").html();
@@ -30,7 +30,7 @@ async function update(options) {
   }
 
   const html = readFileSync(CACHE_FILE_PATH, "utf-8");
-  const $ = cheerio.load(html);
+  const $ = load(html);
 
   const result = $("h3")
     .slice(1)

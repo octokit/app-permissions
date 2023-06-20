@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: npm
-          node-version: 16
+          node-version: lts/*
       - run: npm ci
       - run: npm test
-      - run: node scripts/update
+      - run: node scripts/update.mjs
