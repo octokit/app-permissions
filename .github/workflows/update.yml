@@ -7,8 +7,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
-      - uses: actions/setup-node@5b949b50c3461bbcd5a540b150c368278160234a # tag=v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           cache: npm
           node-version: 16
@@ -37,7 +37,7 @@ jobs:
           author: Octokit Bot <octokitbot@martynus.net>
           path: cache
           commit-message: "build: cache"
-          labels: maintenance
+          labels: "Type: Maintenance"
       - name: update generated app permissions
         uses: gr2m/create-or-update-pull-request-action@v1.x
         env:
@@ -47,4 +47,4 @@ jobs:
           author: Octokit Bot <octokitbot@martynus.net>
           path: generated/
           commit-message: "WIP: app permissions update"
-          labels: maintenance
+          labels: "Type: Maintenance"
