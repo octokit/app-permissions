@@ -19,8 +19,8 @@
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "MIT",
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "got": "^12.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "got": "^13.0.0",
     "minimist": "^1.2.5",
     "prettier": "^2.1.0",
     "semantic-release": "^19.0.0"
