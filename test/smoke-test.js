@@ -1,6 +1,6 @@
-const assert = require("assert");
+import assert from "assert"
 
-const appPermissions = require("..");
+import appPermissions from "../index.js"
 
 assert("api.github.com" in appPermissions, 'export has "api.github.com" key');
 
