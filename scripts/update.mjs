@@ -1,9 +1,9 @@
-import { writeFileSync, readFileSync } from "fs"
+import { writeFileSync, readFileSync } from "fs";
 
-import { load } from "cheerio"
-import got from "got"
-import minimist from "minimist"
-import prettier from "prettier"
+import { load } from "cheerio";
+import got from "got";
+import minimist from "minimist";
+import prettier from "prettier";
 
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";

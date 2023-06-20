@@ -1,6 +1,6 @@
-import assert from "assert"
+import assert from "assert";
 
-import appPermissions from "../index.js"
+import appPermissions from "../index.js";
 
 assert("api.github.com" in appPermissions, 'export has "api.github.com" key');
 
