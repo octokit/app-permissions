@@ -32,7 +32,7 @@ const createIssuePermissions =
   appPermissions["api.github.com"].paths["/repos/{owner}/{repo}/issues"].post;
 console.log(
   `Required app permissions to create an issue: %o`,
-  createIssuePermissions
+  createIssuePermissions,
 );
 
 const issuesPermission = appPermissions["api.github.com"].permissions.issues;

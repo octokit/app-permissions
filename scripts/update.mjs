@@ -93,8 +93,8 @@ async function update(options) {
         permissions,
         paths,
       }),
-      { parser: "json" }
-    )
+      { parser: "json" },
+    ),
   );
   console.log("%s written", GENERATED_JSON_FILE_PATH);
 }
@@ -146,6 +146,6 @@ function toPermissionsObject(paths) {
 
       return map;
     },
-    { read: [], write: [] }
+    { read: [], write: [] },
   );
 }
