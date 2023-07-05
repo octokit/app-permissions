@@ -3,7 +3,7 @@ import { writeFileSync, readFileSync } from "fs";
 import { load } from "cheerio";
 import got from "got";
 import minimist from "minimist";
-import prettier from "prettier";
+import * as prettier from "prettier";
 
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
@@ -24,7 +24,7 @@ async function update(options) {
     const html = $("#article-contents").html();
 
     // format the html to avoid unnecessary cache updates
-    const formattedHtml = prettier.format(html, { parser: "html" });
+    const formattedHtml = await prettier.format(html, { parser: "html" });
     writeFileSync(CACHE_FILE_PATH, formattedHtml);
     console.log("%s written", CACHE_FILE_PATH);
   }
@@ -88,7 +88,7 @@ async function update(options) {
 
   writeFileSync(
     GENERATED_JSON_FILE_PATH,
-    prettier.format(
+    await prettier.format(
       JSON.stringify({
         permissions,
         paths,
