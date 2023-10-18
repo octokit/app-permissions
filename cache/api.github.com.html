@@ -9243,33 +9243,6 @@
           <td>
             <a
               rel=""
-              href="/en/rest/repos/properties#get-all-custom-property-values-for-a-repository"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/properties/values</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">✖️</td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
               href="/en/rest/repos/tags#list-tag-protection-states-for-a-repository"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/tags/protection</a
@@ -15769,6 +15742,33 @@
         </tr>
         <tr>
           <td>
+            <a
+              rel=""
+              href="/en/rest/repos/properties#get-all-custom-property-values-for-a-repository"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/properties/values</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">✖️</td>
+        </tr>
+        <tr>
+          <td>
             <a rel="" href="/en/rest/repos/rules#get-rules-for-a-branch"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/rules/branches/{branch}</a
@@ -20227,7 +20227,7 @@
       <tbody>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#create-a-repository-webhook"
+            <a rel="" href="/en/rest/repos/webhooks#create-a-repository-webhook"
               ><span>POST</span>
               <!-- -->/repos/{owner}/{repo}/hooks</a
             >
@@ -20252,7 +20252,7 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#update-a-repository-webhook"
+            <a rel="" href="/en/rest/repos/webhooks#update-a-repository-webhook"
               ><span>PATCH</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}</a
             >
@@ -20277,7 +20277,7 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#delete-a-repository-webhook"
+            <a rel="" href="/en/rest/repos/webhooks#delete-a-repository-webhook"
               ><span>DELETE</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}</a
             >
@@ -20304,7 +20304,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repo-config#update-a-webhook-configuration-for-a-repository"
+              href="/en/rest/repos/webhooks#update-a-webhook-configuration-for-a-repository"
               ><span>PATCH</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/config</a
             >
@@ -20331,7 +20331,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repo-deliveries#redeliver-a-delivery-for-a-repository-webhook"
+              href="/en/rest/repos/webhooks#redeliver-a-delivery-for-a-repository-webhook"
               ><span>POST</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts</a
             >
@@ -20356,7 +20356,7 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#list-repository-webhooks"
+            <a rel="" href="/en/rest/repos/webhooks#list-repository-webhooks"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/hooks</a
             >
@@ -20381,7 +20381,7 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#get-a-repository-webhook"
+            <a rel="" href="/en/rest/repos/webhooks#get-a-repository-webhook"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}</a
             >
@@ -20408,7 +20408,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repo-config#get-a-webhook-configuration-for-a-repository"
+              href="/en/rest/repos/webhooks#get-a-webhook-configuration-for-a-repository"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/config</a
             >
@@ -20435,7 +20435,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repo-deliveries#list-deliveries-for-a-repository-webhook"
+              href="/en/rest/repos/webhooks#list-deliveries-for-a-repository-webhook"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/deliveries</a
             >
@@ -20462,7 +20462,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repo-deliveries#get-a-delivery-for-a-repository-webhook"
+              href="/en/rest/repos/webhooks#get-a-delivery-for-a-repository-webhook"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}</a
             >
@@ -20487,7 +20487,7 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/webhooks/repos#ping-a-repository-webhook"
+            <a rel="" href="/en/rest/repos/webhooks#ping-a-repository-webhook"
               ><span>POST</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/pings</a
             >
@@ -20514,7 +20514,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/webhooks/repos#test-the-push-repository-webhook"
+              href="/en/rest/repos/webhooks#test-the-push-repository-webhook"
               ><span>POST</span>
               <!-- -->/repos/{owner}/{repo}/hooks/{hook_id}/tests</a
             >
