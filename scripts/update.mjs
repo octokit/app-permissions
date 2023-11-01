@@ -58,12 +58,12 @@ async function update(options) {
     let ref;
     if (process.env.OCTOKIT_OPENAPI_VERSION) {
       console.log(
-        `\`OCTOKIT_OPENAPI_VERSION\` is set: using OpenAPI version ${process.env.OCTOKIT_OPENAPI_VERSION}`
+        `\`OCTOKIT_OPENAPI_VERSION\` is set: using OpenAPI version ${process.env.OCTOKIT_OPENAPI_VERSION}`,
       );
       ref = process.env.OCTOKIT_OPENAPI_VERSION;
     } else {
       console.log(
-        "`OCTOKIT_OPENAPI_VERSION` is not set: using latest OpenAPI version"
+        "`OCTOKIT_OPENAPI_VERSION` is not set: using latest OpenAPI version",
       );
       ref = "main";
     }
@@ -78,7 +78,7 @@ async function update(options) {
       JSON.stringify(appPermissionsSchema),
       {
         parser: "json-stringify",
-      }
+      },
     );
     writeFileSync(APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH, formattedJson);
 
@@ -88,10 +88,10 @@ async function update(options) {
   const html = readFileSync(PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH, "utf-8");
   const $ = cheerio.load(html);
   const appPermissionsSchema = JSON.parse(
-    readFileSync(APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH, "utf-8")
+    readFileSync(APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH, "utf-8"),
   );
   const knownAppPermissions = Object.entries(
-    appPermissionsSchema.properties
+    appPermissionsSchema.properties,
   ).reduce((acc, [permissionName, schema]) => {
     return {
       ...acc,
