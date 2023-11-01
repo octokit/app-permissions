@@ -361,7 +361,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#create-or-update-custom-properties-for-an-organization"
+              href="/en/rest/orgs/custom-properties#create-or-update-custom-properties-for-an-organization"
               ><span>PATCH</span>
               <!-- -->/orgs/{org}/properties/schema</a
             >
@@ -382,13 +382,19 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#create-or-update-a-custom-property-for-an-organization"
+              href="/en/rest/orgs/custom-properties#create-or-update-a-custom-property-for-an-organization"
               ><span>PUT</span>
               <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
             >
@@ -409,13 +415,19 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#remove-a-custom-property-for-an-organization"
+              href="/en/rest/orgs/custom-properties#remove-a-custom-property-for-an-organization"
               ><span>DELETE</span>
               <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
             >
@@ -436,13 +448,19 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#create-or-update-custom-property-values-for-organization-repositories"
+              href="/en/rest/orgs/custom-properties#create-or-update-custom-property-values-for-organization-repositories"
               ><span>PATCH</span>
               <!-- -->/orgs/{org}/properties/values</a
             >
@@ -463,7 +481,13 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
@@ -1222,6 +1246,261 @@
     </table>
   </div>
   <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="organization-permissions-for-custom-properties" tabindex="-1">
+      <a
+        class="heading-link"
+        href="#organization-permissions-for-custom-properties"
+        >Organization permissions for "Custom properties"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#create-or-update-custom-properties-for-an-organization"
+              ><span>PATCH</span>
+              <!-- -->/orgs/{org}/properties/schema</a
+            >
+          </td>
+          <td class="v-align-middle text-center">admin</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-administration"
+                >Organization permissions for "Administration"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#create-or-update-a-custom-property-for-an-organization"
+              ><span>PUT</span>
+              <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">admin</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-administration"
+                >Organization permissions for "Administration"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#remove-a-custom-property-for-an-organization"
+              ><span>DELETE</span>
+              <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">admin</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-administration"
+                >Organization permissions for "Administration"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#create-or-update-custom-property-values-for-organization-repositories"
+              ><span>PATCH</span>
+              <!-- -->/orgs/{org}/properties/values</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-administration"
+                >Organization permissions for "Administration"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#get-all-custom-properties-for-an-organization"
+              ><span>GET</span>
+              <!-- -->/orgs/{org}/properties/schema</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-members"
+                >Organization permissions for "Members"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#get-a-custom-property-for-an-organization"
+              ><span>GET</span>
+              <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-members"
+                >Organization permissions for "Members"</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/orgs/custom-properties#list-custom-property-values-for-organization-repositories"
+              ><span>GET</span>
+              <!-- -->/orgs/{org}/properties/values</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-members"
+                >Organization permissions for "Members"</a
+              >
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
     <h2 id="organization-permissions-for-events" tabindex="-1">
       <a class="heading-link" href="#organization-permissions-for-events"
         >Organization permissions for "Events"<span
@@ -1907,7 +2186,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#get-all-custom-properties-for-an-organization"
+              href="/en/rest/orgs/custom-properties#get-all-custom-properties-for-an-organization"
               ><span>GET</span>
               <!-- -->/orgs/{org}/properties/schema</a
             >
@@ -1928,13 +2207,19 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#get-a-custom-property-for-an-organization"
+              href="/en/rest/orgs/custom-properties#get-a-custom-property-for-an-organization"
               ><span>GET</span>
               <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
             >
@@ -1955,13 +2240,19 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
             <a
               rel=""
-              href="/en/rest/orgs/properties#list-custom-property-values-for-organization-repositories"
+              href="/en/rest/orgs/custom-properties#list-custom-property-values-for-organization-repositories"
               ><span>GET</span>
               <!-- -->/orgs/{org}/properties/values</a
             >
@@ -1982,7 +2273,13 @@
               ></span
             >
           </td>
-          <td class="text-center">✖️</td>
+          <td class="">
+            <div>
+              <a href="#organization-permissions-for-custom-properties"
+                >Organization permissions for "Custom properties"</a
+              >
+            </div>
+          </td>
         </tr>
         <tr>
           <td>
@@ -15744,7 +16041,7 @@
           <td>
             <a
               rel=""
-              href="/en/rest/repos/properties#get-all-custom-property-values-for-a-repository"
+              href="/en/rest/repos/custom-properties#get-all-custom-property-values-for-a-repository"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/properties/values</a
             >
