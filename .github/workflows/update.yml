@@ -2,6 +2,9 @@
   schedule:
     - cron: 0 9 * * *
   workflow_dispatch: {}
+  repository_dispatch:
+    types:
+      - octokit/openapi release
 name: Update
 jobs:
   update:
@@ -13,6 +16,10 @@ jobs:
           cache: npm
           node-version: 16
       - run: npm ci
+      - run: >-
+          echo "OCTOKIT_OPENAPI_VERSION=${{
+          github.event.client_payload.release.tag_name }}" >> $GITHUB_ENV
+        if: github.event.client_payload.release.tag_name
       - name: update
         run: node scripts/update.mjs
       - run: git status
