@@ -1,6 +1,6 @@
-const assert = require("assert");
+import assert from "assert";
 
-const appPermissions = require("..");
+import appPermissions from "../index.js";
 
 assert("api.github.com" in appPermissions, 'export has "api.github.com" key');
 
@@ -8,7 +8,7 @@ const dotcomPermissions = appPermissions["api.github.com"];
 
 assert(
   "permissions" in dotcomPermissions,
-  '"api.github.com" export has "permissions" key'
+  '"api.github.com" export has "permissions" key',
 );
 assert("paths" in dotcomPermissions, '"api.github.com" export has "paths" key');
 
@@ -18,7 +18,7 @@ assert(
 );
 assert(
   typeof dotcomPermissions.paths["/"].GET === "object",
-  '"paths" export has ["/"]["GET"] keys'
+  '"paths" export has ["/"]["GET"] keys',
 );
 
 const metaPermission = dotcomPermissions.permissions.metadata;
@@ -34,7 +34,7 @@ assert(
 const rootPath = dotcomPermissions.paths["/"].GET;
 assert(
   typeof rootPath.permission === "string",
-  'rout path has "permission" key'
+  'rout path has "permission" key',
 );
 assert(typeof rootPath.access === "string", 'rout path has "access" key');
 

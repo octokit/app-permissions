@@ -10,8 +10,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           cache: npm
           node-version: 16
@@ -21,7 +21,7 @@ jobs:
           github.event.client_payload.release.tag_name }}" >> $GITHUB_ENV
         if: github.event.client_payload.release.tag_name
       - name: update
-        run: node scripts/update
+        run: node scripts/update.mjs
       - run: git status
       - name: update cache
         uses: gr2m/create-or-update-pull-request-action@v1.x
@@ -44,7 +44,7 @@ jobs:
           author: Octokit Bot <octokitbot@martynus.net>
           path: cache
           commit-message: "build: cache"
-          labels: maintenance
+          labels: "Type: Maintenance"
       - name: update generated app permissions
         uses: gr2m/create-or-update-pull-request-action@v1.x
         env:
@@ -54,4 +54,4 @@ jobs:
           author: Octokit Bot <octokitbot@martynus.net>
           path: generated/
           commit-message: "WIP: app permissions update"
-          labels: maintenance
+          labels: "Type: Maintenance"

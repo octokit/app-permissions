@@ -11,11 +11,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           cache: npm
-          node-version: 16
+          node-version: lts/*
       - run: npm ci
       - run: npm test
-      - run: node scripts/update
+      - run: node scripts/update.mjs
