@@ -2,7 +2,8 @@
   "name": "@octokit/app-permissions",
   "version": "0.0.0-development",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "description": "machine-readable, always up-to-date GitHub App permissions",
   "main": "index.js",
