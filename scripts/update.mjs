@@ -50,7 +50,7 @@ async function update(options) {
     const html = $("#article-contents").html();
 
     // format the html to avoid unnecessary cache updates
-    const formattedHtml = prettier.format(html, { parser: "html" });
+    const formattedHtml = await prettier.format(html, { parser: "html" });
     writeFileSync(PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH, formattedHtml);
     console.log("%s written", PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH);
 
