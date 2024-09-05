@@ -1,7 +1,6 @@
 import { writeFileSync, readFileSync } from "fs";
 
-import { load } from "cheerio";
-import got from "got";
+import { fromURL as loadFromURL } from "cheerio";
 import minimist from "minimist";
 import * as prettier from "prettier";
 
@@ -43,8 +42,7 @@ async function update(options) {
 
   if (updateCached) {
     // update documentation cache
-    const { body } = await got(PERMISSIONS_DOCUMENTATION_URL);
-    const $ = load(body);
+    const $ = await loadFromURL(PERMISSIONS_DOCUMENTATION_URL);
 
     // get only the HTML we care about to avoid unnecessary cache updates
     const html = $("#article-contents").html();
@@ -69,9 +67,9 @@ async function update(options) {
     }
     const openapiSchemaUrl = `https://raw.githubusercontent.com/octokit/openapi/${ref}/generated/api.github.com.json`;
 
-    const { body: openApiJson } = await got(openapiSchemaUrl);
+    const req = await fetch(openapiSchemaUrl);
+    const openApiSchema = await req.json();
 
-    const openApiSchema = JSON.parse(openApiJson);
     const appPermissionsSchema =
       openApiSchema.components.schemas["app-permissions"];
     const formattedJson = prettier.format(
