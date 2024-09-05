@@ -72,7 +72,7 @@ async function update(options) {
 
     const appPermissionsSchema =
       openApiSchema.components.schemas["app-permissions"];
-    const formattedJson = prettier.format(
+    const formattedJson = await prettier.format(
       JSON.stringify(appPermissionsSchema),
       {
         parser: "json-stringify",
