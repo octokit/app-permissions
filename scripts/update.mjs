@@ -1,6 +1,6 @@
 import { writeFileSync, readFileSync } from "fs";
 
-import { fromURL as loadFromURL } from "cheerio";
+import { fromURL as loadFromURL, load} from "cheerio";
 import minimist from "minimist";
 import * as prettier from "prettier";
 
@@ -84,7 +84,7 @@ async function update(options) {
   }
 
   const html = readFileSync(PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH, "utf-8");
-  const $ = cheerio.load(html);
+  const $ = load(html);
   const appPermissionsSchema = JSON.parse(
     readFileSync(APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH, "utf-8"),
   );
@@ -100,7 +100,7 @@ async function update(options) {
   const result = $("h2")
     .slice(1)
     .map((i, el) => {
-      $el = $(el);
+      const $el = $(el);
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
