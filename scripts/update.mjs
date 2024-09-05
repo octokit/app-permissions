@@ -1,6 +1,6 @@
 import { writeFileSync, readFileSync } from "fs";
 
-import { fromURL as loadFromURL, load} from "cheerio";
+import { fromURL as loadFromURL, load } from "cheerio";
 import minimist from "minimist";
 import * as prettier from "prettier";
 
