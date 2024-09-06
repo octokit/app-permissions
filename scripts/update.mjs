@@ -205,7 +205,7 @@ function toPermissionName(text) {
     return "meta";
   }
 
-  const title = text.match(/([^"]+)/).pop();
+  const title = text.match(/"([^"]+)"/).pop();
 
   return title.toLowerCase().replace(/\W/g, "_");
 }
