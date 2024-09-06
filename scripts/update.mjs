@@ -50,7 +50,6 @@ const KNOWN_PERMISSIONS_MAPPING = {
   projects: "repository_projects",
   self_hosted_runners: "organization_self_hosted_runners",
   webhooks: "repository_webhooks",
-  
 };
 
 update(minimist(process.argv.slice(2))).catch(console.error);
