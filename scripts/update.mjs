@@ -115,7 +115,7 @@ async function update(options) {
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
         .nextUntil("h2")
-        .find("li")
+        .find("tr td:first-child a")
         .map((i, el) => {
           const documentationUrl =
             DOCUMENTED_BASE_URL + $(el).find("a").attr("href");
