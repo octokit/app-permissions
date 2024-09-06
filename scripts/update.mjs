@@ -15,25 +15,42 @@ const DOCUMENTED_BASE_URL = "https://docs.github.com";
 
 // TODO: these should be added to GitHub's OpenAPI schema
 const MISSING_SCHEMA_PERMISSIONS = [
-  "codespaces",
-  "dependabot_secrets",
-  "email_addresses",
-  "followers",
-  "git_ssh_keys",
-  "gpg_keys",
-  "interaction_limits",
-  "organization_events",
+  "attestations",
+  "block_another_user",
+  "codespaces_lifecycle_admin",
+  "codespaces_metadata",
+  "codespaces_secrets",
+  "codespaces_user_secrets",
+  "enterprise_administration",
+  "gists",
+  "notifications",
+  "organization_codespaces_secrets",
+  "organization_codespaces_settings",
   "organization_webhooks",
-  "profile",
+  "repository_security_advisories",
   "repository_webhooks",
-  "self_hosted_runners",
-  "starring",
+  "personal_access_token_requests",
+  "personal_access_tokens",
+  "plan", // user plan is missing, organization plan is present
+  "ssh_signing_keys",
+  "variables",
+  "watching",
 ];
 const KNOWN_PERMISSIONS_MAPPING = {
   blocking_users: "organization_user_blocking",
   code_scanning_alerts: "security_events",
   commit_statuses: "statuses",
+  custom_organization_roles: "organization_custom_roles",
+  custom_properties: "organization_custom_properties",
   dependabot_alerts: "vulnerability_alerts",
+  events: "organization_events",
+  github_copilot_business: "organization_copilot_seat_management",
+  organization_codespaces: "codespaces",
+  organization_dependabot_secrets: "dependabot_secrets",
+  projects: "repository_projects",
+  self_hosted_runners: "organization_self_hosted_runners",
+  webhooks: "repository_webhooks",
+  
 };
 
 update(minimist(process.argv.slice(2))).catch(console.error);
