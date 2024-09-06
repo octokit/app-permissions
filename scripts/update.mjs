@@ -123,10 +123,7 @@ async function update(options) {
 
           return {
             method,
-            // replace :varname with {varname} to make it RFC 6570 compatible
-            // and coherent with current docs
-            // NOTE: this workaround can be removed once URLs in the docs use {varname}
-            url: url.replace(/:([a-z]\w+)/g, "{$1}"),
+            url,
             access,
             documentationUrl,
           };
