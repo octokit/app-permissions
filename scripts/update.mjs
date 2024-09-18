@@ -1,7 +1,6 @@
 import { writeFileSync, readFileSync } from "fs";
 
-import { load } from "cheerio";
-import got from "got";
+import { fromURL as loadFromURL, load } from "cheerio";
 import minimist from "minimist";
 import * as prettier from "prettier";
 
@@ -43,14 +42,13 @@ async function update(options) {
 
   if (updateCached) {
     // update documentation cache
-    const { body } = await got(PERMISSIONS_DOCUMENTATION_URL);
-    const $ = load(body);
+    const $ = await loadFromURL(PERMISSIONS_DOCUMENTATION_URL);
 
     // get only the HTML we care about to avoid unnecessary cache updates
     const html = $("#article-contents").html();
 
     // format the html to avoid unnecessary cache updates
-    const formattedHtml = prettier.format(html, { parser: "html" });
+    const formattedHtml = await prettier.format(html, { parser: "html" });
     writeFileSync(PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH, formattedHtml);
     console.log("%s written", PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH);
 
@@ -69,12 +67,12 @@ async function update(options) {
     }
     const openapiSchemaUrl = `https://raw.githubusercontent.com/octokit/openapi/${ref}/generated/api.github.com.json`;
 
-    const { body: openApiJson } = await got(openapiSchemaUrl);
+    const req = await fetch(openapiSchemaUrl);
+    const openApiSchema = await req.json();
 
-    const openApiSchema = JSON.parse(openApiJson);
     const appPermissionsSchema =
       openApiSchema.components.schemas["app-permissions"];
-    const formattedJson = prettier.format(
+    const formattedJson = await prettier.format(
       JSON.stringify(appPermissionsSchema),
       {
         parser: "json-stringify",
@@ -86,7 +84,7 @@ async function update(options) {
   }
 
   const html = readFileSync(PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH, "utf-8");
-  const $ = cheerio.load(html);
+  const $ = load(html);
   const appPermissionsSchema = JSON.parse(
     readFileSync(APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH, "utf-8"),
   );
@@ -102,7 +100,7 @@ async function update(options) {
   const result = $("h2")
     .slice(1)
     .map((i, el) => {
-      $el = $(el);
+      const $el = $(el);
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
@@ -117,7 +115,7 @@ async function update(options) {
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
         .nextUntil("h2")
-        .find("li")
+        .find("td:first-child")
         .map((i, el) => {
           const documentationUrl =
             DOCUMENTED_BASE_URL + $(el).find("a").attr("href");
@@ -125,10 +123,7 @@ async function update(options) {
 
           return {
             method,
-            // replace :varname with {varname} to make it RFC 6570 compatible
-            // and coherent with current docs
-            // NOTE: this workaround can be removed once URLs in the docs use {varname}
-            url: url.replace(/:([a-z]\w+)/g, "{$1}"),
+            url,
             access,
             documentationUrl,
           };
@@ -210,7 +205,7 @@ function toPermissionName(text) {
     return "meta";
   }
 
-  const title = text.match(/([^"]+)/).pop();
+  const title = text.match(/"([^"]+)"/).pop();
 
   return title.toLowerCase().replace(/\W/g, "_");
 }
