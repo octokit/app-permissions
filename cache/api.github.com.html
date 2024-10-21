@@ -3246,10 +3246,6 @@
                 >IAT</a
               ></span
             >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -3282,7 +3278,7 @@
               <!-- -->/orgs/{org}/properties/values</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -3320,33 +3316,6 @@
             </svg>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="PermissionTable_parameterTable__3KEFb">
-    <h2
-      id="organization-permissions-for-custom-organization-roles"
-      tabindex="-1"
-    >
-      <a
-        class="heading-link"
-        href="#organization-permissions-for-custom-organization-roles"
-        >Organization permissions for "Custom organization roles"<span
-          aria-hidden="true"
-          class="heading-link-symbol"
-        ></span
-      ></a>
-    </h2>
-    <table>
-      <thead>
-        <tr>
-          <th class="text-left">Endpoint</th>
-          <th class="text-center">Access</th>
-          <th class="text-center">Token types</th>
-          <th class="text-center">Additional permissions</th>
-        </tr>
-      </thead>
-      <tbody>
         <tr>
           <td>
             <a
@@ -3356,7 +3325,7 @@
               <!-- -->/orgs/{org}/properties/schema</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -3403,7 +3372,7 @@
               <!-- -->/orgs/{org}/properties/schema/{custom_property_name}</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -3441,30 +3410,6 @@
             </svg>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="PermissionTable_parameterTable__3KEFb">
-    <h2 id="organization-permissions-for-custom-properties" tabindex="-1">
-      <a
-        class="heading-link"
-        href="#organization-permissions-for-custom-properties"
-        >Organization permissions for "Custom properties"<span
-          aria-hidden="true"
-          class="heading-link-symbol"
-        ></span
-      ></a>
-    </h2>
-    <table>
-      <thead>
-        <tr>
-          <th class="text-left">Endpoint</th>
-          <th class="text-center">Access</th>
-          <th class="text-center">Token types</th>
-          <th class="text-center">Additional permissions</th>
-        </tr>
-      </thead>
-      <tbody>
         <tr>
           <td>
             <a
@@ -3474,7 +3419,7 @@
               <!-- -->/orgs/{org}/properties/values</a
             >
           </td>
-          <td class="v-align-middle text-center">admin</td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -3655,6 +3600,8 @@
             >
           </td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <a
@@ -3823,6 +3770,30 @@
             >
           </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="organization-permissions-for-organization-codespaces" tabindex="-1">
+      <a
+        class="heading-link"
+        href="#organization-permissions-for-organization-codespaces"
+        >Organization permissions for "Organization codespaces"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <a
@@ -3832,7 +3803,7 @@
               <!-- -->/orgs/{org}/copilot/billing</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -3879,20 +3850,6 @@
             >
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="PermissionTable_parameterTable__3KEFb">
-    <h2 id="organization-permissions-for-events" tabindex="-1">
-      <a class="heading-link" href="#organization-permissions-for-events"
-        >Organization permissions for "Events"<span
-          aria-hidden="true"
-          class="heading-link-symbol"
-        ></span
-      ></a>
-    </h2>
-    <table>
-      <thead>
         <tr>
           <td>
             <a
@@ -3902,7 +3859,7 @@
               <!-- -->/orgs/{org}/copilot/billing/seats</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -4210,40 +4167,6 @@
                 >IAT</a
               ></span
             >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/copilot/copilot-user-management#remove-teams-from-the-copilot-subscription-for-an-organization"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
           </td>
           <td class="text-center">
             <svg
@@ -4368,7 +4291,7 @@
               <!-- -->/orgs/{org}/memberships/{username}</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -4618,6 +4541,10 @@
                 >IAT</a
               ></span
             >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -4650,7 +4577,7 @@
               <!-- -->/orgs/{org}/organization-roles/users/{username}/{role_id}</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -4712,6 +4639,10 @@
                 >IAT</a
               ></span
             >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -5134,6 +5065,28 @@
             </svg>
           </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="organization-permissions-for-projects" tabindex="-1">
+      <a class="heading-link" href="#organization-permissions-for-projects"
+        >Organization permissions for "Projects"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <a
@@ -5188,7 +5141,7 @@
               <!-- -->/orgs/{org}/members</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">admin</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5235,7 +5188,7 @@
               <!-- -->/orgs/{org}/members/{username}</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5243,28 +5196,13 @@
                 href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
                 >UAT</a
               ></span
-            ><br />
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
             >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -5297,7 +5235,7 @@
               <!-- -->/orgs/{org}/memberships/{username}</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">admin</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5305,28 +5243,13 @@
                 href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
                 >UAT</a
               ></span
-            ><br />
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
             >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -5359,7 +5282,7 @@
               <!-- -->/orgs/{org}/organization-roles/{role_id}/teams</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">admin</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5508,28 +5431,13 @@
                 href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
                 >UAT</a
               ></span
-            ><br />
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
             >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -5562,7 +5470,7 @@
               <!-- -->/orgs/{org}/public_members/{username}</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5765,7 +5673,7 @@
               <!-- -->/orgs/{org}/codespaces/secrets/{secret_name}</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -5812,7 +5720,7 @@
               <!-- -->/orgs/{org}/codespaces/secrets/{secret_name}</a
             >
           </td>
-          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">write</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -8762,7 +8670,7 @@
               <!-- -->/orgs/{org}/actions/secrets/{secret_name}</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -8800,6 +8708,28 @@
             </svg>
           </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="organization-permissions-for-secrets" tabindex="-1">
+      <a class="heading-link" href="#organization-permissions-for-secrets"
+        >Organization permissions for "Secrets"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <a
@@ -9214,6 +9144,30 @@
             </svg>
           </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="organization-permissions-for-self-hosted-runners" tabindex="-1">
+      <a
+        class="heading-link"
+        href="#organization-permissions-for-self-hosted-runners"
+        >Organization permissions for "Self-hosted runners"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <a
@@ -15548,6 +15502,27 @@
               ></path>
             </svg>
           </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
         </tr>
         <tr>
           <td>
@@ -15600,9 +15575,9 @@
           <td>
             <a
               rel=""
-              href="/en/rest/branches/branch-protection#set-user-access-restrictions"
-              ><span>PUT</span>
-              <!-- -->/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users</a
+              href="/en/rest/code-scanning/code-scanning#update-a-code-scanning-default-setup-configuration"
+              ><span>PATCH</span>
+              <!-- -->/repos/{owner}/{repo}/code-scanning/default-setup</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -15620,6 +15595,10 @@
                 >IAT</a
               ></span
             >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
           </td>
           <td class="text-center">
             <svg
@@ -18571,6 +18550,147 @@
           <td>
             <a
               rel=""
+              href="/en/rest/code-scanning/code-scanning#get-a-code-scanning-default-setup-configuration"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/code-scanning/default-setup</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/code-security/configurations#get-the-code-security-configuration-associated-with-a-repository"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/code-security-configuration</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/deployments/protection-rules#list-custom-deployment-rule-integrations-available-for-an-environment"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
               href="/en/rest/interactions/repos#get-interaction-restrictions-for-a-repository"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/interaction-limits</a
@@ -19077,6 +19197,133 @@
               href="/en/rest/collaborators/invitations#list-repository-invitations-for-the-authenticated-user"
               ><span>GET</span>
               <!-- -->/user/repository_invitations</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br />
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="PermissionTable_parameterTable__3KEFb">
+    <h2 id="repository-permissions-for-attestations" tabindex="-1">
+      <a class="heading-link" href="#repository-permissions-for-attestations"
+        >Repository permissions for "Attestations"<span
+          aria-hidden="true"
+          class="heading-link-symbol"
+        ></span
+      ></a>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="text-left">Endpoint</th>
+          <th class="text-center">Access</th>
+          <th class="text-center">Token types</th>
+          <th class="text-center">Additional permissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/repos/repos#create-an-attestation"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/attestations</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/repos/repos#list-attestations"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/attestations/{subject_digest}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -23068,12 +23315,123 @@
           <td>
             <a
               rel=""
-              href="/en/rest/branches/branches#sync-a-fork-branch-with-the-upstream-repository"
+              href="/en/rest/secret-scanning/secret-scanning#create-a-push-protection-bypass"
               ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/merge-upstream</a
+              <!-- -->/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br />
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/releases/releases#create-a-release"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/repos/repos#list-repository-activities"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/activity</a
+            >
+          </td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -23113,57 +23471,12 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/branches/branches#merge-a-branch"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/merges</a
+            <a rel="" href="/en/rest/branches/branches#list-branches"
+              ><span>GET</span>
+              <!-- -->/repos/{owner}/{repo}/branches</a
             >
           </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
-            >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/releases/releases#delete-a-release"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/releases/{release_id}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">read</td>
           <td class="v-align-middle text-center">
             <span class="label no-underline"
               ><a
@@ -23349,9 +23662,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/repos/repos#list-repository-activities"
+            <a rel="" href="/en/rest/branches/branches#get-a-branch"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/activity</a
+              <!-- -->/repos/{owner}/{repo}/branches/{branch}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -23394,9 +23707,11 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/branches/branches#list-branches"
+            <a
+              rel=""
+              href="/en/rest/code-scanning/code-scanning#list-codeql-databases-for-a-repository"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/branches</a
+              <!-- -->/repos/{owner}/{repo}/code-scanning/codeql/databases</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -23501,9 +23816,11 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/branches/branches#get-a-branch"
+            <a
+              rel=""
+              href="/en/rest/code-scanning/code-scanning#get-a-codeql-database-for-a-repository"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/branches/{branch}</a
+              <!-- -->/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -24974,9 +25291,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/releases/assets#get-a-release-asset"
+            <a rel="" href="/en/rest/releases/releases#get-a-release"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/releases/assets/{asset_id}</a
+              <!-- -->/repos/{owner}/{repo}/releases/{release_id}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -25017,11 +25334,62 @@
             </svg>
           </td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
-            <a rel="" href="/en/rest/releases/releases#get-the-latest-release"
+            <a
+              rel=""
+              href="/en/rest/repos/custom-properties#create-or-update-custom-property-values-for-a-repository"
+              ><span>PATCH</span>
+              <!-- -->/repos/{owner}/{repo}/properties/values</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/repos/contents#download-a-repository-archive-tar"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/releases/latest</a
+              <!-- -->/repos/{owner}/{repo}/tarball/{ref}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -25066,54 +25434,9 @@
           <td>
             <a
               rel=""
-              href="/en/rest/releases/releases#get-a-release-by-tag-name"
+              href="/en/rest/repos/contents#download-a-repository-archive-zip"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/releases/tags/{tag}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
-            >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/releases/releases#get-a-release"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/releases/{release_id}</a
+              <!-- -->/repos/{owner}/{repo}/zipball/{ref}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -27346,7 +27669,7 @@
           <td>
             <a rel="" href="/en/rest/issues/labels#add-labels-to-an-issue"
               ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</a
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -27398,11 +27721,9 @@
         </tr>
         <tr>
           <td>
-            <a
-              rel=""
-              href="/en/rest/reactions/reactions#delete-an-issue-comment-reaction"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</a
+            <a rel="" href="/en/rest/issues/labels#set-labels-for-an-issue"
+              ><span>PUT</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -27426,480 +27747,6 @@
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
               href="/en/rest/issues/labels#set-labels-for-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/issues#update-an-issue"
-              ><span>PATCH</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#remove-all-labels-from-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/assignees#add-assignees-to-an-issue"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/assignees</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#remove-a-label-from-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/issues#create-an-issue"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/issues#lock-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/comments#update-an-issue-comment"
-              ><span>PATCH</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/issues#unlock-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/comments#delete-an-issue-comment"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
-            >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
-              href="/en/rest/reactions/reactions#create-reaction-for-an-issue-comment"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
-            >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
-              href="/en/rest/reactions/reactions#delete-an-issue-comment-reaction"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#create-a-label"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/issues#update-an-issue"
-              ><span>PATCH</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#update-a-label"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/assignees#add-assignees-to-an-issue"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/assignees</a
-            >
-          </td>
-          <td class="v-align-middle text-center">write</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#delete-a-label"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -27955,7 +27802,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/milestones#create-a-milestone"
+              href="/en/rest/issues/labels#remove-all-labels-from-an-issue"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28009,7 +27856,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/milestones#update-a-milestone"
+              href="/en/rest/issues/labels#remove-a-label-from-an-issue"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28040,7 +27887,483 @@
           <td>
             <a rel="" href="/en/rest/issues/labels#add-labels-to-an-issue"
               ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/issues#lock-an-issue"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/reactions/reactions#delete-an-issue-comment-reaction"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/issues#unlock-an-issue"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/issues#update-an-issue"
+              ><span>PATCH</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/assignees#add-assignees-to-an-issue"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/assignees</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/issues#create-an-issue"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/labels#create-a-label"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/comments#update-an-issue-comment"
+              ><span>PATCH</span>
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/labels#update-a-label"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/comments#delete-an-issue-comment"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/labels#delete-a-label"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/reactions/reactions#create-reaction-for-an-issue-comment"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/milestones#create-a-milestone"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/reactions/reactions#delete-an-issue-comment-reaction"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/milestones#update-a-milestone"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/issues#update-an-issue"
+              ><span>PATCH</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28092,9 +28415,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/issues/labels#set-labels-for-an-issue"
-              ><span>PUT</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
+            <a rel="" href="/en/rest/issues/assignees#add-assignees-to-an-issue"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/assignees</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28148,9 +28471,9 @@
           <td>
             <a
               rel=""
-              href="/en/rest/issues/labels#remove-all-labels-from-an-issue"
+              href="/en/rest/issues/assignees#remove-assignees-from-an-issue"
               ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/assignees</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28202,9 +28525,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/issues/labels#remove-a-label-from-an-issue"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}</a
+            <a rel="" href="/en/rest/issues/comments#create-an-issue-comment"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/comments</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28247,9 +28570,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/issues/issues#lock-an-issue"
-              ><span>PUT</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/lock</a
+            <a rel="" href="/en/rest/issues/labels#add-labels-to-an-issue"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28301,9 +28624,9 @@
         </tr>
         <tr>
           <td>
-            <a rel="" href="/en/rest/issues/issues#unlock-an-issue"
-              ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/lock</a
+            <a rel="" href="/en/rest/issues/labels#set-labels-for-an-issue"
+              ><span>PUT</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28357,9 +28680,9 @@
           <td>
             <a
               rel=""
-              href="/en/rest/reactions/reactions#create-reaction-for-an-issue"
-              ><span>POST</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/reactions</a
+              href="/en/rest/issues/labels#remove-all-labels-from-an-issue"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28404,9 +28727,114 @@
           <td>
             <a
               rel=""
-              href="/en/rest/reactions/reactions#delete-an-issue-reaction"
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/assignees#check-if-a-user-can-be-assigned"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+          <td class="text-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="octicon octicon-x"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+              style="
+                display: inline-block;
+                user-select: none;
+                vertical-align: text-bottom;
+                overflow: visible;
+              "
+            >
+              <path
+                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/labels#remove-a-label-from-an-issue"
               ><span>DELETE</span>
-              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}</a
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/events#get-an-issue-event"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/issues#lock-an-issue"
+              ><span>PUT</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/lock</a
             >
           </td>
           <td class="v-align-middle text-center">write</td>
@@ -28445,6 +28873,172 @@
                 d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
               ></path>
             </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a rel="" href="/en/rest/issues/issues#unlock-an-issue"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/lock</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/assignees#check-if-a-user-can-be-assigned-to-a-issue"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/reactions/reactions#create-reaction-for-an-issue"
+              ><span>POST</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/reactions</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/comments#list-issue-comments"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              rel=""
+              href="/en/rest/reactions/reactions#delete-an-issue-reaction"
+              ><span>DELETE</span>
+              <!-- -->/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}</a
+            >
+          </td>
+          <td class="v-align-middle text-center">write</td>
+          <td class="v-align-middle text-center">
+            <span class="label no-underline"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
+                >UAT</a
+              ></span
+            ><br /><span class="label mt-2"
+              ><a
+                rel=""
+                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
+                >IAT</a
+              ></span
+            >
+          </td>
+          <td class="text-center">
+            <a
+              rel=""
+              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
+              href="/en/rest/issues/events#list-issue-events"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                class="octicon octicon-check"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="
+                  display: inline-block;
+                  user-select: none;
+                  vertical-align: text-bottom;
+                  overflow: visible;
+                "
+              >
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                ></path></svg
+              ><span class="visually-hidden"
+                >Multiple permissions are required, or a different permission
+                may be used. For more information about the permissions, see the
+                documentation for this endpoint.</span
+              ></a
+            >
           </td>
         </tr>
         <tr>
@@ -28474,7 +29068,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/events#get-an-issue-event"
+              href="/en/rest/issues/labels#list-labels-for-an-issue"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28573,7 +29167,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/assignees#check-if-a-user-can-be-assigned-to-a-issue"
+              href="/en/rest/issues/timeline#list-timeline-events-for-an-issue"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28627,7 +29221,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/comments#list-issue-comments"
+              href="/en/rest/issues/labels#list-labels-for-a-repository"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28681,7 +29275,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/events#list-issue-events"
+              href="/en/rest/issues/labels#get-a-label"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28735,7 +29329,7 @@
             <a
               rel=""
               title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#list-labels-for-an-issue"
+              href="/en/rest/issues/milestones#list-milestones"
               ><svg
                 aria-hidden="true"
                 focusable="false"
@@ -28767,273 +29361,6 @@
             <a rel="" href="/en/rest/issues/assignees#list-assignees"
               ><span>GET</span>
               <!-- -->/repos/{owner}/{repo}/assignees</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="octicon octicon-x"
-              viewBox="0 0 16 16"
-              width="16"
-              height="16"
-              fill="currentColor"
-              style="
-                display: inline-block;
-                user-select: none;
-                vertical-align: text-bottom;
-                overflow: visible;
-              "
-            >
-              <path
-                d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-              ></path>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
-              href="/en/rest/issues/assignees#check-if-a-user-can-be-assigned"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/assignees/{assignee}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/timeline#list-timeline-events-for-an-issue"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/issues#list-repository-issues"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/issues</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#list-labels-for-a-repository"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
-              href="/en/rest/issues/comments#list-issue-comments-for-a-repository"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/labels#get-a-label"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a rel="" href="/en/rest/issues/comments#get-an-issue-comment"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}</a
-            >
-          </td>
-          <td class="v-align-middle text-center">read</td>
-          <td class="v-align-middle text-center">
-            <span class="label no-underline"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user"
-                >UAT</a
-              ></span
-            ><br /><span class="label mt-2"
-              ><a
-                rel=""
-                href="/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation"
-                >IAT</a
-              ></span
-            >
-          </td>
-          <td class="text-center">
-            <a
-              rel=""
-              title="Multiple permissions are required, or a different permission may be used. For more information about the permissions, see the documentation for this endpoint."
-              href="/en/rest/issues/milestones#list-milestones"
-              ><svg
-                aria-hidden="true"
-                focusable="false"
-                class="octicon octicon-check"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-                style="
-                  display: inline-block;
-                  user-select: none;
-                  vertical-align: text-bottom;
-                  overflow: visible;
-                "
-              >
-                <path
-                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
-                ></path></svg
-              ><span class="visually-hidden"
-                >Multiple permissions are required, or a different permission
-                may be used. For more information about the permissions, see the
-                documentation for this endpoint.</span
-              ></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              rel=""
-              href="/en/rest/reactions/reactions#list-reactions-for-an-issue-comment"
-              ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
@@ -29087,9 +29414,9 @@
           <td>
             <a
               rel=""
-              href="/en/rest/issues/events#list-issue-events-for-a-repository"
+              href="/en/rest/issues/assignees#check-if-a-user-can-be-assigned"
               ><span>GET</span>
-              <!-- -->/repos/{owner}/{repo}/issues/events</a
+              <!-- -->/repos/{owner}/{repo}/assignees/{assignee}</a
             >
           </td>
           <td class="v-align-middle text-center">read</td>
