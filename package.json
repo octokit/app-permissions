@@ -39,5 +39,8 @@
       ],
       "@semantic-release/npm"
     ]
+  },
+  "dependencies": {
+    "sort-keys": "^5.1.0"
   }
 }

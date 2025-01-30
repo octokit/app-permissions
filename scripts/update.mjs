@@ -3,6 +3,7 @@ import { writeFileSync, readFileSync } from "fs";
 import { fromURL as loadFromURL, load } from "cheerio";
 import minimist from "minimist";
 import * as prettier from "prettier";
+import sortKeys from "sort-keys";
 
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
@@ -162,10 +163,15 @@ async function update(options) {
   writeFileSync(
     GENERATED_JSON_FILE_PATH,
     await prettier.format(
-      JSON.stringify({
-        permissions,
-        paths,
-      }),
+      JSON.stringify(
+        sortKeys(
+          {
+            permissions,
+            paths,
+          },
+          { deep: true },
+        ),
+      ),
       { parser: "json" },
     ),
   );
