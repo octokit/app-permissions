@@ -13,22 +13,6 @@ const APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH =
 const GENERATED_JSON_FILE_PATH = "generated/api.github.com.json";
 const DOCUMENTED_BASE_URL = "https://docs.github.com";
 
-// TODO: these should be added to GitHub's OpenAPI schema
-const MISSING_SCHEMA_PERMISSIONS = [
-  "codespaces",
-  "dependabot_secrets",
-  "email_addresses",
-  "followers",
-  "git_ssh_keys",
-  "gpg_keys",
-  "interaction_limits",
-  "organization_events",
-  "organization_webhooks",
-  "profile",
-  "repository_webhooks",
-  "self_hosted_runners",
-  "starring",
-];
 const KNOWN_PERMISSIONS_MAPPING = {
   blocking_users: "organization_user_blocking",
   code_scanning_alerts: "security_events",
@@ -98,6 +82,7 @@ async function update(options) {
     };
   }, {});
 
+  const missingSchemaPermissions = [];
   const result = $("h2")
     .slice(1)
     .map((i, el) => {
@@ -105,12 +90,9 @@ async function update(options) {
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
-      if (MISSING_SCHEMA_PERMISSIONS.includes(name)) {
-        return;
-      }
-
       if (!knownAppPermissions[name]) {
-        throw new Error(`Unknown permission: ${name}`);
+        missingSchemaPermissions.push(name);
+        return;
       }
 
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
@@ -135,6 +117,12 @@ async function update(options) {
     })
     .get()
     .filter(Boolean);
+
+  if (missingSchemaPermissions.length) {
+    console.warn(
+      `The following permissions are documented but are not present in the app-permissions schema:\n- ${missingSchemaPermissions.join("\n- ")}`,
+    );
+  }
 
   const permissions = result.reduce((map, { name, url, routes }) => {
     map[name] = {
