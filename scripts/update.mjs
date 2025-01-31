@@ -90,19 +90,18 @@ async function update(options) {
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
-      if (!knownAppPermissions[name]) {
-        missingSchemaPermissions.push(name);
-        return;
-      }
-
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
         .nextUntil("h2")
-        .find("td:first-child")
+        .find("tbody tr")
         .map((i, el) => {
           const documentationUrl =
-            DOCUMENTED_BASE_URL + $(el).find("a").attr("href");
-          const { method, url, access } = getRouteAndAccess($(el).text());
+            DOCUMENTED_BASE_URL + $(el).find("td:first-child a").attr("href");
+
+          const { method, url } = getRoute(
+            $(el).first("td:first-child").text(),
+          );
+          const access = $(el).find("td:nth-child(2)").text().trim();
 
           return {
             method,
@@ -166,7 +165,7 @@ async function update(options) {
   console.log("%s written", GENERATED_JSON_FILE_PATH);
 }
 
-function getRouteAndAccess(rawText) {
+function getRoute(rawText) {
   // normalize whitestpace
   const text = normalize(rawText);
 
@@ -175,19 +174,7 @@ function getRouteAndAccess(rawText) {
   return {
     method,
     url,
-    access: getAccess(rawText.replace(/\s+ /g, " ").trim(), accessString),
   };
-}
-
-function getAccess(text, accessString) {
-  if (!accessString) return "read";
-
-  const matches = accessString.match(/\((read|write)\)$/);
-  if (!matches) {
-    throw new Error(`Invalid string: ${text}`);
-  }
-
-  return matches.pop();
 }
 
 function normalize(rawText) {
@@ -213,6 +200,6 @@ function toPermissionsObject(paths) {
 
       return map;
     },
-    { read: [], write: [] },
+    { read: [], write: [], admin: [] },
   );
 }
