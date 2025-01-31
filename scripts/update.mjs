@@ -17,7 +17,16 @@ const KNOWN_PERMISSIONS_MAPPING = {
   blocking_users: "organization_user_blocking",
   code_scanning_alerts: "security_events",
   commit_statuses: "statuses",
+  custom_organization_roles: "organization_custom_roles",
+  custom_properties: "organization_custom_properties",
   dependabot_alerts: "vulnerability_alerts",
+  events: "organization_events",
+  github_copilot_business: "organization_copilot_seat_management",
+  organization_codespaces: "codespaces",
+  organization_dependabot_secrets: "dependabot_secrets",
+  projects: "repository_projects",
+  self_hosted_runners: "organization_self_hosted_runners",
+  webhooks: "repository_webhooks",
 };
 
 update(minimist(process.argv.slice(2))).catch(console.error);
@@ -169,7 +178,7 @@ function getRoute(rawText) {
   // normalize whitestpace
   const text = normalize(rawText);
 
-  const [method, url, accessString] = text.split(" ");
+  const [method, url] = text.split(" ");
 
   return {
     method,
