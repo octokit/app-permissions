@@ -5,6 +5,8 @@ import minimist from "minimist";
 import * as prettier from "prettier";
 import sortKeys from "sort-keys";
 
+import METADATA_ROUTES_OVERRIDE from "./metadata-routes-override.mjs";
+
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
 const PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH = "cache/api.github.com.html";
@@ -99,6 +101,10 @@ async function update(options) {
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
+      if (name === `metadata`) {
+        return METADATA_ROUTES_OVERRIDE;
+      }
+
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
         .nextUntil("h2")
@@ -191,10 +197,6 @@ function normalize(rawText) {
 }
 
 function toPermissionName(text) {
-  if (text === "Metadata permissions") {
-    return "meta";
-  }
-
   const title = text.match(/"([^"]+)"/).pop();
 
   return title.toLowerCase().replace(/\W/g, "_");
