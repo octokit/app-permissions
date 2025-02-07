@@ -1,5 +1,15 @@
 {
   "paths": {
+    "/": { "GET": { "access": "read", "permission": "metadata" } },
+    "/codes_of_conduct": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/codes_of_conduct/{key}": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/emojis": { "GET": { "access": "read", "permission": "metadata" } },
+    "/events": { "GET": { "access": "read", "permission": "metadata" } },
+    "/feeds": { "GET": { "access": "read", "permission": "metadata" } },
     "/gists": { "POST": { "access": "write", "permission": "gists" } },
     "/gists/{gist_id}": {
       "DELETE": { "access": "write", "permission": "gists" },
@@ -19,14 +29,32 @@
       "DELETE": { "access": "write", "permission": "gists" },
       "PUT": { "access": "write", "permission": "gists" }
     },
+    "/gitignore/templates": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/gitignore/templates/{key}": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/licenses": { "GET": { "access": "read", "permission": "metadata" } },
+    "/licenses/{key}": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/markdown": { "POST": { "access": "read", "permission": "metadata" } },
+    "/markdown/raw": { "POST": { "access": "read", "permission": "metadata" } },
+    "/meta": { "GET": { "access": "read", "permission": "metadata" } },
+    "/networks/{owner}/{repo}/events": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
     "/notifications": {
       "GET": { "access": "read", "permission": "notifications" }
     },
+    "/organizations": { "GET": { "access": "read", "permission": "metadata" } },
     "/organizations/{org}/settings/billing/usage": {
       "GET": { "access": "read", "permission": "administration" }
     },
     "/orgs/{org}": {
       "DELETE": { "access": "write", "permission": "administration" },
+      "GET": { "access": "read", "permission": "metadata" },
       "PATCH": { "access": "write", "permission": "administration" }
     },
     "/orgs/{org}/actions/cache/usage": {
@@ -72,8 +100,8 @@
       "PUT": { "access": "write", "permission": "administration" }
     },
     "/orgs/{org}/actions/permissions/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": { "access": "write", "permission": "administration" },
+      "PUT": { "access": "write", "permission": "administration" }
     },
     "/orgs/{org}/actions/permissions/selected-actions": {
       "GET": { "access": "read", "permission": "administration" },
@@ -84,60 +112,138 @@
       "PUT": { "access": "write", "permission": "administration" }
     },
     "/orgs/{org}/actions/runner-groups": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" },
-      "POST": { "access": "write", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      },
+      "POST": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}": {
-      "DELETE": { "access": "write", "permission": "self_hosted_runners" },
-      "GET": { "access": "read", "permission": "self_hosted_runners" },
-      "PATCH": { "access": "write", "permission": "self_hosted_runners" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" },
-      "PUT": { "access": "write", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" },
-      "PUT": { "access": "write", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}": {
-      "DELETE": { "access": "write", "permission": "self_hosted_runners" },
-      "PUT": { "access": "write", "permission": "self_hosted_runners" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/downloads": {
-      "GET": { "access": "read", "permission": "self_hosted_runners" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/generate-jitconfig": {
-      "POST": { "access": "write", "permission": "self_hosted_runners" }
+      "POST": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/registration-token": {
-      "POST": { "access": "write", "permission": "self_hosted_runners" }
+      "POST": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/remove-token": {
-      "POST": { "access": "write", "permission": "self_hosted_runners" }
+      "POST": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/{runner_id}": {
-      "DELETE": { "access": "write", "permission": "self_hosted_runners" },
-      "GET": { "access": "read", "permission": "self_hosted_runners" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/{runner_id}/labels": {
-      "DELETE": { "access": "write", "permission": "self_hosted_runners" },
-      "GET": { "access": "read", "permission": "self_hosted_runners" },
-      "POST": { "access": "write", "permission": "self_hosted_runners" },
-      "PUT": { "access": "write", "permission": "self_hosted_runners" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "GET": {
+        "access": "read",
+        "permission": "organization_self_hosted_runners"
+      },
+      "POST": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/runners/{runner_id}/labels/{name}": {
-      "DELETE": { "access": "write", "permission": "self_hosted_runners" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_self_hosted_runners"
+      }
     },
     "/orgs/{org}/actions/secrets": {
       "GET": { "access": "read", "permission": "secrets" }
@@ -155,8 +261,8 @@
       "PUT": { "access": "write", "permission": "secrets" }
     },
     "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": { "access": "write", "permission": "secrets" },
+      "PUT": { "access": "write", "permission": "secrets" }
     },
     "/orgs/{org}/actions/variables": {
       "GET": { "access": "read", "permission": "variables" },
@@ -172,8 +278,8 @@
       "PUT": { "access": "write", "permission": "variables" }
     },
     "/orgs/{org}/actions/variables/{name}/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": { "access": "write", "permission": "variables" },
+      "PUT": { "access": "write", "permission": "variables" }
     },
     "/orgs/{org}/blocks": {
       "GET": { "access": "read", "permission": "organization_user_blocking" }
@@ -269,99 +375,111 @@
       }
     },
     "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_codespaces_secrets"
+      },
+      "PUT": {
+        "access": "write",
+        "permission": "organization_codespaces_secrets"
+      }
     },
     "/orgs/{org}/copilot/billing": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/copilot/billing/seats": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/copilot/billing/selected_teams": {
-      "DELETE": { "access": "write", "permission": "github_copilot_business" },
-      "POST": { "access": "write", "permission": "github_copilot_business" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_copilot_seat_management"
+      },
+      "POST": {
+        "access": "write",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/copilot/billing/selected_users": {
-      "DELETE": { "access": "write", "permission": "github_copilot_business" },
-      "POST": { "access": "write", "permission": "github_copilot_business" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_copilot_seat_management"
+      },
+      "POST": {
+        "access": "write",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/copilot/metrics": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/copilot/usage": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/dependabot/alerts": {
       "GET": { "access": "read", "permission": "vulnerability_alerts" }
     },
     "/orgs/{org}/dependabot/secrets": {
-      "GET": {
-        "access": "read",
-        "permission": "organization_dependabot_secrets"
-      }
+      "GET": { "access": "read", "permission": "dependabot_secrets" }
     },
     "/orgs/{org}/dependabot/secrets/public-key": {
-      "GET": {
-        "access": "read",
-        "permission": "organization_dependabot_secrets"
-      }
+      "GET": { "access": "read", "permission": "dependabot_secrets" }
     },
     "/orgs/{org}/dependabot/secrets/{secret_name}": {
-      "DELETE": {
-        "access": "write",
-        "permission": "organization_dependabot_secrets"
-      },
-      "GET": {
-        "access": "read",
-        "permission": "organization_dependabot_secrets"
-      },
-      "PUT": {
-        "access": "write",
-        "permission": "organization_dependabot_secrets"
-      }
+      "DELETE": { "access": "write", "permission": "dependabot_secrets" },
+      "GET": { "access": "read", "permission": "dependabot_secrets" },
+      "PUT": { "access": "write", "permission": "dependabot_secrets" }
     },
     "/orgs/{org}/dependabot/secrets/{secret_name}/repositories": {
-      "GET": {
-        "access": "read",
-        "permission": "organization_dependabot_secrets"
-      },
-      "PUT": {
-        "access": "write",
-        "permission": "organization_dependabot_secrets"
-      }
+      "GET": { "access": "read", "permission": "dependabot_secrets" },
+      "PUT": { "access": "write", "permission": "dependabot_secrets" }
     },
     "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}": {
-      "DELETE": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "read", "permission": "metadata" }
+      "DELETE": { "access": "write", "permission": "dependabot_secrets" },
+      "PUT": { "access": "write", "permission": "dependabot_secrets" }
+    },
+    "/orgs/{org}/events": {
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/orgs/{org}/failed_invitations": {
       "GET": { "access": "read", "permission": "members" }
     },
     "/orgs/{org}/hooks": {
-      "GET": { "access": "read", "permission": "webhooks" },
-      "POST": { "access": "write", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "POST": { "access": "write", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}": {
-      "DELETE": { "access": "write", "permission": "webhooks" },
-      "GET": { "access": "read", "permission": "webhooks" },
-      "PATCH": { "access": "write", "permission": "webhooks" }
+      "DELETE": { "access": "write", "permission": "repository_webhooks" },
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "PATCH": { "access": "write", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}/config": {
-      "GET": { "access": "read", "permission": "webhooks" },
-      "PATCH": { "access": "write", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "PATCH": { "access": "write", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}/deliveries": {
-      "GET": { "access": "read", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}": {
-      "GET": { "access": "read", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts": {
-      "POST": { "access": "write", "permission": "webhooks" }
+      "POST": { "access": "write", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/hooks/{hook_id}/pings": {
-      "POST": { "access": "write", "permission": "webhooks" }
+      "POST": { "access": "write", "permission": "repository_webhooks" }
     },
     "/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}": {
       "GET": { "access": "read", "permission": "api_insights" }
@@ -409,11 +527,11 @@
       "GET": { "access": "read", "permission": "members" }
     },
     "/orgs/{org}/members": {
-      "GET": { "access": "read", "permission": "members" }
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/orgs/{org}/members/{username}": {
       "DELETE": { "access": "write", "permission": "members" },
-      "GET": { "access": "read", "permission": "members" }
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/orgs/{org}/members/{username}/codespaces": {
       "GET": { "access": "read", "permission": "codespaces" }
@@ -425,7 +543,10 @@
       "POST": { "access": "write", "permission": "codespaces_lifecycle_admin" }
     },
     "/orgs/{org}/members/{username}/copilot": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/memberships/{username}": {
       "DELETE": { "access": "write", "permission": "members" },
@@ -433,7 +554,7 @@
       "PUT": { "access": "write", "permission": "members" }
     },
     "/orgs/{org}/organization-roles": {
-      "GET": { "access": "read", "permission": "custom_organization_roles" }
+      "GET": { "access": "read", "permission": "organization_custom_roles" }
     },
     "/orgs/{org}/organization-roles/teams/{team_slug}": {
       "DELETE": { "access": "write", "permission": "members" }
@@ -450,7 +571,7 @@
       "PUT": { "access": "write", "permission": "members" }
     },
     "/orgs/{org}/organization-roles/{role_id}": {
-      "GET": { "access": "read", "permission": "custom_organization_roles" }
+      "GET": { "access": "read", "permission": "organization_custom_roles" }
     },
     "/orgs/{org}/organization-roles/{role_id}/teams": {
       "GET": { "access": "read", "permission": "members" }
@@ -528,28 +649,49 @@
       }
     },
     "/orgs/{org}/projects": {
-      "GET": { "access": "read", "permission": "projects" },
-      "POST": { "access": "write", "permission": "projects" }
+      "GET": { "access": "read", "permission": "metadata" },
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
     "/orgs/{org}/properties/schema": {
-      "GET": { "access": "read", "permission": "custom_properties" },
-      "PATCH": { "access": "admin", "permission": "custom_properties" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_custom_properties"
+      },
+      "PATCH": {
+        "access": "admin",
+        "permission": "organization_custom_properties"
+      }
     },
     "/orgs/{org}/properties/schema/{custom_property_name}": {
-      "DELETE": { "access": "admin", "permission": "custom_properties" },
-      "GET": { "access": "read", "permission": "custom_properties" },
-      "PUT": { "access": "admin", "permission": "custom_properties" }
+      "DELETE": {
+        "access": "admin",
+        "permission": "organization_custom_properties"
+      },
+      "GET": {
+        "access": "read",
+        "permission": "organization_custom_properties"
+      },
+      "PUT": {
+        "access": "admin",
+        "permission": "organization_custom_properties"
+      }
     },
     "/orgs/{org}/properties/values": {
-      "GET": { "access": "read", "permission": "custom_properties" },
-      "PATCH": { "access": "write", "permission": "custom_properties" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_custom_properties"
+      },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_custom_properties"
+      }
     },
     "/orgs/{org}/public_members": {
-      "GET": { "access": "read", "permission": "members" }
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/orgs/{org}/public_members/{username}": {
       "DELETE": { "access": "write", "permission": "members" },
-      "GET": { "access": "read", "permission": "members" },
+      "GET": { "access": "read", "permission": "metadata" },
       "PUT": { "access": "write", "permission": "members" }
     },
     "/orgs/{org}/repos": {
@@ -609,10 +751,16 @@
       "GET": { "access": "read", "permission": "network_configurations" }
     },
     "/orgs/{org}/team/{team_slug}/copilot/metrics": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/team/{team_slug}/copilot/usage": {
-      "GET": { "access": "read", "permission": "github_copilot_business" }
+      "GET": {
+        "access": "read",
+        "permission": "organization_copilot_seat_management"
+      }
     },
     "/orgs/{org}/teams": {
       "GET": { "access": "read", "permission": "members" },
@@ -628,44 +776,45 @@
       "POST": { "access": "write", "permission": "administration" }
     },
     "/projects/columns/cards/{card_id}": {
-      "DELETE": { "access": "write", "permission": "projects" },
-      "GET": { "access": "read", "permission": "projects" },
-      "PATCH": { "access": "write", "permission": "projects" }
+      "DELETE": { "access": "write", "permission": "repository_projects" },
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "PATCH": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/columns/cards/{card_id}/moves": {
-      "POST": { "access": "write", "permission": "projects" }
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/columns/{column_id}": {
-      "DELETE": { "access": "write", "permission": "projects" },
-      "GET": { "access": "read", "permission": "projects" },
-      "PATCH": { "access": "write", "permission": "projects" }
+      "DELETE": { "access": "write", "permission": "repository_projects" },
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "PATCH": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/columns/{column_id}/cards": {
-      "GET": { "access": "read", "permission": "projects" },
-      "POST": { "access": "write", "permission": "projects" }
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/columns/{column_id}/moves": {
-      "POST": { "access": "write", "permission": "projects" }
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/{project_id}": {
-      "DELETE": { "access": "write", "permission": "projects" },
-      "GET": { "access": "read", "permission": "projects" },
-      "PATCH": { "access": "write", "permission": "projects" }
+      "DELETE": { "access": "write", "permission": "repository_projects" },
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "PATCH": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/{project_id}/collaborators": {
-      "GET": { "access": "write", "permission": "projects" }
+      "GET": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/{project_id}/collaborators/{username}": {
-      "DELETE": { "access": "write", "permission": "projects" },
-      "PUT": { "access": "write", "permission": "projects" }
+      "DELETE": { "access": "write", "permission": "repository_projects" },
+      "PUT": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/{project_id}/collaborators/{username}/permission": {
-      "GET": { "access": "write", "permission": "projects" }
+      "GET": { "access": "write", "permission": "repository_projects" }
     },
     "/projects/{project_id}/columns": {
-      "GET": { "access": "read", "permission": "projects" },
-      "POST": { "access": "write", "permission": "projects" }
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
+    "/rate_limit": { "GET": { "access": "read", "permission": "metadata" } },
     "/repos/{owner}/{repo}": {
       "DELETE": { "access": "write", "permission": "administration" },
       "GET": { "access": "read", "permission": "metadata" },
@@ -1058,9 +1207,6 @@
       "GET": { "access": "read", "permission": "metadata" },
       "PUT": { "access": "write", "permission": "administration" }
     },
-    "/repos/{owner}/{repo}/collaborators/{username}/permission": {
-      "GET": { "access": "read", "permission": "metadata" }
-    },
     "/repos/{owner}/{repo}/comments": {
       "GET": { "access": "read", "permission": "metadata" }
     },
@@ -1083,7 +1229,6 @@
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/commits/{commit_sha}/comments": {
-      "GET": { "access": "read", "permission": "metadata" },
       "POST": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/commits/{commit_sha}/pulls": {
@@ -1104,8 +1249,11 @@
     "/repos/{owner}/{repo}/commits/{ref}/statuses": {
       "GET": { "access": "read", "permission": "statuses" }
     },
+    "/repos/{owner}/{repo}/commits/{sha}/comments": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
     "/repos/{owner}/{repo}/community/profile": {
-      "GET": { "access": "read", "permission": "contents" }
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/repos/{owner}/{repo}/compare/{basehead}": {
       "GET": { "access": "read", "permission": "contents" }
@@ -1214,6 +1362,9 @@
     "/repos/{owner}/{repo}/events": {
       "GET": { "access": "read", "permission": "metadata" }
     },
+    "/repos/{owner}/{repo}/events/issues": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
     "/repos/{owner}/{repo}/forks": {
       "GET": { "access": "read", "permission": "metadata" },
       "POST": { "access": "read", "permission": "contents" }
@@ -1256,32 +1407,32 @@
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/hooks": {
-      "GET": { "access": "read", "permission": "webhooks" },
-      "POST": { "access": "write", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "POST": { "access": "write", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}": {
-      "DELETE": { "access": "write", "permission": "webhooks" },
-      "GET": { "access": "read", "permission": "webhooks" },
-      "PATCH": { "access": "write", "permission": "webhooks" }
+      "DELETE": { "access": "write", "permission": "repository_webhooks" },
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "PATCH": { "access": "write", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/config": {
-      "GET": { "access": "read", "permission": "webhooks" },
-      "PATCH": { "access": "write", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" },
+      "PATCH": { "access": "write", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/deliveries": {
-      "GET": { "access": "read", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}": {
-      "GET": { "access": "read", "permission": "webhooks" }
+      "GET": { "access": "read", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts": {
-      "POST": { "access": "write", "permission": "webhooks" }
+      "POST": { "access": "write", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/pings": {
-      "POST": { "access": "read", "permission": "webhooks" }
+      "POST": { "access": "read", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/hooks/{hook_id}/tests": {
-      "POST": { "access": "read", "permission": "webhooks" }
+      "POST": { "access": "read", "permission": "repository_webhooks" }
     },
     "/repos/{owner}/{repo}/import": {
       "DELETE": { "access": "write", "permission": "contents" },
@@ -1460,16 +1611,17 @@
     },
     "/repos/{owner}/{repo}/private-vulnerability-reporting": {
       "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "metadata" },
       "PUT": { "access": "write", "permission": "administration" }
     },
     "/repos/{owner}/{repo}/projects": {
-      "GET": { "access": "read", "permission": "projects" },
-      "POST": { "access": "write", "permission": "projects" }
+      "GET": { "access": "read", "permission": "repository_projects" },
+      "POST": { "access": "write", "permission": "repository_projects" }
     },
     "/repos/{owner}/{repo}/properties/values": {
-      "GET": { "access": "read", "permission": "metadata" },
-      "PATCH": { "access": "write", "permission": "custom_properties" }
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_custom_properties"
+      }
     },
     "/repos/{owner}/{repo}/pulls": {
       "GET": { "access": "read", "permission": "pull_requests" },
@@ -1566,11 +1718,7 @@
     "/repos/{owner}/{repo}/releases/{release_id}/assets": {
       "GET": { "access": "read", "permission": "contents" }
     },
-    "/repos/{owner}/{repo}/rules/branches/{branch}": {
-      "GET": { "access": "read", "permission": "metadata" }
-    },
     "/repos/{owner}/{repo}/rulesets": {
-      "GET": { "access": "read", "permission": "metadata" },
       "POST": { "access": "write", "permission": "administration" }
     },
     "/repos/{owner}/{repo}/rulesets/rule-suites": {
@@ -1581,7 +1729,6 @@
     },
     "/repos/{owner}/{repo}/rulesets/{ruleset_id}": {
       "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "metadata" },
       "PUT": { "access": "write", "permission": "administration" }
     },
     "/repos/{owner}/{repo}/secret-scanning/alerts": {
@@ -1709,7 +1856,17 @@
       "POST": { "access": "write", "permission": "administration" }
     },
     "/repositories": { "GET": { "access": "read", "permission": "metadata" } },
+    "/search/code": { "GET": { "access": "read", "permission": "metadata" } },
+    "/search/commits": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/search/issues": { "GET": { "access": "read", "permission": "metadata" } },
     "/search/labels": { "GET": { "access": "read", "permission": "metadata" } },
+    "/search/repositories": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/search/topics": { "GET": { "access": "read", "permission": "metadata" } },
+    "/search/users": { "GET": { "access": "read", "permission": "metadata" } },
     "/teams/{team_id}/members/{username}": {
       "DELETE": { "access": "write", "permission": "members" },
       "GET": { "access": "read", "permission": "members" },
@@ -1797,9 +1954,6 @@
       "DELETE": { "access": "write", "permission": "gpg_keys" },
       "GET": { "access": "read", "permission": "gpg_keys" }
     },
-    "/user/installations/{installation_id}/repositories": {
-      "GET": { "access": "read", "permission": "metadata" }
-    },
     "/user/interaction-limits": {
       "DELETE": { "access": "write", "permission": "interaction_limits" },
       "GET": { "access": "read", "permission": "interaction_limits" },
@@ -1852,11 +2006,42 @@
     "/user/subscriptions": {
       "GET": { "access": "read", "permission": "watching" }
     },
+    "/users": { "GET": { "access": "read", "permission": "metadata" } },
+    "/users/{username}": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/events": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
     "/users/{username}/events/orgs/{org}": {
-      "GET": { "access": "read", "permission": "events" }
+      "GET": { "access": "read", "permission": "organization_events" }
+    },
+    "/users/{username}/events/public": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/followers": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/following": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/following/{target_user}": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/gpg_keys": {
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/users/{username}/keys": {
       "GET": { "access": "read", "permission": "git_ssh_keys" }
+    },
+    "/users/{username}/orgs": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/received_events": {
+      "GET": { "access": "read", "permission": "metadata" }
+    },
+    "/users/{username}/received_events/public": {
+      "GET": { "access": "read", "permission": "metadata" }
     },
     "/users/{username}/repos": {
       "GET": { "access": "read", "permission": "metadata" }
@@ -2260,21 +2445,6 @@
         "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
       ]
     },
-    "custom_organization_roles": {
-      "admin": [],
-      "read": [
-        "GET /orgs/{org}/organization-roles",
-        "GET /orgs/{org}/organization-roles/{role_id}"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-custom-organization-roles",
-      "write": []
-    },
-    "custom_properties": {
-      "admin": [],
-      "read": [],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-custom-properties",
-      "write": ["PATCH /repos/{owner}/{repo}/properties/values"]
-    },
     "dependabot_secrets": {
       "admin": [],
       "read": [
@@ -2333,12 +2503,6 @@
         "PUT /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}"
       ]
     },
-    "events": {
-      "admin": [],
-      "read": ["GET /users/{username}/events/orgs/{org}"],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-events",
-      "write": []
-    },
     "followers": {
       "admin": [],
       "read": [
@@ -2377,25 +2541,6 @@
       ],
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#user-permissions-for-git-ssh-keys",
       "write": ["DELETE /user/keys/{key_id}", "POST /user/keys"]
-    },
-    "github_copilot_business": {
-      "admin": [],
-      "read": [
-        "GET /orgs/{org}/copilot/billing",
-        "GET /orgs/{org}/copilot/billing/seats",
-        "GET /orgs/{org}/copilot/metrics",
-        "GET /orgs/{org}/copilot/usage",
-        "GET /orgs/{org}/members/{username}/copilot",
-        "GET /orgs/{org}/team/{team_slug}/copilot/metrics",
-        "GET /orgs/{org}/team/{team_slug}/copilot/usage"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-github-copilot-business",
-      "write": [
-        "DELETE /orgs/{org}/copilot/billing/selected_teams",
-        "DELETE /orgs/{org}/copilot/billing/selected_users",
-        "POST /orgs/{org}/copilot/billing/selected_teams",
-        "POST /orgs/{org}/copilot/billing/selected_users"
-      ]
     },
     "gpg_keys": {
       "admin": [],
@@ -2511,34 +2656,42 @@
     "metadata": {
       "admin": [],
       "read": [
-        "DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}",
-        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
-        "DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}",
-        "DELETE /orgs/{org}/actions/variables/{name}/repositories/{repository_id}",
-        "DELETE /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}",
-        "DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}",
-        "DELETE /user/codespaces/secrets/{secret_name}/repositories/{repository_id}",
-        "DELETE /user/starred/{owner}/{repo}",
-        "GET /notifications",
+        "GET /",
+        "GET /codes_of_conduct",
+        "GET /codes_of_conduct/{key}",
+        "GET /emojis",
+        "GET /events",
+        "GET /feeds",
+        "GET /gitignore/templates",
+        "GET /gitignore/templates/{key}",
+        "GET /licenses",
+        "GET /licenses/{key}",
+        "GET /meta",
+        "GET /networks/{owner}/{repo}/events",
+        "GET /organizations",
+        "GET /orgs/{org}",
+        "GET /orgs/{org}/events",
+        "GET /orgs/{org}/members",
+        "GET /orgs/{org}/members/{username}",
+        "GET /orgs/{org}/projects",
+        "GET /orgs/{org}/public_members",
+        "GET /orgs/{org}/public_members/{username}",
         "GET /orgs/{org}/repos",
+        "GET /rate_limit",
         "GET /repos/{owner}/{repo}",
         "GET /repos/{owner}/{repo}/collaborators",
         "GET /repos/{owner}/{repo}/collaborators/{username}",
-        "GET /repos/{owner}/{repo}/collaborators/{username}/permission",
         "GET /repos/{owner}/{repo}/comments",
         "GET /repos/{owner}/{repo}/comments/{comment_id}",
         "GET /repos/{owner}/{repo}/comments/{comment_id}/reactions",
-        "GET /repos/{owner}/{repo}/commits/{commit_sha}/comments",
+        "GET /repos/{owner}/{repo}/commits/{sha}/comments",
+        "GET /repos/{owner}/{repo}/community/profile",
         "GET /repos/{owner}/{repo}/contributors",
         "GET /repos/{owner}/{repo}/events",
+        "GET /repos/{owner}/{repo}/events/issues",
         "GET /repos/{owner}/{repo}/forks",
         "GET /repos/{owner}/{repo}/languages",
         "GET /repos/{owner}/{repo}/license",
-        "GET /repos/{owner}/{repo}/private-vulnerability-reporting",
-        "GET /repos/{owner}/{repo}/properties/values",
-        "GET /repos/{owner}/{repo}/rules/branches/{branch}",
-        "GET /repos/{owner}/{repo}/rulesets",
-        "GET /repos/{owner}/{repo}/rulesets/{ruleset_id}",
         "GET /repos/{owner}/{repo}/stargazers",
         "GET /repos/{owner}/{repo}/stats/code_frequency",
         "GET /repos/{owner}/{repo}/stats/commit_activity",
@@ -2549,21 +2702,34 @@
         "GET /repos/{owner}/{repo}/tags",
         "GET /repos/{owner}/{repo}/topics",
         "GET /repositories",
+        "GET /search/code",
+        "GET /search/commits",
+        "GET /search/issues",
         "GET /search/labels",
-        "GET /user/installations/{installation_id}/repositories",
+        "GET /search/repositories",
+        "GET /search/topics",
+        "GET /search/users",
         "GET /user/repos",
-        "GET /user/starred/{owner}/{repo}",
+        "GET /user/starred",
+        "GET /user/subscriptions",
+        "GET /users",
+        "GET /users/{username}",
+        "GET /users/{username}/events",
+        "GET /users/{username}/events/public",
+        "GET /users/{username}/followers",
+        "GET /users/{username}/following",
+        "GET /users/{username}/following/{target_user}",
+        "GET /users/{username}/gpg_keys",
+        "GET /users/{username}/keys",
+        "GET /users/{username}/orgs",
+        "GET /users/{username}/received_events",
+        "GET /users/{username}/received_events/public",
         "GET /users/{username}/repos",
-        "PUT /orgs/{org}/actions/permissions/repositories/{repository_id}",
-        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
-        "PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}",
-        "PUT /orgs/{org}/actions/variables/{name}/repositories/{repository_id}",
-        "PUT /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}",
-        "PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}",
-        "PUT /user/codespaces/secrets/{secret_name}/repositories/{repository_id}",
-        "PUT /user/starred/{owner}/{repo}"
+        "GET /users/{username}/subscriptions",
+        "POST /markdown",
+        "POST /markdown/raw"
       ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-metadata",
+      "url": "https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#metadata",
       "write": []
     },
     "network_configurations": {
@@ -2585,18 +2751,6 @@
       "read": ["GET /notifications"],
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#user-permissions-for-notifications",
       "write": []
-    },
-    "organization_codespaces": {
-      "admin": [],
-      "read": [
-        "GET /orgs/{org}/codespaces",
-        "GET /orgs/{org}/members/{username}/codespaces"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-organization-codespaces",
-      "write": [
-        "DELETE /orgs/{org}/members/{username}/codespaces/{codespace_name}",
-        "POST /orgs/{org}/members/{username}/codespaces/{codespace_name}/stop"
-      ]
     },
     "organization_codespaces_secrets": {
       "admin": [],
@@ -2625,22 +2779,45 @@
         "PUT /orgs/{org}/codespaces/access"
       ]
     },
-    "organization_dependabot_secrets": {
+    "organization_copilot_seat_management": {
       "admin": [],
       "read": [
-        "GET /orgs/{org}/dependabot/secrets",
-        "GET /orgs/{org}/dependabot/secrets/public-key",
-        "GET /orgs/{org}/dependabot/secrets/{secret_name}",
-        "GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories"
+        "GET /orgs/{org}/copilot/billing",
+        "GET /orgs/{org}/copilot/billing/seats",
+        "GET /orgs/{org}/copilot/metrics",
+        "GET /orgs/{org}/copilot/usage",
+        "GET /orgs/{org}/members/{username}/copilot",
+        "GET /orgs/{org}/team/{team_slug}/copilot/metrics",
+        "GET /orgs/{org}/team/{team_slug}/copilot/usage"
       ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-organization-dependabot-secrets",
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-github-copilot-business",
       "write": [
-        "DELETE /orgs/{org}/dependabot/secrets/{secret_name}",
-        "DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}",
-        "PUT /orgs/{org}/dependabot/secrets/{secret_name}",
-        "PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories",
-        "PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}"
+        "DELETE /orgs/{org}/copilot/billing/selected_teams",
+        "DELETE /orgs/{org}/copilot/billing/selected_users",
+        "POST /orgs/{org}/copilot/billing/selected_teams",
+        "POST /orgs/{org}/copilot/billing/selected_users"
       ]
+    },
+    "organization_custom_properties": {
+      "admin": [],
+      "read": [],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-custom-properties",
+      "write": ["PATCH /repos/{owner}/{repo}/properties/values"]
+    },
+    "organization_custom_roles": {
+      "admin": [],
+      "read": [
+        "GET /orgs/{org}/organization-roles",
+        "GET /orgs/{org}/organization-roles/{role_id}"
+      ],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-custom-organization-roles",
+      "write": []
+    },
+    "organization_events": {
+      "admin": [],
+      "read": ["GET /users/{username}/events/orgs/{org}"],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-events",
+      "write": []
     },
     "organization_private_registries": {
       "admin": [],
@@ -2654,6 +2831,40 @@
         "DELETE /orgs/{org}/private-registries/{secret_name}",
         "PATCH /orgs/{org}/private-registries/{secret_name}",
         "POST /orgs/{org}/private-registries"
+      ]
+    },
+    "organization_self_hosted_runners": {
+      "admin": [],
+      "read": [
+        "GET /orgs/{org}/actions/runner-groups",
+        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}",
+        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners",
+        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories",
+        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners",
+        "GET /orgs/{org}/actions/runners",
+        "GET /orgs/{org}/actions/runners/downloads",
+        "GET /orgs/{org}/actions/runners/{runner_id}",
+        "GET /orgs/{org}/actions/runners/{runner_id}/labels"
+      ],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-self-hosted-runners",
+      "write": [
+        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}",
+        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
+        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}",
+        "DELETE /orgs/{org}/actions/runners/{runner_id}",
+        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels",
+        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}",
+        "PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}",
+        "POST /orgs/{org}/actions/runner-groups",
+        "POST /orgs/{org}/actions/runners/generate-jitconfig",
+        "POST /orgs/{org}/actions/runners/registration-token",
+        "POST /orgs/{org}/actions/runners/remove-token",
+        "POST /orgs/{org}/actions/runners/{runner_id}/labels",
+        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories",
+        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
+        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners",
+        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}",
+        "PUT /orgs/{org}/actions/runners/{runner_id}/labels"
       ]
     },
     "organization_user_blocking": {
@@ -2729,35 +2940,6 @@
         "POST /user/social_accounts"
       ]
     },
-    "projects": {
-      "admin": [],
-      "read": [
-        "GET /projects/columns/cards/{card_id}",
-        "GET /projects/columns/{column_id}",
-        "GET /projects/columns/{column_id}/cards",
-        "GET /projects/{project_id}",
-        "GET /projects/{project_id}/columns",
-        "GET /repos/{owner}/{repo}/projects"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-projects",
-      "write": [
-        "DELETE /projects/columns/cards/{card_id}",
-        "DELETE /projects/columns/{column_id}",
-        "DELETE /projects/{project_id}",
-        "DELETE /projects/{project_id}/collaborators/{username}",
-        "GET /projects/{project_id}/collaborators",
-        "GET /projects/{project_id}/collaborators/{username}/permission",
-        "PATCH /projects/columns/cards/{card_id}",
-        "PATCH /projects/columns/{column_id}",
-        "PATCH /projects/{project_id}",
-        "POST /projects/columns/cards/{card_id}/moves",
-        "POST /projects/columns/{column_id}/cards",
-        "POST /projects/columns/{column_id}/moves",
-        "POST /projects/{project_id}/columns",
-        "POST /repos/{owner}/{repo}/projects",
-        "PUT /projects/{project_id}/collaborators/{username}"
-      ]
-    },
     "pull_requests": {
       "admin": [],
       "read": [
@@ -2829,6 +3011,35 @@
         "PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch"
       ]
     },
+    "repository_projects": {
+      "admin": [],
+      "read": [
+        "GET /projects/columns/cards/{card_id}",
+        "GET /projects/columns/{column_id}",
+        "GET /projects/columns/{column_id}/cards",
+        "GET /projects/{project_id}",
+        "GET /projects/{project_id}/columns",
+        "GET /repos/{owner}/{repo}/projects"
+      ],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-projects",
+      "write": [
+        "DELETE /projects/columns/cards/{card_id}",
+        "DELETE /projects/columns/{column_id}",
+        "DELETE /projects/{project_id}",
+        "DELETE /projects/{project_id}/collaborators/{username}",
+        "GET /projects/{project_id}/collaborators",
+        "GET /projects/{project_id}/collaborators/{username}/permission",
+        "PATCH /projects/columns/cards/{card_id}",
+        "PATCH /projects/columns/{column_id}",
+        "PATCH /projects/{project_id}",
+        "POST /projects/columns/cards/{card_id}/moves",
+        "POST /projects/columns/{column_id}/cards",
+        "POST /projects/columns/{column_id}/moves",
+        "POST /projects/{project_id}/columns",
+        "POST /repos/{owner}/{repo}/projects",
+        "PUT /projects/{project_id}/collaborators/{username}"
+      ]
+    },
     "repository_security_advisories": {
       "admin": [],
       "read": [
@@ -2843,6 +3054,26 @@
         "POST /repos/{owner}/{repo}/security-advisories",
         "POST /repos/{owner}/{repo}/security-advisories/reports",
         "POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve"
+      ]
+    },
+    "repository_webhooks": {
+      "admin": [],
+      "read": [
+        "GET /repos/{owner}/{repo}/hooks",
+        "GET /repos/{owner}/{repo}/hooks/{hook_id}",
+        "GET /repos/{owner}/{repo}/hooks/{hook_id}/config",
+        "GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries",
+        "GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}",
+        "POST /repos/{owner}/{repo}/hooks/{hook_id}/pings",
+        "POST /repos/{owner}/{repo}/hooks/{hook_id}/tests"
+      ],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-webhooks",
+      "write": [
+        "DELETE /repos/{owner}/{repo}/hooks/{hook_id}",
+        "PATCH /repos/{owner}/{repo}/hooks/{hook_id}",
+        "PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config",
+        "POST /repos/{owner}/{repo}/hooks",
+        "POST /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts"
       ]
     },
     "secret_scanning_alerts": {
@@ -2896,40 +3127,6 @@
         "PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}",
         "POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix",
         "POST /repos/{owner}/{repo}/code-scanning/sarifs"
-      ]
-    },
-    "self_hosted_runners": {
-      "admin": [],
-      "read": [
-        "GET /orgs/{org}/actions/runner-groups",
-        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}",
-        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners",
-        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories",
-        "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners",
-        "GET /orgs/{org}/actions/runners",
-        "GET /orgs/{org}/actions/runners/downloads",
-        "GET /orgs/{org}/actions/runners/{runner_id}",
-        "GET /orgs/{org}/actions/runners/{runner_id}/labels"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#organization-permissions-for-self-hosted-runners",
-      "write": [
-        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}",
-        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
-        "DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}",
-        "DELETE /orgs/{org}/actions/runners/{runner_id}",
-        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels",
-        "DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}",
-        "PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}",
-        "POST /orgs/{org}/actions/runner-groups",
-        "POST /orgs/{org}/actions/runners/generate-jitconfig",
-        "POST /orgs/{org}/actions/runners/registration-token",
-        "POST /orgs/{org}/actions/runners/remove-token",
-        "POST /orgs/{org}/actions/runners/{runner_id}/labels",
-        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories",
-        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}",
-        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners",
-        "PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}",
-        "PUT /orgs/{org}/actions/runners/{runner_id}/labels"
       ]
     },
     "ssh_signing_keys": {
@@ -3012,26 +3209,6 @@
       ],
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#user-permissions-for-watching",
       "write": []
-    },
-    "webhooks": {
-      "admin": [],
-      "read": [
-        "GET /repos/{owner}/{repo}/hooks",
-        "GET /repos/{owner}/{repo}/hooks/{hook_id}",
-        "GET /repos/{owner}/{repo}/hooks/{hook_id}/config",
-        "GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries",
-        "GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}",
-        "POST /repos/{owner}/{repo}/hooks/{hook_id}/pings",
-        "POST /repos/{owner}/{repo}/hooks/{hook_id}/tests"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-webhooks",
-      "write": [
-        "DELETE /repos/{owner}/{repo}/hooks/{hook_id}",
-        "PATCH /repos/{owner}/{repo}/hooks/{hook_id}",
-        "PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config",
-        "POST /repos/{owner}/{repo}/hooks",
-        "POST /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts"
-      ]
     },
     "workflows": {
       "admin": [],
