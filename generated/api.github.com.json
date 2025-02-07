@@ -50,66 +50,81 @@
     },
     "/organizations": { "GET": { "access": "read", "permission": "metadata" } },
     "/organizations/{org}/settings/billing/usage": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "metadata" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/orgs/{org}/actions/cache/usage": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/cache/usage-by-repository": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners": {
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/images/github-owned": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/images/partner": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/limits": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/machine-sizes": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/platforms": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/hosted-runners/{hosted_runner_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/orgs/{org}/actions/oidc/customization/sub": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/permissions": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/permissions/repositories": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/permissions/repositories/{repository_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/permissions/selected-actions": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/permissions/workflow": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/actions/runner-groups": {
       "GET": {
@@ -296,28 +311,37 @@
       "GET": { "access": "read", "permission": "security_events" }
     },
     "/orgs/{org}/code-security/configurations": {
-      "GET": { "access": "write", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/code-security/configurations/defaults": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/code-security/configurations/detach": {
-      "DELETE": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/orgs/{org}/code-security/configurations/{configuration_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "write", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "write", "permission": "organization_administration" },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/orgs/{org}/code-security/configurations/{configuration_id}/attach": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/code-security/configurations/{configuration_id}/defaults": {
-      "PUT": { "access": "write", "permission": "administration" }
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/code-security/configurations/{configuration_id}/repositories": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/codespaces": {
       "GET": { "access": "read", "permission": "codespaces" }
@@ -509,12 +533,15 @@
       "GET": { "access": "read", "permission": "api_insights" }
     },
     "/orgs/{org}/installations": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/interaction-limits": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/invitations": {
       "GET": { "access": "read", "permission": "members" },
@@ -696,22 +723,25 @@
     },
     "/orgs/{org}/repos": {
       "GET": { "access": "read", "permission": "metadata" },
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/rulesets": {
-      "GET": { "access": "write", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/rulesets/rule-suites": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/rulesets/rule-suites/{rule_suite_id}": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/rulesets/{ruleset_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "write", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/secret-scanning/alerts": {
       "GET": { "access": "read", "permission": "secret_scanning_alerts" }
@@ -723,20 +753,23 @@
       }
     },
     "/orgs/{org}/security-managers": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/security-managers/teams/{team_slug}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/orgs/{org}/settings/billing/actions": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/settings/billing/packages": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/settings/billing/shared-storage": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/orgs/{org}/settings/network-configurations": {
       "GET": { "access": "read", "permission": "network_configurations" },
@@ -773,7 +806,7 @@
       "DELETE": { "access": "write", "permission": "team_discussions" }
     },
     "/orgs/{org}/{security_product}/{enablement}": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/projects/columns/cards/{card_id}": {
       "DELETE": { "access": "write", "permission": "repository_projects" },
@@ -816,9 +849,15 @@
     },
     "/rate_limit": { "GET": { "access": "read", "permission": "metadata" } },
     "/repos/{owner}/{repo}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "metadata" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/actions/artifacts": {
       "GET": { "access": "read", "permission": "actions" }
@@ -860,48 +899,60 @@
       "GET": { "access": "read", "permission": "variables" }
     },
     "/repos/{owner}/{repo}/actions/permissions": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/permissions/access": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/permissions/selected-actions": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/permissions/workflow": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/downloads": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/generate-jitconfig": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/registration-token": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/remove-token": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/{runner_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}": {
-      "DELETE": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/actions/runs": {
       "GET": { "access": "read", "permission": "actions" }
@@ -1014,17 +1065,23 @@
       "GET": { "access": "read", "permission": "attestations" }
     },
     "/repos/{owner}/{repo}/autolinks": {
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/autolinks/{autolink_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/automated-security-fixes": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches": {
       "GET": { "access": "read", "permission": "contents" }
@@ -1033,57 +1090,105 @@
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/branches/{branch}/rename": {
       "POST": { "access": "write", "permission": "contents" }
@@ -1157,8 +1262,11 @@
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/code-scanning/default-setup": {
-      "GET": { "access": "read", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/code-scanning/sarifs": {
       "POST": { "access": "write", "permission": "security_events" }
@@ -1167,7 +1275,7 @@
       "GET": { "access": "read", "permission": "security_events" }
     },
     "/repos/{owner}/{repo}/code-security-configuration": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/codeowners/errors": {
       "GET": { "access": "read", "permission": "contents" }
@@ -1203,9 +1311,12 @@
       "GET": { "access": "read", "permission": "metadata" }
     },
     "/repos/{owner}/{repo}/collaborators/{username}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/comments": {
       "GET": { "access": "read", "permission": "metadata" }
@@ -1315,28 +1426,37 @@
       "GET": { "access": "read", "permission": "actions" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "actions" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies": {
       "GET": { "access": "read", "permission": "actions" },
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "actions" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules": {
       "GET": { "access": "read", "permission": "actions" },
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
       "GET": { "access": "read", "permission": "actions" }
     },
     "/repos/{owner}/{repo}/environments/{environment_name}/secrets": {
@@ -1453,16 +1573,25 @@
       "PATCH": { "access": "write", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/interaction-limits": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/invitations": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/invitations/{invitation_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/issues": {
       "GET": { "access": "read", "permission": "issues" },
@@ -1541,12 +1670,15 @@
       "GET": { "access": "read", "permission": "pull_requests" }
     },
     "/repos/{owner}/{repo}/keys": {
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/keys/{key_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/labels": {
       "GET": { "access": "read", "permission": "pull_requests" },
@@ -1610,8 +1742,11 @@
       "GET": { "access": "write", "permission": "pages" }
     },
     "/repos/{owner}/{repo}/private-vulnerability-reporting": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/projects": {
       "GET": { "access": "read", "permission": "repository_projects" },
@@ -1719,17 +1854,20 @@
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/rulesets": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/rulesets/rule-suites": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/rulesets/rule-suites/{rule_suite_id}": {
-      "GET": { "access": "write", "permission": "administration" }
+      "GET": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/rulesets/{ruleset_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/secret-scanning/alerts": {
       "GET": { "access": "read", "permission": "secret_scanning_alerts" }
@@ -1813,47 +1951,53 @@
       "GET": { "access": "read", "permission": "metadata" }
     },
     "/repos/{owner}/{repo}/tags/protection": {
-      "GET": { "access": "read", "permission": "administration" },
-      "POST": { "access": "write", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/tags/protection/{tag_protection_id}": {
-      "DELETE": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/repos/{owner}/{repo}/tarball/{ref}": {
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{owner}/{repo}/teams": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/topics": {
       "GET": { "access": "read", "permission": "metadata" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/traffic/clones": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/traffic/popular/paths": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/traffic/popular/referrers": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/traffic/views": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/transfer": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/vulnerability-alerts": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "GET": { "access": "read", "permission": "administration" },
-      "PUT": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "GET": { "access": "read", "permission": "organization_administration" },
+      "PUT": { "access": "write", "permission": "organization_administration" }
     },
     "/repos/{owner}/{repo}/zipball/{ref}": {
       "GET": { "access": "read", "permission": "contents" }
     },
     "/repos/{template_owner}/{template_repo}/generate": {
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/repositories": { "GET": { "access": "read", "permission": "metadata" } },
     "/search/code": { "GET": { "access": "read", "permission": "metadata" } },
@@ -1976,14 +2120,20 @@
     },
     "/user/repos": {
       "GET": { "access": "read", "permission": "metadata" },
-      "POST": { "access": "write", "permission": "administration" }
+      "POST": { "access": "write", "permission": "organization_administration" }
     },
     "/user/repository_invitations": {
-      "GET": { "access": "read", "permission": "administration" }
+      "GET": { "access": "read", "permission": "organization_administration" }
     },
     "/user/repository_invitations/{invitation_id}": {
-      "DELETE": { "access": "write", "permission": "administration" },
-      "PATCH": { "access": "write", "permission": "administration" }
+      "DELETE": {
+        "access": "write",
+        "permission": "organization_administration"
+      },
+      "PATCH": {
+        "access": "write",
+        "permission": "organization_administration"
+      }
     },
     "/user/social_accounts": {
       "DELETE": { "access": "write", "permission": "profile" },
@@ -2114,131 +2264,6 @@
         "PUT /repos/{owner}/{repo}/actions/oidc/customization/sub",
         "PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable",
         "PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable"
-      ]
-    },
-    "administration": {
-      "admin": [],
-      "read": [
-        "GET /repos/{owner}/{repo}/actions/permissions",
-        "GET /repos/{owner}/{repo}/actions/permissions/access",
-        "GET /repos/{owner}/{repo}/actions/permissions/selected-actions",
-        "GET /repos/{owner}/{repo}/actions/permissions/workflow",
-        "GET /repos/{owner}/{repo}/actions/runners",
-        "GET /repos/{owner}/{repo}/actions/runners/downloads",
-        "GET /repos/{owner}/{repo}/actions/runners/{runner_id}",
-        "GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
-        "GET /repos/{owner}/{repo}/autolinks",
-        "GET /repos/{owner}/{repo}/autolinks/{autolink_id}",
-        "GET /repos/{owner}/{repo}/automated-security-fixes",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
-        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
-        "GET /repos/{owner}/{repo}/code-scanning/default-setup",
-        "GET /repos/{owner}/{repo}/code-security-configuration",
-        "GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps",
-        "GET /repos/{owner}/{repo}/interaction-limits",
-        "GET /repos/{owner}/{repo}/invitations",
-        "GET /repos/{owner}/{repo}/keys",
-        "GET /repos/{owner}/{repo}/keys/{key_id}",
-        "GET /repos/{owner}/{repo}/tags/protection",
-        "GET /repos/{owner}/{repo}/teams",
-        "GET /repos/{owner}/{repo}/traffic/clones",
-        "GET /repos/{owner}/{repo}/traffic/popular/paths",
-        "GET /repos/{owner}/{repo}/traffic/popular/referrers",
-        "GET /repos/{owner}/{repo}/traffic/views",
-        "GET /repos/{owner}/{repo}/vulnerability-alerts",
-        "GET /user/repository_invitations"
-      ],
-      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-administration",
-      "write": [
-        "DELETE /repos/{owner}/{repo}",
-        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}",
-        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
-        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}",
-        "DELETE /repos/{owner}/{repo}/autolinks/{autolink_id}",
-        "DELETE /repos/{owner}/{repo}/automated-security-fixes",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
-        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
-        "DELETE /repos/{owner}/{repo}/collaborators/{username}",
-        "DELETE /repos/{owner}/{repo}/environments/{environment_name}",
-        "DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}",
-        "DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}",
-        "DELETE /repos/{owner}/{repo}/interaction-limits",
-        "DELETE /repos/{owner}/{repo}/invitations/{invitation_id}",
-        "DELETE /repos/{owner}/{repo}/keys/{key_id}",
-        "DELETE /repos/{owner}/{repo}/pages",
-        "DELETE /repos/{owner}/{repo}/private-vulnerability-reporting",
-        "DELETE /repos/{owner}/{repo}/rulesets/{ruleset_id}",
-        "DELETE /repos/{owner}/{repo}/tags/protection/{tag_protection_id}",
-        "DELETE /repos/{owner}/{repo}/vulnerability-alerts",
-        "DELETE /user/repository_invitations/{invitation_id}",
-        "GET /repos/{owner}/{repo}/pages/health",
-        "GET /repos/{owner}/{repo}/rulesets/rule-suites",
-        "GET /repos/{owner}/{repo}/rulesets/rule-suites/{rule_suite_id}",
-        "PATCH /repos/{owner}/{repo}",
-        "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
-        "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
-        "PATCH /repos/{owner}/{repo}/code-scanning/default-setup",
-        "PATCH /repos/{owner}/{repo}/invitations/{invitation_id}",
-        "PATCH /user/repository_invitations/{invitation_id}",
-        "POST /orgs/{org}/repos",
-        "POST /repos/{owner}/{repo}/actions/runners/generate-jitconfig",
-        "POST /repos/{owner}/{repo}/actions/runners/registration-token",
-        "POST /repos/{owner}/{repo}/actions/runners/remove-token",
-        "POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
-        "POST /repos/{owner}/{repo}/autolinks",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
-        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
-        "POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies",
-        "POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules",
-        "POST /repos/{owner}/{repo}/forks",
-        "POST /repos/{owner}/{repo}/keys",
-        "POST /repos/{owner}/{repo}/pages",
-        "POST /repos/{owner}/{repo}/rulesets",
-        "POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks",
-        "POST /repos/{owner}/{repo}/tags/protection",
-        "POST /repos/{owner}/{repo}/transfer",
-        "POST /repos/{template_owner}/{template_repo}/generate",
-        "POST /user/repos",
-        "PUT /repos/{owner}/{repo}/actions/permissions",
-        "PUT /repos/{owner}/{repo}/actions/permissions/access",
-        "PUT /repos/{owner}/{repo}/actions/permissions/selected-actions",
-        "PUT /repos/{owner}/{repo}/actions/permissions/workflow",
-        "PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
-        "PUT /repos/{owner}/{repo}/automated-security-fixes",
-        "PUT /repos/{owner}/{repo}/branches/{branch}/protection",
-        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
-        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
-        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
-        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
-        "PUT /repos/{owner}/{repo}/collaborators/{username}",
-        "PUT /repos/{owner}/{repo}/environments/{environment_name}",
-        "PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}",
-        "PUT /repos/{owner}/{repo}/interaction-limits",
-        "PUT /repos/{owner}/{repo}/pages",
-        "PUT /repos/{owner}/{repo}/private-vulnerability-reporting",
-        "PUT /repos/{owner}/{repo}/rulesets/{ruleset_id}",
-        "PUT /repos/{owner}/{repo}/topics",
-        "PUT /repos/{owner}/{repo}/vulnerability-alerts"
       ]
     },
     "api_insights": {
@@ -2751,6 +2776,131 @@
       "read": ["GET /notifications"],
       "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#user-permissions-for-notifications",
       "write": []
+    },
+    "organization_administration": {
+      "admin": [],
+      "read": [
+        "GET /repos/{owner}/{repo}/actions/permissions",
+        "GET /repos/{owner}/{repo}/actions/permissions/access",
+        "GET /repos/{owner}/{repo}/actions/permissions/selected-actions",
+        "GET /repos/{owner}/{repo}/actions/permissions/workflow",
+        "GET /repos/{owner}/{repo}/actions/runners",
+        "GET /repos/{owner}/{repo}/actions/runners/downloads",
+        "GET /repos/{owner}/{repo}/actions/runners/{runner_id}",
+        "GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+        "GET /repos/{owner}/{repo}/autolinks",
+        "GET /repos/{owner}/{repo}/autolinks/{autolink_id}",
+        "GET /repos/{owner}/{repo}/automated-security-fixes",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+        "GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
+        "GET /repos/{owner}/{repo}/code-scanning/default-setup",
+        "GET /repos/{owner}/{repo}/code-security-configuration",
+        "GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps",
+        "GET /repos/{owner}/{repo}/interaction-limits",
+        "GET /repos/{owner}/{repo}/invitations",
+        "GET /repos/{owner}/{repo}/keys",
+        "GET /repos/{owner}/{repo}/keys/{key_id}",
+        "GET /repos/{owner}/{repo}/tags/protection",
+        "GET /repos/{owner}/{repo}/teams",
+        "GET /repos/{owner}/{repo}/traffic/clones",
+        "GET /repos/{owner}/{repo}/traffic/popular/paths",
+        "GET /repos/{owner}/{repo}/traffic/popular/referrers",
+        "GET /repos/{owner}/{repo}/traffic/views",
+        "GET /repos/{owner}/{repo}/vulnerability-alerts",
+        "GET /user/repository_invitations"
+      ],
+      "url": "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/#repository-permissions-for-administration",
+      "write": [
+        "DELETE /repos/{owner}/{repo}",
+        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}",
+        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+        "DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}",
+        "DELETE /repos/{owner}/{repo}/autolinks/{autolink_id}",
+        "DELETE /repos/{owner}/{repo}/automated-security-fixes",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+        "DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
+        "DELETE /repos/{owner}/{repo}/collaborators/{username}",
+        "DELETE /repos/{owner}/{repo}/environments/{environment_name}",
+        "DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}",
+        "DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}",
+        "DELETE /repos/{owner}/{repo}/interaction-limits",
+        "DELETE /repos/{owner}/{repo}/invitations/{invitation_id}",
+        "DELETE /repos/{owner}/{repo}/keys/{key_id}",
+        "DELETE /repos/{owner}/{repo}/pages",
+        "DELETE /repos/{owner}/{repo}/private-vulnerability-reporting",
+        "DELETE /repos/{owner}/{repo}/rulesets/{ruleset_id}",
+        "DELETE /repos/{owner}/{repo}/tags/protection/{tag_protection_id}",
+        "DELETE /repos/{owner}/{repo}/vulnerability-alerts",
+        "DELETE /user/repository_invitations/{invitation_id}",
+        "GET /repos/{owner}/{repo}/pages/health",
+        "GET /repos/{owner}/{repo}/rulesets/rule-suites",
+        "GET /repos/{owner}/{repo}/rulesets/rule-suites/{rule_suite_id}",
+        "PATCH /repos/{owner}/{repo}",
+        "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
+        "PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
+        "PATCH /repos/{owner}/{repo}/code-scanning/default-setup",
+        "PATCH /repos/{owner}/{repo}/invitations/{invitation_id}",
+        "PATCH /user/repository_invitations/{invitation_id}",
+        "POST /orgs/{org}/repos",
+        "POST /repos/{owner}/{repo}/actions/runners/generate-jitconfig",
+        "POST /repos/{owner}/{repo}/actions/runners/registration-token",
+        "POST /repos/{owner}/{repo}/actions/runners/remove-token",
+        "POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+        "POST /repos/{owner}/{repo}/autolinks",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+        "POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
+        "POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies",
+        "POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules",
+        "POST /repos/{owner}/{repo}/forks",
+        "POST /repos/{owner}/{repo}/keys",
+        "POST /repos/{owner}/{repo}/pages",
+        "POST /repos/{owner}/{repo}/rulesets",
+        "POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks",
+        "POST /repos/{owner}/{repo}/tags/protection",
+        "POST /repos/{owner}/{repo}/transfer",
+        "POST /repos/{template_owner}/{template_repo}/generate",
+        "POST /user/repos",
+        "PUT /repos/{owner}/{repo}/actions/permissions",
+        "PUT /repos/{owner}/{repo}/actions/permissions/access",
+        "PUT /repos/{owner}/{repo}/actions/permissions/selected-actions",
+        "PUT /repos/{owner}/{repo}/actions/permissions/workflow",
+        "PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+        "PUT /repos/{owner}/{repo}/automated-security-fixes",
+        "PUT /repos/{owner}/{repo}/branches/{branch}/protection",
+        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
+        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
+        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+        "PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
+        "PUT /repos/{owner}/{repo}/collaborators/{username}",
+        "PUT /repos/{owner}/{repo}/environments/{environment_name}",
+        "PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}",
+        "PUT /repos/{owner}/{repo}/interaction-limits",
+        "PUT /repos/{owner}/{repo}/pages",
+        "PUT /repos/{owner}/{repo}/private-vulnerability-reporting",
+        "PUT /repos/{owner}/{repo}/rulesets/{ruleset_id}",
+        "PUT /repos/{owner}/{repo}/topics",
+        "PUT /repos/{owner}/{repo}/vulnerability-alerts"
+      ]
     },
     "organization_codespaces_secrets": {
       "admin": [],

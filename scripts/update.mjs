@@ -16,6 +16,7 @@ const GENERATED_JSON_FILE_PATH = "generated/api.github.com.json";
 const DOCUMENTED_BASE_URL = "https://docs.github.com";
 
 const KNOWN_PERMISSIONS_MAPPING = {
+  administration: "organization_administration",
   blocking_users: "organization_user_blocking",
   code_scanning_alerts: "security_events",
   commit_statuses: "statuses",
