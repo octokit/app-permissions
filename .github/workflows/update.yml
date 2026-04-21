@@ -24,7 +24,7 @@ jobs:
         run: node scripts/update.mjs
       - run: git status
       - name: update cache
-        uses: gr2m/create-or-update-pull-request-action@v1.x
+        uses: gr2m/create-or-update-pull-request-action@v1.10.1
         env:
           GITHUB_TOKEN: ${{ secrets.OCTOKITBOT_PAT }}
         with:
@@ -46,7 +46,7 @@ jobs:
           commit-message: "build: cache"
           labels: "Type: Maintenance"
       - name: update generated app permissions
-        uses: gr2m/create-or-update-pull-request-action@v1.x
+        uses: gr2m/create-or-update-pull-request-action@v1.10.1
         env:
           GITHUB_TOKEN: ${{ secrets.OCTOKITBOT_PAT }}
         with:
