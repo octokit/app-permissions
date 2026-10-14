@@ -5,6 +5,8 @@ import minimist from "minimist";
 import * as prettier from "prettier";
 import sortKeys from "sort-keys";
 
+import METADATA_ROUTES_OVERRIDE from "./metadata-routes-override.mjs";
+
 const PERMISSIONS_DOCUMENTATION_URL =
   "https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps/";
 const PERMISSIONS_DOCUMENTATION_CACHE_FILE_PATH = "cache/api.github.com.html";
@@ -13,27 +15,21 @@ const APP_PERMISSIONS_SCHEMA_CACHE_FILE_PATH =
 const GENERATED_JSON_FILE_PATH = "generated/api.github.com.json";
 const DOCUMENTED_BASE_URL = "https://docs.github.com";
 
-// TODO: these should be added to GitHub's OpenAPI schema
-const MISSING_SCHEMA_PERMISSIONS = [
-  "codespaces",
-  "dependabot_secrets",
-  "email_addresses",
-  "followers",
-  "git_ssh_keys",
-  "gpg_keys",
-  "interaction_limits",
-  "organization_events",
-  "organization_webhooks",
-  "profile",
-  "repository_webhooks",
-  "self_hosted_runners",
-  "starring",
-];
 const KNOWN_PERMISSIONS_MAPPING = {
+  administration: "organization_administration",
   blocking_users: "organization_user_blocking",
   code_scanning_alerts: "security_events",
   commit_statuses: "statuses",
+  custom_organization_roles: "organization_custom_roles",
+  custom_properties: "organization_custom_properties",
   dependabot_alerts: "vulnerability_alerts",
+  events: "organization_events",
+  github_copilot_business: "organization_copilot_seat_management",
+  organization_codespaces: "codespaces",
+  organization_dependabot_secrets: "dependabot_secrets",
+  projects: "repository_projects",
+  self_hosted_runners: "organization_self_hosted_runners",
+  webhooks: "repository_webhooks",
 };
 
 update(minimist(process.argv.slice(2))).catch(console.error);
@@ -98,6 +94,7 @@ async function update(options) {
     };
   }, {});
 
+  const missingSchemaPermissions = [];
   const result = $("h2")
     .slice(1)
     .map((i, el) => {
@@ -105,22 +102,22 @@ async function update(options) {
       const title = toPermissionName($el.text().trim());
       const name = KNOWN_PERMISSIONS_MAPPING[title] || title;
 
-      if (MISSING_SCHEMA_PERMISSIONS.includes(name)) {
-        return;
-      }
-
-      if (!knownAppPermissions[name]) {
-        throw new Error(`Unknown permission: ${name}`);
+      if (name === `metadata`) {
+        return METADATA_ROUTES_OVERRIDE;
       }
 
       const url = `${PERMISSIONS_DOCUMENTATION_URL}#${$el.attr("id")}`;
       const routes = $(el)
         .nextUntil("h2")
-        .find("td:first-child")
+        .find("tbody tr")
         .map((i, el) => {
           const documentationUrl =
-            DOCUMENTED_BASE_URL + $(el).find("a").attr("href");
-          const { method, url, access } = getRouteAndAccess($(el).text());
+            DOCUMENTED_BASE_URL + $(el).find("td:first-child a").attr("href");
+
+          const { method, url } = getRoute(
+            $(el).first("td:first-child").text(),
+          );
+          const access = $(el).find("td:nth-child(2)").text().trim();
 
           return {
             method,
@@ -135,6 +132,12 @@ async function update(options) {
     })
     .get()
     .filter(Boolean);
+
+  if (missingSchemaPermissions.length) {
+    console.warn(
+      `The following permissions are documented but are not present in the app-permissions schema:\n- ${missingSchemaPermissions.join("\n- ")}`,
+    );
+  }
 
   const permissions = result.reduce((map, { name, url, routes }) => {
     map[name] = {
@@ -178,28 +181,16 @@ async function update(options) {
   console.log("%s written", GENERATED_JSON_FILE_PATH);
 }
 
-function getRouteAndAccess(rawText) {
+function getRoute(rawText) {
   // normalize whitestpace
   const text = normalize(rawText);
 
-  const [method, url, accessString] = text.split(" ");
+  const [method, url] = text.split(" ");
 
   return {
     method,
     url,
-    access: getAccess(rawText.replace(/\s+ /g, " ").trim(), accessString),
   };
-}
-
-function getAccess(text, accessString) {
-  if (!accessString) return "read";
-
-  const matches = accessString.match(/\((read|write)\)$/);
-  if (!matches) {
-    throw new Error(`Invalid string: ${text}`);
-  }
-
-  return matches.pop();
 }
 
 function normalize(rawText) {
@@ -207,10 +198,6 @@ function normalize(rawText) {
 }
 
 function toPermissionName(text) {
-  if (text === "Metadata permissions") {
-    return "meta";
-  }
-
   const title = text.match(/"([^"]+)"/).pop();
 
   return title.toLowerCase().replace(/\W/g, "_");
@@ -225,6 +212,6 @@ function toPermissionsObject(paths) {
 
       return map;
     },
-    { read: [], write: [] },
+    { read: [], write: [], admin: [] },
   );
 }
